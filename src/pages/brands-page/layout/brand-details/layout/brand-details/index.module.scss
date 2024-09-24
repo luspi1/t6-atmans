@@ -1,0 +1,48 @@
+.brandDetailsTab {
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+
+.brandStats {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 66px;
+  margin-bottom: 40px;
+  @media (max-width: 1024px) {
+    gap: 35px;
+  }
+
+  li {
+    display: flex;
+    gap: 17px;
+
+    h6 {
+      margin-bottom: 0;
+      color: #ED1C24;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    span {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
+
+
+.brandDescs {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 7px solid #F2F5F8;
+
+  p {
+    line-height: 1.45;
+
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+
+}

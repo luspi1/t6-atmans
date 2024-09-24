@@ -1,0 +1,34 @@
+@import "src/assets/styles/vars";
+
+.eventInfoWrapper {
+  margin-bottom: 40px;
+  h2 {
+    margin-bottom: 8px;
+  }
+}
+
+.mainInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+.avatarWrapper {
+  width: 132px;
+  height: 132px;
+  min-width: 132px;
+  border: 7px solid #EBEEF2;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.infoBlock {
+  flex-grow: 1;
+}
+
+
+

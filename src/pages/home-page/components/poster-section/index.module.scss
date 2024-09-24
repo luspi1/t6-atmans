@@ -1,0 +1,57 @@
+@import "src/assets/styles/vars";
+
+.posterSection {
+  padding: 60px 0 30px;
+}
+
+.posterSlider {
+  max-width: 1220px;
+}
+
+.slideItem {
+  border-radius: 10px;
+  height: 396px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+
+.slideInfo{
+  padding: 0 33px 38px;
+  z-index: 10;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  h5 {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1;
+  }
+}
+
+.slideInfoTitle {
+  ul {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    li {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 5px 20px;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+    }
+  }
+}

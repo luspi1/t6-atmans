@@ -1,0 +1,26 @@
+.videosTitleBlock {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  h2 {
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-size: 25px;
+  }
+}
+
+select.newsDateSelect {
+  padding: 6px 46px 6px 7px;
+}
+
+.groupTabNewsVideos {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.newsVideosPagination {
+  margin-top: auto;
+}

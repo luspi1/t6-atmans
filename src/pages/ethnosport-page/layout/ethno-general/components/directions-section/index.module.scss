@@ -1,0 +1,51 @@
+@import "src/assets/styles/vars";
+
+.directionsSection {
+  h5 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #9D9D9D;
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+}
+
+.directionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  li {
+    background: #F2F5F8;
+    padding: 16px 15px 17px 15px;
+    h6 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.directionItemBottom {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  a {
+    color: #DE0008;
+  }
+}
+.directionItemInfo {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  span {
+    @include ptsans-italic;
+    font-size: 14px;
+  }
+}

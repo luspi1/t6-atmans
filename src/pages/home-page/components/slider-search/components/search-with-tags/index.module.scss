@@ -1,0 +1,49 @@
+@import "src/assets/styles/vars";
+.searchWrapper {
+  position: relative;
+}
+
+.searchBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.tagsList {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  li {
+    padding: 10px 14px;
+    @include opensans-bold;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid rgba(#ffffff, 0.5);
+    text-align: center;
+    @media (max-width: 768px) {
+      padding: 7px 10px;
+    }
+
+    &:hover {
+      border: 1px solid rgba(#ffffff, 1);
+    }
+  }
+}
+
+.searchInput {
+  input {
+    @include opensans-medium;
+    font-size: 20px;
+    padding: 18.5px 120px 18.5px 22px;
+    border-radius: 5px;
+
+    &::placeholder {
+      color: #ACACAC;
+    }
+  }
+
+}

@@ -1,0 +1,43 @@
+@import "src/assets/styles/vars";
+
+.menuList {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  @media (max-width: 1280px) {
+    max-width: 50%;
+    gap: 15px;
+  }
+  @media (max-width: 768px) {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+
+.menuItem {
+  a {
+    @include opensans-bold;
+    color: #000000;
+    text-transform: uppercase;
+    transition: all .3s;
+
+    &:hover {
+      color: #009937;
+    }
+  }
+
+  &._accent {
+    a {
+      color: #009937;
+    }
+    .activeLink {
+
+    }
+  }
+
+  a.activeLink {
+    color: #B2B2B2;
+  }
+}
+

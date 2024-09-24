@@ -1,0 +1,38 @@
+.tabNavWrapper {
+  h5 {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
+
+
+.tabNav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  li {
+    a {
+      border-radius: 8px;
+      background: #EBEEF2;
+      padding: 3px 10px 5px;
+      line-height: 1;
+      display: inline-block;
+      color: #000;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+  }
+
+  .activeLink {
+    background: #ED1C24;
+    color: #ffffff;
+  }
+}

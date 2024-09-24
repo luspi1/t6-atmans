@@ -1,0 +1,21 @@
+.documents {
+  max-width: 203px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  li {
+    line-height: 1.2;
+  }
+
+  .documentLink {
+    font-size: 14px;
+    color: #015DB9;
+    line-height: 1;
+  }
+
+  .documentInfo {
+    color: #9D9D9D;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,25 @@
+.videoDetailTab {
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.videoContentWrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.mainVideo {
+  flex-grow: 1;
+
+  iframe {
+    width: 100%;
+    height: 520px;
+    border: none;
+    border-radius: 9px;
+  }
+}
+
+.allVideosLink {
+  font-weight: 700;
+}

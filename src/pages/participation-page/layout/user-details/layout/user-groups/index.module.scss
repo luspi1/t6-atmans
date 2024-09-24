@@ -1,0 +1,67 @@
+
+section.userGroupsSection {
+  padding: 15px 0 10px;
+  border-bottom: 7px solid #F2F5F8;
+
+  .groupLengthInfo {
+    margin-bottom: 15px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.usersGroupsTable {
+  grid-template-columns:
+          minmax(40px, 0.2fr)
+          minmax(100px, 0.9fr)
+          minmax(325px, 2.4fr)
+          minmax(180px, 1.4fr)
+          minmax(75px, 0.5fr)
+          minmax(90px, 0.8fr)
+          minmax(90px, 0.8fr);
+
+  td {
+    min-height: 60px;
+
+    &:nth-child(3) {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  th {
+    &:nth-child(4) {
+      padding: 0 12px;
+    }
+
+  }
+
+}
+
+.usersGroupsSearchWrapper {
+  svg {
+    left: 100px;
+  }
+
+  input {
+    padding: 6px 20px 6px 105px;
+  }
+}
+
+.ratingCell {
+  span {
+    display: block;
+    font-weight: 700;
+  }
+}
+
+.userCategorySelect {
+  width: 100%;
+
+  select {
+    width: 100%;
+  }
+}

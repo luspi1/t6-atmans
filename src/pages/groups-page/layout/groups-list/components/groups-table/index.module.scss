@@ -1,0 +1,35 @@
+.groupsTable {
+  grid-template-columns: minmax(40px, 0.2fr) minmax(150px, 1fr) minmax(300px, 2.1fr) minmax(180px, 1.5fr) minmax(70px, 0.5fr) minmax(130px, 0.9fr) minmax(110px, 0.8fr);
+  margin-bottom: 10px;
+
+  td {
+    min-height: 60px;
+  }
+  th:nth-child(4) {
+    padding: 0 5px;
+  }
+}
+
+.groupsSearchWrapper {
+  svg {
+    left: 78px;
+  }
+  input {
+    padding: 6px 20px 6px 83px;
+  }
+}
+
+.ratingCell {
+  span {
+    font-weight: 700;
+  }
+}
+
+.groupsCategorySelect {
+  width: 100%;
+
+  select {
+    width: 100%;
+  }
+
+}

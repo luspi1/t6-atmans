@@ -1,0 +1,12 @@
+.eventsList {
+  margin-bottom: 20px;
+  li {
+    h5 {
+      max-width: 780px;
+      @media (max-width: 1280px) {
+        white-space: initial;
+      }
+    }
+  }
+}
+

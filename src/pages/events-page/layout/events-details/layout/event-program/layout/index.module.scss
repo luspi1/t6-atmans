@@ -1,0 +1,40 @@
+.programTab {
+  padding-bottom: 40px;
+}
+
+.programNav {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-top: 50px;
+
+  a {
+    font-size: 16px;
+    color: #000000;
+    font-weight: 700;
+    padding: 5px 8px;
+    background-color: #EBEEF2;
+  }
+
+  li {
+    :global {
+      .active {
+        background-color: #ED1C24;
+        color: #ffffff;
+      }
+    }
+  }
+
+  li:first-child {
+    a {
+      border-radius: 8px 0 0 8px;
+    }
+  }
+
+  li:last-child {
+    a {
+      border-radius: 0 8px 8px 0;
+    }
+  }
+}

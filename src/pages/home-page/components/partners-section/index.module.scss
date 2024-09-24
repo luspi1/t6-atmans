@@ -1,0 +1,26 @@
+@import "src/assets/styles/vars";
+
+
+.partnersSection {
+  padding-bottom: 33px;
+}
+
+
+.partnersSlider {
+  max-width: 1220px;
+}
+
+.slideItem {
+  border-radius: 10px;
+  border: 10px solid #ffffff;
+  height: 110px;
+  width: 100%;
+  display: inline-block;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+

@@ -1,0 +1,31 @@
+.departmentInfoBlock {
+  border-bottom: 7px solid #F2F5F8;
+}
+
+a.pageMainLink {
+  display: block;
+  padding: 25px 0 5px 0;
+  margin-top: 25px;
+  border-top: 7px solid #F2F5F8;
+  font-weight: 700;
+}
+
+.departmentDetailsLayoutWrapper {
+  display: flex;
+  gap: 35px;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.departmentDetailsSideMenu {
+  padding-top: 30px;
+  margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    padding-top: 30px;
+    margin-bottom: 15px;
+  }
+}

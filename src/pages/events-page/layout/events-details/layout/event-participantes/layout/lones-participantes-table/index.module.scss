@@ -1,0 +1,23 @@
+.lonesParticipantesTable {
+  grid-template-columns: minmax(40px, 0.2fr) minmax(280px, 2.5fr) minmax(60px, 0.6fr) minmax(105px, 1fr)  minmax(105px, 0.8fr) minmax(120px, 0.9fr);
+  margin-bottom: 10px;
+
+  td {
+    min-height: 60px;
+  }
+}
+
+.lonesParticipantesSearchWrapper {
+  svg {
+    left: 90px;
+    @media (max-width: 1024px) {
+      left: 20px;
+    }
+  }
+  input {
+    padding: 6px 20px 6px 95px;
+    @media (max-width: 1024px) {
+      padding: 6px 20px 6px 25px;
+    }
+  }
+}

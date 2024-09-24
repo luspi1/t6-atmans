@@ -1,0 +1,24 @@
+  .departmentTable {
+    grid-template-columns: minmax(35px, 0.2fr) minmax(200px, 2.8fr) minmax(70px, 0.5fr) minmax(110px, 0.8fr) minmax(100px, 0.7fr);
+    margin-bottom: 10px;
+  
+    td {
+      min-height: 60px;
+      padding: 0 4px;
+    }
+  }
+  
+  .usersSearchWrapper {
+    svg {
+      left: 155px;
+      @media (max-width: 768px) {
+        left: 20px;
+      }
+    }
+    input {
+      padding: 6px 20px 6px 160px;
+      @media (max-width: 768px) {
+        padding: 6px 20px 6px 25px;
+      }
+    }
+  }

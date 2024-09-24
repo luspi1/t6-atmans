@@ -1,0 +1,24 @@
+
+.eventDescs {
+  p {
+    line-height: 1.45;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+  }
+
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.eventFaqItem {
+  button {
+    font-weight: 700;
+    padding: 16px 45px 16px 18px;
+  }
+}

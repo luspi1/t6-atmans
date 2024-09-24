@@ -1,0 +1,141 @@
+@import "src/assets/styles/vars";
+
+
+.materialsTop {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  & > p {
+    min-width: 180px;
+  }
+}
+
+.materialsSearchForm {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  button {
+    background: #015DB9;
+    height: 30px;
+    padding: 0 14px;
+    text-transform: capitalize;
+  }
+}
+
+.materialsSearchInput {
+  flex-grow: 1;
+  min-width: 180px;
+
+  input {
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #B8B8B8;
+    border-radius: 3px;
+    padding: 6px 10px 6px 26px;
+    background: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.8" d="M11.7583 10.5934L9.32359 8.15873C9.935 7.31184 10.2958 6.27229 10.2958 5.14763C10.2958 2.30466 7.99112 0 5.14815 0C2.30518 0 0 2.30466 0 5.14815C0 7.99165 2.30466 10.2963 5.14815 10.2963C6.27229 10.2963 7.31236 9.93552 8.15925 9.32411L10.5939 11.7588C10.9155 12.0804 11.4371 12.0804 11.7588 11.7588C12.0804 11.4371 12.0804 10.9155 11.7588 10.5939L11.7583 10.5934ZM5.14763 8.67981C3.19697 8.67981 1.61545 7.09829 1.61545 5.14763C1.61545 3.19697 3.19697 1.61545 5.14815 1.61545C7.09933 1.61545 8.68033 3.19697 8.68033 5.14763C8.68033 7.09829 7.09881 8.67981 5.14815 8.67981H5.14763Z" fill="%23848484"/></svg>') no-repeat 9px 50%;
+
+    &::placeholder {
+      color: #848484;
+    }
+  }
+}
+
+.materialsSearchSelect {
+  min-width: 138px;
+  max-height: 30px;
+
+  :global(div.react-dropdown-select ) {
+    min-height: 30px;
+    height: 30px;
+    border-color: #B8B8B8;
+    padding: 2px 10px 3px;
+  }
+
+}
+
+.materialsList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  & > li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    svg {
+      min-width: 16px;
+    }
+  }
+}
+
+.materialsItemTitle {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 2px;
+  span:first-letter {
+    text-transform: capitalize;
+  }
+
+  a {
+    display: inline-block;
+    max-width: 935px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media (max-width: 1280px) {
+      max-width: 800px
+    }
+    @media (max-width: 1024px) {
+      max-width: 500px;
+    }
+    @media (max-width: 768px) {
+      max-width: 300px
+    }
+    @media (max-width: 500px) {
+      max-width: 140px
+    }
+
+  }
+}
+
+.materialsItemInfo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  @media (max-width: 1100px) {
+    gap: 3px 10px;
+  }
+  span {
+    @include ptsans-italic;
+    color: #9D9D9D;
+    font-size: 14px;
+    line-height: 1.1;
+  }
+}
+.materialsItemPub {
+  max-width: 340px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media (max-width: 768px) {
+    max-width: 200px;
+  }
+}
+
+a.allMaterialsLink {
+  display: inline-block;
+  margin-top: 30px;
+}

@@ -1,0 +1,24 @@
+.usersTable {
+  grid-template-columns: minmax(40px, 0.3fr) minmax(150px, 1.1fr) minmax(150px, 1.1fr) minmax(370px, 2.6fr) minmax(80px, 0.5fr) minmax(130px, 0.7fr) minmax(130px, 0.7fr);
+  margin-bottom: 10px;
+
+  td {
+    min-height: 60px;
+  }
+}
+
+.usersSearchWrapper {
+  svg {
+    left: 78px;
+  }
+  input {
+    padding: 6px 20px 6px 83px;
+  }
+}
+
+.ratingCell {
+  span {
+    display: block;
+    font-weight: 700;
+  }
+}

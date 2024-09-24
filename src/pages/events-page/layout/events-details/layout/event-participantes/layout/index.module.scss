@@ -1,0 +1,24 @@
+.eventParticipantesTab {
+  padding: 10px 0 30px;
+}
+
+.eventParticipantesNav {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+
+  a {
+    color: #ED1C24;
+    border-bottom: 1px dotted #ED1C24;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  :global {
+    .active {
+      color: #000000;
+      border: none;
+    }
+  }
+
+}
