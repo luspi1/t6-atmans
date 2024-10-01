@@ -143,3 +143,10 @@ export const getCorrectWordForm = (number: number | undefined, wordForms: string
 		number % 100 > 4 && number % 100 < 20 ? 2 : cases[number % 10 < 5 ? number % 10 : 5]
 	return `${number} ${wordForms[wordIndex]}`
 }
+
+// получение названия месяца по индексу
+
+export const getMonthName = (monthIdx: number) => {
+	const date = new Date(2024, monthIdx)
+	return date.toLocaleString('ru', { month: 'long' })
+}

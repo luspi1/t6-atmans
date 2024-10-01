@@ -8,9 +8,9 @@ import { useGetHomePostersQuery } from 'src/store/home/home.api'
 
 import { posterSliderOptions } from './consts'
 
-import styles from './index.module.scss'
 import { formatDateRange } from 'src/helpers/utils'
 import { MainButton } from 'src/UI/MainButton/MainButton'
+import styles from './index.module.scss'
 
 export const PosterSection: FC = () => {
 	const { data: posterData } = useGetHomePostersQuery(null)
@@ -24,7 +24,9 @@ export const PosterSection: FC = () => {
 					{posterData?.map((slideItem, idx) => (
 						<SwiperSlide key={idx}>
 							<div className={styles.slideItem}>
-								<img src={slideItem.image_url} alt={slideItem.title} />
+								<div className={styles.slideItemImg}>
+									<img src={slideItem.image_url} alt={slideItem.title} />
+								</div>
 								<div className={styles.slideInfo}>
 									<div className={styles.slideInfoTitle}>
 										<ul>
@@ -41,7 +43,7 @@ export const PosterSection: FC = () => {
 						</SwiperSlide>
 					))}
 				</Swiper>
-				<SliderBtns $topPosition='50%' swiperRef={swiperRef} />
+				<SliderBtns $topPosition='50%' $variant='lg' $btnsSpacing='93%' swiperRef={swiperRef} />
 			</section>
 		</Container>
 	)

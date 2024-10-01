@@ -16,9 +16,13 @@ export type HomeEthnoItems = HomeRegion
 
 export type HomeEventItem = {
 	id: string
+	category: string
 	title: string
-	date: [Date, Date]
-	desc: string
-	ismain: boolean
-	ethnoType: 'rus' | 'bur'
+	imgUrl: string
+	date: Date
+	location: {
+		title: string
+		address: string
+	}
+	description: string
 }

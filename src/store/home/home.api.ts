@@ -30,9 +30,18 @@ export const homeApi = createApi({
 				url: `ethnosport_directions/`,
 			}),
 		}),
-		getHomeEvents: build.query<HomeEventItem[], null>({
+		getAllEventMonths: build.query<HomeEventItem[][], null>({
 			query: () => ({
-				url: `events_list/`,
+				url: `/home/all-event-months`,
+			}),
+		}),
+		getHomeEventMonths: build.query<HomeEventItem[], { month: number; category: string }>({
+			query: ({ month, category = '' }) => ({
+				url: 'home/event-months/',
+				params: {
+					m: month,
+					cat: category,
+				},
 			}),
 		}),
 	}),
@@ -41,6 +50,7 @@ export const homeApi = createApi({
 export const {
 	useGetHomeRegionsQuery,
 	useGetHomeEthnoQuery,
-	useGetHomeEventsQuery,
+	useGetHomeEventMonthsQuery,
+	useGetAllEventMonthsQuery,
 	useGetHomePostersQuery,
 } = homeApi

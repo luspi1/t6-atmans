@@ -2,6 +2,7 @@ import {
 	deleteNews,
 	getAllBrandEvents,
 	getAllDisciplines,
+	getAllEventMonths,
 	getBrandEventById,
 	getBrandEventNews,
 	getBrandEventNewsById,
@@ -13,6 +14,7 @@ import {
 	getEthnosportGlobal,
 	getEventById,
 	getEventDisciplinesById,
+	getEventMonths,
 	getEventNews,
 	getEventNewsById,
 	getEventNewsVideoById,
@@ -134,3 +136,5 @@ router.get('/brand-events/:id/events', getEventsByBrands)
 router.get('/brand-events/:id/photos', getBrandEventPhotos)
 router.get('/home/regions', getHomeRegions)
 router.get('/home/posters', getHomePosters)
+router.get('/home/event-months', getEventMonths)
+router.get('/home/all-event-months', getAllEventMonths)

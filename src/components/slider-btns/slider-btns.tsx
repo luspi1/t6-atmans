@@ -9,7 +9,8 @@ import { type SwiperRef } from 'swiper/react'
 
 type SliderBtnsProps = {
 	$topPosition?: string
-	$btnsWidth?: string
+	$btnsSpacing?: string
+	$variant?: 'sm' | 'lg' | 'opaque'
 }
 
 type SliderProps = {
@@ -24,11 +25,11 @@ const StyledSliderBtns = styled.div<SliderBtnsProps>`
 	z-index: 1;
 	height: 0;
 	transform: translate(-50%, -50%);
-	width: ${({ $btnsWidth }) => $btnsWidth ?? '100%'};
+	width: ${({ $btnsSpacing }) => $btnsSpacing ?? '100%'};
 	top: ${({ $topPosition }) => $topPosition ?? '0'};
 
 	button {
-		height: 22px;
+		height: ${({ $variant }) => ($variant === 'sm' ? '22px' : '50px')};
 		transform: translateY(-50%);
 		&:hover {
 			svg rect {
@@ -38,7 +39,11 @@ const StyledSliderBtns = styled.div<SliderBtnsProps>`
 	}
 `
 
-export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({ swiperRef, ...props }) => {
+export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
+	swiperRef,
+	$variant = 'sm',
+	...props
+}) => {
 	const handlePrev = () => {
 		swiperRef.current?.swiper.slidePrev()
 	}
@@ -49,10 +54,10 @@ export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({ swiperRef, ...pr
 	return (
 		<StyledSliderBtns {...props}>
 			<button className={styles.slideBtnPrev} type='button' onClick={handlePrev}>
-				<SlidePrevSvg />
+				<SlidePrevSvg variant={$variant} />
 			</button>
 			<button className={styles.slideBtnNext} type='button' onClick={handleNext}>
-				<SlideNextSvg />
+				<SlideNextSvg variant={$variant} />
 			</button>
 		</StyledSliderBtns>
 	)

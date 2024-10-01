@@ -1,4 +1,50 @@
-export const SlideNextSvg = () => {
+import { type FC } from 'react'
+
+type SlideNextSvgProps = {
+	variant?: 'sm' | 'lg' | 'opaque'
+}
+
+export const SlideNextSvg: FC<SlideNextSvgProps> = ({ variant = 'sm' }) => {
+	if (variant === 'lg') {
+		return (
+			<svg
+				width='33'
+				height='50'
+				viewBox='0 0 33 50'
+				fill='none'
+				xmlns='http://www.w3.org/2000/svg'
+			>
+				<g style={{ mixBlendMode: 'multiply' }}>
+					<rect width='32.2115' height='50' rx='5' fill='black' fillOpacity='0.3' />
+				</g>
+				<path
+					d='M19.7663 24.8668C19.7663 25.0653 19.667 25.3631 19.4685 25.4623L13.5136 31.4173C13.2158 31.7151 12.6203 31.7151 12.2233 31.4173C11.9256 31.1196 11.9256 30.524 12.2233 30.127L17.5828 24.7675L12.2233 19.408C11.9256 19.1103 11.9256 18.5149 12.2233 18.1179C12.5211 17.8201 13.1166 17.8201 13.5136 18.1179L19.4685 24.0728C19.667 24.3706 19.7663 24.6683 19.7663 24.8668Z'
+					fill='white'
+				/>
+			</svg>
+		)
+	}
+
+	if (variant === 'opaque') {
+		return (
+			<svg
+				width='33'
+				height='40'
+				viewBox='0 0 33 40'
+				fill='none'
+				xmlns='http://www.w3.org/2000/svg'
+			>
+				<g style={{ mixBlendMode: 'multiply' }}>
+					<rect width='32.2115' height='40' rx='5' fill='#E7E7E7' />
+				</g>
+				<path
+					d='M20.4747 20.6082C20.4747 20.8248 20.3664 21.1498 20.1498 21.2581L13.6516 27.7563C13.3267 28.0812 12.6769 28.0812 12.2437 27.7563C11.9188 27.4314 11.9188 26.7815 12.2437 26.3483L18.092 20.4999L12.2437 14.6515C11.9188 14.3266 11.9188 13.6769 12.2437 13.2437C12.5686 12.9188 13.2184 12.9188 13.6516 13.2437L20.1498 19.7419C20.3664 20.0668 20.4747 20.3916 20.4747 20.6082Z'
+					fill='black'
+				/>
+			</svg>
+		)
+	}
+
 	return (
 		<svg width='20' height='30' viewBox='0 0 20 30' fill='none' xmlns='http://www.w3.org/2000/svg'>
 			<rect width='19.3269' height='30' rx='5' fill='black' fillOpacity='0.2' />
