@@ -14,9 +14,14 @@ export type HomePoster = {
 
 export type HomeEthnoItems = HomeRegion
 
+export type HomeEventCategory = {
+	title: string
+	id: string
+}
+
 export type HomeEventItem = {
 	id: string
-	category: string
+	category: HomeEventCategory
 	title: string
 	imgUrl: string
 	date: Date

@@ -107,7 +107,10 @@ export let homeEventMonths = [
 	[
 		{
 			id: '0',
-			category: 'Русские игры',
+			category: {
+				id: '21',
+				title: 'Русские игры',
+			},
 			title: 'Русские игры в Лужниках',
 			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
 			date: '2024-08-15T00:00:00+03:00',
@@ -120,7 +123,10 @@ export let homeEventMonths = [
 		},
 		{
 			id: '1',
-			category: 'Кулачки',
+			category: {
+				id: '13',
+				title: 'Кулачки',
+			},
 			title: 'Атмановские кулачки',
 			imgUrl:
 				'https://api.top68.ru/attachments/609da8f2e3da0db6e37b1a50108be0c86b141e76/store/crop/0/0/604/406/604/406/0/9bde754921ce1545f391210b2ea45fd1f87e1fb31cabc09c5ac5ab78bf4a/qmcmxpgs08w.jpg',
@@ -134,7 +140,10 @@ export let homeEventMonths = [
 		},
 		{
 			id: '3',
-			category: 'Русские игры',
+			category: {
+				id: '21',
+				title: 'Русские игры',
+			},
 			title: 'Русские игры в Лужниках',
 			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
 			date: '2024-08-15T00:00:00+03:00',
@@ -147,7 +156,10 @@ export let homeEventMonths = [
 		},
 		{
 			id: '4',
-			category: 'Русские игры',
+			category: {
+				id: '21',
+				title: 'Русские игры',
+			},
 			title: 'Русские игры в Лужниках',
 			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
 			date: '2024-08-15T00:00:00+03:00',
@@ -160,7 +172,10 @@ export let homeEventMonths = [
 		},
 		{
 			id: '5',
-			category: 'Кулачки',
+			category: {
+				id: '13',
+				title: 'Кулачки',
+			},
 			title: 'Атмановские кулачки',
 			imgUrl:
 				'https://api.top68.ru/attachments/609da8f2e3da0db6e37b1a50108be0c86b141e76/store/crop/0/0/604/406/604/406/0/9bde754921ce1545f391210b2ea45fd1f87e1fb31cabc09c5ac5ab78bf4a/qmcmxpgs08w.jpg',
@@ -174,7 +189,10 @@ export let homeEventMonths = [
 		},
 		{
 			id: '6',
-			category: 'Русские игры',
+			category: {
+				id: '21',
+				title: 'Русские игры',
+			},
 			title: 'Русские игры в Лужниках',
 			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
 			date: '2024-08-15T00:00:00+03:00',
@@ -189,7 +207,10 @@ export let homeEventMonths = [
 	[
 		{
 			id: '7',
-			category: 'Кулачки',
+			category: {
+				id: '13',
+				title: 'Кулачки',
+			},
 			title: 'Атмановские кулачки',
 			imgUrl:
 				'https://api.top68.ru/attachments/609da8f2e3da0db6e37b1a50108be0c86b141e76/store/crop/0/0/604/406/604/406/0/9bde754921ce1545f391210b2ea45fd1f87e1fb31cabc09c5ac5ab78bf4a/qmcmxpgs08w.jpg',
@@ -203,7 +224,10 @@ export let homeEventMonths = [
 		},
 		{
 			id: '13',
-			category: 'Русские игры',
+			category: {
+				id: '21',
+				title: 'Русские игры',
+			},
 			title: 'Русские игры в Лужниках',
 			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
 			date: '2024-09-15T00:00:00+03:00',
@@ -218,7 +242,10 @@ export let homeEventMonths = [
 	[
 		{
 			id: '16',
-			category: 'Русские игры',
+			category: {
+				id: '21',
+				title: 'Русские игры',
+			},
 			title: 'Русские игры в Лужниках',
 			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
 			date: '2024-10-15T00:00:00+03:00',
@@ -233,7 +260,10 @@ export let homeEventMonths = [
 	[
 		{
 			id: '21',
-			category: 'Кулачки',
+			category: {
+				id: '13',
+				title: 'Кулачки',
+			},
 			title: 'Атмановские кулачки',
 			imgUrl:
 				'https://api.top68.ru/attachments/609da8f2e3da0db6e37b1a50108be0c86b141e76/store/crop/0/0/604/406/604/406/0/9bde754921ce1545f391210b2ea45fd1f87e1fb31cabc09c5ac5ab78bf4a/qmcmxpgs08w.jpg',
@@ -247,7 +277,10 @@ export let homeEventMonths = [
 		},
 		{
 			id: '22',
-			category: 'Русские игры',
+			category: {
+				id: '21',
+				title: 'Русские игры',
+			},
 			title: 'Русские игры в Лужниках',
 			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
 			date: '2024-08-15T00:00:00+03:00',
@@ -260,7 +293,10 @@ export let homeEventMonths = [
 		},
 		{
 			id: '23',
-			category: 'Русские игры',
+			category: {
+				id: '21',
+				title: 'Русские игры',
+			},
 			title: 'Русские игры в Лужниках',
 			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
 			date: '2024-08-15T00:00:00+03:00',
@@ -273,7 +309,10 @@ export let homeEventMonths = [
 		},
 		{
 			id: '24',
-			category: 'Русские игры',
+			category: {
+				id: '21',
+				title: 'Русские игры',
+			},
 			title: 'Русские игры в Лужниках',
 			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
 			date: '2024-08-15T00:00:00+03:00',
@@ -286,7 +325,10 @@ export let homeEventMonths = [
 		},
 		{
 			id: '25',
-			category: 'Кулачки',
+			category: {
+				id: '13',
+				title: 'Кулачки',
+			},
 			title: 'Атмановские кулачки',
 			imgUrl:
 				'https://api.top68.ru/attachments/609da8f2e3da0db6e37b1a50108be0c86b141e76/store/crop/0/0/604/406/604/406/0/9bde754921ce1545f391210b2ea45fd1f87e1fb31cabc09c5ac5ab78bf4a/qmcmxpgs08w.jpg',
@@ -302,7 +344,10 @@ export let homeEventMonths = [
 	[
 		{
 			id: '35',
-			category: 'Кулачки',
+			category: {
+				id: '13',
+				title: 'Кулачки',
+			},
 			title: 'Атмановские кулачки',
 			imgUrl:
 				'https://api.top68.ru/attachments/609da8f2e3da0db6e37b1a50108be0c86b141e76/store/crop/0/0/604/406/604/406/0/9bde754921ce1545f391210b2ea45fd1f87e1fb31cabc09c5ac5ab78bf4a/qmcmxpgs08w.jpg',
@@ -315,4 +360,15 @@ export let homeEventMonths = [
 				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
 		},
 	],
+]
+
+export let homeEventsCategories = [
+	{
+		id: '21',
+		title: 'Русские игры',
+	},
+	{
+		id: '13',
+		title: 'Кулачки',
+	},
 ]

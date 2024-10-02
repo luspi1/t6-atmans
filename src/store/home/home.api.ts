@@ -1,5 +1,6 @@
 import {
 	type HomeEthnoItems,
+	type HomeEventCategory,
 	type HomeEventItem,
 	type HomePoster,
 	type HomeRegion,
@@ -44,11 +45,17 @@ export const homeApi = createApi({
 				},
 			}),
 		}),
+		getHomeEventCategories: build.query<HomeEventCategory[], null>({
+			query: () => ({
+				url: 'home/all-event-categories',
+			}),
+		}),
 	}),
 })
 
 export const {
 	useGetHomeRegionsQuery,
+	useGetHomeEventCategoriesQuery,
 	useGetHomeEthnoQuery,
 	useGetHomeEventMonthsQuery,
 	useGetAllEventMonthsQuery,

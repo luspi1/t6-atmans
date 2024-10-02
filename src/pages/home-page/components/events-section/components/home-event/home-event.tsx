@@ -2,30 +2,38 @@ import { type FC } from 'react'
 import { type HomeEventItem } from 'src/types/home-page'
 
 import { Link } from 'react-router-dom'
-import cnBind from 'classnames/bind'
 import { AppRoute } from 'src/routes/main-routes/consts'
 
-import { formatDateRange } from 'src/helpers/utils'
+import { mainFormatDate } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
 
 type EventItemProps = HomeEventItem
 export const HomeEvent: FC<EventItemProps> = ({
+	id,
+	category: { title: catTitle },
+	location: { title: locTitle, address },
 	title,
 	date,
-	desc,
-	ismain,
-	id,
-	ethnoType = 'rus',
+	imgUrl,
+	description,
 }) => {
-	const cx = cnBind.bind(styles)
-
 	return (
-		<li className={cx(styles.eventItem, { _main: ismain }, ethnoType)}>
+		<li className={styles.eventItem}>
 			<Link to={`/${AppRoute.Events}/${id}`}>
-				<h4>{title}</h4>
-				<span>{formatDateRange(date)}</span>
-				{desc && <p>{desc}</p>}
+				<div className={styles.imgWrapper}>
+					<img src={imgUrl} alt={title} />
+					<span>{catTitle}</span>
+				</div>
+				<div className={styles.eventContent}>
+					<h6>{title}</h6>
+					<p className={styles.eventDate}>{mainFormatDate(date, ' ')}</p>
+					<p className={styles.eventLocations}>
+						<span>{locTitle}</span>
+						<span>{address}</span>
+					</p>
+					{description && <p>{description}</p>}
+				</div>
 			</Link>
 		</li>
 	)

@@ -36,7 +36,7 @@ export const RegionSlider: FC = () => {
 					</SwiperSlide>
 				))}
 			</Swiper>
-			<SliderBtns $topPosition='28%' $btnsSpacing='99%' swiperRef={swiperRef} />
+			<SliderBtns $topPosition='31%' $btnsSpacing='99%' swiperRef={swiperRef} />
 		</Container>
 	)
 }

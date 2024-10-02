@@ -1,101 +1,56 @@
 @import "src/assets/styles/vars";
 
 .eventItem {
-  border-radius: 10px;
-  border: 2px solid #E1E0E8;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
   transition: all .3s;
   cursor: pointer;
-  min-height: 300px;
-  background: #ffffff no-repeat 620% 50%;
-  @media (max-width: 576px) {
-    min-height: auto;
-  }
-
-  &:hover {
-    border-color: #025DB9;
-    box-shadow: 0 4px 50px 0 rgba(2, 93, 185, 0.50);
-    &.rus {
-      background-image: url("src/assets/img/event-rus-hover.png");
-    }
-    &.bur {
-      background-image: url("src/assets/img/event-bur-hover.png");
-      background-position: 600% 50%;
-      background-size: 90%;
-    }
-  }
+  min-height: 475px;
+  max-width: 390px;
 
   a {
     display: block;
     height: 100%;
-    padding: 23px 21px 15px 23px;
-
-    h4 {
-      color: #000;
-      @include ptsans-bold;
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 13px;
-      line-height: 1.25;
-    }
   }
+}
 
-
+.imgWrapper {
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
+  height: 240px;
+  background: url('data:image/svg+xml,<svg width="139" height="125" viewBox="0 0 139 125" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M139.474 37.9666C82.1226 38.4724 35.8436 84.2467 36.1537 140.401C36.2932 159.279 41.8976 176.926 51.1704 192.026C28.5315 145.116 46.2652 88.2808 92.4721 62.958C138.679 37.6352 200.114 54.3824 226.213 102.005C243.03 132.692 241.877 168.393 226.09 196.996C237.545 180.512 244.327 160.681 243.994 139.07C243.684 82.9159 196.896 37.7291 139.474 37.9666Z" fill="%2302D04C"/><path d="M207.777 217.773C244.824 180.358 244.894 120.696 208.35 84.3984C177.823 54.3191 131.337 49.8678 95.2665 70.8633C128.863 53.7556 171.162 58.9671 199.531 86.9293C234.789 121.86 235.213 178.642 200.283 213.9C165.352 249.157 108.57 249.582 73.312 214.651C59.2616 200.635 50.6499 183.101 47.8265 164.927C50.2135 185.105 59.0492 204.588 74.386 219.971C111.107 256.172 170.729 255.189 207.777 217.773Z" fill="%2302D04C"/><path d="M202.535 167.145C202.779 206.377 171.156 238.288 131.957 238.591C92.4887 238.965 60.5783 207.342 60.3016 168.051C60.0572 128.819 91.6805 96.9084 130.88 96.605C170.112 96.3607 202.258 127.855 202.503 167.086M133.207 84.0493C89.3676 84.2867 54.1212 119.948 54.3909 163.846C54.8053 207.589 90.5253 242.803 134.188 242.663C178.028 242.426 213.274 206.765 213.005 162.866C212.767 119.026 177.106 83.7796 133.207 84.0493Z" fill="%2302D04C"/><path d="M157.607 74.8343C180.962 84.8256 200.083 104.734 208.154 131.082C222.667 178.148 196.825 227.609 150.479 242.036C146.105 243.435 141.74 244.292 137.423 244.817C146.258 245.116 155.241 243.723 164.295 241.063C209.639 227.187 235.166 178.972 221.258 133.57C211.879 102.874 186.734 81.3555 157.607 74.8343Z" fill="%2302D04C"/></svg>') no-repeat;
+  img {
+    max-height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: 5px;
+  }
   span {
-    color: #9D9D9D;
-    margin-bottom: 15px;
-    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    color: #8D8D8D;
+    padding: 5px 10px;
+    background: #ffffff;
+    border-radius: 5px;
   }
+}
 
-  p {
+.eventContent {
+  padding: 25px 20px;
+  color: #000000;
+  h6 {
     color: #000000;
-    line-height: 22px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    -webkit-line-clamp: 7;
-    text-overflow: ellipsis;
-    height: 154px;
-  }
-
-
-  &._main {
-    border: none;
-    grid-area: 1 / 1 / 2 / 3;
-
-
-    &.rus {
-      background: #DE0008 url("src/assets/img/main-event-rus-bg.png") no-repeat 123% 50%;
-    }
-
-    @media (max-width: 576px) {
-      grid-area: 1 / 1 / 1 / 1;
-    }
-
-
-    h4 {
-      color: #ffffff;
-      font-size: 28px;
-      max-width: 280px;
-      margin-bottom: 19px;
-    }
-
-    a {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 20px;
-    }
-
-    span {
-      font-weight: 500;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-
-    p {
-      color: #ffffff;
-      max-width: 370px;
-      margin-top: auto;
-      height: auto;
-    }
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 13px;
+    line-height: 1.25;
   }
 }

@@ -1,0 +1,21 @@
+.categoriesFiltration {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  li {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all .3s;
+    &:hover {
+      color: #009937;
+    }
+  }
+}
+
+  ._active {
+    color: #8D8D8D;
+    pointer-events: none;
+  }
+

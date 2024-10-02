@@ -9,7 +9,12 @@ import { disciplines } from '../mockData/disciplines.mjs'
 import { newsVideos } from '../mockData/newsVideos.mjs'
 import { groups } from '../mockData/groups.mjs'
 import { brandEvents } from '../mockData/brandEvents.mjs'
-import { homeEventMonths, homePosters, homeRegions } from '../mockData/home.mjs'
+import {
+	homeEventMonths,
+	homeEventsCategories,
+	homePosters,
+	homeRegions,
+} from '../mockData/home.mjs'
 
 export const getRegionsInfo = (req, res) => {
 	res.status(200).json(regionsInfo)
@@ -568,6 +573,12 @@ export const getEventMonths = (req, res) => {
 	const { m, cat } = req.query
 	const currentMonthEvents = homeEventMonths[m] || []
 
-	const filteredEvents = currentMonthEvents.filter((event) => cat === '' || event.category === cat)
+	const filteredEvents = currentMonthEvents.filter(
+		(event) => cat === '0' || event.category.id === cat,
+	)
+
 	res.status(200).json(filteredEvents)
+}
+export const getEventCategories = (req, res) => {
+	res.status(200).json(homeEventsCategories)
 }

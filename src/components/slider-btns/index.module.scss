@@ -11,10 +11,16 @@
   button {
     height: 22px;
     transform: translateY(-50%);
+
     &:hover {
       svg rect {
         fill-opacity: 0.4;
       }
     }
   }
+}
+
+._disabled {
+  opacity: 0.5;
+  cursor: initial;
 }

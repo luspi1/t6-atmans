@@ -7,9 +7,23 @@
     height: 40px;
     padding: 0 20px;
     font-weight: 700;
+    line-height: 1;
     background: #E7E7E7;
     text-transform: uppercase;
     border-radius: 5px;
     cursor: pointer;
+  }
+}
+
+._disableSlide {
+  p {
+    color: #8D8D8D
+  }
+}
+
+._activeSlide {
+  p {
+    background-color: #00A93D;
+    color: #ffffff;
   }
 }

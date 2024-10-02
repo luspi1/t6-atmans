@@ -51,6 +51,7 @@ export const SlidePrevSvg: FC<SlidePrevSvgProps> = ({ variant = 'sm' }) => {
 						rx='5'
 						transform='rotate(-180 32.2115 40)'
 						fill='#E7E7E7'
+						fillOpacity='1'
 					/>
 				</g>
 				<path

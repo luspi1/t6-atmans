@@ -13,6 +13,7 @@ import {
 	getEthnosportById,
 	getEthnosportGlobal,
 	getEventById,
+	getEventCategories,
 	getEventDisciplinesById,
 	getEventMonths,
 	getEventNews,
@@ -138,3 +139,4 @@ router.get('/home/regions', getHomeRegions)
 router.get('/home/posters', getHomePosters)
 router.get('/home/event-months', getEventMonths)
 router.get('/home/all-event-months', getAllEventMonths)
+router.get('/home/all-event-categories', getEventCategories)
