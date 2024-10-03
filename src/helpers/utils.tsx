@@ -134,6 +134,12 @@ export const formatDateRange = ([startDate, endDate]: [Date, Date] | []): string
 	return `${format(startDate, 'd MMMM yyyy', { locale: ru })} — ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
 }
 
+// Получение дня недели
+
+export const getDayOfWeek = (date: Date) => {
+	return format(date, 'EEEE', { locale: ru })
+}
+
 // функция, которая возвращает правильно склонение, в зависимости от числа
 
 export const getCorrectWordForm = (number: number | undefined, wordForms: string[]) => {

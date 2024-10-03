@@ -1,13 +1,17 @@
-import { useGetHomeEventCategoriesQuery } from 'src/store/home/home.api'
-import { useState } from 'react'
+import { type FC } from 'react'
 import cn from 'classnames'
+
+import { useGetHomeEventCategoriesQuery } from 'src/store/home/home.api'
 
 import styles from './index.module.scss'
 
-export const MonthsFiltration = () => {
-	const { data: categories } = useGetHomeEventCategoriesQuery(null)
+type MonthsFiltrationProps = {
+	activeCatId: string
+	changeActiveCatId: (arg: string) => void
+}
 
-	const [activeCatId, setActiveCatId] = useState<string>('0')
+export const MonthsFiltration: FC<MonthsFiltrationProps> = ({ activeCatId, changeActiveCatId }) => {
+	const { data: categories } = useGetHomeEventCategoriesQuery(null)
 
 	if (!categories?.length) return
 	return (
@@ -16,7 +20,7 @@ export const MonthsFiltration = () => {
 				<li
 					className={cn({ [styles._active]: activeCatId === catEl.id })}
 					key={catEl.id}
-					onClick={() => setActiveCatId(catEl.id)}
+					onClick={() => changeActiveCatId(catEl.id)}
 				>
 					{catEl.title}
 				</li>

@@ -3,7 +3,7 @@ import { type NewsItem } from 'src/types/news'
 import { type VideoItem } from 'src/types/videos'
 import { type ImageItem } from 'src/types/photos'
 import { type ShortDocument } from 'src/types/document'
-import { type PathwayItem, type PlacementItem } from 'src/types/location'
+import { type PathwayItem } from 'src/types/location'
 import { type EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
 import { type UserItem } from 'src/types/users'
 import { type ProgramDay } from 'src/types/program'
@@ -35,7 +35,6 @@ export type EventsItem = {
 	brandImg: string
 	partnerImg: string
 	pathways: PathwayItem[]
-	placement: PlacementItem[]
 	faq: Array<{ title: string; content: string }>
 	chronology: ChronologyItem[]
 	disciplines: EthnosportDisciplineItem[]

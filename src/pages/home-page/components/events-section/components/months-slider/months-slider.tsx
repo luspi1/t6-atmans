@@ -1,8 +1,8 @@
-import { type FC, type RefObject, useEffect, useRef, useState } from 'react'
+import { type FC, type RefObject, useEffect, useRef } from 'react'
 import type { SwiperRef } from 'swiper/react/swiper-react'
-import cn from 'classnames'
-import { Swiper, SwiperSlide } from 'swiper/react'
 import { uid } from 'react-uid'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import cn from 'classnames'
 
 import { useGetAllEventMonthsQuery } from 'src/store/home/home.api'
 import { Container } from 'src/UI/Container/Container'
@@ -12,15 +12,25 @@ import { monthsSliderOptions } from 'src/pages/home-page/components/events-secti
 
 import styles from './index.module.scss'
 
-export const MonthsSlider: FC = () => {
+type MonthsSliderProps = {
+	activeMonth: number
+	changeActiveMonth: (arg: number) => void
+}
+
+export const MonthsSlider: FC<MonthsSliderProps> = ({ activeMonth, changeActiveMonth }) => {
 	const { data: monthsList, isSuccess } = useGetAllEventMonthsQuery(null)
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
-	const [activeMonth, setActiveMonth] = useState(0)
+
+	const handleChangeMonth = (idx: number, isActive: boolean) => {
+		if (isActive) {
+			changeActiveMonth(idx)
+		}
+	}
 
 	useEffect(() => {
 		if (swiperRef && isSuccess) {
 			const currentMonthIndex = new Date().getMonth()
-			setActiveMonth(currentMonthIndex)
+			changeActiveMonth(currentMonthIndex)
 			swiperRef.current?.swiper.slideTo(currentMonthIndex)
 		}
 	}, [swiperRef, isSuccess])
@@ -32,11 +42,11 @@ export const MonthsSlider: FC = () => {
 				{monthsList?.map((slideItem, idx) => (
 					<SwiperSlide
 						className={cn(styles.monthSlide, {
-							[styles._disableSlide]: slideItem?.length,
+							[styles._disableSlide]: !slideItem?.length,
 							[styles._activeSlide]: idx === activeMonth,
 						})}
 						key={uid(slideItem)}
-						onClick={() => setActiveMonth(idx)}
+						onClick={() => handleChangeMonth(idx, !!slideItem?.length)}
 					>
 						<p>{getMonthName(idx)}</p>
 					</SwiperSlide>

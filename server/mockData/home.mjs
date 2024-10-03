@@ -125,7 +125,7 @@ export let homeEventMonths = [
 			id: '1',
 			category: {
 				id: '13',
-				title: 'Кулачки',
+				title: 'Атмановские кулачки',
 			},
 			title: 'Атмановские кулачки',
 			imgUrl:
@@ -174,7 +174,7 @@ export let homeEventMonths = [
 			id: '5',
 			category: {
 				id: '13',
-				title: 'Кулачки',
+				title: 'Атмановские кулачки',
 			},
 			title: 'Атмановские кулачки',
 			imgUrl:
@@ -209,7 +209,7 @@ export let homeEventMonths = [
 			id: '7',
 			category: {
 				id: '13',
-				title: 'Кулачки',
+				title: 'Атмановские кулачки',
 			},
 			title: 'Атмановские кулачки',
 			imgUrl:
@@ -262,7 +262,7 @@ export let homeEventMonths = [
 			id: '21',
 			category: {
 				id: '13',
-				title: 'Кулачки',
+				title: 'Атмановские кулачки',
 			},
 			title: 'Атмановские кулачки',
 			imgUrl:
@@ -327,7 +327,7 @@ export let homeEventMonths = [
 			id: '25',
 			category: {
 				id: '13',
-				title: 'Кулачки',
+				title: 'Атмановские кулачки',
 			},
 			title: 'Атмановские кулачки',
 			imgUrl:
@@ -346,7 +346,7 @@ export let homeEventMonths = [
 			id: '35',
 			category: {
 				id: '13',
-				title: 'Кулачки',
+				title: 'Атмановские кулачки',
 			},
 			title: 'Атмановские кулачки',
 			imgUrl:
@@ -369,6 +369,6 @@ export let homeEventsCategories = [
 	},
 	{
 		id: '13',
-		title: 'Кулачки',
+		title: 'Атмановские кулачки',
 	},
 ]

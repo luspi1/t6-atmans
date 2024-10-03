@@ -4,7 +4,7 @@ import { type HomeEventItem } from 'src/types/home-page'
 import { Link } from 'react-router-dom'
 import { AppRoute } from 'src/routes/main-routes/consts'
 
-import { mainFormatDate } from 'src/helpers/utils'
+import { getDayOfWeek, mainFormatDate } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
 
@@ -27,12 +27,14 @@ export const HomeEvent: FC<EventItemProps> = ({
 				</div>
 				<div className={styles.eventContent}>
 					<h6>{title}</h6>
-					<p className={styles.eventDate}>{mainFormatDate(date, ' ')}</p>
+					<p className={styles.eventDate}>
+						{mainFormatDate(date)}, {getDayOfWeek(date)}
+					</p>
 					<p className={styles.eventLocations}>
 						<span>{locTitle}</span>
 						<span>{address}</span>
 					</p>
-					{description && <p>{description}</p>}
+					{description && <p className={styles.eventDesc}>{description}</p>}
 				</div>
 			</Link>
 		</li>
