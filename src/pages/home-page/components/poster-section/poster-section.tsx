@@ -30,12 +30,17 @@ export const PosterSection: FC = () => {
 								<div className={styles.slideInfo}>
 									<div className={styles.slideInfoTitle}>
 										<ul>
-											{slideItem?.dates && <li>{formatDateRange(slideItem.dates)}</li>}
+											{slideItem?.dates && <li>{formatDateRange(slideItem.dates, '-')}</li>}
 											{slideItem?.location && <li>{slideItem.location}</li>}
 										</ul>
 										<h5>{slideItem.title}</h5>
 									</div>
-									<MainButton as='route' to={`events/${slideItem.id}`}>
+									<MainButton
+										as='route'
+										$padding='0 50px'
+										$height='50px'
+										to={`events/${slideItem.id}`}
+									>
 										Зарегистрироваться
 									</MainButton>
 								</div>

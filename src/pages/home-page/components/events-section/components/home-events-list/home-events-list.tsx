@@ -5,6 +5,7 @@ import { type HomeEventItem } from 'src/types/home-page'
 import { MainButton } from 'src/UI/MainButton/MainButton'
 
 import styles from './index.module.scss'
+import { FlexRow } from 'src/components/flex-row/flex-row'
 
 type HomeEventsListProps = {
 	homeEvents: HomeEventItem[]
@@ -12,21 +13,23 @@ type HomeEventsListProps = {
 }
 
 export const HomeEventsList: FC<HomeEventsListProps> = ({ homeEvents, previewCount = 3 }) => {
-	const [countEvents, setCountEvents] = useState(previewCount)
-	const slicedEvents = [...homeEvents].slice(0, countEvents)
+	const [expandedList, setExpandedList] = useState(false)
+	const slicedEvents = homeEvents.slice(0, expandedList ? homeEvents.length : previewCount)
 	return (
 		<>
 			<ul className={styles.eventsList}>
 				{slicedEvents?.map((item) => <HomeEvent key={item.id} {...item} />)}
 			</ul>
-			{homeEvents.length > countEvents ? (
-				<MainButton as='button' type='button' onClick={() => setCountEvents(homeEvents.length)}>
-					Показать еще
-				</MainButton>
-			) : (
-				<MainButton as='button' type='button' onClick={() => setCountEvents(previewCount)}>
-					Скрыть
-				</MainButton>
+			{homeEvents.length > previewCount && (
+				<FlexRow $justifyContent='center'>
+					<MainButton
+						$variant='secondary'
+						type='button'
+						onClick={() => setExpandedList(!expandedList)}
+					>
+						{expandedList ? 'Скрыть' : 'Показать еще'}
+					</MainButton>
+				</FlexRow>
 			)}
 		</>
 	)

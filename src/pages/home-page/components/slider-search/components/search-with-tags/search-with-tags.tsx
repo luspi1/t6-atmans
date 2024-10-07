@@ -32,7 +32,7 @@ export const SearchWithTags: FC = () => {
 							placeholder='Введите запрос...'
 							required
 						/>
-						<MainButton className={styles.searchBtn} as='button' type='submit'>
+						<MainButton className={styles.searchBtn} $radius='3px' as='button' type='submit'>
 							найти
 						</MainButton>
 					</form>

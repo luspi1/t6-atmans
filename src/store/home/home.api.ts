@@ -2,8 +2,10 @@ import {
 	type HomeEthnoItems,
 	type HomeEventCategory,
 	type HomeEventItem,
+	type HomeNewsItem,
 	type HomePoster,
 	type HomeRegion,
+	type HomeVideoItem,
 } from 'src/types/home-page'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
@@ -50,13 +52,24 @@ export const homeApi = createApi({
 				url: 'home/all-event-categories',
 			}),
 		}),
+		getHomeNews: build.query<HomeNewsItem[], null>({
+			query: () => ({
+				url: 'home/all-news',
+			}),
+		}),
+		getHomeVideos: build.query<HomeVideoItem[], null>({
+			query: () => ({
+				url: 'home/all-videos',
+			}),
+		}),
 	}),
 })
 
 export const {
 	useGetHomeRegionsQuery,
 	useGetHomeEventCategoriesQuery,
-	useGetHomeEthnoQuery,
+	useGetHomeNewsQuery,
+	useGetHomeVideosQuery,
 	useGetHomeEventMonthsQuery,
 	useGetAllEventMonthsQuery,
 	useGetHomePostersQuery,

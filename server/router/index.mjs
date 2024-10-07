@@ -37,8 +37,10 @@ import {
 	getGroupPhotos,
 	getGroups,
 	getGroupTable,
+	getHomeNews,
 	getHomePosters,
 	getHomeRegions,
+	getHomeVideos,
 	getNews,
 	getNewsById,
 	getNewsVideoById,
@@ -140,3 +142,5 @@ router.get('/home/posters', getHomePosters)
 router.get('/home/event-months', getEventMonths)
 router.get('/home/all-event-months', getAllEventMonths)
 router.get('/home/all-event-categories', getEventCategories)
+router.get('/home/all-news', getHomeNews)
+router.get('/home/all-videos', getHomeVideos)

@@ -31,3 +31,18 @@ export type HomeEventItem = {
 	}
 	description: string
 }
+
+export type HomeNewsItem = {
+	id: string
+	title: string
+	imgUrl: string
+	date: [Date, Date] | [Date]
+	desc: string
+}
+
+export type HomeVideoItem = {
+	id: string
+	title: string
+	duration: string
+	thumb: string
+}

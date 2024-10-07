@@ -8,7 +8,6 @@ import { EventsSection } from 'src/pages/home-page/components/events-section/eve
 import { VideotapeSection } from 'src/pages/home-page/components/videotape-section/videotape-section'
 import { NewsSection } from 'src/pages/home-page/components/news-section/news-section'
 import { PartnersSection } from 'src/pages/home-page/components/partners-section/partners-section'
-import { FeedbackSection } from 'src/pages/home-page/components/feedback-section/feedback-section'
 
 import styles from './index.module.scss'
 
@@ -21,10 +20,9 @@ export const HomePage: FC = () => {
 			<SliderSearch />
 			<PosterSection />
 			<EventsSection />
-			<VideotapeSection />
 			<NewsSection />
+			<VideotapeSection />
 			<PartnersSection />
-			<FeedbackSection />
 		</div>
 	)
 }

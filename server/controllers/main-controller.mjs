@@ -12,8 +12,10 @@ import { brandEvents } from '../mockData/brandEvents.mjs'
 import {
 	homeEventMonths,
 	homeEventsCategories,
+	homeNews,
 	homePosters,
 	homeRegions,
+	homeVideos,
 } from '../mockData/home.mjs'
 
 export const getRegionsInfo = (req, res) => {
@@ -565,6 +567,14 @@ export const getHomeRegions = (req, res) => {
 export const getHomePosters = (req, res) => {
 	res.status(200).json(homePosters)
 }
+
+export const getHomeNews = (req, res) => {
+	res.status(200).json(homeNews)
+}
+export const getHomeVideos = (req, res) => {
+	res.status(200).json(homeVideos)
+}
+
 export const getAllEventMonths = (req, res) => {
 	res.status(200).json(homeEventMonths)
 }

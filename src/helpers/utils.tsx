@@ -117,7 +117,10 @@ export const mainFormatDate = (
 	return format(date, dateFormat, { locale: ru })
 }
 
-export const formatDateRange = ([startDate, endDate]: [Date, Date] | []): string | null => {
+export const formatDateRange = (
+	[startDate, endDate]: [Date, Date] | [],
+	separator: string = '—',
+): string | null => {
 	if (!startDate || !endDate) return null
 
 	const startMonth = format(startDate, 'MMMM', { locale: ru })
@@ -126,12 +129,12 @@ export const formatDateRange = ([startDate, endDate]: [Date, Date] | []): string
 	const endYear = format(endDate, 'yyyy', { locale: ru })
 
 	if (startYear === endYear && startMonth !== endMonth) {
-		return `${format(startDate, 'd MMMM', { locale: ru })} — ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
+		return `${format(startDate, 'd MMMM', { locale: ru })} ${separator} ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
 	}
 	if (startMonth === endMonth && startYear === endYear) {
-		return `${format(startDate, 'd', { locale: ru })} — ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
+		return `${format(startDate, 'd', { locale: ru })} ${separator} ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
 	}
-	return `${format(startDate, 'd MMMM yyyy', { locale: ru })} — ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
+	return `${format(startDate, 'd MMMM yyyy', { locale: ru })} ${separator} ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
 }
 
 // Получение дня недели

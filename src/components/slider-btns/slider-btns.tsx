@@ -1,17 +1,17 @@
 import React, { type FC, type RefObject, useEffect, useState } from 'react'
+import { type SwiperRef } from 'swiper/react'
+import cn from 'classnames'
 import styled from 'styled-components'
 
 import { SlidePrevSvg } from 'src/UI/icons/slidePrevSVG'
 import { SlideNextSvg } from 'src/UI/icons/slideNextSVG'
 
 import styles from './index.module.scss'
-import { type SwiperRef } from 'swiper/react'
-import cn from 'classnames'
 
 type SliderBtnsProps = {
 	$topPosition?: string
 	$btnsSpacing?: string
-	$variant?: 'sm' | 'lg' | 'opaque'
+	$variant?: 'sm' | 'lg' | 'opaque' | 'sm-light'
 }
 
 type SliderProps = {
@@ -34,8 +34,24 @@ const StyledSliderBtns = styled.div<SliderBtnsProps>`
 		transform: translateY(-50%);
 		&:hover {
 			svg rect {
-				fill-opacity: ${({ $variant }) => ($variant === 'opaque' ? 1 : 0.4)};
-				fill: ${({ $variant }) => ($variant === 'opaque' ? '#D4D4D4' : '#000000')};
+				fill-opacity: ${({ $variant }) => {
+					if ($variant === 'opaque') {
+						return '1'
+					}
+					if ($variant === 'sm-light') {
+						return '0.8'
+					}
+					return '0.4'
+				}};
+				fill: ${({ $variant }) => {
+					if ($variant === 'opaque') {
+						return '#D4D4D4'
+					}
+					if ($variant === 'sm-light') {
+						return '#E7E7E7'
+					}
+					return '#000000'
+				}};
 			}
 		}
 	}
@@ -75,17 +91,22 @@ export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 	const handleNext = () => {
 		swiperRef.current?.swiper.slideNext()
 	}
+	console.log()
 	return (
 		<StyledSliderBtns {...props} $variant={$variant}>
 			<button
-				className={cn(styles.slideBtnPrev, { [styles._disabled]: isBeginning })}
+				className={cn(styles.slideBtnPrev, {
+					[styles._disabled]: isBeginning && !swiperRef.current?.swiper?.params?.loop,
+				})}
 				type='button'
 				onClick={handlePrev}
 			>
 				<SlidePrevSvg variant={$variant} />
 			</button>
 			<button
-				className={cn(styles.slideBtnNext, { [styles._disabled]: isEnd })}
+				className={cn(styles.slideBtnNext, {
+					[styles._disabled]: isEnd && !swiperRef.current?.swiper?.params?.loop,
+				})}
 				type='button'
 				onClick={handleNext}
 			>
