@@ -1,26 +1,24 @@
-@import "src/assets/styles/vars";
-
-
 .partnersSection {
-  padding-bottom: 33px;
+  padding-bottom: 75px;
 }
 
+.partnersList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  li {
+    border-radius: 5px;
+    width: 188px;
+    height: 105px;
+    a {
+      width: 100%;
+      height: 100%;
+      img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+      }
 
-.partnersSlider {
-  max-width: 1220px;
-}
-
-.slideItem {
-  border-radius: 10px;
-  border: 10px solid #ffffff;
-  height: 110px;
-  width: 100%;
-  display: inline-block;
-  img {
-    width: 100%;
-    height: 100%;
+    }
   }
-
 }
-
-

@@ -10,10 +10,6 @@ export const UserInfoNavItems: NavigationItem[] = [
 		link: 'user-events',
 	},
 	{
-		title: 'группы',
-		link: 'user-groups',
-	},
-	{
 		title: 'дисциплины',
 		link: 'user-disciplines',
 	},

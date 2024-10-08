@@ -7,6 +7,7 @@ import { PosterSection } from 'src/pages/home-page/components/poster-section/pos
 import { EventsSection } from 'src/pages/home-page/components/events-section/events-section'
 import { VideotapeSection } from 'src/pages/home-page/components/videotape-section/videotape-section'
 import { NewsSection } from 'src/pages/home-page/components/news-section/news-section'
+import { EthnoSection } from 'src/pages/home-page/components/ethno-section/ethno-section'
 import { PartnersSection } from 'src/pages/home-page/components/partners-section/partners-section'
 
 import styles from './index.module.scss'
@@ -21,6 +22,7 @@ export const HomePage: FC = () => {
 			<PosterSection />
 			<EventsSection />
 			<NewsSection />
+			<EthnoSection />
 			<VideotapeSection />
 			<PartnersSection />
 		</div>

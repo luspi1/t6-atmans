@@ -460,3 +460,66 @@ export let homeVideos = [
 			'https://i.mycdn.me/getVideoPreview?id=5913254234770&idx=7&type=39&tkn=1wE77ep98UgPWAJJNXvFXZC0bWY&fn=vid_w',
 	},
 ]
+
+export let homePartners = [
+	{
+		id: '1',
+		imgUrl: 'https://атманки2022.рф/uploads/catalogimages/original/246_mcai.jpg',
+		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
+	},
+	{
+		id: '2',
+		imgUrl: 'https://атманки2022.рф/uploads/catalogimages/original/199_zhupikov.jpg',
+		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
+	},
+	{
+		id: '3',
+		imgUrl:
+			'https://upload.wikimedia.org/wikipedia/ru/archive/e/ea/20221113222557%21Dobry_Logo.png',
+		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
+	},
+	{
+		id: '4',
+		imgUrl: 'https://assets.turbologo.ru/blog/ru/2020/02/18161800/sber-logo.png',
+		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
+	},
+	{
+		id: '5',
+		imgUrl: 'https://assets.turbologo.ru/blog/ru/2020/02/18161800/sber-logo.png',
+		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
+	},
+	{
+		id: '6',
+		imgUrl: 'https://npotau.ru/templates/default/img/logo.png',
+		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
+	},
+]
+
+export let homeEthnoTypes = [
+	{
+		id: '1',
+		title: 'Ханты-Мансийский',
+		link: 'https://www.khanty-yasang.ru/articles/etnosport',
+		imgUrl: 'https://ugramegasport.ru/wp-content/uploads/2020/06/oblasa.jpg',
+	},
+	{
+		id: '2',
+		title: 'Русский',
+		link: 'http://ethnosport.ru/',
+		imgUrl:
+			'https://s.vtambove.ru/localStorage/news/b5/e1/01/de/b5e101de_resizedScaled_1020to573.jpg',
+	},
+	{
+		id: '3',
+		title: 'Ханты-Мансийский',
+		link: 'https://www.khanty-yasang.ru/articles/etnosport',
+		imgUrl: 'https://ugramegasport.ru/wp-content/uploads/2020/06/oblasa.jpg',
+	},
+	{
+		id: '4',
+		title: 'Русский',
+		link: 'http://ethnosport.ru/',
+		imgUrl:
+			'https://s.vtambove.ru/localStorage/news/b5/e1/01/de/b5e101de_resizedScaled_1020to573.jpg',
+	},
+]

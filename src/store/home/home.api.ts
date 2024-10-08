@@ -1,8 +1,10 @@
 import {
+	type HomeEthno,
 	type HomeEthnoItems,
 	type HomeEventCategory,
 	type HomeEventItem,
 	type HomeNewsItem,
+	type HomePartnerItem,
 	type HomePoster,
 	type HomeRegion,
 	type HomeVideoItem,
@@ -62,6 +64,16 @@ export const homeApi = createApi({
 				url: 'home/all-videos',
 			}),
 		}),
+		getHomePartners: build.query<HomePartnerItem[], null>({
+			query: () => ({
+				url: 'home/partners',
+			}),
+		}),
+		getHomeEthnoTypes: build.query<HomeEthno[], null>({
+			query: () => ({
+				url: 'home/ethno-types',
+			}),
+		}),
 	}),
 })
 
@@ -73,4 +85,6 @@ export const {
 	useGetHomeEventMonthsQuery,
 	useGetAllEventMonthsQuery,
 	useGetHomePostersQuery,
+	useGetHomePartnersQuery,
+	useGetHomeEthnoTypesQuery,
 } = homeApi

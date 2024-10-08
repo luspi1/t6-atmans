@@ -10,9 +10,11 @@ import { newsVideos } from '../mockData/newsVideos.mjs'
 import { groups } from '../mockData/groups.mjs'
 import { brandEvents } from '../mockData/brandEvents.mjs'
 import {
+	homeEthnoTypes,
 	homeEventMonths,
 	homeEventsCategories,
 	homeNews,
+	homePartners,
 	homePosters,
 	homeRegions,
 	homeVideos,
@@ -574,9 +576,14 @@ export const getHomeNews = (req, res) => {
 export const getHomeVideos = (req, res) => {
 	res.status(200).json(homeVideos)
 }
-
+export const getHomePartners = (req, res) => {
+	res.status(200).json(homePartners)
+}
 export const getAllEventMonths = (req, res) => {
 	res.status(200).json(homeEventMonths)
+}
+export const getHomeEthnoTypes = (req, res) => {
+	res.status(200).json(homeEthnoTypes)
 }
 
 export const getEventMonths = (req, res) => {

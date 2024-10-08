@@ -46,3 +46,14 @@ export type HomeVideoItem = {
 	duration: string
 	thumb: string
 }
+export type HomePartnerItem = {
+	id: string
+	imgUrl: string
+	link: string
+}
+export type HomeEthno = {
+	id: string
+	title: string
+	imgUrl: string
+	link: string
+}

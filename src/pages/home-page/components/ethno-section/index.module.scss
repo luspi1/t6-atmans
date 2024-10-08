@@ -1,0 +1,114 @@
+@import "src/assets/styles/vars";
+
+.ethnoSection {
+  position: relative;
+}
+div.ethnoContainer {
+  @media (max-width: 1650px) {
+    max-width: 1220px;
+  }
+  @media (max-width: 1024px) {
+    padding: 0 15px;
+  }
+}
+
+.ethnoSlider {
+  position: relative;
+
+  :global {
+    .swiper-slide:not(.swiper-slide-active) {
+      transform: scale(0.8);
+      @media (max-width: 1024px) {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.slideItem {
+  border-radius: 5px;
+  height: 412px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 47px;
+
+
+  h5 {
+    padding-top: 60px;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+
+    span {
+      font-size: 50px;
+      border-radius: 5px;
+      background-color: #00C246;
+      padding: 0 20px 7px;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      @media (max-width: 1024px) {
+        font-size: 40px;
+        padding: 2px 15px 6px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &:last-child {
+        height: 54px;
+        padding: 0 20px 10px;
+        @media (max-width: 1024px) {
+          height: 47px;
+          padding: 0 15px 8px;
+        }
+      }
+    }
+  }
+  a {
+    z-index: 10;
+  }
+
+  .slideItemImg {
+    position: absolute;
+    inset: 0;
+    border-radius: 5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+  }
+
+}
+
+div.ethnoSliderBtns {
+  @media (max-width: 1650px) {
+    width: 95%;
+  }
+  @media (max-width: 1260px) {
+    width: 73%;
+  }
+  @media (max-width: 1024px) {
+    width: 96%;
+  }
+}
+

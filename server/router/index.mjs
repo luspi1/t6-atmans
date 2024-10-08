@@ -37,7 +37,9 @@ import {
 	getGroupPhotos,
 	getGroups,
 	getGroupTable,
+	getHomeEthnoTypes,
 	getHomeNews,
+	getHomePartners,
 	getHomePosters,
 	getHomeRegions,
 	getHomeVideos,
@@ -144,3 +146,5 @@ router.get('/home/all-event-months', getAllEventMonths)
 router.get('/home/all-event-categories', getEventCategories)
 router.get('/home/all-news', getHomeNews)
 router.get('/home/all-videos', getHomeVideos)
+router.get('/home/partners', getHomePartners)
+router.get('/home/ethno-types', getHomeEthnoTypes)

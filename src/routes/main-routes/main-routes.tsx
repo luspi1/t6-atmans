@@ -52,28 +52,12 @@ import { UsersList } from 'src/pages/participation-page/layout/users-list/users-
 import { UserDetailsLayout } from 'src/pages/participation-page/layout/user-details/layout/user-details-layout'
 import { UserDetails } from 'src/pages/participation-page/layout/user-details/layout/user-details/user-details'
 import { UserEvents } from 'src/pages/participation-page/layout/user-details/layout/user-events/user-events'
-import { UserGroups } from 'src/pages/participation-page/layout/user-details/layout/user-groups/user-groups'
 import { UserDisciplines } from 'src/pages/participation-page/layout/user-details/layout/user-disciplines/user-disciplines'
 import { UserGallery } from 'src/pages/participation-page/layout/user-details/layout/user-gallery/user-gallery'
 import { UserAuthors } from 'src/pages/participation-page/layout/user-details/layout/user-authors/user-authors'
 
 import { NewsDetails } from 'src/pages/news-page/layout/news-details/news-details'
 
-import { GroupsLayout } from 'src/pages/groups-page/layout/groups-layout'
-import { GroupsList } from 'src/pages/groups-page/layout/groups-list/groups-list'
-import { GroupDetailsLayout } from 'src/pages/groups-page/layout/group-details/layout/group-details-layout'
-import { GroupDetails } from 'src/pages/groups-page/layout/group-details/layout/group-details/group-details'
-import { GroupContacts } from 'src/pages/groups-page/layout/group-details/layout/group-contacts/group-contacts'
-import { GroupEvents } from 'src/pages/groups-page/layout/group-details/layout/group-events/group-events'
-import { GroupParticipantes } from 'src/pages/groups-page/layout/group-details/layout/group-participantes/group-participantes'
-import { GroupTable } from 'src/pages/groups-page/layout/group-details/layout/group-table/group-table'
-import { GroupDisciplines } from 'src/pages/groups-page/layout/group-details/layout/group-disciplines/group-disciplines'
-import { GroupGallery } from 'src/pages/groups-page/layout/group-details/layout/group-gallery/group-gallery'
-import { GroupNewsLayout } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/group-news-layout'
-import { GroupNewsList } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/group-news-list/group-news-list'
-import { GroupNewsVideos } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/news-videos/group-news-videos'
-import { GroupNewsVideoDetails } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/group-news-video-details/group-news-video-details'
-import { GroupNewsDetails } from 'src/pages/groups-page/layout/group-details/layout/group-news/layout/group-news-details/group-news-details'
 import { NewsLayout } from 'src/pages/news-page/layout/news-layout'
 import { VideosLayout } from 'src/pages/videos-page/layout/videos-layout'
 import { Videos } from 'src/pages/videos-page/layout/videos/videos'
@@ -174,28 +158,9 @@ export const MainRoutes = () => {
 					<Route path=':id' element={<UserDetailsLayout />}>
 						<Route path={AppRoute.UserInfo} element={<UserDetails />} />
 						<Route path={AppRoute.UserEvents} element={<UserEvents />} />
-						<Route path={AppRoute.UserGroups} element={<UserGroups />} />
 						<Route path={AppRoute.UserDisciplines} element={<UserDisciplines />} />
 						<Route path={AppRoute.UserGallery} element={<UserGallery />} />
 						<Route path={AppRoute.UserAuthors} element={<UserAuthors />} />
-					</Route>
-				</Route>
-				<Route path={AppRoute.Groups} element={<GroupsLayout />}>
-					<Route index element={<GroupsList />} />
-					<Route path=':id' element={<GroupDetailsLayout />}>
-						<Route path={AppRoute.News} element={<GroupNewsLayout />}>
-							<Route index element={<GroupNewsList />} />
-							<Route path={AppRoute.Videos} element={<GroupNewsVideos />} />
-							<Route path={`${AppRoute.Videos}/:vidId`} element={<GroupNewsVideoDetails />} />
-							<Route path=':newsId' element={<GroupNewsDetails />} />
-						</Route>
-						<Route path={AppRoute.GroupInfo} element={<GroupDetails />} />
-						<Route path={AppRoute.GroupContacts} element={<GroupContacts />} />
-						<Route path={AppRoute.GroupEvents} element={<GroupEvents />} />
-						<Route path={AppRoute.GroupParticipantes} element={<GroupParticipantes />} />
-						<Route path={AppRoute.GroupTable} element={<GroupTable />} />
-						<Route path={AppRoute.GroupDisciplines} element={<GroupDisciplines />} />
-						<Route path={AppRoute.GroupGallery} element={<GroupGallery />} />
 					</Route>
 				</Route>
 

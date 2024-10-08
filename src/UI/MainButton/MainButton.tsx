@@ -12,14 +12,14 @@ type ButtonComponentProps = {
 	$padding?: string
 	$height?: string
 	$radius?: string
-	$variant?: 'primary' | 'secondary'
+	$variant?: 'primary' | 'secondary' | 'light'
 }
 
 type SharedStylesTypes = {
 	$padding?: string
 	$height?: string
 	$radius?: string
-	$variant?: 'primary' | 'secondary'
+	$variant?: 'primary' | 'secondary' | 'light'
 }
 
 const sharedStyles = css<SharedStylesTypes>`
@@ -29,19 +29,22 @@ const sharedStyles = css<SharedStylesTypes>`
 
 	background-color: ${({ $variant }) => {
 		if ($variant === 'secondary') return '#E7E7E7'
+		if ($variant === 'light') return '#FFFFFF'
 		return '#00C246'
 	}};
 	color: ${({ $variant }) => {
 		if ($variant === 'secondary') return '#000000'
+		if ($variant === 'light') return '#000000'
 		return '#ffffff'
 	}};
 	text-transform: ${({ $variant }) => {
-		if ($variant === 'secondary') return 'initial'
-		return 'uppercase'
+		if ($variant === 'primary') return 'uppercase'
+		return 'initial'
 	}};
 	border: none;
 	text-decoration: none;
 	font-weight: 700;
+	font-size: 16px;
 	cursor: pointer;
 	display: inline-flex;
 	align-items: center;
@@ -50,10 +53,12 @@ const sharedStyles = css<SharedStylesTypes>`
 	&:hover {
 		background-color: ${({ $variant }) => {
 			if ($variant === 'secondary') return '#E7E7E7'
+			if ($variant === 'light') return '#cdcbcb'
 			return '#00AB3E;'
 		}};
 		color: ${({ $variant }) => {
 			if ($variant === 'secondary') return '#B2B2B2'
+			if ($variant === 'light') return '#000000'
 			return '#ffffff'
 		}};
 	}
@@ -72,16 +77,29 @@ const StyledRouteLink = styled(Link)<SharedStylesTypes>`
 export const MainButton: FC<ButtonComponentProps & (ButtonProps | AnchorProps | LinkProps)> = ({
 	children,
 	as = 'button',
+	$variant = 'primary',
 	...props
 }) => {
 	if (as === 'button') {
-		return <StyledButton {...(props as ButtonProps)}>{children}</StyledButton>
+		return (
+			<StyledButton $variant={$variant} {...(props as ButtonProps)}>
+				{children}
+			</StyledButton>
+		)
 	}
 	if (as === 'link') {
-		return <StyledLink {...(props as AnchorProps)}>{children}</StyledLink>
+		return (
+			<StyledLink $variant={$variant} {...(props as AnchorProps)}>
+				{children}
+			</StyledLink>
+		)
 	}
 	if (as === 'route') {
-		return <StyledRouteLink {...(props as LinkProps)}>{children}</StyledRouteLink>
+		return (
+			<StyledRouteLink $variant={$variant} {...(props as LinkProps)}>
+				{children}
+			</StyledRouteLink>
+		)
 	}
 	return null
 }

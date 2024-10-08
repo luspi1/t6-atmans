@@ -16,6 +16,7 @@ type SliderBtnsProps = {
 
 type SliderProps = {
 	swiperRef: RefObject<SwiperRef>
+	className?: string
 }
 
 const StyledSliderBtns = styled.div<SliderBtnsProps>`
@@ -60,6 +61,7 @@ const StyledSliderBtns = styled.div<SliderBtnsProps>`
 export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 	swiperRef,
 	$variant = 'sm',
+	className,
 	...props
 }) => {
 	const [isBeginning, setIsBeginning] = useState(true)
@@ -93,7 +95,7 @@ export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 	}
 	console.log()
 	return (
-		<StyledSliderBtns {...props} $variant={$variant}>
+		<StyledSliderBtns className={className} {...props} $variant={$variant}>
 			<button
 				className={cn(styles.slideBtnPrev, {
 					[styles._disabled]: isBeginning && !swiperRef.current?.swiper?.params?.loop,
