@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 import { Container } from 'src/UI/Container/Container'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { MenuList } from 'src/components/main-navigation/components/menu-list/menu-list'
+import { PersonalControllers } from 'src/components/main-navigation/components/personal-controllers/personal-controllers'
 
 import mainLogo from 'src/assets/img/main-logo.svg'
 
 import styles from './index.module.scss'
-import { PersonalControllers } from 'src/components/main-navigation/components/personal-controllers/personal-controllers'
 
 export const MainNavigation: FC = () => {
 	return (

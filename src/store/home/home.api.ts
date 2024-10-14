@@ -1,5 +1,5 @@
 import {
-	type HomeEthno,
+	type HomeDepartment,
 	type HomeEthnoItems,
 	type HomeEventCategory,
 	type HomeEventItem,
@@ -69,9 +69,9 @@ export const homeApi = createApi({
 				url: 'home/partners',
 			}),
 		}),
-		getHomeEthnoTypes: build.query<HomeEthno[], null>({
+		getHomeDepartments: build.query<HomeDepartment[], null>({
 			query: () => ({
-				url: 'home/ethno-types',
+				url: 'home/departments',
 			}),
 		}),
 	}),
@@ -86,5 +86,5 @@ export const {
 	useGetAllEventMonthsQuery,
 	useGetHomePostersQuery,
 	useGetHomePartnersQuery,
-	useGetHomeEthnoTypesQuery,
+	useGetHomeDepartmentsQuery,
 } = homeApi

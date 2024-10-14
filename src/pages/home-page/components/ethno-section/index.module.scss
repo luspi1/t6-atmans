@@ -1,9 +1,14 @@
 @import "src/assets/styles/vars";
 
-.ethnoSection {
+.departmentsSectionWrapper {
+  padding: 50px 0;
+}
+
+.departmentsSection {
   position: relative;
 }
-div.ethnoContainer {
+
+div.departmentsContainer {
   @media (max-width: 1650px) {
     max-width: 1220px;
   }
@@ -12,7 +17,7 @@ div.ethnoContainer {
   }
 }
 
-.ethnoSlider {
+.departmentsSlider {
   position: relative;
 
   :global {
@@ -35,47 +40,12 @@ div.ethnoContainer {
   justify-content: center;
   gap: 47px;
 
+  a {
+    z-index: 10;
+  }
 
   h5 {
     padding-top: 60px;
-    text-align: center;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1;
-
-    span {
-      font-size: 50px;
-      border-radius: 5px;
-      background-color: #00C246;
-      padding: 0 20px 7px;
-      font-weight: 700;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      @media (max-width: 1024px) {
-        font-size: 40px;
-        padding: 2px 15px 6px;
-      }
-
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
-
-      &:last-child {
-        height: 54px;
-        padding: 0 20px 10px;
-        @media (max-width: 1024px) {
-          height: 47px;
-          padding: 0 15px 8px;
-        }
-      }
-    }
-  }
-  a {
-    z-index: 10;
   }
 
   .slideItemImg {
@@ -100,7 +70,7 @@ div.ethnoContainer {
 
 }
 
-div.ethnoSliderBtns {
+div.departmentsSliderBtns {
   @media (max-width: 1650px) {
     width: 95%;
   }

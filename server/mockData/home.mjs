@@ -495,31 +495,44 @@ export let homePartners = [
 	},
 ]
 
-export let homeEthnoTypes = [
+export let homeDepartments = [
 	{
 		id: '1',
-		title: 'Ханты-Мансийский',
-		link: 'https://www.khanty-yasang.ru/articles/etnosport',
-		imgUrl: 'https://ugramegasport.ru/wp-content/uploads/2020/06/oblasa.jpg',
+		title: 'Сосновские бугры',
+		imgUrl: 'https://a.d-cd.net/FjAAAgDsi-A-960.jpg',
 	},
 	{
 		id: '2',
-		title: 'Русский',
-		link: 'http://ethnosport.ru/',
+		title: 'Конно-спортивный клуб «Фаворит»',
 		imgUrl:
-			'https://s.vtambove.ru/localStorage/news/b5/e1/01/de/b5e101de_resizedScaled_1020to573.jpg',
+			'https://travel.riamo.ru/upload/files/i/i/820/iiuT3yJ0UDr9H8SMEuQcZ4bUUrzUIEZXZAFYVP0wi5IDg2DQykw9pzYBj8fF3TGITZEAFbAFewl6Qe83H8Oipv0NSCOO5ak.jpeg',
 	},
 	{
 		id: '3',
-		title: 'Ханты-Мансийский',
-		link: 'https://www.khanty-yasang.ru/articles/etnosport',
-		imgUrl: 'https://ugramegasport.ru/wp-content/uploads/2020/06/oblasa.jpg',
+		title: 'Свято-Никольская Мамонтова пустынь',
+		imgUrl:
+			'https://lh6.googleusercontent.com/proxy/glc5jMejHwRKfVLtUT5o5fZDy0skLC-U7GU1BhLDKE00cROfEB_RHAi8TI6fFfezZGVm27L8uAZl5N-SIug',
 	},
 	{
 		id: '4',
-		title: 'Русский',
-		link: 'http://ethnosport.ru/',
+		title: 'Традиционные игры «Атмановские кулачки»',
 		imgUrl:
 			'https://s.vtambove.ru/localStorage/news/b5/e1/01/de/b5e101de_resizedScaled_1020to573.jpg',
+	},
+	{
+		id: '5',
+		title: 'Оленеферма КФХ Гуровых',
+		imgUrl: 'https://shkola1sosnovka-r68.gosweb.gosuslugi.ru/netcat_files/48/188/olen1.jpg',
+	},
+	{
+		id: '6',
+		title: 'Источник святого апостола Андрея Первозванного',
+		imgUrl:
+			'https://lh4.googleusercontent.com/proxy/G-ekbPtDyuAPxGLW07x3riCiYLY1jS7gkUtzGSxLyRZFtPM7195reEMkrmygelOYcyugmYJn0Hd5BwuXbSug',
+	},
+	{
+		id: '7',
+		title: 'Сосновский краеведческий музей',
+		imgUrl: 'https://cdn.culture.ru/images/4859f888-005d-5f34-be27-a53b1ac3bce3',
 	},
 ]

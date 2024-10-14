@@ -2,24 +2,23 @@ import { type NavigationItem } from 'src/types/navigation'
 
 export const MenuItems: NavigationItem[] = [
 	{
-		title: 'федерация',
+		title: 'атманов угол',
 		link: 'about',
 	},
 	{
-		title: 'отделения',
+		title: 'объекты',
 		link: 'departments-list',
-	},
-	{
-		title: 'этноспорт',
-		link: 'ethnosport',
 	},
 	{
 		title: 'новости',
 		link: 'news',
 	},
 	{
+		title: 'видеолента',
+		link: 'videos',
+	},
+	{
 		title: 'события',
 		link: 'events',
-		accent: true,
 	},
 ]

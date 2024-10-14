@@ -51,9 +51,8 @@ export type HomePartnerItem = {
 	imgUrl: string
 	link: string
 }
-export type HomeEthno = {
+export type HomeDepartment = {
 	id: string
 	title: string
 	imgUrl: string
-	link: string
 }

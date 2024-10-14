@@ -23,21 +23,12 @@
     transition: all .3s;
 
     &:hover {
-      color: #009937;
-    }
-  }
-
-  &._accent {
-    a {
-      color: #009937;
-    }
-    .activeLink {
-
+      color: #DD0B16;
     }
   }
 
   a.activeLink {
-    color: #B2B2B2;
+    color: #DD0B16;
   }
 }
 

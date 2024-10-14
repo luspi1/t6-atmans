@@ -1,11 +1,10 @@
 import { type SwiperProps } from 'swiper/react'
 
-export const ethnoSliderOptions: SwiperProps = {
+export const departmentsSliderOptions: SwiperProps = {
 	slidesPerView: 1,
 	grabCursor: true,
 	spaceBetween: 10,
 	centeredSlides: true,
-	loop: true,
 	breakpoints: {
 		1650: {
 			slidesPerView: 1.555,

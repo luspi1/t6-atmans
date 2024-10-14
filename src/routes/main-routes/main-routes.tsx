@@ -17,24 +17,6 @@ import { DepartmentsList } from 'src/pages/departments-page/layout/departments-l
 import { DepartmentsAbout } from 'src/pages/departments-page/layout/departments-about/departments-about'
 import { DepartmentDetailsLayout } from 'src/pages/departments-page/layout/department-details/layout/department-details-layout'
 
-import { EthnosportLayout } from 'src/pages/ethnosport-page/ethnosport-layout'
-import { EthnoGeneral } from 'src/pages/ethnosport-page/layout/ethno-general/ethno-general'
-import { EthnoDetails } from 'src/pages/ethnosport-page/layout/ethno-details/ethno-details'
-import { EthnoDetailsInfo } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-info/ethno-details-info'
-import { EthnoDetailsHistory } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-history/ethno-details-history'
-import { EthnoDetailsDisciplines } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-disciplines/ethno-details-disciplines'
-import { EthnoDetailsEvents } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-events/ethno-details-events'
-import { EthnoDetailsParticipants } from 'src/pages/ethnosport-page/layout/ethno-details/layout/ethno-details-participants/ethno-details-participants'
-
-import { DisciplinesLayout } from 'src/pages/disciplines-page/disciplines-layout'
-import { Disciplines } from 'src/pages/disciplines-page/layout/disciplines/disciplines'
-import { DisciplineDetails } from 'src/pages/disciplines-page/layout/discipline-details/discipline-details'
-import { DisDetailsInfo } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-info/dis-details-info'
-import { DisDetailsEvents } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-events/dis-details-events'
-import { DisDetailsGallery } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-gallery/dis-details-gallery'
-import { DisGalleryPhotos } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-gallery/layout/dis-gallery-photos/dis-gallery-photos'
-import { DisGalleryVideos } from 'src/pages/disciplines-page/layout/discipline-details/layout/dis-details-gallery/layout/dis-gallery-videos/dis-gallery-videos'
-
 import { RegDetailsInfo } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/reg-details-info'
 import { RegDetailsHistory } from 'src/pages/departments-page/layout/department-details/layout/reg-details-history/reg-details-history'
 import { RegDetailsParticipants } from 'src/pages/departments-page/layout/department-details/layout/reg-details-participants/reg-details-participants'
@@ -46,16 +28,6 @@ import { RegNewsVideoDetails } from 'src/pages/departments-page/layout/departmen
 import { RegNewsDetails } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-details/reg-news-details'
 import { RegNewsList } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-list/reg-news-list'
 
-import { ParticipationLayout } from 'src/pages/participation-page/layout/participation-layout'
-
-import { UsersList } from 'src/pages/participation-page/layout/users-list/users-list'
-import { UserDetailsLayout } from 'src/pages/participation-page/layout/user-details/layout/user-details-layout'
-import { UserDetails } from 'src/pages/participation-page/layout/user-details/layout/user-details/user-details'
-import { UserEvents } from 'src/pages/participation-page/layout/user-details/layout/user-events/user-events'
-import { UserDisciplines } from 'src/pages/participation-page/layout/user-details/layout/user-disciplines/user-disciplines'
-import { UserGallery } from 'src/pages/participation-page/layout/user-details/layout/user-gallery/user-gallery'
-import { UserAuthors } from 'src/pages/participation-page/layout/user-details/layout/user-authors/user-authors'
-
 import { NewsDetails } from 'src/pages/news-page/layout/news-details/news-details'
 
 import { NewsLayout } from 'src/pages/news-page/layout/news-layout'
@@ -63,18 +35,6 @@ import { VideosLayout } from 'src/pages/videos-page/layout/videos-layout'
 import { Videos } from 'src/pages/videos-page/layout/videos/videos'
 import { VideoDetails } from 'src/pages/videos-page/layout/video-details/video-details'
 import { News } from 'src/pages/news-page/layout/news/news'
-
-import { BrandsLayout } from 'src/pages/brands-page/layout/brands-layout'
-import { BrandsList } from 'src/pages/brands-page/layout/brands-list/brands-list'
-import { BrandDetailsLayout } from 'src/pages/brands-page/layout/brand-details/layout/brand-details-layout'
-import { BrandNewsLayout } from 'src/pages/brands-page/layout/brand-details/layout/brand-news/layout/brand-news-layout'
-import { BrandNewsList } from 'src/pages/brands-page/layout/brand-details/layout/brand-news/layout/brand-news-list/brand-news-list'
-import { BrandNewsVideos } from 'src/pages/brands-page/layout/brand-details/layout/brand-news/layout/brand-news-videos/brand-news-videos'
-import { BrandNewsVideoDetails } from 'src/pages/brands-page/layout/brand-details/layout/brand-news/layout/brand-news-video-details/brand-news-video-details'
-import { BrandNewsDetails } from 'src/pages/brands-page/layout/brand-details/layout/brand-news/layout/brand-news-details/brand-news-details'
-import { BrandDetails } from 'src/pages/brands-page/layout/brand-details/layout/brand-details/brand-details'
-import { BrandEvents } from 'src/pages/brands-page/layout/brand-details/layout/brand-events/brand-events'
-import { BrandGallery } from 'src/pages/brands-page/layout/brand-details/layout/brand-gallery/brand-gallery'
 
 import { EventsLayout } from 'src/pages/events-page/events-layout'
 import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
@@ -130,48 +90,16 @@ export const MainRoutes = () => {
 					</Route>
 				</Route>
 
-				<Route path={AppRoute.Ethnosport} element={<EthnosportLayout />}>
-					<Route index element={<EthnoGeneral />} />
-					<Route path=':id' element={<EthnoDetails />}>
-						<Route index element={<EthnoDetailsInfo />} />
-						<Route path={AppRoute.EthnoHistory} element={<EthnoDetailsHistory />} />
-						<Route path={AppRoute.EthnoDisciplines} element={<EthnoDetailsDisciplines />} />
-						<Route path={AppRoute.EthnoEvents} element={<EthnoDetailsEvents />} />
-						<Route path={AppRoute.EthnoParticipants} element={<EthnoDetailsParticipants />} />
-					</Route>
-				</Route>
-
-				<Route path={AppRoute.Disciplines} element={<DisciplinesLayout />}>
-					<Route index element={<Disciplines />} />
-					<Route path=':id' element={<DisciplineDetails />}>
-						<Route index element={<DisDetailsInfo />} />
-						<Route path={AppRoute.DisEvents} element={<DisDetailsEvents />} />
-						<Route path={AppRoute.DisGallery} element={<DisDetailsGallery />}>
-							<Route index element={<DisGalleryPhotos />} />
-							<Route path={AppRoute.DisGalleryVideos} element={<DisGalleryVideos />} />
-						</Route>
-					</Route>
-				</Route>
-
-				<Route path={AppRoute.Users} element={<ParticipationLayout />}>
-					<Route index element={<UsersList />} />
-					<Route path=':id' element={<UserDetailsLayout />}>
-						<Route path={AppRoute.UserInfo} element={<UserDetails />} />
-						<Route path={AppRoute.UserEvents} element={<UserEvents />} />
-						<Route path={AppRoute.UserDisciplines} element={<UserDisciplines />} />
-						<Route path={AppRoute.UserGallery} element={<UserGallery />} />
-						<Route path={AppRoute.UserAuthors} element={<UserAuthors />} />
-					</Route>
-				</Route>
-
 				<Route path={AppRoute.News} element={<NewsLayout />}>
 					<Route index element={<News />} />
 					<Route path=':id' element={<NewsDetails />} />
 				</Route>
+
 				<Route path={AppRoute.Videos} element={<VideosLayout />}>
 					<Route index element={<Videos />} />
 					<Route path=':id' element={<VideoDetails />} />
 				</Route>
+
 				<Route path={AppRoute.Events} element={<EventsLayout />}>
 					<Route index element={<EventsListPage />} />
 					<Route path=':id' element={<EventDetailsLayout />}>
@@ -196,20 +124,6 @@ export const MainRoutes = () => {
 						</Route>
 						<Route path={AppRoute.EventGallery} element={<EventGallery />} />
 					</Route>
-				</Route>
-			</Route>
-			<Route path={AppRoute.Brands} element={<BrandsLayout />}>
-				<Route index element={<BrandsList />} />
-				<Route path=':id' element={<BrandDetailsLayout />}>
-					<Route path={AppRoute.News} element={<BrandNewsLayout />}>
-						<Route index element={<BrandNewsList />} />
-						<Route path={AppRoute.Videos} element={<BrandNewsVideos />} />
-						<Route path={`${AppRoute.Videos}/:vidId`} element={<BrandNewsVideoDetails />} />
-						<Route path=':newsId' element={<BrandNewsDetails />} />
-					</Route>
-					<Route path={AppRoute.BrandInfo} element={<BrandDetails />} />
-					<Route path={AppRoute.BrandEventsList} element={<BrandEvents />} />
-					<Route path={AppRoute.BrandGallery} element={<BrandGallery />} />
 				</Route>
 			</Route>
 		</Routes>
