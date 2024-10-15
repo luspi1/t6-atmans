@@ -8,7 +8,7 @@ import { useGetHomePostersQuery } from 'src/store/home/home.api'
 
 import { posterSliderOptions } from './consts'
 
-import { formatDateRange } from 'src/helpers/utils'
+import { mainFormatDate } from 'src/helpers/utils'
 import { MainButton } from 'src/UI/MainButton/MainButton'
 import styles from './index.module.scss'
 
@@ -30,7 +30,9 @@ export const PosterSection: FC = () => {
 								<div className={styles.slideInfo}>
 									<div className={styles.slideInfoTitle}>
 										<ul>
-											{slideItem?.dates && <li>{formatDateRange(slideItem.dates, '-')}</li>}
+											{slideItem?.date && (
+												<li>{mainFormatDate(slideItem.date, "d MMMM yyyy 'года' в HH:mm")}</li>
+											)}
 											{slideItem?.location && <li>{slideItem.location}</li>}
 										</ul>
 										<h5>{slideItem.title}</h5>
@@ -48,7 +50,7 @@ export const PosterSection: FC = () => {
 						</SwiperSlide>
 					))}
 				</Swiper>
-				<SliderBtns $topPosition='50%' $variant='lg' $btnsSpacing='93%' swiperRef={swiperRef} />
+				<SliderBtns $topPosition='47%' $variant='lg' $btnsSpacing='93%' swiperRef={swiperRef} />
 			</section>
 		</Container>
 	)

@@ -12,14 +12,14 @@ type ButtonComponentProps = {
 	$padding?: string
 	$height?: string
 	$radius?: string
-	$variant?: 'primary' | 'secondary' | 'light'
+	$variant?: 'primary' | 'light'
 }
 
 type SharedStylesTypes = {
 	$padding?: string
 	$height?: string
 	$radius?: string
-	$variant?: 'primary' | 'secondary' | 'light'
+	$variant?: 'primary' | 'light'
 }
 
 const sharedStyles = css<SharedStylesTypes>`
@@ -28,12 +28,10 @@ const sharedStyles = css<SharedStylesTypes>`
 	border-radius: ${({ $radius }) => $radius ?? '5px'};
 
 	background-color: ${({ $variant }) => {
-		if ($variant === 'secondary') return '#E7E7E7'
 		if ($variant === 'light') return '#FFFFFF'
-		return '#00C246'
+		return '#DD0A15'
 	}};
 	color: ${({ $variant }) => {
-		if ($variant === 'secondary') return '#000000'
 		if ($variant === 'light') return '#000000'
 		return '#ffffff'
 	}};
@@ -52,12 +50,10 @@ const sharedStyles = css<SharedStylesTypes>`
 
 	&:hover {
 		background-color: ${({ $variant }) => {
-			if ($variant === 'secondary') return '#E7E7E7'
 			if ($variant === 'light') return '#cdcbcb'
-			return '#00AB3E;'
+			return '#c40a14'
 		}};
 		color: ${({ $variant }) => {
-			if ($variant === 'secondary') return '#B2B2B2'
 			if ($variant === 'light') return '#000000'
 			return '#ffffff'
 		}};

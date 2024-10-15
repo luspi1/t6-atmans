@@ -1,7 +1,7 @@
 @import "src/assets/styles/vars";
 
 .posterSection {
-  padding: 60px 0 65px;
+  padding: 65px 0 65px;
 }
 
 .posterSlider {
@@ -34,12 +34,11 @@
       border-radius: 10px;
     }
   }
-
 }
 
 
 .slideInfo{
-  padding: 0 33px 38px;
+  padding: 0 33px 31px;
   z-index: 10;
   margin-top: auto;
   display: flex;
@@ -51,20 +50,20 @@
     color: #ffffff;
     font-size: 35px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.3;
   }
 }
 
 .slideInfoTitle {
   ul {
     display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 8px;
+    margin-bottom: 8px;
     li {
       color: #ffffff;
       font-size: 14px;
       font-weight: 700;
-      padding: 5px 20px;
+      padding: 5px 9px;
       border: 1px solid #ffffff;
       border-radius: 5px;
     }

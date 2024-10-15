@@ -1,7 +1,7 @@
 @import "src/assets/styles/vars";
 
 .departmentsSectionWrapper {
-  padding: 50px 0;
+  padding: 50px 0 62px;
 }
 
 .departmentsSection {
@@ -23,6 +23,13 @@ div.departmentsContainer {
   :global {
     .swiper-slide:not(.swiper-slide-active) {
       transform: scale(0.8);
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.3);
+      }
       @media (max-width: 1024px) {
         transform: scale(1);
       }
@@ -52,15 +59,6 @@ div.departmentsContainer {
     position: absolute;
     inset: 0;
     border-radius: 5px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 5px;
-      background: rgba(0, 0, 0, 0.3);
-    }
-
     img {
       width: 100%;
       height: 100%;
@@ -82,3 +80,48 @@ div.departmentsSliderBtns {
   }
 }
 
+.departmentsSliderPagination {
+  display: flex;
+  gap: 25px;
+
+  li {
+    font-size: 15px;
+  }
+}
+
+div.sliderThumbContainer {
+  @media (max-width: 1024px) {
+    padding: 0;
+  }
+}
+
+.slideThumbItem {
+
+  p {
+    width: 100%;
+    cursor: pointer;
+    @media (max-width: 1280px) {
+      display: flex;
+      justify-content: center;
+    }
+
+    span {
+      font-size: 15px;
+      max-width: 170px;
+      text-decoration: underline;
+      text-align: center;
+      display: block;
+    }
+  }
+}
+
+.departmentsThumbSlider {
+  :global {
+    .swiper-slide-thumb-active {
+      p {
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+  }
+}

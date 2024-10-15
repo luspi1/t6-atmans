@@ -22,11 +22,7 @@ export const HomeEventsList: FC<HomeEventsListProps> = ({ homeEvents, previewCou
 			</ul>
 			{homeEvents.length > previewCount && (
 				<FlexRow $justifyContent='center'>
-					<MainButton
-						$variant='secondary'
-						type='button'
-						onClick={() => setExpandedList(!expandedList)}
-					>
+					<MainButton $variant='light' type='button' onClick={() => setExpandedList(!expandedList)}>
 						{expandedList ? 'Скрыть' : 'Показать еще'}
 					</MainButton>
 				</FlexRow>

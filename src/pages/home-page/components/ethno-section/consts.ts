@@ -20,3 +20,21 @@ export const departmentsSliderOptions: SwiperProps = {
 		},
 	},
 }
+export const departmentsThumbSliderOptions: SwiperProps = {
+	slidesPerView: 2,
+	spaceBetween: 15,
+	breakpoints: {
+		1650: {
+			slidesPerView: 7,
+		},
+		1260: {
+			slidesPerView: 6,
+		},
+		1024: {
+			slidesPerView: 5,
+		},
+		768: {
+			slidesPerView: 4,
+		},
+	},
+}

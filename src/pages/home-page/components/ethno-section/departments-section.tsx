@@ -1,31 +1,37 @@
-import { type FC, type RefObject, useRef } from 'react'
-
+import { type FC, type RefObject, useRef, useState } from 'react'
+import { type Swiper as SwiperClass } from 'swiper'
 import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react'
+import { Thumbs } from 'swiper'
 
 import { SliderBtns } from 'src/components/slider-btns/slider-btns'
 import { useGetHomeDepartmentsQuery } from 'src/store/home/home.api'
 import { MainButton } from 'src/UI/MainButton/MainButton'
-import { departmentsSliderOptions } from 'src/pages/home-page/components/ethno-section/consts'
+import {
+	departmentsSliderOptions,
+	departmentsThumbSliderOptions,
+} from 'src/pages/home-page/components/ethno-section/consts'
 import { Container } from 'src/UI/Container/Container'
 import { AppRoute } from 'src/routes/main-routes/consts'
-
-import styles from './index.module.scss'
 import { HighlightedText } from 'src/components/highlighted-text/highlighted-text'
 import { FlexRow } from 'src/components/flex-row/flex-row'
+
+import styles from './index.module.scss'
+import cn from 'classnames'
 
 export const DepartmentsSection: FC = () => {
 	const { data: departmentsList } = useGetHomeDepartmentsQuery(null)
 
+	const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null)
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 
 	if (!departmentsList?.length) return null
 
 	return (
-		<div className={styles.departmentsSectionWrapper}>
+		<section className={cn(styles.departmentsSectionWrapper, '_bordered')}>
 			<Container>
 				<FlexRow $margin='0 0 10px 0' $justifyContent='space-between'>
 					<h4>Объекты</h4>
-					<MainButton as='route' to={AppRoute.News} $variant='secondary'>
+					<MainButton as='route' to={AppRoute.Home} $variant='light'>
 						Все объекты
 					</MainButton>
 				</FlexRow>
@@ -36,6 +42,8 @@ export const DepartmentsSection: FC = () => {
 						className={styles.departmentsSlider}
 						initialSlide={Math.floor(departmentsList?.length / 2)}
 						{...departmentsSliderOptions}
+						modules={[Thumbs]}
+						thumbs={{ swiper: thumbsSwiper }}
 						ref={swiperRef}
 					>
 						{departmentsList?.map((slideItem, idx) => (
@@ -58,13 +66,30 @@ export const DepartmentsSection: FC = () => {
 					</Swiper>
 					<SliderBtns
 						className={styles.departmentsSliderBtns}
-						$topPosition='50%'
+						$topPosition='42%'
 						$variant='lg'
 						$btnsSpacing='61%'
 						swiperRef={swiperRef}
 					/>
+					<Container className={styles.sliderThumbContainer} $margin='20px auto 0'>
+						<Swiper
+							className={styles.departmentsThumbSlider}
+							modules={[Thumbs]}
+							watchSlidesProgress
+							onSwiper={setThumbsSwiper}
+							{...departmentsThumbSliderOptions}
+						>
+							{departmentsList?.map((slideItem, idx) => (
+								<SwiperSlide className={styles.slideThumbItem} key={idx}>
+									<p>
+										<span>{slideItem.title}</span>
+									</p>
+								</SwiperSlide>
+							))}
+						</Swiper>
+					</Container>
 				</section>
 			</Container>
-		</div>
+		</section>
 	)
 }

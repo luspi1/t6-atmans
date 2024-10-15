@@ -15,7 +15,7 @@ export const PartnersSection: FC = () => {
 			<Container>
 				<FlexRow $margin='0 0 10px 0' $justifyContent='space-between'>
 					<h4>Партнеры</h4>
-					<MainButton as='route' to={AppRoute.Home} $variant='secondary'>
+					<MainButton as='route' to={AppRoute.Home} $variant='light'>
 						Все партнеры
 					</MainButton>
 				</FlexRow>

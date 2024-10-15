@@ -18,7 +18,7 @@ export const NewsSection: FC = () => {
 			<Container>
 				<FlexRow $margin='0 0 10px 0' $justifyContent='space-between'>
 					<h4>Новости</h4>
-					<MainButton as='route' to={AppRoute.News} $variant='secondary'>
+					<MainButton as='route' to={AppRoute.News} $variant='light'>
 						Все новости
 					</MainButton>
 				</FlexRow>

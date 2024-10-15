@@ -81,16 +81,24 @@ export let homeRegions = [
 
 export let homePosters = [
 	{
+		id: '6',
+		title: 'Открытая тренировка',
+		date: '2024-10-17T17:10:00+03:00',
+		location: 'Конно-спортивный клуб «Фаворит»',
+		image_url:
+			'https://img.championat.com/c/1200x900/news/big/t/m/stavki-na-loshadinye-skachki_15923826641808959597.jpg',
+	},
+	{
 		id: '0',
 		title: 'Атмановские кулачки',
-		dates: ['2024-08-23T00:00:00+03:00', '2024-08-25T00:00:00+03:00'],
+		date: '2024-08-23T00:00:00+03:00',
 		location: 'Село Атманов угол',
 		image_url: 'https://атманки.рф/uploads/catalogimages/events/big/53_foto.jpg',
 	},
 	{
 		id: '1',
 		title: 'Международный фестиваль этноспорт',
-		dates: ['2025-02-16T00:00:00+03:00', '2025-02-18T00:00:00+03:00'],
+		date: '2025-02-16T00:00:00+03:00',
 		location: 'Москва',
 		image_url: 'https://rossaprimavera.ru/static/files/45db11f24f2b.jpg',
 	},

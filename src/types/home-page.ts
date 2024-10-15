@@ -7,7 +7,7 @@ export type HomeRegion = {
 export type HomePoster = {
 	id: string
 	title: string
-	dates: [Date, Date]
+	date: Date
 	location: string
 	image_url: string
 }

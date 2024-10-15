@@ -22,7 +22,7 @@ export const VideotapeSection: FC = () => {
 			<Container>
 				<FlexRow $margin='0 0 10px 0' $justifyContent='space-between'>
 					<h4>Видеолента</h4>
-					<MainButton as='route' to={AppRoute.Videos} $variant='secondary'>
+					<MainButton as='route' to={AppRoute.Videos} $variant='light'>
 						Все видео
 					</MainButton>
 				</FlexRow>
