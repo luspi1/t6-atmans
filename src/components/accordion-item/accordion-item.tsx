@@ -8,9 +8,15 @@ type AccordionItemProps = {
 	trigger: ReactNode
 	content: ReactNode
 	className?: string
+	customArrow?: ReactNode
 }
 
-export const AccordionItem: FC<AccordionItemProps> = ({ trigger, content, className }) => {
+export const AccordionItem: FC<AccordionItemProps> = ({
+	trigger,
+	content,
+	className,
+	customArrow,
+}) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
 	const contentRef = useRef<HTMLDivElement>(null)
 
@@ -20,19 +26,19 @@ export const AccordionItem: FC<AccordionItemProps> = ({ trigger, content, classN
 	return (
 		<div className={cn(styles.accordion, className)}>
 			<button
-				className={cn(styles.accordionTrigger, { [styles._contentOpen]: isOpen })}
+				className={cn(styles.accordionTrigger, { _triggerOpen: isOpen })}
 				onClick={toggleAccordion}
 				type='button'
 			>
 				{trigger}
-				<AccordionArrow />
+				{customArrow ?? <AccordionArrow />}
 			</button>
 			<div
 				className={styles.accordionContent}
 				style={{ maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : '0' }}
 				ref={contentRef}
 			>
-				<div className={styles.accordionContentInner}>{content}</div>
+				<div className={cn(styles.accordionContentInner, 'accordion-content')}>{content}</div>
 			</div>
 		</div>
 	)

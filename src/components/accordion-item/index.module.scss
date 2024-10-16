@@ -2,6 +2,18 @@
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 10px 0 rgba(105, 119, 132, 0.25);
+
+  :global {
+    ._triggerOpen {
+      & > svg {
+        transform: rotate(180deg);
+
+        path {
+          fill: #ED1C24;
+        }
+      }
+    }
+  }
 }
 
 .accordionTrigger {
@@ -11,6 +23,7 @@
   text-align: left;
   position: relative;
   width: 100%;
+
   & > svg {
     position: absolute;
     right: 20px;
@@ -28,21 +41,6 @@
 .accordionContent {
   overflow: hidden;
   transition: max-height .3s ease;
-}
-
-._contentOpen {
-  & > svg {
-    transform: rotate(180deg);
-
-    path {
-      fill: #ED1C24;
-    }
-  }
-  :global {
-    ._accordion-open {
-      color: #ED1C24;
-    }
-  }
 }
 
 .accordionContentInner {

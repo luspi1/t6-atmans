@@ -110,11 +110,12 @@ export const defineFileFormat = (fileName: string) => {
 
 // функция форматирования даты с локализацией
 export const mainFormatDate = (
-	date: Date | undefined,
+	date: Date | string | undefined,
 	dateFormat = 'dd MMMM yyyy',
 ): string | null => {
 	if (!date) return null
-	return format(date, dateFormat, { locale: ru })
+	const formatedDate = typeof date === 'string' ? new Date(date) : date
+	return format(formatedDate, dateFormat, { locale: ru })
 }
 
 export const formatDateRange = (

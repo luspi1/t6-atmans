@@ -1,7 +1,9 @@
 import { type FC, type RefObject, useRef } from 'react'
 import { type SwiperRef } from 'swiper/react/swiper-react'
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { generatePath, Link } from 'react-router-dom'
+import cn from 'classnames'
 
 import { Container } from 'src/UI/Container/Container'
 import { SliderBtns } from 'src/components/slider-btns/slider-btns'
@@ -18,7 +20,7 @@ export const VideotapeSection: FC = () => {
 
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 	return (
-		<section className={styles.videotapeSection}>
+		<section className={cn(styles.videotapeSection, '_bordered')}>
 			<Container>
 				<FlexRow $margin='0 0 10px 0' $justifyContent='space-between'>
 					<h4>Видеолента</h4>

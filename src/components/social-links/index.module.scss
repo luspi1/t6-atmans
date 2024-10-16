@@ -4,12 +4,6 @@
   min-width: 150px;
   a {
     display: inline-block;
-    &:hover {
-      svg rect {
-        fill: #00A93D;
-      }
-    }
-
     svg {
       width: 40px;
       height: 40px;

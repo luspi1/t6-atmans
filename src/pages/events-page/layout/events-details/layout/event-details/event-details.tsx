@@ -26,9 +26,9 @@ export const EventDetails: FC = () => {
 			<section>
 				<Placement placeVariants={eventInfo?.pathways} title='Как добраться' />
 			</section>
-			<section>
-				<Placement placeVariants={eventInfo?.placement} title='Размещение' />
-			</section>
+			{/* <section> */}
+			{/* 	<Placement placeVariants={eventInfo?.placement} title='Размещение' /> */}
+			{/* </section> */}
 			<section>
 				<h4>Часто задаваемые вопросы</h4>
 				<div className={styles.faqList}>

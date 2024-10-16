@@ -32,6 +32,8 @@ export type HomeEventItem = {
 	description: string
 }
 
+export type HomeEventsList = Record<string, HomeEventItem[]>
+
 export type HomeNewsItem = {
 	id: string
 	title: string
@@ -55,4 +57,9 @@ export type HomeDepartment = {
 	id: string
 	title: string
 	imgUrl: string
+}
+export type HomeFaq = {
+	id: string
+	title: string
+	content: string
 }

@@ -15,6 +15,9 @@ type HomeEventsListProps = {
 export const HomeEventsList: FC<HomeEventsListProps> = ({ homeEvents, previewCount = 3 }) => {
 	const [expandedList, setExpandedList] = useState(false)
 	const slicedEvents = homeEvents.slice(0, expandedList ? homeEvents.length : previewCount)
+
+	if (homeEvents.length < 1) return <p>Нет событий</p>
+
 	return (
 		<>
 			<ul className={styles.eventsList}>

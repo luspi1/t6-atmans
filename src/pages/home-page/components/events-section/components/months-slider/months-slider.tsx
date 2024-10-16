@@ -2,53 +2,57 @@ import { type FC, type RefObject, useEffect, useRef } from 'react'
 import type { SwiperRef } from 'swiper/react/swiper-react'
 import { uid } from 'react-uid'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { isSameMonth } from 'date-fns'
 import cn from 'classnames'
 
-import { useGetAllEventMonthsQuery } from 'src/store/home/home.api'
 import { Container } from 'src/UI/Container/Container'
 import { SliderBtns } from 'src/components/slider-btns/slider-btns'
-import { getMonthName } from 'src/helpers/utils'
+import { mainFormatDate } from 'src/helpers/utils'
 import { monthsSliderOptions } from 'src/pages/home-page/components/events-section/components/months-slider/consts'
+import { useGetAllEventMonthsQuery } from 'src/store/home/home.api'
 
 import styles from './index.module.scss'
 
 type MonthsSliderProps = {
-	activeMonth: number
-	changeActiveMonth: (arg: number) => void
+	activeMonth: string
+	changeActiveMonth: (arg: string) => void
 }
 
 export const MonthsSlider: FC<MonthsSliderProps> = ({ activeMonth, changeActiveMonth }) => {
 	const { data: monthsList, isSuccess } = useGetAllEventMonthsQuery(null)
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 
-	const handleChangeMonth = (idx: number, isActive: boolean) => {
+	const handleChangeMonth = (date: string, isActive: boolean) => {
 		if (isActive) {
-			changeActiveMonth(idx)
+			changeActiveMonth(date)
 		}
 	}
 
 	useEffect(() => {
 		if (swiperRef && isSuccess) {
-			const currentMonthIndex = new Date().getMonth()
-			changeActiveMonth(currentMonthIndex)
-			swiperRef.current?.swiper.slideTo(currentMonthIndex)
+			const datesArr = Object.keys(monthsList)
+			const activeDateIndex = datesArr.findIndex((dateEl) =>
+				isSameMonth(new Date(), new Date(dateEl)),
+			)
+			changeActiveMonth(datesArr[activeDateIndex])
+			swiperRef.current?.swiper.slideTo(activeDateIndex)
 		}
 	}, [swiperRef, isSuccess])
 
-	if (!monthsList?.length) return
+	if (!monthsList) return
 	return (
 		<Container $margin='0 auto 30px auto' $width='1300px' $padding='0 40px'>
 			<Swiper {...monthsSliderOptions} ref={swiperRef}>
-				{monthsList?.map((slideItem, idx) => (
+				{Object.entries(monthsList)?.map(([date, months]) => (
 					<SwiperSlide
 						className={cn(styles.monthSlide, {
-							[styles._disableSlide]: !slideItem?.length,
-							[styles._activeSlide]: idx === activeMonth,
+							[styles._disableSlide]: !months?.length,
+							[styles._activeSlide]: isSameMonth(new Date(date), new Date(activeMonth)),
 						})}
-						key={uid(slideItem)}
-						onClick={() => handleChangeMonth(idx, !!slideItem?.length)}
+						key={uid(date)}
+						onClick={() => handleChangeMonth(date, !!months?.length)}
 					>
-						<p>{getMonthName(idx)}</p>
+						<p>{mainFormatDate(date, 'LLLL')}</p>
 					</SwiperSlide>
 				))}
 			</Swiper>

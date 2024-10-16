@@ -5,11 +5,10 @@ import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react'
 import { SliderBtns } from 'src/components/slider-btns/slider-btns'
 import { Container } from 'src/UI/Container/Container'
 import { useGetHomePostersQuery } from 'src/store/home/home.api'
-
 import { posterSliderOptions } from './consts'
-
 import { mainFormatDate } from 'src/helpers/utils'
 import { MainButton } from 'src/UI/MainButton/MainButton'
+
 import styles from './index.module.scss'
 
 export const PosterSection: FC = () => {

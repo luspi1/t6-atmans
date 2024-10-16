@@ -1,7 +1,9 @@
 import { type FC, type RefObject, useRef, useState } from 'react'
 import { type Swiper as SwiperClass } from 'swiper'
+
 import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react'
 import { Thumbs } from 'swiper'
+import cn from 'classnames'
 
 import { SliderBtns } from 'src/components/slider-btns/slider-btns'
 import { useGetHomeDepartmentsQuery } from 'src/store/home/home.api'
@@ -9,14 +11,13 @@ import { MainButton } from 'src/UI/MainButton/MainButton'
 import {
 	departmentsSliderOptions,
 	departmentsThumbSliderOptions,
-} from 'src/pages/home-page/components/ethno-section/consts'
+} from 'src/pages/home-page/components/departments-section/consts'
 import { Container } from 'src/UI/Container/Container'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { HighlightedText } from 'src/components/highlighted-text/highlighted-text'
 import { FlexRow } from 'src/components/flex-row/flex-row'
 
 import styles from './index.module.scss'
-import cn from 'classnames'
 
 export const DepartmentsSection: FC = () => {
 	const { data: departmentsList } = useGetHomeDepartmentsQuery(null)

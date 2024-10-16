@@ -38,6 +38,7 @@ import {
 	getGroups,
 	getGroupTable,
 	getHomeDepartments,
+	getHomeFaq,
 	getHomeNews,
 	getHomePartners,
 	getHomePosters,
@@ -148,3 +149,4 @@ router.get('/home/all-news', getHomeNews)
 router.get('/home/all-videos', getHomeVideos)
 router.get('/home/partners', getHomePartners)
 router.get('/home/departments', getHomeDepartments)
+router.get('/home/faq', getHomeFaq)

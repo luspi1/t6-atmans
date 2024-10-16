@@ -1,7 +1,8 @@
 import { type FC } from 'react'
 
-import { Container } from 'src/UI/Container/Container'
+import cn from 'classnames'
 
+import { Container } from 'src/UI/Container/Container'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { FlexRow } from 'src/components/flex-row/flex-row'
 import { MainButton } from 'src/UI/MainButton/MainButton'
@@ -14,7 +15,7 @@ export const NewsSection: FC = () => {
 	const { data: newsList } = useGetHomeNewsQuery(null)
 
 	return (
-		<section className={styles.newsSection}>
+		<section className={cn(styles.newsSection, '_bordered')}>
 			<Container>
 				<FlexRow $margin='0 0 10px 0' $justifyContent='space-between'>
 					<h4>Новости</h4>

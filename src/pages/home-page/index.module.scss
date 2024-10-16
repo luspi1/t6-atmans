@@ -18,6 +18,10 @@
         left: 50%;
         transform: translateX(-50%);
         background: url('data:image/svg+xml,<svg width="620" height="9" viewBox="0 0 620 9" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="4.5" x2="282.295" y2="4.5" stroke="%23A8A8A8"/><line x1="337.703" y1="4.5" x2="619.998" y2="4.5" stroke="%23A8A8A8"/><circle cx="310.5" cy="4.5" r="4.5" fill="%23DD0A15"/></svg>') no-repeat;
+        @media (max-width: 768px) {
+          width: 200px;
+          height: 5px;
+        }
       }
     }
   }

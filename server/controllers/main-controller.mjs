@@ -13,6 +13,7 @@ import {
 	homeDepartments,
 	homeEventMonths,
 	homeEventsCategories,
+	homeFaq,
 	homeNews,
 	homePartners,
 	homePosters,
@@ -587,8 +588,8 @@ export const getHomeDepartments = (req, res) => {
 }
 
 export const getEventMonths = (req, res) => {
-	const { m, cat } = req.query
-	const currentMonthEvents = homeEventMonths[m] || []
+	const { d, cat } = req.query
+	const currentMonthEvents = homeEventMonths[d] || []
 
 	const filteredEvents = currentMonthEvents.filter(
 		(event) => cat === '0' || event.category.id === cat,
@@ -596,6 +597,11 @@ export const getEventMonths = (req, res) => {
 
 	res.status(200).json(filteredEvents)
 }
+
 export const getEventCategories = (req, res) => {
 	res.status(200).json(homeEventsCategories)
+}
+
+export const getHomeFaq = (req, res) => {
+	res.status(200).json(homeFaq)
 }

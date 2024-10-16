@@ -1,12 +1,12 @@
 import {
 	type HomeDepartment,
-	type HomeEthnoItems,
 	type HomeEventCategory,
 	type HomeEventItem,
+	type HomeEventsList,
+	type HomeFaq,
 	type HomeNewsItem,
 	type HomePartnerItem,
 	type HomePoster,
-	type HomeRegion,
 	type HomeVideoItem,
 } from 'src/types/home-page'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
@@ -20,31 +20,21 @@ export const homeApi = createApi({
 		baseUrl: BASE_URL,
 	}),
 	endpoints: (build) => ({
-		getHomeRegions: build.query<HomeRegion[], null>({
-			query: () => ({
-				url: `home/regions`,
-			}),
-		}),
 		getHomePosters: build.query<HomePoster[], null>({
 			query: () => ({
 				url: `home/posters`,
 			}),
 		}),
-		getHomeEthno: build.query<HomeEthnoItems[], null>({
-			query: () => ({
-				url: `ethnosport_directions/`,
-			}),
-		}),
-		getAllEventMonths: build.query<HomeEventItem[][], null>({
+		getAllEventMonths: build.query<HomeEventsList, null>({
 			query: () => ({
 				url: `/home/all-event-months`,
 			}),
 		}),
-		getHomeEventMonths: build.query<HomeEventItem[], { month: number; category: string }>({
-			query: ({ month, category = '' }) => ({
+		getHomeEventMonths: build.query<HomeEventItem[], { date: string; category: string }>({
+			query: ({ date, category = '' }) => ({
 				url: 'home/event-months/',
 				params: {
-					m: month,
+					d: date,
 					cat: category,
 				},
 			}),
@@ -74,11 +64,15 @@ export const homeApi = createApi({
 				url: 'home/departments',
 			}),
 		}),
+		getHomeFaq: build.query<HomeFaq[], null>({
+			query: () => ({
+				url: 'home/faq',
+			}),
+		}),
 	}),
 })
 
 export const {
-	useGetHomeRegionsQuery,
 	useGetHomeEventCategoriesQuery,
 	useGetHomeNewsQuery,
 	useGetHomeVideosQuery,
@@ -87,4 +81,5 @@ export const {
 	useGetHomePostersQuery,
 	useGetHomePartnersQuery,
 	useGetHomeDepartmentsQuery,
+	useGetHomeFaqQuery,
 } = homeApi

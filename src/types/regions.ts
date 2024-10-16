@@ -1,6 +1,5 @@
 import { type ShortDocument } from './document'
 import { type ChronologyItem, type RelatedLink, type SourceLink } from 'src/types/global'
-import { type UserItem } from './users'
 import { type EventsItem } from 'src/types/events'
 
 export type RegionItem = {
@@ -25,7 +24,6 @@ export type RegionItem = {
 	relatedObjects: RelatedLink[]
 	relatedLinks: SourceLink[]
 	documents: ShortDocument[]
-	participants: UserItem[]
 	history: {
 		mainDesc: string
 		chronology: ChronologyItem[]

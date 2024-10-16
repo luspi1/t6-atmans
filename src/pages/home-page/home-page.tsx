@@ -6,10 +6,11 @@ import { PosterSection } from 'src/pages/home-page/components/poster-section/pos
 import { EventsSection } from 'src/pages/home-page/components/events-section/events-section'
 import { VideotapeSection } from 'src/pages/home-page/components/videotape-section/videotape-section'
 import { NewsSection } from 'src/pages/home-page/components/news-section/news-section'
-import { DepartmentsSection } from 'src/pages/home-page/components/ethno-section/departments-section'
+import { DepartmentsSection } from 'src/pages/home-page/components/departments-section/departments-section'
 import { PartnersSection } from 'src/pages/home-page/components/partners-section/partners-section'
 
 import styles from './index.module.scss'
+import { FaqSection } from 'src/pages/home-page/components/faq-section/faq-section'
 
 export const HomePage: FC = () => {
 	return (
@@ -23,6 +24,7 @@ export const HomePage: FC = () => {
 			<NewsSection />
 			<VideotapeSection />
 			<PartnersSection />
+			<FaqSection />
 		</div>
 	)
 }

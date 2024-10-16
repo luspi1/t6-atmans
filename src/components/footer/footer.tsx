@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { Container } from 'src/UI/Container/Container'
 import { SocialLinks } from 'src/components/social-links/social-links'
-import footerEthnoImg from 'src/assets/img/footer-ethno.svg'
+import footerLogo from 'src/assets/img/footer-logo.svg'
 
 import styles from './index.module.scss'
 import { AppRoute } from 'src/routes/main-routes/consts'
@@ -18,8 +18,9 @@ export const Footer: FC = () => {
 					$gap='10px'
 					$alignItems='center'
 					$justifyContent='space-between'
+					$margin='0 0 45px 0'
 				>
-					<img src={footerEthnoImg} alt='Этноспорт России' />
+					<img src={footerLogo} alt='Логотип' />
 					<FlexRow $gap='50px'>
 						<Link to={AppRoute.Events}>События</Link>
 						<Link to={AppRoute.Events}>Обратная связь</Link>
@@ -41,13 +42,13 @@ export const Footer: FC = () => {
 					<SocialLinks className={styles.footerSocials} />
 				</div>
 				<div className={styles.footerDesc}>
-					<p>© Федерация Этноспорта России, 2024</p>
+					<p>© Атманов угол, 2024</p>
 					<p>Разработано и построено в НПО ТАУ. Платформа Т-6.</p>
 				</div>
 				<p className={styles.footerCertificate}>
 					Cвидетельство о регистрации средства массовой информации Эл № ФС77 - 37229 от 14 августа
-					2009 г. Выдано Федеральной службой по надзору в сфере связи, информационных технологий и
-					массовых коммуникаций (Роскомнадзор).
+					2009 г. <br /> Выдано Федеральной службой по надзору в сфере связи, информационных
+					технологий и массовых коммуникаций (Роскомнадзор).
 				</p>
 			</Container>
 		</footer>
