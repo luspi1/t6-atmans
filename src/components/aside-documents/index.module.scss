@@ -1,17 +1,20 @@
+@import "src/assets/styles/vars";
+
 .documents {
   max-width: 203px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 22px;
 
   li {
     line-height: 1.2;
+    font-size: 14px;
+    @include ptsans-regular
   }
 
   .documentLink {
-    font-size: 14px;
     color: #015DB9;
-    line-height: 1;
+    line-height: 1.25;
   }
 
   .documentInfo {

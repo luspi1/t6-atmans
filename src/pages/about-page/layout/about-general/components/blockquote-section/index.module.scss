@@ -1,8 +1,10 @@
+@import "src/assets/styles/vars";
+
 .blockquote {
   display: flex;
   align-items: flex-start;
   gap: 18px;
-  margin-bottom: 35px;
+  margin-bottom: 42px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -14,6 +16,7 @@
     font-style: italic;
     font-weight: 400;
     line-height: 1.5;
+    @include ptsans-italic
   }
 
   footer {
@@ -21,13 +24,14 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
+    @include ptsans-regular
   }
 }
 
 .blockquoteImg {
-  width: 125px;
-  min-width: 125px ;
-  height: 157px;
+  width: 132px;
+  min-width: 132px ;
+  height: 164px;
   border: 7px solid #EBEEF2;
   img {
     width: 100%;

@@ -12,11 +12,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    @include ptsans-regular;
   }
 
   a {
     color: #DE0008;
-    @include ptsans-regular;
     font-size: 14px;
   }
 

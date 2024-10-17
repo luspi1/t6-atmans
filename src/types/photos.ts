@@ -1,7 +1,7 @@
 export type ImageItem = {
 	original: string
 	thumbnail: string
-	date: Date
+	date?: Date
 	title: string
 	id: string
 }

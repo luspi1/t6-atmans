@@ -20,7 +20,7 @@ export const AsideDocuments: FC<AsideDocumentsProps> = ({ documents, className }
 					</a>
 
 					<p className={styles.documentInfo}>
-						{item.type}-файл, {item.size}
+						{item.type}-файл, {item.size} Кбайт
 					</p>
 				</li>
 			))}

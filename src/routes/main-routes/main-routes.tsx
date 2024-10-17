@@ -7,10 +7,7 @@ import { HomePage } from 'src/pages/home-page/home-page'
 import { AboutLayout } from 'src/pages/about-page/about-layout'
 import { AboutGeneral } from 'src/pages/about-page/layout/about-general/about-general'
 import { AboutHistory } from 'src/pages/about-page/layout/about-history/about-history'
-import { AboutDirection } from 'src/pages/about-page/layout/about-direction/about-direction'
 import { AboutContacts } from 'src/pages/about-page/layout/about-contacts/about-contacts'
-import { AboutDocuments } from 'src/pages/about-page/layout/about-documents/about-documents'
-import { AboutMediakit } from 'src/pages/about-page/layout/about-mediakit/about-mediakit'
 
 import { DepartmentsLayout } from 'src/pages/departments-page/layout/departments-layout'
 import { DepartmentsList } from 'src/pages/departments-page/layout/departments-list/departments-list'
@@ -53,6 +50,9 @@ import { EventGallery } from 'src/pages/events-page/layout/events-details/layout
 import { EventProgramLayout } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-layout'
 import { EventProgramDay } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-day/event-program-day'
 import { EventDetails } from 'src/pages/events-page/layout/events-details/layout/event-details/event-details'
+import { AboutCultureLayout } from 'src/pages/about-page/layout/about-culture/about-culture-layout'
+import { CultureGeneral } from 'src/pages/about-page/layout/about-culture/layout/culture-general/culture-general'
+import { CultureDetails } from 'src/pages/about-page/layout/about-culture/layout/culture-details/culture-details'
 
 export const MainRoutes = () => {
 	return (
@@ -63,10 +63,11 @@ export const MainRoutes = () => {
 				<Route path={AppRoute.About} element={<AboutLayout />}>
 					<Route index element={<AboutGeneral />} />
 					<Route path={AppRoute.AboutHistory} element={<AboutHistory />} />
-					<Route path={AppRoute.AboutDirection} element={<AboutDirection />} />
+					<Route path={AppRoute.AboutCulture} element={<AboutCultureLayout />}>
+						<Route index element={<CultureGeneral />} />
+						<Route path=':id' element={<CultureDetails />} />
+					</Route>
 					<Route path={AppRoute.AboutContacts} element={<AboutContacts />} />
-					<Route path={AppRoute.AboutDocuments} element={<AboutDocuments />} />
-					<Route path={AppRoute.AboutMediakit} element={<AboutMediakit />} />
 				</Route>
 
 				<Route path={AppRoute.Departments} element={<DepartmentsLayout />}>

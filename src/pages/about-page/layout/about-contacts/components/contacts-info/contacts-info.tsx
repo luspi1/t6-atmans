@@ -1,34 +1,28 @@
 import { type FC } from 'react'
 import styles from './index.module.scss'
+import { useGetEventByIdQuery } from 'src/store/events/events.api'
+import { Placement } from 'src/modules/placement/placement'
 
 export const ContactsInfo: FC = () => {
+	const { data: contactsInfo } = useGetEventByIdQuery('1')
 	return (
 		<>
 			<div className={styles.contactsBlock}>
 				<h4>Почтовый адрес</h4>
-				<p>119019, Москва, Гагаринский пер., 4/2</p>
+				<p>119019, Тамбовская область, Сосновский округ, с. Атманов угол, ул. Ленина, 4/2</p>
 			</div>
 
 			<div className={styles.contactsBlock}>
-				<h4>Телефоны</h4>
-				<p>
-					Демидов Артём Геннадьевич <br /> Председатель Центрального совета <br />8 (495) 695-07-06
-					(приемная)
-				</p>
+				<h4>Телефон</h4>
+				<p>Демидов Артём Геннадьевич, заведующий библиотекой</p>
+				<a href='tel:csvoopik@mail.ru'>+7 (495) 695-07-06</a>
 			</div>
 
 			<div className={styles.contactsBlock}>
 				<h4>Электронная почта</h4>
-				<p>
-					Для писем, связанных с работой Общества <br />
-					<a href='mailto:csvoopik@mail.ru'>csvoopik@mail.ru</a>
-				</p>
+				<a href='mailto:mail@mail.ru'>mail@mail.ru</a>
 			</div>
-
-			<div className={styles.contactsLinks}>
-				<a href='#'>Центральный Совет ВООПИиК</a>
-				<a href='#'>Региональные отделения</a>
-			</div>
+			<Placement placeVariants={contactsInfo?.pathways} title='Маршруты' />
 		</>
 	)
 }

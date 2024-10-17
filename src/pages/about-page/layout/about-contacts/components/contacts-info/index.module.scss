@@ -1,15 +1,18 @@
 .contactsBlock {
-    margin-bottom: 28px;
+  margin-bottom: 28px;
+  font-family: 'PT Sans', sans-serif;
 
+  h4 {
+    margin-bottom: 7px;
+  }
 
-
-    a[href^="tel:"] {
-        color: inherit;
-    }
+  a {
+    color: #015DB9;
+  }
 }
 
 .contactsLinks {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }

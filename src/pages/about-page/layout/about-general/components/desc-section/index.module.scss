@@ -1,5 +1,12 @@
+@import "src/assets/styles/vars";
+
+
 .descSection {
   p {
-    margin-bottom: 23px;
+    @include ptsans-regular;
+    font-size: 16px;
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
   }
 }

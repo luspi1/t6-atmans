@@ -1,13 +1,11 @@
 export enum ReducerPath {
 	Home = 'home/api',
 	Regions = 'regions/api',
-	Users = 'users/api',
 	Ethnosport = 'ethnosport/api',
-	Disciplines = 'disciplines/api',
 	News = 'news/api',
 	Events = 'events/api',
 	Groups = 'groups/api',
-	BrandEvents = 'brandEvents/api',
+	Cultures = 'cultures/api',
 }
 
 export const ImagesFormat = ['png', 'jpeg', 'jpg', 'webp', 'gif']

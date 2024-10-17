@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 import { Container } from 'src/UI/Container/Container'
 import { BreadCrumbs } from 'src/modules/bread-crumbs/bread-crumbs'
@@ -12,8 +12,6 @@ import { AboutMenuItems, aboutPageDocuments } from './consts'
 import styles from './index.module.scss'
 
 export const AboutLayout: FC = () => {
-	const { pathname } = useLocation()
-
 	return (
 		<div className={styles.aboutLayout}>
 			<Container>
@@ -21,7 +19,7 @@ export const AboutLayout: FC = () => {
 					crumbsLinksMap={[
 						...AboutMenuItems,
 						{
-							title: 'О Федерации',
+							title: 'Атманов угол',
 							link: 'about',
 						},
 					]}
@@ -33,13 +31,13 @@ export const AboutLayout: FC = () => {
 							className={styles.aboutSideMenu}
 							sideItems={[
 								{
-									title: 'О Федерации',
+									title: 'Атманов угол',
 									link: '/about',
 								},
 								...AboutMenuItems,
 							]}
 						/>
-						{pathname === '/about' && <AsideDocuments documents={aboutPageDocuments} />}
+						<AsideDocuments documents={aboutPageDocuments} />
 					</div>
 				</div>
 			</Container>

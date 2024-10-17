@@ -1,11 +1,10 @@
 import { type FC } from 'react'
 
 import styles from './index.module.scss'
+
 export const DescSection: FC = () => {
 	return (
 		<section className={styles.descSection}>
-			<h4>Что такое Федерация?</h4>
-
 			<p>
 				Всероссийское общество охраны памятников истории и культуры— добровольная самоуправляемая
 				общественная организация, обладающая полной финансовой самостоятельностью и осуществляющая

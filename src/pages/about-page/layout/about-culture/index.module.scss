@@ -1,18 +1,25 @@
 @import "src/assets/styles/vars";
 
-.gallerySection {
-  margin-bottom: 30px;
+.aboutCulturePage {
+  p {
+    @include ptsans-regular;
+    line-height: 1.5;
+  }
 }
 
 .galleryPhotos {
+  margin: 20px 0 20px;
+
   ul {
     justify-items: start;
     gap: 17px;
     grid-template-columns: repeat(auto-fit, minmax(160px, 160px));
+
     li {
       & > div {
         height: 127px;
       }
+
       h6 {
         @include ptsans-regular;
         margin-top: 5px;

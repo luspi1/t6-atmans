@@ -20,6 +20,7 @@ import {
 	homeRegions,
 	homeVideos,
 } from '../mockData/home.mjs'
+import { cultures } from '../mockData/cultures.mjs'
 
 export const getRegionsInfo = (req, res) => {
 	res.status(200).json(regionsInfo)
@@ -604,4 +605,12 @@ export const getEventCategories = (req, res) => {
 
 export const getHomeFaq = (req, res) => {
 	res.status(200).json(homeFaq)
+}
+export const getCultures = (req, res) => {
+	res.status(200).json(cultures)
+}
+export const getCultureById = (req, res) => {
+	const cultureId = req.params.id
+	const searchedCulture = cultures.find((culture) => culture.id === cultureId)
+	res.status(200).json(searchedCulture)
 }

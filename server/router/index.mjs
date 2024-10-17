@@ -9,6 +9,8 @@ import {
 	getBrandEventNewsVideoById,
 	getBrandEventNewsVideos,
 	getBrandEventPhotos,
+	getCultureById,
+	getCultures,
 	getDisciplineById,
 	getEthnosportById,
 	getEthnosportGlobal,
@@ -150,3 +152,5 @@ router.get('/home/all-videos', getHomeVideos)
 router.get('/home/partners', getHomePartners)
 router.get('/home/departments', getHomeDepartments)
 router.get('/home/faq', getHomeFaq)
+router.get('/cultures', getCultures)
+router.get('/cultures/:id', getCultureById)

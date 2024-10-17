@@ -5,7 +5,6 @@ import { type ImageItem } from 'src/types/photos'
 import { type ShortDocument } from 'src/types/document'
 import { type PathwayItem } from 'src/types/location'
 import { type EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
-import { type UserItem } from 'src/types/users'
 import { type ProgramDay } from 'src/types/program'
 
 export type TeamItem = {
@@ -35,10 +34,10 @@ export type EventsItem = {
 	brandImg: string
 	partnerImg: string
 	pathways: PathwayItem[]
+	placement: PathwayItem[]
 	faq: Array<{ title: string; content: string }>
 	chronology: ChronologyItem[]
 	disciplines: EthnosportDisciplineItem[]
-	participants: UserItem[]
 	program: ProgramDay[]
 	teams: TeamItem[]
 	dates: [Date, Date]

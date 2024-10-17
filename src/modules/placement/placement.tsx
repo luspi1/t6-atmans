@@ -50,7 +50,7 @@ export const Placement: FC<PlacementProps> = ({ title, placeVariants }) => {
 				))}
 			</ul>
 			<div className={styles.placeMap}>
-				<iframe src={activePlace.placeSrc} width='100%' height='350' loading='eager'></iframe>
+				<iframe src={activePlace.placeSrc} width='100%' height='300' loading='eager'></iframe>
 			</div>
 		</div>
 	)
