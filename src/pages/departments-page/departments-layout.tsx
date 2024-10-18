@@ -6,16 +6,11 @@ import { Container } from 'src/UI/Container/Container'
 import { BreadCrumbs } from 'src/modules/bread-crumbs/bread-crumbs'
 import { SideMenu } from 'src/components/side-menu/side-menu'
 
-import { DepartmentsMenuItems } from 'src/pages/departments-page/layout/consts'
-
-import { AsideDocuments } from 'src/components/aside-documents/aside-documents'
-import { useGetRegionsInfoQuery } from 'src/store/regions/regions.api'
+import { DepartmentsMenuItems } from 'src/pages/departments-page/consts'
 
 import styles from './index.module.scss'
 
 export const DepartmentsLayout: FC = () => {
-	const { data: regionsInfo } = useGetRegionsInfoQuery(null)
-
 	const { id } = useParams()
 	return (
 		<div className={styles.departmentsLayout}>
@@ -23,11 +18,11 @@ export const DepartmentsLayout: FC = () => {
 				<BreadCrumbs
 					crumbsLinksMap={[
 						{
-							title: 'Региональные отделения',
+							title: 'Объекты',
 							link: 'departments-list',
 						},
 						{
-							title: 'О региональных отделениях ВООПИК',
+							title: 'Об объектах',
 							link: 'departments-about',
 						},
 					]}
@@ -35,10 +30,7 @@ export const DepartmentsLayout: FC = () => {
 				<div className={styles.departmentsContentWrapper}>
 					<Outlet />
 					{!id && (
-						<div>
-							<SideMenu className={styles.departmentsSideMenu} sideItems={DepartmentsMenuItems} />
-							<AsideDocuments documents={regionsInfo?.sideDocs} />
-						</div>
+						<SideMenu className={styles.departmentsSideMenu} sideItems={DepartmentsMenuItems} />
 					)}
 				</div>
 			</Container>

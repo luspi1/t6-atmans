@@ -6,13 +6,13 @@ import { AppRoute } from 'src/routes/main-routes/consts'
 
 import { AsideNews } from 'src/components/aside-news/aside-news'
 import styles from './index.module.scss'
-import { useGetRegionAllNewsQuery, useGetRegionNewsByIdQuery } from 'src/store/regions/regions.api'
+import { useGetObjectAllNewsQuery, useGetObjectNewsByIdQuery } from 'src/store/objects/objects.api'
 
-export const RegNewsDetails = () => {
+export const ObjNewsDetails = () => {
 	const { id, newsId } = useParams()
-	const { data: newsList } = useGetRegionAllNewsQuery({ regCode: id })
-	const { data: newsItemData, isLoading } = useGetRegionNewsByIdQuery({
-		regCode: id,
+	const { data: newsList } = useGetObjectAllNewsQuery({ objCode: id })
+	const { data: newsItemData, isLoading } = useGetObjectNewsByIdQuery({
+		objCode: id,
 		newsId,
 	})
 
@@ -45,7 +45,7 @@ export const RegNewsDetails = () => {
 					))}
 				</ul>
 				<div className={styles.allNewsBlock}>
-					<Link to={`/${AppRoute.Departments}/${id}/${AppRoute.News}`}>К новостям отделения</Link>
+					<Link to={`/${AppRoute.Departments}/${id}/${AppRoute.News}`}>К новостям объекта</Link>
 				</div>
 			</div>
 			<AsideNews currentNewsId={newsId} newsList={newsList} previewCount={4} />

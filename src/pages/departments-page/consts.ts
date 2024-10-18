@@ -2,11 +2,11 @@ import { type NavigationItem } from 'src/types/navigation'
 
 export const DepartmentsMenuItems: NavigationItem[] = [
 	{
-		title: 'Региональные отделения',
+		title: 'Объекты',
 		link: '/departments-list',
 	},
 	{
-		title: 'Подробнее об отделениях',
+		title: 'Об объектах',
 		link: 'departments-about',
 	},
 ]

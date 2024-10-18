@@ -50,57 +50,31 @@ import {
 	getNewsById,
 	getNewsVideoById,
 	getNewsVideos,
-	getObjectById,
+	getObjectByCode,
+	getObjectEvents,
+	getObjectNews,
+	getObjectNewsById,
+	getObjectNewsVideoById,
+	getObjectNewsVideos,
+	getObjectPhotos,
 	getObjects,
+	getObjectsInfo,
 	getProjectById,
 	getProjects,
-	getRegionByCode,
-	getRegionEvents,
-	getRegionNews,
-	getRegionNewsById,
-	getRegionNewsVideoById,
-	getRegionNewsVideos,
-	getRegionParticipants,
-	getRegionPhotos,
-	getRegions,
-	getRegionsInfo,
-	getUserById,
-	getUsers,
-	getUsersDisciplines,
-	getUsersEvent,
-	getUsersGroup,
-	getUsersMaterial,
-	getUsersObject,
-	getUsersPhotos,
-	getUsersProject,
-	getUsersVideos,
 } from '../controllers/main-controller.mjs'
 import { Router } from 'express'
 
 export const router = new Router()
 
-router.get('/regions-info', getRegionsInfo)
-router.get('/regions', getRegions)
-router.get('/regions/:code', getRegionByCode)
-router.get('/regions/:code/participants', getRegionParticipants)
-router.get('/regions/:code/events', getRegionEvents)
-router.get('/regions/:code/photos', getRegionPhotos)
-router.get('/regions/:code/news', getRegionNews)
-router.get('/regions/:code/news-videos', getRegionNewsVideos)
-router.get('/regions/:code/news/:newsId', getRegionNewsById)
-router.get('/regions/:code/news-videos/:videoId', getRegionNewsVideoById)
-router.get('/users', getUsers)
-router.get('/users/:id', getUserById)
-router.get('/users/:id/group', getUsersGroup)
-router.get('/users/:id/event', getUsersEvent)
-router.get('/users/:id/project', getUsersProject)
-router.get('/users/:id/object', getUsersObject)
-router.get('/users/:id/materials', getUsersMaterial)
-router.get('/users/:id/disciplines', getUsersDisciplines)
-router.get('/users/:id/photo', getUsersPhotos)
-router.get('/users/:id/video', getUsersVideos)
+router.get('/objects-info', getObjectsInfo)
 router.get('/objects', getObjects)
-router.get('/objects/:id', getObjectById)
+router.get('/objects/:code', getObjectByCode)
+router.get('/objects/:code/events', getObjectEvents)
+router.get('/objects/:code/photos', getObjectPhotos)
+router.get('/objects/:code/news', getObjectNews)
+router.get('/objects/:code/news-videos', getObjectNewsVideos)
+router.get('/objects/:code/news/:newsId', getObjectNewsById)
+router.get('/objects/:code/news-videos/:videoId', getObjectNewsVideoById)
 router.get('/projects', getProjects)
 router.get('/projects/:id', getProjectById)
 router.get('/news', getNews)

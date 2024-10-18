@@ -6,22 +6,21 @@ import { Link } from 'react-router-dom'
 import { PageContent } from 'src/components/page-content/page-content'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { RenderedArray } from 'src/components/rendered-array/rendered-array'
-
-import { useGetRegionsInfoQuery } from 'src/store/regions/regions.api'
+import { useGetObjectsInfoQuery } from 'src/store/objects/objects.api'
 
 import styles from './index.module.scss'
 
 export const DepartmentsAbout: FC = () => {
-	const { data: regionsInfo } = useGetRegionsInfoQuery(null)
+	const { data: regionsInfo } = useGetObjectsInfoQuery(null)
 
 	return (
 		<PageContent className={styles.aboutDepartmentContainer} $padding='30px 55px 25px 30px'>
 			<Helmet>
-				<title>О региональных отделениях</title>
+				<title>Об объектах</title>
 			</Helmet>
 
-			<h2>О региональных отделениях</h2>
-			<Link to={`/${AppRoute.Departments}`}>На страницу списка отделений</Link>
+			<h2>Об объектах</h2>
+			<Link to={`/${AppRoute.Departments}`}>На страницу списка объектов</Link>
 			<RenderedArray strArray={regionsInfo?.aboutDescriptions} as='div' asStr='p' separator='' />
 
 			<figure className={styles.image}>
@@ -36,7 +35,7 @@ export const DepartmentsAbout: FC = () => {
 				separator=''
 			/>
 
-			<Link to={`/${AppRoute.Departments}`}>На страницу списка отделений</Link>
+			<Link to={`/${AppRoute.Departments}`}>На страницу списка объектов</Link>
 		</PageContent>
 	)
 }

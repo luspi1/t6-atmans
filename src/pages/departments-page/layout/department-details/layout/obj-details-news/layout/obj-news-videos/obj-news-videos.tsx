@@ -6,15 +6,15 @@ import { VideoGallery } from 'src/components/video-gallery/video-gallery'
 import { Link, useParams } from 'react-router-dom'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { Pagination } from 'src/components/pagination/pagination'
-import { useGetRegionNewsVideosQuery } from 'src/store/regions/regions.api'
+import { useGetObjectNewsVideosQuery } from 'src/store/objects/objects.api'
 
 import styles from './index.module.scss'
 
-export const RegNewsVideos: FC = () => {
+export const ObjNewsVideos: FC = () => {
 	const { id } = useParams()
 
 	const [yearsSelectValue, setYearsSelectValue] = useState<string>('')
-	const { data: newsVideosList } = useGetRegionNewsVideosQuery(id ?? '')
+	const { data: newsVideosList } = useGetObjectNewsVideosQuery(id ?? '')
 
 	return (
 		<div>

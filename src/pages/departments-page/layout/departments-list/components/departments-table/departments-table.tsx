@@ -1,56 +1,55 @@
-import { type RegionItem } from 'src/types/regions'
+import { type ObjectItem } from 'src/types/objects'
 
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { useGetAllRegionsQuery } from 'src/store/regions/regions.api'
 import { CustomTable } from 'src/components/custom-table/custom-table'
 import { TableSearch } from 'src/modules/table-search/table-search'
 import { Loader } from 'src/components/loader/loader'
 import { mainFormatDate } from 'src/helpers/utils'
 import { useDebounce } from 'src/hooks/debounce/debounce'
+import { useGetAllObjectsQuery } from 'src/store/objects/objects.api'
 
 import styles from './index.module.scss'
+
 export const DepartmentsTable = () => {
-	const [searchRegion, setSearchRegion] = useState<string>('')
-	const debouncedSearch = useDebounce(searchRegion)
-	const { data: regionsList, isLoading } = useGetAllRegionsQuery(debouncedSearch)
+	const [searchObject, setSearchObject] = useState<string>('')
+	const debouncedSearch = useDebounce(searchObject)
+	const { data: objectsList, isLoading } = useGetAllObjectsQuery(debouncedSearch)
 
 	const searchDepartments = (value: string) => {
-		setSearchRegion(value)
+		setSearchObject(value)
 	}
 
 	const tableTitles = [
 		'№',
-		'Логотип',
 		<TableSearch
 			wrapperClassName={styles.departmentsSearchWrapper}
 			key={2}
 			handleSearch={searchDepartments}
-			placeholder='Поиск по названию отделения'
+			placeholder='Поиск по названию объекта'
 		/>,
 		'Дата открытия',
 	]
 
-	const formatRegionsTableData = (regionsData: RegionItem[]) => {
-		return regionsData.map((regionEl, idx) => {
+	const formatObjectsTableData = (objectsData: ObjectItem[]) => {
+		return objectsData.map((objectEl, idx) => {
 			return [
 				String(idx + 1),
-				<img src={regionEl.logo} alt={regionEl.title} key={idx} />,
-				<Link to={regionEl.regionCode} key={regionEl.regionCode}>
-					{regionEl.title}
+				<Link to={objectEl.objectCode} key={objectEl.objectCode}>
+					{objectEl.title}
 				</Link>,
-				mainFormatDate(regionEl.openDate),
+				mainFormatDate(objectEl.openDate),
 			]
 		})
 	}
 
-	if (isLoading || !regionsList) return <Loader />
+	if (isLoading || !objectsList) return <Loader />
 
 	return (
 		<CustomTable
 			className={styles.departmentTable}
-			cellsData={formatRegionsTableData(regionsList)}
+			cellsData={formatObjectsTableData(objectsList)}
 			colTitles={tableTitles}
 		/>
 	)

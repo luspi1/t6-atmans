@@ -5,7 +5,7 @@ import { NewsNavigation } from 'src/components/news-navigation/news-navigation'
 
 import styles from './index.module.scss'
 
-export const RegNewsLayout: FC = () => {
+export const ObjNewsLayout: FC = () => {
 	return (
 		<div className={styles.newsTabContent}>
 			<NewsNavigation

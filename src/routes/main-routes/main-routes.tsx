@@ -9,21 +9,20 @@ import { AboutGeneral } from 'src/pages/about-page/layout/about-general/about-ge
 import { AboutHistory } from 'src/pages/about-page/layout/about-history/about-history'
 import { AboutContacts } from 'src/pages/about-page/layout/about-contacts/about-contacts'
 
-import { DepartmentsLayout } from 'src/pages/departments-page/layout/departments-layout'
+import { DepartmentsLayout } from 'src/pages/departments-page/departments-layout'
 import { DepartmentsList } from 'src/pages/departments-page/layout/departments-list/departments-list'
 import { DepartmentsAbout } from 'src/pages/departments-page/layout/departments-about/departments-about'
-import { DepartmentDetailsLayout } from 'src/pages/departments-page/layout/department-details/layout/department-details-layout'
+import { DepartmentDetailsLayout } from 'src/pages/departments-page/layout/department-details/department-details-layout'
 
-import { RegDetailsInfo } from 'src/pages/departments-page/layout/department-details/layout/reg-details-info/reg-details-info'
-import { RegDetailsHistory } from 'src/pages/departments-page/layout/department-details/layout/reg-details-history/reg-details-history'
-import { RegDetailsParticipants } from 'src/pages/departments-page/layout/department-details/layout/reg-details-participants/reg-details-participants'
-import { RegDetailsEvents } from 'src/pages/departments-page/layout/department-details/layout/reg-details-events/reg-details-events'
-import { RegDetailsGallery } from 'src/pages/departments-page/layout/department-details/layout/reg-details-gallery/reg-details-gallery'
-import { RegNewsLayout } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-layout'
-import { RegNewsVideos } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-videos/reg-news-videos'
-import { RegNewsVideoDetails } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-video-details/reg-news-video-details'
-import { RegNewsDetails } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-details/reg-news-details'
-import { RegNewsList } from 'src/pages/departments-page/layout/department-details/layout/reg-details-news/layout/reg-news-list/reg-news-list'
+import { ObjDetailsHistory } from 'src/pages/departments-page/layout/department-details/layout/obj-details-history/obj-details-history'
+import { ObjDetailsEvents } from 'src/pages/departments-page/layout/department-details/layout/obj-details-events/obj-details-events'
+import { ObjDetailsGallery } from 'src/pages/departments-page/layout/department-details/layout/obj-details-gallery/obj-details-gallery'
+import { ObjDetailsInfo } from 'src/pages/departments-page/layout/department-details/layout/obj-details-info/obj-details-info'
+import { ObjNewsLayout } from 'src/pages/departments-page/layout/department-details/layout/obj-details-news/layout/obj-news-layout'
+import { ObjNewsList } from 'src/pages/departments-page/layout/department-details/layout/obj-details-news/layout/obj-news-list/obj-news-list'
+import { ObjNewsVideos } from 'src/pages/departments-page/layout/department-details/layout/obj-details-news/layout/obj-news-videos/obj-news-videos'
+import { ObjNewsVideoDetails } from 'src/pages/departments-page/layout/department-details/layout/obj-details-news/layout/obj-news-video-details/obj-news-video-details'
+import { ObjNewsDetails } from 'src/pages/departments-page/layout/department-details/layout/obj-details-news/layout/obj-news-details/obj-news-details'
 
 import { NewsDetails } from 'src/pages/news-page/layout/news-details/news-details'
 
@@ -74,20 +73,16 @@ export const MainRoutes = () => {
 					<Route index element={<DepartmentsList />} />
 					<Route path={AppRoute.DepartmentsAbout} element={<DepartmentsAbout />} />
 					<Route path=':id' element={<DepartmentDetailsLayout />}>
-						<Route index element={<RegDetailsInfo />} />
-						<Route path={AppRoute.News} element={<RegNewsLayout />}>
-							<Route index element={<RegNewsList />} />
-							<Route path={AppRoute.Videos} element={<RegNewsVideos />} />
-							<Route path={`${AppRoute.Videos}/:vidId`} element={<RegNewsVideoDetails />} />
-							<Route path=':newsId' element={<RegNewsDetails />} />
+						<Route index element={<ObjDetailsInfo />} />
+						<Route path={AppRoute.News} element={<ObjNewsLayout />}>
+							<Route index element={<ObjNewsList />} />
+							<Route path={AppRoute.Videos} element={<ObjNewsVideos />} />
+							<Route path={`${AppRoute.Videos}/:vidId`} element={<ObjNewsVideoDetails />} />
+							<Route path=':newsId' element={<ObjNewsDetails />} />
 						</Route>
-						<Route path={AppRoute.DepartmentsDetailsHistory} element={<RegDetailsHistory />} />
-						<Route
-							path={AppRoute.DepartmentsDetailsParticipant}
-							element={<RegDetailsParticipants />}
-						/>
-						<Route path={AppRoute.DepartmentsDetailsEvents} element={<RegDetailsEvents />} />
-						<Route path={AppRoute.DepartmentsDetailsGallery} element={<RegDetailsGallery />} />
+						<Route path={AppRoute.DepartmentsDetailsHistory} element={<ObjDetailsHistory />} />
+						<Route path={AppRoute.DepartmentsDetailsEvents} element={<ObjDetailsEvents />} />
+						<Route path={AppRoute.DepartmentsDetailsGallery} element={<ObjDetailsGallery />} />
 					</Route>
 				</Route>
 

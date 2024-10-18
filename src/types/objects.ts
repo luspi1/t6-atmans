@@ -2,11 +2,11 @@ import { type ShortDocument } from './document'
 import { type ChronologyItem, type RelatedLink, type SourceLink } from 'src/types/global'
 import { type EventsItem } from 'src/types/events'
 
-export type RegionItem = {
+export type ObjectItem = {
 	title: string
 	fullTitle: string
 	mainDesc: string
-	regionCode: string
+	objectCode: string
 	status: string
 	type: string
 	director: string
@@ -30,7 +30,7 @@ export type RegionItem = {
 	}
 }
 
-export type RegionsInfo = {
+export type ObjectsInfo = {
 	mainDescription: string
 	aboutDescriptions: string[]
 	secondaryDescriptions: string[]

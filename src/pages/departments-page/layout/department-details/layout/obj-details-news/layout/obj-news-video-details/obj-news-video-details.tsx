@@ -4,13 +4,13 @@ import { CustomText } from 'src/components/custom-text/custom-text'
 import { mainFormatDate } from 'src/helpers/utils'
 import { AsideVideos } from 'src/components/aside-videos/aside-videos'
 import { AppRoute } from 'src/routes/main-routes/consts'
-import { useGetRegionNewsVideoByIdQuery } from 'src/store/regions/regions.api'
+import { useGetObjectNewsVideoByIdQuery } from 'src/store/objects/objects.api'
 
 import styles from './index.module.scss'
 
-export const RegNewsVideoDetails: FC = () => {
+export const ObjNewsVideoDetails: FC = () => {
 	const { id, vidId } = useParams()
-	const { data: videoDetails } = useGetRegionNewsVideoByIdQuery({ regCode: id, videoId: vidId })
+	const { data: videoDetails } = useGetObjectNewsVideoByIdQuery({ objCode: id, videoId: vidId })
 
 	if (!videoDetails) return
 

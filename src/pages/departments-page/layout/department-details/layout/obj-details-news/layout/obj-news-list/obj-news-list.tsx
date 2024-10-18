@@ -2,14 +2,14 @@ import { type FC, useState } from 'react'
 
 import { NewsList } from 'src/modules/news-list/news-list'
 import { useParams } from 'react-router-dom'
-import { useGetRegionAllNewsQuery } from 'src/store/regions/regions.api'
+import { useGetObjectAllNewsQuery } from 'src/store/objects/objects.api'
 
-export const RegNewsList: FC = () => {
+export const ObjNewsList: FC = () => {
 	const { id } = useParams()
 
 	const [yearsValue, setYearsValue] = useState<string>('')
 
-	const { data: newsList, isSuccess } = useGetRegionAllNewsQuery({ regCode: id, year: yearsValue })
+	const { data: newsList, isSuccess } = useGetObjectAllNewsQuery({ objCode: id, year: yearsValue })
 
 	return (
 		<div>
