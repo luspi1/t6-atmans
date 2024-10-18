@@ -3,12 +3,19 @@
 .mainNav {
   padding: 55px 0;
   background-color: #fff;
+  @media (max-width: 768px) {
+    padding: 15px 0;
+  }
 }
 
 .logoWrapper {
   width: 219px;
   min-width: 219px;
   height: 50px;
+  @media (max-width: 768px) {
+    min-width: auto;
+    width: 156px;
+  }
   img {
     object-fit: contain;
     width: 100%;
@@ -22,8 +29,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  @media (max-width: 768px) {
-    flex-direction: column;
+  @media(max-width: 768px) {
+    gap: 15px;
   }
 }
 
@@ -33,9 +40,8 @@
   gap: 60px;
   align-items: center;
   flex-wrap: wrap;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 20px;
+  @media(max-width: 768px) {
+    gap: 15px;
   }
 }
 

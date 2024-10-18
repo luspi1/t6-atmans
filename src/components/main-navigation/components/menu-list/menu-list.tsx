@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import { MenuItems } from 'src/components/main-navigation/components/menu-list/consts'
 import { useSetActive } from 'src/hooks/set-active'
+import { MenuItems } from 'src/components/main-navigation/consts'
 
 import styles from './index.module.scss'
 

@@ -9,7 +9,7 @@ export const videotapeSliderOptions: SwiperProps = {
 	loop: true,
 	grabCursor: true,
 	breakpoints: {
-		[DisplayBreakpoints.Sm]: {
+		[DisplayBreakpoints.Xs]: {
 			slidesPerView: 2,
 		},
 		[DisplayBreakpoints.Lg]: {

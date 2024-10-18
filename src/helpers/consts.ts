@@ -15,6 +15,7 @@ export enum NameSpace {
 }
 
 export enum DisplayBreakpoints {
+	Xs = 400,
 	Sm = 576,
 	Md = 768,
 	Lg = 1024,

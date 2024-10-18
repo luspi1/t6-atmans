@@ -16,11 +16,6 @@ export const OneDepartmentMenu: NavigationItem[] = [
 	},
 
 	{
-		title: 'Участники',
-		link: 'departments-details-participants',
-	},
-
-	{
 		title: 'События',
 		link: 'departments-details-events',
 	},

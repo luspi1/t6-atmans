@@ -15,7 +15,7 @@ export const Footer: FC = () => {
 			<Container>
 				<FlexRow
 					className={styles.footerTop}
-					$gap='10px'
+					$gap='35px'
 					$alignItems='center'
 					$justifyContent='space-between'
 					$margin='0 0 45px 0'

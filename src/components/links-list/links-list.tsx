@@ -17,11 +17,7 @@ export const LinksList: FC<LinksListProps> = ({ dataList, title, className }) =>
 	if (!dataList?.length) return null
 	return (
 		<div className={cn(styles.linksListWrapper, className)}>
-			{title && (
-				<h4>
-					{title} <span>({dataList?.length ?? 0})</span>
-				</h4>
-			)}
+			{title && <h4>{title}</h4>}
 
 			{!!dataList?.length && (
 				<ul>

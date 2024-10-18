@@ -35,6 +35,7 @@ const StyledInfoRow = styled.div<InfoRowStyleProps>`
 		font-weight: ${({ $titleWeight }) => $titleWeight ?? '700'};
 		width: ${({ $titleWidth }) => $titleWidth ?? '190px'};
 		min-width: ${({ $titleWidth }) => $titleWidth ?? '190px'};
+		font-family: 'PT Sans', sans-serif;
 	}
 
 	a {

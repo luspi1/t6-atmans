@@ -23,6 +23,9 @@ export const DepartmentHeader: FC = () => {
 	return (
 		<div className={styles.departmentHeader}>
 			{objectData?.fullTitle && <h2>{objectData?.fullTitle}</h2>}
+			<CustomText $fontStyle='italic' $fontSize='16px' $margin='0 0 15px 0'>
+				{objectData?.type}
+			</CustomText>
 			<div className={styles.mainDescContainer}>
 				{objectData?.logo && (
 					<p className={styles.logoContainer}>
@@ -35,20 +38,24 @@ export const DepartmentHeader: FC = () => {
 					</CustomText>
 				)}
 			</div>
-			<InfoRow title='Руководитель Отделения:' label={<a href='#'>{objectData?.director}</a>} />
-			<InfoRow title='Первый заместитель:' label={objectData?.vice} />
-			<InfoRow title='Главный бухгалтер:' label={objectData?.accountant} $margin='0 0 35px 0' />
+			<InfoRow
+				title='Начальник объекта:'
+				label={<a href='#'>{objectData?.director}</a>}
+				$titleWidth='172px'
+				$margin='0 0 36px 0'
+			/>
 
 			<InfoRow
 				title='Телефоны:'
 				label={<RenderedArray strArray={objectData?.phones} as='span' />}
+				$titleWidth='172px'
 			/>
 			<InfoRow
 				title='Электронная почта:'
 				label={<SimpleLink title={objectData?.email} link={objectData?.email} isEmail />}
+				$titleWidth='172px'
 			/>
-			<InfoRow title='Сайт:' label={<a href={objectData?.site}>{objectData?.site}</a>} />
-			<InfoRow title='Адрес отделения:' label={objectData?.address} />
+			<InfoRow title='Адрес объекта:' label={objectData?.address} $titleWidth='172px' />
 		</div>
 	)
 }

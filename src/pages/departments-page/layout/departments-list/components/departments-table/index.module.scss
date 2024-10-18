@@ -1,8 +1,9 @@
 .departmentTable {
-  grid-template-columns: minmax(40px, 0.2fr) minmax(270px, 1.8fr) minmax(120px, 1fr);
+  grid-template-columns: minmax(40px, 0.1fr) minmax(270px, 2.5fr) minmax(120px, 0.4fr);
   margin-bottom: 20px;
   td {
     padding: 14px 0;
+    height: 98px;
   }
   td:nth-child(2) {
     img {
@@ -16,13 +17,13 @@
 
 .departmentsSearchWrapper {
   svg {
-    left: 215px;
+    left: 275px;
     @media (max-width: 1024px) {
       left: 20px;
     }
   }
   input {
-    padding: 6px 20px 6px 220px;
+    padding: 6px 20px 6px 280px;
     @media (max-width: 1024px) {
       padding: 6px 20px 6px 25px;
     }

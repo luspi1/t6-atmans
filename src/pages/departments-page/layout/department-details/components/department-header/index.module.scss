@@ -1,9 +1,14 @@
 .departmentHeader {
   h2 {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
   }
+
   padding-bottom: 20px;
   border-bottom: 7px solid #F2F5F8;
+}
+
+p {
+  font-family: 'PT Sans', sans-serif;
 }
 
 .mainDescContainer {
@@ -14,6 +19,7 @@
   @media (max-width: 650px) {
     flex-direction: column;
   }
+
 
   .logoContainer {
     min-width: 130px;

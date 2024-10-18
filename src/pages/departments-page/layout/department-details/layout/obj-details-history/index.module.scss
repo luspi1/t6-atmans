@@ -1,7 +1,15 @@
-.regionHistoryTab {
+.objectHistoryTab {
   padding-top: 20px;
 }
 
 .chronologyAccordion {
   margin-bottom: 10px;
+
+  :global {
+    ._triggerOpen {
+      h6 {
+        color: #ED1C24;
+      }
+    }
+  }
 }

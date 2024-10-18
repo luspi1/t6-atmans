@@ -3,6 +3,9 @@
   align-items: center;
   width: 75px;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    width: 63px;
+  }
 
   button {
     svg path {

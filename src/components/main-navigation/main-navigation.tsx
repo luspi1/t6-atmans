@@ -5,6 +5,8 @@ import { Container } from 'src/UI/Container/Container'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { MenuList } from 'src/components/main-navigation/components/menu-list/menu-list'
 import { PersonalControllers } from 'src/components/main-navigation/components/personal-controllers/personal-controllers'
+import { BurgerMenu } from 'src/components/burger-menu/burger-menu'
+import { MenuItems } from 'src/components/main-navigation/consts'
 
 import mainLogo from 'src/assets/img/main-logo.svg'
 
@@ -20,6 +22,7 @@ export const MainNavigation: FC = () => {
 				<div className={styles.menuWrapper}>
 					<MenuList />
 					<PersonalControllers />
+					<BurgerMenu menuItems={MenuItems} />
 				</div>
 			</Container>
 		</nav>

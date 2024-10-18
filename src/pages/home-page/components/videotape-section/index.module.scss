@@ -1,7 +1,17 @@
 @import "src/assets/styles/vars";
 
-.videotapeSection {
+section.videotapeSection {
   padding: 55px 0 26px;
+  h4 {
+    @media (max-width: 550px) {
+      margin-bottom: 1px;
+    }
+  }
+  .videotapeTop {
+    @media (max-width: 550px) {
+      margin-bottom: 17px;
+    }
+  }
 }
 
 .videotapeSlider {

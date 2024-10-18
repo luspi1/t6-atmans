@@ -8,6 +8,9 @@
   cursor: pointer;
   min-height: 475px;
   max-width: 390px;
+  @media (max-width: 550px) {
+    max-width: 100%;
+  }
 
   a {
     display: block;

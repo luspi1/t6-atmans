@@ -5,6 +5,7 @@ import { GalleryImg } from 'src/components/image-gallery/image-gallery'
 import { useGetObjectPhotosQuery } from 'src/store/objects/objects.api'
 
 import styles from './index.module.scss'
+import { Pagination } from 'src/components/pagination/pagination'
 
 export const ObjDetailsGallery: FC = () => {
 	const { id } = useParams()
@@ -13,7 +14,8 @@ export const ObjDetailsGallery: FC = () => {
 	return (
 		<div className={styles.galleryPage}>
 			<p className={styles.itemsCount}>Всего фото: {photos?.length}</p>
-			<GalleryImg className={styles.groupPhotos} images={photos} limit={12} limitController />
+			<GalleryImg className={styles.objPhotos} images={photos} limit={10} />
+			<Pagination pagesCount={7} activePage={2} />
 		</div>
 	)
 }

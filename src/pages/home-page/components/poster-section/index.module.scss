@@ -2,6 +2,17 @@
 
 .posterSection {
   padding: 65px 0 60px;
+  .posterRegBtn {
+    @media (max-width: 768px) {
+      padding: 0 40px;
+    }
+  }
+  .posterSliderBtns {
+    @media (max-width: 768px) {
+      top: 44%;
+      width: 91%;
+    }
+  }
 }
 
 .posterSlider {
@@ -51,6 +62,10 @@
     font-size: 35px;
     font-weight: 700;
     line-height: 1.3;
+    @media (max-width: 768px) {
+      font-size: 30px;
+      line-height: 1.25;
+    }
   }
 }
 
@@ -59,6 +74,9 @@
     display: flex;
     gap: 8px;
     margin-bottom: 8px;
+    @media (max-width: 768px) {
+      padding-bottom: 15px;
+    }
     li {
       color: #ffffff;
       font-size: 14px;
@@ -66,6 +84,11 @@
       padding: 5px 9px;
       border: 1px solid #ffffff;
       border-radius: 5px;
+      @media (max-width: 768px) {
+        background: #DD0A15;
+        border-color: transparent;
+      }
     }
   }
 }
+

@@ -1,6 +1,9 @@
 @import "src/assets/styles/vars";
 
 .menuList {
+  @media (max-width: 768px) {
+    display: none;
+  }
   display: flex;
   gap: 40px;
   flex-wrap: wrap;

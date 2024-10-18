@@ -37,6 +37,7 @@ export const PosterSection: FC = () => {
 										<h5>{slideItem.title}</h5>
 									</div>
 									<MainButton
+										className={styles.posterRegBtn}
 										as='route'
 										$padding='0 50px'
 										$height='50px'
@@ -49,7 +50,13 @@ export const PosterSection: FC = () => {
 						</SwiperSlide>
 					))}
 				</Swiper>
-				<SliderBtns $topPosition='47%' $variant='lg' $btnsSpacing='93%' swiperRef={swiperRef} />
+				<SliderBtns
+					className={styles.posterSliderBtns}
+					$topPosition='47%'
+					$variant='lg'
+					$btnsSpacing='93%'
+					swiperRef={swiperRef}
+				/>
 			</section>
 		</Container>
 	)

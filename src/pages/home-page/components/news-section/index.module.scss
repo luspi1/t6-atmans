@@ -22,6 +22,10 @@
     cursor: pointer;
     overflow: hidden;
     background: #ffffff;
+    @media (max-width: 550px) {
+      width: 100%;
+      max-width: 100%
+    }
     &:hover {
       .newsItemContent {
         p, h6 {
@@ -37,7 +41,9 @@
   width: 100%;
   height: 160px;
   border-radius: 5px 5px 0 0;
-
+  @media (max-width: 550px) {
+    height: 173px;
+  }
   img {
     border-radius: 5px 5px 0 0;
     width: 100%;

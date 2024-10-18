@@ -15,7 +15,7 @@ export const ObjNewsList: FC = () => {
 		<div>
 			<NewsList
 				newsItems={newsList ?? []}
-				title='Новости отделения'
+				title='Новости объекта'
 				setYearsValue={setYearsValue}
 				yearsValue={yearsValue}
 				isSuccess={isSuccess}

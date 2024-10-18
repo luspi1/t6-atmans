@@ -21,7 +21,7 @@ export const VideotapeSection: FC = () => {
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 	return (
 		<section className={cn(styles.videotapeSection, '_bordered')}>
-			<Container>
+			<Container className={styles.videotapeTop}>
 				<FlexRow $margin='0 0 10px 0' $justifyContent='space-between'>
 					<h4>Видеолента</h4>
 					<MainButton as='route' to={AppRoute.Videos} $variant='light'>
