@@ -1,7 +1,7 @@
 .asideNews {
   min-width: 203px;
   width: 203px;
-  padding-top: 10px;
+  padding-top: 2px;
   @media (max-width: 768px) {
     min-width: auto;
     width: 100%;
@@ -11,6 +11,7 @@
 
 
   h6 {
+    font-family: 'PT Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
     font-weight: 700;
@@ -19,6 +20,7 @@
 
   li {
     line-height: 1.1;
+    font-family: 'PT Sans', sans-serif;
 
     &:not(:last-child) {
       margin-bottom: 22px;

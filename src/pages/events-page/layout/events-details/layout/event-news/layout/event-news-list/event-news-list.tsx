@@ -8,6 +8,7 @@ export const EventNewsList: FC = () => {
 	const { id } = useParams()
 
 	const [yearsValue, setYearsValue] = useState<string>('')
+	const [monthsValue, setMonthsValue] = useState<string>('')
 
 	const { data: newsList, isSuccess } = useGetEventAllNewsQuery({ eventId: id, year: yearsValue })
 
@@ -19,6 +20,8 @@ export const EventNewsList: FC = () => {
 				setYearsValue={setYearsValue}
 				yearsValue={yearsValue}
 				isSuccess={isSuccess}
+				monthsValue={monthsValue}
+				setMonthsValue={setMonthsValue}
 			/>
 		</div>
 	)

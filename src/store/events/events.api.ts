@@ -1,10 +1,8 @@
 import { type EventsItem } from 'src/types/events'
-import type { UserItem } from 'src/types/users'
 import type { EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
 import type { ImageItem } from 'src/types/photos'
 import type { NewsItem } from 'src/types/news'
 import type { VideoItem } from 'src/types/videos'
-import { type GroupItem } from 'src/types/groups'
 import { type ProgramListItem } from 'src/types/program'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
@@ -29,22 +27,6 @@ export const eventsApi = createApi({
 		getEventById: build.query<EventsItem, string>({
 			query: (eventId) => ({
 				url: `events/${eventId}`,
-			}),
-		}),
-		getEventParticipantes: build.query<UserItem[], [string, string]>({
-			query: ([search, eventId]) => ({
-				url: `events/${eventId}/participantes`,
-				params: {
-					q: search,
-				},
-			}),
-		}),
-		getEventTeams: build.query<GroupItem[], [string, string]>({
-			query: ([search, eventId]) => ({
-				url: `events/${eventId}/teams`,
-				params: {
-					q: search,
-				},
 			}),
 		}),
 		getEventDisciplines: build.query<EthnosportDisciplineItem[], string>({
@@ -94,9 +76,6 @@ export const eventsApi = createApi({
 export const {
 	useGetAllEventsQuery,
 	useGetEventByIdQuery,
-	useGetEventParticipantesQuery,
-	useGetEventTeamsQuery,
-	useGetEventDisciplinesQuery,
 	useGetEventPhotoQuery,
 	useGetEventAllNewsQuery,
 	useGetEventNewsVideosQuery,

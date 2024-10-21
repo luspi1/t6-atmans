@@ -12,6 +12,7 @@ import styles from './index.module.scss'
 import { format } from 'date-fns'
 import { ru } from 'date-fns/locale'
 import { Link } from 'react-router-dom'
+import { AppRoute } from 'src/routes/main-routes/consts'
 
 type EventsListProps = {
 	eventsData?: EventsItem[]
@@ -79,7 +80,7 @@ export const EventsList: FC<EventsListProps> = ({ eventsData, className }) => {
 							<span className={styles.eventLocation}>{eventEl.location}</span>
 						</div>
 						<div className={styles.eventElContent}>
-							<Link className={styles.titleLink} to={eventEl.id}>
+							<Link className={styles.titleLink} to={`/${AppRoute.Events}/${eventEl.id}`}>
 								{eventEl.title}
 							</Link>
 
@@ -95,7 +96,7 @@ export const EventsList: FC<EventsListProps> = ({ eventsData, className }) => {
 								<ul>{eventEl?.tags?.map((orgTag, idx) => <li key={idx}>{orgTag}</li>)}</ul>
 							</div>
 						</div>
-						<Link className={styles.eventElImg} to={eventEl.id}>
+						<Link className={styles.eventElImg} to={`/${AppRoute.Events}/${eventEl.id}`}>
 							<img src={eventEl.preview} alt={eventEl.title} />
 						</Link>
 					</li>

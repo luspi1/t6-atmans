@@ -1,3 +1,5 @@
+import { type ImageItem } from 'src/types/photos'
+
 export type NewsItem = {
 	id: string
 	title: string
@@ -9,7 +11,7 @@ export type NewsItem = {
 	hidden: boolean
 	main: boolean
 	preview: string
-	imgGallery: string[]
+	imgGallery: ImageItem[]
 	textNews: string[]
 	desc: string
 }

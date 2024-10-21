@@ -7,6 +7,7 @@ import { AppRoute } from 'src/routes/main-routes/consts'
 import { AsideNews } from 'src/components/aside-news/aside-news'
 import styles from './index.module.scss'
 import { useGetObjectAllNewsQuery, useGetObjectNewsByIdQuery } from 'src/store/objects/objects.api'
+import { GalleryImg } from 'src/components/image-gallery/image-gallery'
 
 export const ObjNewsDetails = () => {
 	const { id, newsId } = useParams()
@@ -37,13 +38,7 @@ export const ObjNewsDetails = () => {
 						{textEl}
 					</p>
 				))}
-				<ul className={styles.newsGallery}>
-					{newsItemData?.imgGallery?.map((imgEl, idx) => (
-						<li className={styles.galleryImg} key={idx}>
-							<img src={imgEl} alt='gallery image' />
-						</li>
-					))}
-				</ul>
+				<GalleryImg images={newsItemData.imgGallery} />
 				<div className={styles.allNewsBlock}>
 					<Link to={`/${AppRoute.Departments}/${id}/${AppRoute.News}`}>К новостям объекта</Link>
 				</div>

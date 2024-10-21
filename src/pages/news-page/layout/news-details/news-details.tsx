@@ -8,6 +8,8 @@ import { AppRoute } from 'src/routes/main-routes/consts'
 
 import styles from './index.module.scss'
 import { AsideNews } from 'src/components/aside-news/aside-news'
+import { GalleryImg } from 'src/components/image-gallery/image-gallery'
+import { PageContent } from 'src/components/page-content/page-content'
 
 export const NewsDetails = () => {
 	const { id } = useParams()
@@ -19,7 +21,7 @@ export const NewsDetails = () => {
 	if (!newsItemData) return null
 	return (
 		<div className={styles.newsItemPage}>
-			<div className={styles.newsItemPageContent}>
+			<PageContent className={styles.newsItemPageContent} $padding='30px 40px 55px 30px'>
 				<h2>{newsItemData?.title}</h2>
 				<span className={styles.newsItemDate}>
 					{customFormatDate(newsItemData?.date, {
@@ -36,17 +38,11 @@ export const NewsDetails = () => {
 						{textEl}
 					</p>
 				))}
-				<ul className={styles.newsGallery}>
-					{newsItemData?.imgGallery?.map((imgEl, idx) => (
-						<li className={styles.galleryImg} key={idx}>
-							<img src={imgEl} alt='gallery image' />
-						</li>
-					))}
-				</ul>
+				<GalleryImg listClassName={styles.newsGallery} images={newsItemData.imgGallery} />
 				<div className={styles.allNewsBlock}>
 					<Link to={`/${AppRoute.News}`}>Все новости</Link>
 				</div>
-			</div>
+			</PageContent>
 			<AsideNews currentNewsId={id ?? ''} newsList={newsList} />
 		</div>
 	)

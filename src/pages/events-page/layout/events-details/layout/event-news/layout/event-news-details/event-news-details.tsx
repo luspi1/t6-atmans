@@ -6,6 +6,7 @@ import { Loader } from 'src/components/loader/loader'
 import { AsideNews } from 'src/components/aside-news/aside-news'
 import { useGetEventAllNewsQuery, useGetEventNewsByIdQuery } from 'src/store/events/events.api'
 import styles from './index.module.scss'
+import { GalleryImg } from 'src/components/image-gallery/image-gallery'
 
 export const EventNewsDetails = () => {
 	const { id, newsId } = useParams()
@@ -36,13 +37,7 @@ export const EventNewsDetails = () => {
 						{textEl}
 					</p>
 				))}
-				<ul className={styles.newsGallery}>
-					{newsItemData?.imgGallery?.map((imgEl, idx) => (
-						<li className={styles.galleryImg} key={idx}>
-							<img src={imgEl} alt='gallery image' />
-						</li>
-					))}
-				</ul>
+				<GalleryImg images={newsItemData.imgGallery} />
 			</div>
 			<AsideNews currentNewsId={newsId} newsList={newsList} previewCount={4} />
 		</div>

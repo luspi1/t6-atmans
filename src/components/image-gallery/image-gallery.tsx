@@ -13,6 +13,7 @@ import styles from './index.module.scss'
 
 type ImageGalleryProps = {
 	className?: string
+	listClassName?: string
 	images?: ImageItem[]
 	limit?: number
 	limitController?: boolean
@@ -20,6 +21,7 @@ type ImageGalleryProps = {
 
 export const GalleryImg: FC<ImageGalleryProps> = ({
 	className,
+	listClassName,
 	images,
 	limit,
 	limitController,
@@ -54,13 +56,13 @@ export const GalleryImg: FC<ImageGalleryProps> = ({
 
 	return (
 		<div className={className}>
-			<ul className={styles.gridGallery}>
+			<ul className={cn(styles.gridGallery, listClassName)}>
 				{images.slice(0, expandedGallery ? images.length : limit).map((img, idx) => (
 					<li key={img.id} onClick={() => openFullscreen(idx)}>
 						<div className={styles.gridImgWrapper}>
 							<img src={img.thumbnail} alt={`image ${idx + 1}`} />
 						</div>
-						<h6>{img?.title}</h6>
+						{img.title && <h6>{img.title}</h6>}
 						{img.date && <span className={styles.imgDate}>{mainFormatDate(img.date)}</span>}
 					</li>
 				))}

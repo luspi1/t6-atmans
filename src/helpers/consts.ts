@@ -1,17 +1,14 @@
 export enum ReducerPath {
 	Home = 'home/api',
 	Objects = 'objects/api',
-	Ethnosport = 'ethnosport/api',
 	News = 'news/api',
 	Events = 'events/api',
-	Groups = 'groups/api',
 	Cultures = 'cultures/api',
 }
 
 export const ImagesFormat = ['png', 'jpeg', 'jpg', 'webp', 'gif']
 export enum NameSpace {
 	BreadCrumbs = 'BREAD_CRUMBS',
-	AdminTitle = 'ADMIN_TITLE',
 }
 
 export enum DisplayBreakpoints {
