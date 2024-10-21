@@ -7,6 +7,7 @@ import styles from './index.module.scss'
 
 export const News: FC = () => {
 	const [yearsValue, setYearsValue] = useState<string>('')
+	const [monthsValue, setMonthsValue] = useState<string>('')
 
 	const { data: newsList, isSuccess } = useGetAllNewsQuery({ year: yearsValue })
 
@@ -17,6 +18,8 @@ export const News: FC = () => {
 				title='Все новости'
 				setYearsValue={setYearsValue}
 				yearsValue={yearsValue}
+				setMonthsValue={setMonthsValue}
+				monthsValue={monthsValue}
 				isSuccess={isSuccess}
 			/>
 		</div>

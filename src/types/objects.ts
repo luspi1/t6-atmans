@@ -1,6 +1,7 @@
 import { type ShortDocument } from './document'
 import { type ChronologyItem, type RelatedLink, type SourceLink } from 'src/types/global'
 import { type EventsItem } from 'src/types/events'
+import { type PathwayItem } from 'src/types/location'
 
 export type ObjectItem = {
 	title: string
@@ -17,6 +18,7 @@ export type ObjectItem = {
 	address: string
 	descList: string[]
 	openDate: Date
+	pathways: PathwayItem[]
 	logo: string
 	mainInfoLogo: string
 	site: string

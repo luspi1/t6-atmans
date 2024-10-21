@@ -48,18 +48,20 @@ export const objectsApi = createApi({
 				url: `objects/${objCode}/photos`,
 			}),
 		}),
-		getObjectAllNews: build.query<NewsItem[], { objCode?: string; search?: string; year?: string }>(
-			{
-				query: ({ objCode = '', search = '', year = '' }) => ({
-					url: `objects/${objCode}/news`,
-					params: {
-						q: search,
-						y: year,
-					},
-				}),
-				providesTags: ['ObjectNews'],
-			},
-		),
+		getObjectAllNews: build.query<
+			NewsItem[],
+			{ objCode?: string; search?: string; year?: string; month?: string }
+		>({
+			query: ({ objCode = '', search = '', year = '', month = '' }) => ({
+				url: `objects/${objCode}/news`,
+				params: {
+					q: search,
+					y: year,
+					m: month,
+				},
+			}),
+			providesTags: ['ObjectNews'],
+		}),
 		getObjectNewsById: build.query<NewsItem, { objCode?: string; newsId?: string }>({
 			query: ({ objCode = '', newsId = '' }) => ({
 				url: `objects/${objCode}/news/${newsId}`,

@@ -41,10 +41,6 @@ import { EventNewsVideos } from 'src/pages/events-page/layout/events-details/lay
 import { EventNewsVideoDetails } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-video-details/event-news-video-details'
 import { EventNewsDetails } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-details/event-news-details'
 import { EventHistory } from 'src/pages/events-page/layout/events-details/layout/event-history/event-history'
-import { EventDisciplines } from 'src/pages/events-page/layout/events-details/layout/event-disciplines/event-disciplines'
-import { EventParticipantesLayout } from 'src/pages/events-page/layout/events-details/layout/event-participantes/layout/event-participantes-layout'
-import { TeamsParticipantesTable } from 'src/pages/events-page/layout/events-details/layout/event-participantes/layout/teams-participantes-table/teams-participantes-table'
-import { LonesParticipantesTable } from 'src/pages/events-page/layout/events-details/layout/event-participantes/layout/lones-participantes-table/lones-participantes-table'
 import { EventGallery } from 'src/pages/events-page/layout/events-details/layout/event-gallery/event-gallery'
 import { EventProgramLayout } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-layout'
 import { EventProgramDay } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-day/event-program-day'
@@ -52,12 +48,14 @@ import { EventDetails } from 'src/pages/events-page/layout/events-details/layout
 import { AboutCultureLayout } from 'src/pages/about-page/layout/about-culture/about-culture-layout'
 import { CultureGeneral } from 'src/pages/about-page/layout/about-culture/layout/culture-general/culture-general'
 import { CultureDetails } from 'src/pages/about-page/layout/about-culture/layout/culture-details/culture-details'
+import { SearchPage } from 'src/pages/search-page/search-page'
 
 export const MainRoutes = () => {
 	return (
 		<Routes>
 			<Route path={AppRoute.Home} element={<MainLayout />}>
 				<Route path={AppRoute.Home} element={<HomePage />} />
+				<Route path={AppRoute.Search} element={<SearchPage />} />
 
 				<Route path={AppRoute.About} element={<AboutLayout />}>
 					<Route index element={<AboutGeneral />} />
@@ -109,14 +107,6 @@ export const MainRoutes = () => {
 						<Route path={AppRoute.EventHistory} element={<EventHistory />} />
 						<Route path={`${AppRoute.EventProgram}`} element={<EventProgramLayout />}>
 							<Route path=':dayId' element={<EventProgramDay />} />
-						</Route>
-						<Route path={AppRoute.EventDisciplines} element={<EventDisciplines />} />
-						<Route path={AppRoute.EventParticipantes} element={<EventParticipantesLayout />}>
-							<Route index element={<TeamsParticipantesTable />} />
-							<Route
-								path={AppRoute.EventLonesParticipantes}
-								element={<LonesParticipantesTable />}
-							/>
 						</Route>
 						<Route path={AppRoute.EventGallery} element={<EventGallery />} />
 					</Route>

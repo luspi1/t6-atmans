@@ -2,17 +2,20 @@
   margin-bottom: 30px;
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
 
   h2 {
     margin-bottom: 0;
     line-height: 1.2;
     font-size: 25px;
+    margin-right: 15px;
   }
 }
 
 select.newsDateSelect {
-  padding: 6px 46px 6px 7px;
+  padding: 6px 15px 6px 7px;
+  width: 109px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .groupTabNewsVideos {
@@ -22,5 +25,5 @@ select.newsDateSelect {
 }
 
 .newsVideosPagination {
-  margin-top: auto;
+  margin-top: 50px;
 }

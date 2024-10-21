@@ -5,7 +5,7 @@
     font-size: 14px;
     font-weight: 600;
     display: block;
-    font-family: "Open Sans", sans-serif;
+    font-family: "PT Sans", sans-serif;
     margin-bottom: 5px;
   }
 
@@ -15,8 +15,8 @@
       border-radius: 3px;
       padding: 2px 10px;
       min-height: 35px;
-      @include opensans-regular;
       font-size: 14px;
+      font-family: "PT Sans", sans-serif;
     }
 
     .react-dropdown-select-dropdown-handle {

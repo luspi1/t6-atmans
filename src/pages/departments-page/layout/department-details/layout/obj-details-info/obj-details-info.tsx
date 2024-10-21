@@ -4,7 +4,9 @@ import { useParams } from 'react-router-dom'
 
 import { RenderedArray } from 'src/components/rendered-array/rendered-array'
 import { useGetObjectByCodeQuery } from 'src/store/objects/objects.api'
-import { DepartmentLinks } from 'src/pages/departments-page/layout/department-details/layout/obj-details-info/components/department-links/department-links'
+import { Placement } from 'src/modules/placement/placement'
+import { formatSourceLinks } from 'src/helpers/utils'
+import { LinksList } from 'src/components/links-list/links-list'
 
 import styles from './index.module.scss'
 
@@ -14,18 +16,25 @@ export const ObjDetailsInfo: FC = () => {
 	const { data: objectData } = useGetObjectByCodeQuery(id ?? '')
 
 	return (
-		<div>
+		<div className={styles.regionInfoPage}>
 			<Helmet>
 				<title>Информация о регионе</title>
 			</Helmet>
-			<RenderedArray
-				className={styles.descList}
-				strArray={objectData?.descList}
-				as='div'
-				asStr='p'
-				separator=''
-			/>
-			<DepartmentLinks {...objectData} />
+			<section>
+				<RenderedArray
+					className={styles.descList}
+					strArray={objectData?.descList}
+					as='div'
+					asStr='p'
+					separator=''
+				/>
+			</section>
+			<section>
+				<LinksList dataList={formatSourceLinks(objectData?.relatedLinks)} title='Ссылки' />
+			</section>
+			<section>
+				<Placement placeVariants={objectData?.pathways} title='Маршруты' />
+			</section>
 		</div>
 	)
 }

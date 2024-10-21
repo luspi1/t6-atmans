@@ -121,6 +121,7 @@ export const mainFormatDate = (
 export const formatDateRange = (
 	[startDate, endDate]: [Date, Date] | [],
 	separator: string = '—',
+	isShortMonth = false,
 ): string | null => {
 	if (!startDate || !endDate) return null
 
@@ -130,12 +131,12 @@ export const formatDateRange = (
 	const endYear = format(endDate, 'yyyy', { locale: ru })
 
 	if (startYear === endYear && startMonth !== endMonth) {
-		return `${format(startDate, 'd MMMM', { locale: ru })} ${separator} ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
+		return `${format(startDate, `d ${isShortMonth ? 'LLL' : 'MMMM'}`, { locale: ru }).replace('.', '')} ${separator} ${format(endDate, `d ${isShortMonth ? 'LLL' : 'MMMM'}`, { locale: ru }).replace('.', '')}`
 	}
 	if (startMonth === endMonth && startYear === endYear) {
-		return `${format(startDate, 'd', { locale: ru })} ${separator} ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
+		return `${format(startDate, 'd', { locale: ru })} ${separator} ${format(endDate, `d ${isShortMonth ? 'LLL' : 'MMMM'} yyyy`, { locale: ru }).replace('.', '')}`
 	}
-	return `${format(startDate, 'd MMMM yyyy', { locale: ru })} ${separator} ${format(endDate, 'd MMMM yyyy', { locale: ru })}`
+	return `${format(startDate, `d ${isShortMonth ? 'LLL' : 'MMMM'} yyyy`, { locale: ru }).replace('.', '')} ${separator} ${format(endDate, `d ${isShortMonth ? 'LLL' : 'MMMM'} yyyy`, { locale: ru }).replace('.', '')}`
 }
 
 // Получение дня недели

@@ -18,14 +18,6 @@ export const EventInfoNavItems: NavigationItem[] = [
 		link: 'event-program',
 	},
 	{
-		title: 'дисциплины',
-		link: 'event-disciplines',
-	},
-	{
-		title: 'участники',
-		link: 'event-participantes',
-	},
-	{
 		title: 'галерея',
 		link: 'event-gallery',
 	},

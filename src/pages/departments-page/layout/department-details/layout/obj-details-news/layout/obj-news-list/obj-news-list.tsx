@@ -8,18 +8,22 @@ export const ObjNewsList: FC = () => {
 	const { id } = useParams()
 
 	const [yearsValue, setYearsValue] = useState<string>('')
+	const [monthsValue, setMonthsValue] = useState<string>('')
 
-	const { data: newsList, isSuccess } = useGetObjectAllNewsQuery({ objCode: id, year: yearsValue })
-
+	const { data: newsList, isSuccess } = useGetObjectAllNewsQuery({
+		objCode: id,
+		year: yearsValue,
+		month: monthsValue,
+	})
 	return (
-		<div>
-			<NewsList
-				newsItems={newsList ?? []}
-				title='Новости объекта'
-				setYearsValue={setYearsValue}
-				yearsValue={yearsValue}
-				isSuccess={isSuccess}
-			/>
-		</div>
+		<NewsList
+			newsItems={newsList ?? []}
+			title='Новости объекта'
+			setYearsValue={setYearsValue}
+			yearsValue={yearsValue}
+			setMonthsValue={setMonthsValue}
+			monthsValue={monthsValue}
+			isSuccess={isSuccess}
+		/>
 	)
 }

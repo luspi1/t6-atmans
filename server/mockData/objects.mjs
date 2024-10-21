@@ -21,7 +21,26 @@ export let objects = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 		],
 		openDate: '2024-08-25T00:00:00+03:00',
-
+		pathways: [
+			{
+				title: 'На машине от Тамбова',
+				desc: 'Из Тамбова по трассе на Моршанск до поворота на Сосновку. От поворота на Сосновку проехать село Вирятино до поворота на Атманов Угол. В Атмановом Углу ориентироваться по указателям до места проведения игр.',
+				location:
+					'https://yandex.ru/map-widget/v1/?ll=41.441455%2C52.957474&mode=routes&routes%5Bavoid%5D=unpaved%2Cpoor_condition&rtext=52.721295%2C41.452750~53.133161%2C41.394850&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzA1NzEyMxIa0KDQvtGB0YHQuNGPLCDQotCw0LzQsdC-0LIiCg2dzyVCFZviUkI%2C~&utm_source=share&z=10',
+			},
+			{
+				title: 'На машине от Москвы',
+				desc: 'Из Москвы ехать по трассе М-4. Свернуть на трассу Р-22 затем на окружную с Севера Тамбова. Свернуть на Моршанск на трассу 68Н-040. По трассе на Моршанск доехать до поворота на Сосновку. От поворота на Сосновку проехать село Вирятино до поворота на Атманов Угол. В Атмановом Углу ориентироваться по указателям до места проведения игр.',
+				location:
+					'https://yandex.ru/map-widget/v1/?from=mapframe&amp;ll=41.478860%2C52.857405&amp;mode=routes&amp;rtext=55.755864%2C37.617698~52.858686%2C41.482478~53.133161%2C41.394850&amp;rtt=auto&amp;ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzAwMDA5NBIa0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAiCg2GeBZCFQEGX0I%2C~~&amp;via=1&amp;z=13.49',
+			},
+			{
+				title: 'На автобусе',
+				desc: '24 августа будут организованы автобусные маршруты из Тамбова до Атманова Угла и обратно. Зарегистрироваться на маршрут можно будет с 15 августа на нашем сайте. Следите за информацией.',
+				location:
+					'https://yandex.ru/map-widget/v1/?ll=41.441455%2C52.957474&amp;mode=routes&amp;routes%5Bavoid%5D=unpaved%2Cpoor_condition&amp;rtext=52.721295%2C41.452750~53.133161%2C41.394850&amp;rtt=auto&amp;ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzA1NzEyMxIa0KDQvtGB0YHQuNGPLCDQotCw0LzQsdC-0LIiCg2dzyVCFZviUkI%2C~&amp;utm_source=share&amp;z=10',
+			},
+		],
 		relatedObjects: [
 			{
 				id: '1',
@@ -2857,6 +2876,26 @@ export let objects = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 		],
 		openDate: '2005-03-15T00:00:00+03:00',
+		pathways: [
+			{
+				title: 'На машине от Тамбова',
+				desc: 'Из Тамбова по трассе на Моршанск до поворота на Сосновку. От поворота на Сосновку проехать село Вирятино до поворота на Атманов Угол. В Атмановом Углу ориентироваться по указателям до места проведения игр.',
+				location:
+					'https://yandex.ru/map-widget/v1/?ll=41.441455%2C52.957474&mode=routes&routes%5Bavoid%5D=unpaved%2Cpoor_condition&rtext=52.721295%2C41.452750~53.133161%2C41.394850&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzA1NzEyMxIa0KDQvtGB0YHQuNGPLCDQotCw0LzQsdC-0LIiCg2dzyVCFZviUkI%2C~&utm_source=share&z=10',
+			},
+			{
+				title: 'На машине от Москвы',
+				desc: 'Из Москвы ехать по трассе М-4. Свернуть на трассу Р-22 затем на окружную с Севера Тамбова. Свернуть на Моршанск на трассу 68Н-040. По трассе на Моршанск доехать до поворота на Сосновку. От поворота на Сосновку проехать село Вирятино до поворота на Атманов Угол. В Атмановом Углу ориентироваться по указателям до места проведения игр.',
+				location:
+					'https://yandex.ru/map-widget/v1/?from=mapframe&amp;ll=41.478860%2C52.857405&amp;mode=routes&amp;rtext=55.755864%2C37.617698~52.858686%2C41.482478~53.133161%2C41.394850&amp;rtt=auto&amp;ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzAwMDA5NBIa0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAiCg2GeBZCFQEGX0I%2C~~&amp;via=1&amp;z=13.49',
+			},
+			{
+				title: 'На автобусе',
+				desc: '24 августа будут организованы автобусные маршруты из Тамбова до Атманова Угла и обратно. Зарегистрироваться на маршрут можно будет с 15 августа на нашем сайте. Следите за информацией.',
+				location:
+					'https://yandex.ru/map-widget/v1/?ll=41.441455%2C52.957474&amp;mode=routes&amp;routes%5Bavoid%5D=unpaved%2Cpoor_condition&amp;rtext=52.721295%2C41.452750~53.133161%2C41.394850&amp;rtt=auto&amp;ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzA1NzEyMxIa0KDQvtGB0YHQuNGPLCDQotCw0LzQsdC-0LIiCg2dzyVCFZviUkI%2C~&amp;utm_source=share&amp;z=10',
+			},
+		],
 		relatedLinks: [
 			{
 				id: '0',
@@ -7619,6 +7658,26 @@ export let objects = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
 		],
 		openDate: '2015-03-12T00:00:00+03:00',
+		pathways: [
+			{
+				title: 'На машине от Тамбова',
+				desc: 'Из Тамбова по трассе на Моршанск до поворота на Сосновку. От поворота на Сосновку проехать село Вирятино до поворота на Атманов Угол. В Атмановом Углу ориентироваться по указателям до места проведения игр.',
+				location:
+					'https://yandex.ru/map-widget/v1/?ll=41.441455%2C52.957474&mode=routes&routes%5Bavoid%5D=unpaved%2Cpoor_condition&rtext=52.721295%2C41.452750~53.133161%2C41.394850&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzA1NzEyMxIa0KDQvtGB0YHQuNGPLCDQotCw0LzQsdC-0LIiCg2dzyVCFZviUkI%2C~&utm_source=share&z=10',
+			},
+			{
+				title: 'На машине от Москвы',
+				desc: 'Из Москвы ехать по трассе М-4. Свернуть на трассу Р-22 затем на окружную с Севера Тамбова. Свернуть на Моршанск на трассу 68Н-040. По трассе на Моршанск доехать до поворота на Сосновку. От поворота на Сосновку проехать село Вирятино до поворота на Атманов Угол. В Атмановом Углу ориентироваться по указателям до места проведения игр.',
+				location:
+					'https://yandex.ru/map-widget/v1/?from=mapframe&amp;ll=41.478860%2C52.857405&amp;mode=routes&amp;rtext=55.755864%2C37.617698~52.858686%2C41.482478~53.133161%2C41.394850&amp;rtt=auto&amp;ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzAwMDA5NBIa0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAiCg2GeBZCFQEGX0I%2C~~&amp;via=1&amp;z=13.49',
+			},
+			{
+				title: 'На автобусе',
+				desc: '24 августа будут организованы автобусные маршруты из Тамбова до Атманова Угла и обратно. Зарегистрироваться на маршрут можно будет с 15 августа на нашем сайте. Следите за информацией.',
+				location:
+					'https://yandex.ru/map-widget/v1/?ll=41.441455%2C52.957474&amp;mode=routes&amp;routes%5Bavoid%5D=unpaved%2Cpoor_condition&amp;rtext=52.721295%2C41.452750~53.133161%2C41.394850&amp;rtt=auto&amp;ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzA1NzEyMxIa0KDQvtGB0YHQuNGPLCDQotCw0LzQsdC-0LIiCg2dzyVCFZviUkI%2C~&amp;utm_source=share&amp;z=10',
+			},
+		],
 		relatedObjects: [
 			{
 				id: '1',

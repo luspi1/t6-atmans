@@ -1,9 +1,8 @@
 import React, { type FC } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { CustomText } from 'src/components/custom-text/custom-text'
 import { mainFormatDate } from 'src/helpers/utils'
 import { AsideVideos } from 'src/components/aside-videos/aside-videos'
-import { AppRoute } from 'src/routes/main-routes/consts'
 import { useGetObjectNewsVideoByIdQuery } from 'src/store/objects/objects.api'
 
 import styles from './index.module.scss'
@@ -30,9 +29,6 @@ export const ObjNewsVideoDetails: FC = () => {
 				</div>
 				<AsideVideos videosList={videoDetails.similarVideos} />
 			</div>
-			<Link to={`/${AppRoute.Departments}/${id}/${AppRoute.News}/${AppRoute.Videos}`}>
-				К видеозаписям отделения
-			</Link>
 		</div>
 	)
 }

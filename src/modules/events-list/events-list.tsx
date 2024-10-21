@@ -1,4 +1,4 @@
-import React, { type FC } from 'react'
+import React, { type FC, type ReactNode } from 'react'
 import { type EventSearchInputs } from 'src/modules/events-list/schema'
 import { type EventsItem } from 'src/types/events'
 import { FormProvider, type SubmitHandler, useForm } from 'react-hook-form'
@@ -7,80 +7,34 @@ import cn from 'classnames'
 import { ControlledSelect } from 'src/components/controlled-select/controlled-select'
 import { ControlledInput } from 'src/components/controlled-input/controlled-input'
 import { MainButton } from 'src/UI/MainButton/MainButton'
-import { Link } from 'react-router-dom'
-import { formatDateRange } from 'src/helpers/utils'
-import { InfoRow } from 'src/UI/InfoRow/InfoRow'
 
 import styles from './index.module.scss'
-
-type TypesEventInfo = 'registration' | 'designation' | 'brand'
+import { format } from 'date-fns'
+import { ru } from 'date-fns/locale'
+import { Link } from 'react-router-dom'
 
 type EventsListProps = {
 	eventsData?: EventsItem[]
 	className?: string
-	typeEventInfo?: TypesEventInfo
 }
-export const EventsList: FC<EventsListProps> = ({
-	eventsData,
-	className,
-	typeEventInfo = 'registration',
-}) => {
+
+const formatEventDateRange = ([startDate, endDate]: [Date, Date] | []): ReactNode | null => {
+	if (!startDate || !endDate) return null
+	return (
+		<p>
+			<span>{format(startDate, 'd LLL -', { locale: ru }).replace('.', '')}</span>
+			<span>{format(endDate, 'd LLL yyyy', { locale: ru }).replace('.', '')}</span>
+		</p>
+	)
+}
+
+export const EventsList: FC<EventsListProps> = ({ eventsData, className }) => {
 	const methods = useForm<EventSearchInputs>({
 		mode: 'onBlur',
 	})
 
 	const onSubmit: SubmitHandler<EventSearchInputs> = (data) => {
 		console.log(data)
-	}
-
-	const renderEventInfo = (eventEl: EventsItem, typeInfo: TypesEventInfo) => {
-		switch (typeInfo) {
-			case 'registration':
-				return (
-					<div className={styles.eventElInfo}>
-						<p>
-							<span>{formatDateRange(eventEl.dates)}</span>
-						</p>
-						<span className={styles.eventLocation}>{eventEl.location}</span>
-						<Link to={`/events/${eventEl.id}`}>Регистрация</Link>
-					</div>
-				)
-			case 'designation':
-				return (
-					<div className={styles.eventElInfo}>
-						<p>
-							<span>{formatDateRange(eventEl.dates)}</span>
-						</p>
-						<span className={styles.eventLocation}>{eventEl.location}</span>
-						<span className={styles.eventDesignation}>{eventEl?.designation}</span>
-					</div>
-				)
-			case 'brand':
-				return (
-					<div className={cn(styles.eventElInfo, styles.eventElInfoBrand)}>
-						<span className={styles.brandInterval}>{eventEl.eventsInterval}</span>
-						<InfoRow
-							titleClassname={styles.brandInfoHeldTitle}
-							wrapperClassname={styles.brandInfoHeldRow}
-							title='Проведено:'
-							label={eventEl.countHeld}
-							$gap='5px'
-							$titleWidth='72px'
-							$margin='0'
-						/>
-						<InfoRow
-							titleClassname={styles.brandInfoHeldTitle}
-							wrapperClassname={styles.brandInfoHeldRow}
-							title='В планах:'
-							label={eventEl.countHeldPlan}
-							$gap='5px'
-							$titleWidth='72px'
-							$margin='0 0 0 0'
-						/>
-						<span className={styles.eventBrandLocation}>{eventEl.location}</span>
-					</div>
-				)
-		}
 	}
 
 	if (!eventsData?.length) return null
@@ -120,15 +74,14 @@ export const EventsList: FC<EventsListProps> = ({
 			<ul className={styles.eventsList}>
 				{eventsData?.map((eventEl) => (
 					<li key={eventEl.id}>
-						{renderEventInfo(eventEl, typeEventInfo)}
+						<div className={styles.eventElInfo}>
+							{formatEventDateRange(eventEl.dates)}
+							<span className={styles.eventLocation}>{eventEl.location}</span>
+						</div>
 						<div className={styles.eventElContent}>
-							{typeEventInfo === 'brand' ? (
-								<Link className={styles.titleLink} to={eventEl.id}>
-									{eventEl.title}
-								</Link>
-							) : (
-								<h5>{eventEl.title}</h5>
-							)}
+							<Link className={styles.titleLink} to={eventEl.id}>
+								{eventEl.title}
+							</Link>
 
 							<div className={styles.eventElOrganizers}>
 								{eventEl?.organizerLinks?.map((orgLink, idx) => (
@@ -142,9 +95,9 @@ export const EventsList: FC<EventsListProps> = ({
 								<ul>{eventEl?.tags?.map((orgTag, idx) => <li key={idx}>{orgTag}</li>)}</ul>
 							</div>
 						</div>
-						<div className={styles.eventElImg}>
+						<Link className={styles.eventElImg} to={eventEl.id}>
 							<img src={eventEl.preview} alt={eventEl.title} />
-						</div>
+						</Link>
 					</li>
 				))}
 			</ul>

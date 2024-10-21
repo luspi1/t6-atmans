@@ -14,6 +14,8 @@ type NewsListProps = {
 	className?: string
 	setYearsValue: React.Dispatch<React.SetStateAction<string>>
 	yearsValue: string
+	setMonthsValue: React.Dispatch<React.SetStateAction<string>>
+	monthsValue: string
 	isSuccess: boolean
 }
 
@@ -23,6 +25,8 @@ export const NewsList: FC<NewsListProps> = ({
 	className,
 	setYearsValue,
 	yearsValue,
+	setMonthsValue,
+	monthsValue,
 }) => {
 	return (
 		<div className={className}>
@@ -31,11 +35,31 @@ export const NewsList: FC<NewsListProps> = ({
 				<MainSelect
 					onChange={(e) => setYearsValue(e.target.value)}
 					value={yearsValue}
-					className={styles.newsYearsSelect}
+					className={styles.newsSelect}
 					items={[
 						{ label: 'Все годы', value: '' },
 						{ label: '2023', value: '2023' },
 						{ label: '2024', value: '2024' },
+					]}
+				/>
+				<MainSelect
+					onChange={(e) => setMonthsValue(e.target.value)}
+					value={monthsValue}
+					className={styles.newsSelect}
+					items={[
+						{ label: 'Все месяцы', value: '' },
+						{ label: 'январь', value: '1' },
+						{ label: 'февраль', value: '2' },
+						{ label: 'март', value: '3' },
+						{ label: 'апрель', value: '4' },
+						{ label: 'май', value: '5' },
+						{ label: 'июнь', value: '6' },
+						{ label: 'июль', value: '7' },
+						{ label: 'август', value: '8' },
+						{ label: 'сентябрь', value: '9' },
+						{ label: 'октябрь', value: '10' },
+						{ label: 'ноябрь', value: '11' },
+						{ label: 'декабрь', value: '12' },
 					]}
 				/>
 			</div>

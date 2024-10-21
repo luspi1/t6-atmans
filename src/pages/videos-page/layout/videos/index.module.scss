@@ -2,17 +2,28 @@
   margin-bottom: 30px;
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
 
   h2 {
     margin-bottom: 0;
     line-height: 1.2;
+    margin-right: 15px;
   }
 }
+
 select.newsDateSelect {
-  padding: 6px 46px 6px 7px;
+  padding: 6px 15px 6px 7px;
+  width: 109px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .videosPagination {
   margin-top: 50px;
+}
+
+.videoMonth {
+  font-size: 16px;
+  font-family: 'PT Sans', sans-serif;
+  margin-bottom: 25px;
+  text-transform: uppercase;
 }

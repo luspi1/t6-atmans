@@ -28,6 +28,7 @@ export const Videos: FC = () => {
 					items={[{ label: 'Все месяцы', value: '' }]}
 				/>
 			</div>
+			<h5 className={styles.videoMonth}>Март, 2024</h5>
 			<VideoGallery videos={videosList} />
 			<Pagination className={styles.videosPagination} pagesCount={7} activePage={2} />
 		</div>

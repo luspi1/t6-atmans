@@ -1,7 +1,8 @@
 @import "src/assets/styles/vars";
 
 .eventsListWrapper {
-  margin: 42px 0 27px;
+  margin: 33px 0 27px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .eventSearchForm {
@@ -16,12 +17,15 @@
     height: 30px;
     padding: 0 14px;
     text-transform: capitalize;
+    border-radius: 0;
+    font-family: 'PT Sans', sans-serif;
   }
 }
 
 .eventSearchInput {
   flex-grow: 1;
   min-width: 180px;
+
   input {
     font-size: 14px;
     font-weight: 400;
@@ -39,6 +43,7 @@
 .eventSearchSelect {
   min-width: 138px;
   width: 138px;
+  font-family: 'PT Sans', sans-serif;
 
   :global(div.react-dropdown-select ) {
     min-height: 30px;
@@ -54,7 +59,7 @@
 
   & > li {
     background: #F2F5F8;
-    padding: 15px 20px 16px 17px;
+    padding: 15px 20px 25px 17px;
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -70,40 +75,13 @@
   padding-top: 3px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 
   .eventLocation {
-    font-size: 12px;
+    font-size: 14px;
     display: inline-block;
     line-height: 1.2;
   }
-
-  .brandInterval {
-    font-size: 14px;
-    padding: 0 8px;
-    display: inline-block;
-    background: #EBEEF2;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    text-align: center;
-  }
-  .eventBrandLocation {
-    margin-top: auto;
-    font-size: 14px;
-    line-height: 1.1;
-  }
-
-  .brandInfoHeldRow {
-    p {
-      font-size: 14px;
-    }
-  }
-
-  .brandInfoHeldTitle {
-    font-size: 14px;
-    font-weight: 400;
-  }
-
   p {
     @include ptsans-bold;
 
@@ -123,21 +101,13 @@
   }
 }
 
-.eventElInfoBrand {
-  gap: 1px;
-  width: 150px;
-  min-width: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 .eventElContent {
   flex-grow: 1;
 
   .titleLink, h5 {
     font-size: 22px;
     font-weight: 700;
-    margin-bottom: 11px;
+    margin-bottom: 5px;
     white-space: nowrap;
     display: inline-block;
     line-height: 1.2;

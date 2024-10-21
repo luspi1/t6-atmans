@@ -3,8 +3,7 @@ import React, { type FC, useState } from 'react'
 import { MainSelect } from 'src/UI/MainSelect/MainSelect'
 import { VideoGallery } from 'src/components/video-gallery/video-gallery'
 
-import { Link, useParams } from 'react-router-dom'
-import { AppRoute } from 'src/routes/main-routes/consts'
+import { useParams } from 'react-router-dom'
 import { Pagination } from 'src/components/pagination/pagination'
 import { useGetObjectNewsVideosQuery } from 'src/store/objects/objects.api'
 
@@ -20,7 +19,7 @@ export const ObjNewsVideos: FC = () => {
 		<div>
 			<div className={styles.groupTabNewsVideos}>
 				<div className={styles.videosTitleBlock}>
-					<h2>Видеозаписи группы</h2>
+					<h2>Видеозаписи объекта</h2>
 					<MainSelect
 						onChange={(e) => setYearsSelectValue(e.target.value)}
 						value={yearsSelectValue}
@@ -37,7 +36,6 @@ export const ObjNewsVideos: FC = () => {
 				<VideoGallery videos={newsVideosList} />
 				<Pagination className={styles.newsVideosPagination} pagesCount={7} activePage={2} />
 			</div>
-			<Link to={`/${AppRoute.Departments}`}>На страницу списка отделений</Link>
 		</div>
 	)
 }
