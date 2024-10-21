@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 
 import cn from 'classnames'
+import { Link } from 'react-router-dom'
 
 import { Container } from 'src/UI/Container/Container'
 import { AppRoute } from 'src/routes/main-routes/consts'
@@ -24,9 +25,13 @@ export const NewsSection: FC = () => {
 					</MainButton>
 				</FlexRow>
 				{newsList?.length && (
-					<ul className={styles.newsList}>
+					<div className={styles.newsList}>
 						{newsList.map((newsEl) => (
-							<li key={newsEl.id}>
+							<Link
+								className={styles.newsItem}
+								to={`${AppRoute.News}/${newsEl.id}`}
+								key={newsEl.id}
+							>
 								<div className={styles.newsImgWrapper}>
 									<img src={newsEl.imgUrl} alt={newsEl.title} />
 								</div>
@@ -39,9 +44,9 @@ export const NewsSection: FC = () => {
 									</p>
 									<p>{newsEl?.desc}</p>
 								</div>
-							</li>
+							</Link>
 						))}
-					</ul>
+					</div>
 				)}
 			</Container>
 		</section>

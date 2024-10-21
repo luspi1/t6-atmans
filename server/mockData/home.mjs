@@ -108,7 +108,7 @@ export let homeEventMonths = {
 	'2023-11-01T00:00:00+03:00': [],
 	'2023-12-01T00:00:00+03:00': [
 		{
-			id: '4124',
+			id: '0',
 			category: {
 				id: '13',
 				title: 'Атмановские кулачки',
@@ -125,7 +125,7 @@ export let homeEventMonths = {
 				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
 		},
 		{
-			id: '13',
+			id: '1',
 			category: {
 				id: '21',
 				title: 'Русские игры',
@@ -150,7 +150,7 @@ export let homeEventMonths = {
 	'2024-07-01T00:00:00+03:00': [],
 	'2024-08-01T00:00:00+03:00': [
 		{
-			id: '0',
+			id: '2',
 			category: {
 				id: '21',
 				title: 'Русские игры',
@@ -166,7 +166,7 @@ export let homeEventMonths = {
 				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
 		},
 		{
-			id: '1',
+			id: '3',
 			category: {
 				id: '13',
 				title: 'Атмановские кулачки',
@@ -178,22 +178,6 @@ export let homeEventMonths = {
 			location: {
 				title: 'Старинное село Атманов угол на Тамбовщене',
 				address: 'село Атманов Угол, Сосновский муниципальный округ',
-			},
-			description:
-				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
-		},
-		{
-			id: '3',
-			category: {
-				id: '21',
-				title: 'Русские игры',
-			},
-			title: 'Русские игры в Лужниках',
-			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
-			date: '2024-08-15T00:00:00+03:00',
-			location: {
-				title: 'Спортивный комплекс «Лужники», мини-футбольная площадка',
-				address: 'г. Москва, м. Спортивная',
 			},
 			description:
 				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
@@ -217,6 +201,22 @@ export let homeEventMonths = {
 		{
 			id: '5',
 			category: {
+				id: '21',
+				title: 'Русские игры',
+			},
+			title: 'Русские игры в Лужниках',
+			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
+			date: '2024-08-15T00:00:00+03:00',
+			location: {
+				title: 'Спортивный комплекс «Лужники», мини-футбольная площадка',
+				address: 'г. Москва, м. Спортивная',
+			},
+			description:
+				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
+		},
+		{
+			id: '6',
+			category: {
 				id: '13',
 				title: 'Атмановские кулачки',
 			},
@@ -232,7 +232,7 @@ export let homeEventMonths = {
 				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
 		},
 		{
-			id: '6',
+			id: '7',
 			category: {
 				id: '21',
 				title: 'Русские игры',
@@ -250,7 +250,7 @@ export let homeEventMonths = {
 	],
 	'2024-09-01T00:00:00+03:00': [
 		{
-			id: '7',
+			id: '8',
 			category: {
 				id: '13',
 				title: 'Атмановские кулачки',
@@ -267,7 +267,7 @@ export let homeEventMonths = {
 				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
 		},
 		{
-			id: '13',
+			id: '9',
 			category: {
 				id: '21',
 				title: 'Русские игры',
@@ -285,7 +285,7 @@ export let homeEventMonths = {
 	],
 	'2024-10-01T00:00:00+03:00': [
 		{
-			id: '16',
+			id: '10',
 			category: {
 				id: '21',
 				title: 'Русские игры',
@@ -303,7 +303,7 @@ export let homeEventMonths = {
 	],
 	'2024-11-01T00:00:00+03:00': [
 		{
-			id: '21',
+			id: '11',
 			category: {
 				id: '13',
 				title: 'Атмановские кулачки',
@@ -320,7 +320,7 @@ export let homeEventMonths = {
 				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
 		},
 		{
-			id: '22',
+			id: '12',
 			category: {
 				id: '21',
 				title: 'Русские игры',
@@ -336,7 +336,7 @@ export let homeEventMonths = {
 				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
 		},
 		{
-			id: '23',
+			id: '13',
 			category: {
 				id: '21',
 				title: 'Русские игры',
@@ -352,12 +352,12 @@ export let homeEventMonths = {
 				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
 		},
 		{
-			id: '24',
+			id: '14',
 			category: {
 				id: '21',
 				title: 'Русские игры',
 			},
-			title: 'Русские игры в Лужниках',
+			title: 'Атмановские кулачки',
 			imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
 			date: '2024-11-15T00:00:00+03:00',
 			location: {
@@ -368,7 +368,7 @@ export let homeEventMonths = {
 				'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
 		},
 		{
-			id: '25',
+			id: '15',
 			category: {
 				id: '13',
 				title: 'Атмановские кулачки',
@@ -387,7 +387,7 @@ export let homeEventMonths = {
 	],
 	'2024-12-01T00:00:00+03:00': [
 		{
-			id: '35',
+			id: '16',
 			category: {
 				id: '13',
 				title: 'Атмановские кулачки',
@@ -406,7 +406,7 @@ export let homeEventMonths = {
 	],
 	'2025-01-01T00:00:00+03:00': [
 		{
-			id: '35435',
+			id: '17',
 			category: {
 				id: '13',
 				title: 'Атмановские кулачки',
@@ -470,54 +470,54 @@ export let homeNews = [
 export let homeVideos = [
 	{
 		id: '0',
-		title: 'ВЕСТИ-ТАМБОВ об Атмановских кулачках - 2023',
+		title: 'Атмановские кулачки',
 		duration: '1:20',
 		thumb:
 			'https://i.mycdn.me/getVideoPreview?id=5363256658515&idx=4&type=39&tkn=mEYWV9Y0UtBmXLYFxIM1dHiII4c&fn=vid_w',
 	},
 	{
 		id: '1',
-		title: 'Малые Корелы. Экскурсия по Двинскому сектору музея',
+		title: 'Сколот - Атмановские Кулачки (Live "Наследие 2022")',
 		duration: '1:40',
 		thumb: 'https://sun9-47.userapi.com/IRs714ydO_eVqVKCxRZY2Gd5jRLgtLXEIUNZ4A/gdgfru-DAy0.jpg',
 	},
 	{
 		id: '2',
-		title: 'Почему важно развивать национальные виды спорта (этноспорт)',
+		title: 'Атмановские кулачки',
 		duration: '2:17',
 		thumb:
 			'https://sun9-77.userapi.com/impg/OeNWr3zaF-QsFfHmc_-rbZO-FJ_VINmJe0boHg/8nILqL3n9L0.jpg?quality=90&proxy=1&sign=923a32d8f6bd8a8e39308422e3c9a197&c_uniq_tag=13xrcEi738bbyJAv5r0ST7JWBMd1U6ljBs8qWsxgOjo&type=video_thumb',
 	},
 	{
 		id: '3',
-		title: 'Русский этноспорт',
+		title: 'Сколот - Атмановские Кулачки (Live "Наследие 2022")',
 		duration: '3:44',
 		thumb:
 			'https://i.mycdn.me/getVideoPreview?id=5913254234770&idx=7&type=39&tkn=1wE77ep98UgPWAJJNXvFXZC0bWY&fn=vid_w',
 	},
 	{
 		id: '4',
-		title: 'ВЕСТИ-ТАМБОВ об Атмановских кулачках - 2023',
+		title: 'Атмановские кулачки',
 		duration: '5:14',
 		thumb:
 			'https://i.mycdn.me/getVideoPreview?id=5363256658515&idx=4&type=39&tkn=mEYWV9Y0UtBmXLYFxIM1dHiII4c&fn=vid_w',
 	},
 	{
 		id: '5',
-		title: 'Малые Корелы. Экскурсия по Двинскому сектору музея',
+		title: 'Сколот - Атмановские Кулачки (Live "Наследие 2022")',
 		duration: '11:20',
 		thumb: 'https://sun9-47.userapi.com/IRs714ydO_eVqVKCxRZY2Gd5jRLgtLXEIUNZ4A/gdgfru-DAy0.jpg',
 	},
 	{
 		id: '6',
-		title: 'Почему важно развивать национальные виды спорта (этноспорт)',
+		title: 'Атмановские кулачки',
 		duration: '4:13',
 		thumb:
 			'https://sun9-77.userapi.com/impg/OeNWr3zaF-QsFfHmc_-rbZO-FJ_VINmJe0boHg/8nILqL3n9L0.jpg?quality=90&proxy=1&sign=923a32d8f6bd8a8e39308422e3c9a197&c_uniq_tag=13xrcEi738bbyJAv5r0ST7JWBMd1U6ljBs8qWsxgOjo&type=video_thumb',
 	},
 	{
 		id: '7',
-		title: 'Русский этноспорт',
+		title: 'Сколот - Атмановские Кулачки (Live "Наследие 2022")',
 		duration: '1:13',
 		thumb:
 			'https://i.mycdn.me/getVideoPreview?id=5913254234770&idx=7&type=39&tkn=1wE77ep98UgPWAJJNXvFXZC0bWY&fn=vid_w',
@@ -560,41 +560,41 @@ export let homePartners = [
 
 export let homeDepartments = [
 	{
-		id: '1',
+		id: '16',
 		title: 'Сосновские бугры',
 		imgUrl: 'https://a.d-cd.net/FjAAAgDsi-A-960.jpg',
 	},
 	{
-		id: '2',
+		id: '90',
 		title: 'Конно-спортивный клуб «Фаворит»',
 		imgUrl:
 			'https://travel.riamo.ru/upload/files/i/i/820/iiuT3yJ0UDr9H8SMEuQcZ4bUUrzUIEZXZAFYVP0wi5IDg2DQykw9pzYBj8fF3TGITZEAFbAFewl6Qe83H8Oipv0NSCOO5ak.jpeg',
 	},
 	{
-		id: '3',
+		id: '78',
 		title: 'Свято-Никольская Мамонтова пустынь',
 		imgUrl:
 			'https://lh6.googleusercontent.com/proxy/glc5jMejHwRKfVLtUT5o5fZDy0skLC-U7GU1BhLDKE00cROfEB_RHAi8TI6fFfezZGVm27L8uAZl5N-SIug',
 	},
 	{
-		id: '4',
+		id: '90',
 		title: 'Традиционные игры «Атмановские кулачки»',
 		imgUrl:
 			'https://s.vtambove.ru/localStorage/news/b5/e1/01/de/b5e101de_resizedScaled_1020to573.jpg',
 	},
 	{
-		id: '5',
+		id: '16',
 		title: 'Оленеферма КФХ Гуровых',
 		imgUrl: 'https://shkola1sosnovka-r68.gosweb.gosuslugi.ru/netcat_files/48/188/olen1.jpg',
 	},
 	{
-		id: '6',
+		id: '78',
 		title: 'Источник святого апостола Андрея Первозванного',
 		imgUrl:
 			'https://lh4.googleusercontent.com/proxy/G-ekbPtDyuAPxGLW07x3riCiYLY1jS7gkUtzGSxLyRZFtPM7195reEMkrmygelOYcyugmYJn0Hd5BwuXbSug',
 	},
 	{
-		id: '7',
+		id: '90',
 		title: 'Сосновский краеведческий музей',
 		imgUrl: 'https://cdn.culture.ru/images/4859f888-005d-5f34-be27-a53b1ac3bce3',
 	},

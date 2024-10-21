@@ -35,7 +35,7 @@ export const VideotapeSection: FC = () => {
 						<SwiperSlide key={idx}>
 							<Link
 								className={styles.slideItem}
-								to={generatePath('videotape/:id', {
+								to={generatePath('videos/:id', {
 									id: slideItem.id,
 								})}
 							>

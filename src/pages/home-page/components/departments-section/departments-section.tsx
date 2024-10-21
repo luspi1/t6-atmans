@@ -32,7 +32,7 @@ export const DepartmentsSection: FC = () => {
 			<Container>
 				<FlexRow $margin='0 0 10px 0' $justifyContent='space-between'>
 					<h4>Объекты</h4>
-					<MainButton as='route' to={AppRoute.Home} $variant='light'>
+					<MainButton as='route' to={AppRoute.Departments} $variant='light'>
 						Все объекты
 					</MainButton>
 				</FlexRow>

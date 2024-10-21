@@ -43,7 +43,7 @@ export const PosterSection: FC = () => {
 										$height='50px'
 										to={`events/${slideItem.id}`}
 									>
-										Зарегистрироваться
+										перейти к событию
 									</MainButton>
 								</div>
 							</div>
