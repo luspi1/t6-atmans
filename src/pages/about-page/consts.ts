@@ -11,7 +11,7 @@ export const AboutMenuItems: NavigationItem[] = [
 		link: 'about-culture',
 	},
 	{
-		title: 'Карты и маршруты',
+		title: 'Карта и маршруты',
 		link: 'about-contacts',
 	},
 ]
