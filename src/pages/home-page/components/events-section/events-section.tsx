@@ -1,19 +1,23 @@
-import { type FC } from 'react'
+import { type FC, type RefObject, useRef } from 'react'
+import { type SwiperRef } from 'swiper/react/swiper-react'
 
 import cn from 'classnames'
 
 import { Container } from 'src/UI/Container/Container'
-import { HomeEventsList } from 'src/pages/home-page/components/events-section/components/home-events-list/home-events-list'
 import { useGetHomeEventsQuery } from 'src/store/home/home.api'
-
-import styles from './index.module.scss'
 import { FlexRow } from 'src/components/flex-row/flex-row'
 import { MainButton } from 'src/UI/MainButton/MainButton'
 import { AppRoute } from 'src/routes/main-routes/consts'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { SliderBtns } from 'src/components/slider-btns/slider-btns'
+import { EventCard } from 'src/components/event-card/event-card'
+import { eventsSliderOptions } from 'src/pages/home-page/components/events-section/consts'
+
+import styles from './index.module.scss'
 
 export const EventsSection: FC = () => {
 	const { data: homeEvents } = useGetHomeEventsQuery(null)
-
+	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 	return (
 		<section className={cn(styles.eventsSection, '_bordered')}>
 			<Container>
@@ -23,8 +27,16 @@ export const EventsSection: FC = () => {
 						Все события
 					</MainButton>
 				</FlexRow>
-
-				<HomeEventsList homeEvents={homeEvents ?? []} />
+			</Container>
+			<Container>
+				<Swiper {...eventsSliderOptions} ref={swiperRef}>
+					{homeEvents?.map((slideItem, idx) => (
+						<SwiperSlide key={idx}>
+							<EventCard className={styles.homeEventCard} {...slideItem} />
+						</SwiperSlide>
+					))}
+				</Swiper>
+				<SliderBtns $topPosition='49%' $btnsSpacing='calc(100% - 80px)' swiperRef={swiperRef} />
 			</Container>
 		</section>
 	)

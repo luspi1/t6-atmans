@@ -1,7 +1,7 @@
-import { type EventsItem } from 'src/types/events'
 import { type ImageItem } from 'src/types/photos'
 import { type NewsItem } from 'src/types/news'
 import { type VideoItem } from 'src/types/videos'
+import { type EventItem } from 'src/types/events'
 
 export type ObjectItem = {
 	id: string
@@ -15,7 +15,7 @@ export type ObjectItem = {
 	address: string
 	photos: ImageItem[]
 	descList: string[]
-	events: EventsItem[]
+	events: EventItem[]
 	news: NewsItem[]
 	videos: VideoItem[]
 	location: string

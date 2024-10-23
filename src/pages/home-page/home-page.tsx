@@ -11,6 +11,7 @@ import { PartnersSection } from 'src/pages/home-page/components/partners-section
 import { FaqSection } from 'src/pages/home-page/components/faq-section/faq-section'
 
 import styles from './index.module.scss'
+import { ObjectPreviewSection } from 'src/pages/home-page/components/object-preview-section/object-preview-section'
 
 export const HomePage: FC = () => {
 	return (
@@ -21,6 +22,7 @@ export const HomePage: FC = () => {
 			<PosterSection />
 			<ObjectsSection />
 			<EventsSection />
+			<ObjectPreviewSection />
 			<NewsSection />
 			<VideotapeSection />
 			<PartnersSection />

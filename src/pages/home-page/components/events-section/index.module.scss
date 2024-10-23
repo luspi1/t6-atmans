@@ -1,4 +1,12 @@
 section.eventsSection {
-  padding: 83px 0 60px;
+  padding: 83px 0 145px;
 }
 
+.homeEventCard {
+  max-width: 100%;
+  :global {
+    .event-item-img {
+      height: 255px;
+    }
+  }
+}

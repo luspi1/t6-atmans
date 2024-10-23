@@ -15,7 +15,7 @@ body {
   line-height: 1.37;
   color: #000000;
   position: relative;
-  @include opensans-regular;
+  font-family: 'MADE Likes Slab', serif;
   background-color: #F2F1F7;
 }
 
@@ -93,12 +93,6 @@ input[type=number] {
 
 textarea {
   resize: none;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1250px;
-  padding: 0 15px;
 }
 
 .col-item {

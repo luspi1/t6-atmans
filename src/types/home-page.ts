@@ -6,18 +6,6 @@ export type HomePoster = {
 	image_url: string
 }
 
-export type HomeEventItem = {
-	id: string
-	title: string
-	imgUrl: string
-	date: Date
-	location: {
-		title: string
-		address: string
-	}
-	description: string
-}
-
 export type HomeNewsItem = {
 	id: string
 	title: string

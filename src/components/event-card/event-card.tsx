@@ -1,5 +1,5 @@
 import { type FC } from 'react'
-import { type HomeEventItem } from 'src/types/home-page'
+import { type EventItem } from 'src/types/events'
 
 import { Link } from 'react-router-dom'
 import { AppRoute } from 'src/routes/main-routes/consts'
@@ -7,9 +7,10 @@ import { AppRoute } from 'src/routes/main-routes/consts'
 import { getDayOfWeek, mainFormatDate } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
+import cn from 'classnames'
 
-type EventItemProps = HomeEventItem
-export const HomeEvent: FC<EventItemProps> = ({
+type EventItemProps = EventItem
+export const EventCard: FC<EventItemProps & { className?: string }> = ({
 	id,
 	category: { title: catTitle },
 	location: { title: locTitle, address },
@@ -17,11 +18,12 @@ export const HomeEvent: FC<EventItemProps> = ({
 	date,
 	imgUrl,
 	description,
+	className,
 }) => {
 	return (
-		<li className={styles.eventItem}>
+		<div className={cn(styles.eventItem, className)}>
 			<Link to={`/${AppRoute.Events}/${id}`}>
-				<div className={styles.imgWrapper}>
+				<div className='event-item-img'>
 					<img src={imgUrl} alt={title} />
 					<span>{catTitle}</span>
 				</div>
@@ -37,6 +39,6 @@ export const HomeEvent: FC<EventItemProps> = ({
 					{description && <p className={styles.eventDesc}>{description}</p>}
 				</div>
 			</Link>
-		</li>
+		</div>
 	)
 }

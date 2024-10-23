@@ -1,9 +1,5 @@
 import { type ReactNode } from 'react'
 
-export type RelatedLink = {
-	id: string
-	title: string
-}
 export type LinkItem = {
 	id: string
 	link: string
@@ -28,4 +24,9 @@ export type ChronologyItem = {
 	date: Date
 	text: string
 	hiddenText: string
+}
+
+export type CategoryItem = {
+	id: string
+	title: string
 }

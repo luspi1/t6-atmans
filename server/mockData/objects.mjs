@@ -2,9 +2,9 @@ export let objects = [
 	{
 		id: '1',
 		title: 'Сосновский краеведческий музей',
-		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
+		logo: 'https://www.lenoblmus.ru/sites/default/files/styles/spisok_materialov_standart_3_2_/public/2020-11/luga.png?itok=HlLgA5jt',
 		mainDesc:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.',
+			'Небольшое, но интересное описание объекта кластера. Стоит буквально в нескольких словах описать, что это такое, зачем надо и что в этом месте интересного.',
 		phone: '+7 (432) 900-00-00',
 		email: 'mail@mail.ru',
 		tgSoc: 'https://t.me/username',

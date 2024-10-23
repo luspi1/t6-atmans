@@ -1,4 +1,9 @@
-import { type ChronologyItem, type SimpleLinkType, type SourceLink } from 'src/types/global'
+import {
+	type CategoryItem,
+	type ChronologyItem,
+	type SimpleLinkType,
+	type SourceLink,
+} from 'src/types/global'
 import { type NewsItem } from 'src/types/news'
 import { type VideoItem } from 'src/types/videos'
 import { type ImageItem } from 'src/types/photos'
@@ -16,12 +21,19 @@ export type TeamItem = {
 	side: string
 }
 
-export type EventsItem = {
+export type EventItem = {
 	id: string
+	imgUrl: string
+	category: CategoryItem
+	date: Date
+	location: {
+		title: string
+		address: string
+	}
+	description: string
 	countHeld: number
 	countHeldPlan: string
 	eventsInterval: string
-	category: string
 	sections: string[]
 	region: string
 	relevance: string
@@ -29,7 +41,6 @@ export type EventsItem = {
 	mainBrand: SimpleLinkType
 	contactPerson: string
 	partGroup: string
-	location: string
 	preview: string
 	brandImg: string
 	partnerImg: string
@@ -40,16 +51,13 @@ export type EventsItem = {
 	disciplines: EthnosportDisciplineItem[]
 	program: ProgramDay[]
 	teams: TeamItem[]
-	dates: [Date, Date]
 	type: string
-	desc: string
 	descs: string[]
 	sideDocs: ShortDocument[]
 	organizerLinks: SimpleLinkType[]
 	partnerLinks: SimpleLinkType[]
 	news: NewsItem[]
 	newsVideos: VideoItem[]
-	events: EventsItem[]
 	photos: ImageItem[]
 	relatedLinks: SourceLink[]
 	tags: string[]

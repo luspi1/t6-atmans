@@ -4,7 +4,7 @@
 }
 
 .footerTop {
-  padding: 45px 0 40px;
+  padding: 25px 0 27px;
   position: relative;
 
   &::after {
@@ -21,7 +21,7 @@
   a {
     font-size: 18px;
     color: #000000;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
   }
 }
@@ -41,12 +41,12 @@
   h6 {
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
   }
 
   p {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
   }
 }
 
@@ -58,23 +58,30 @@
 }
 
 .footerDesc {
+
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: #626262;
+
+}
+
+.footerCertificate {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
-  margin-bottom: 20px;
-
-  p {
-    font-size: 14px;
-    font-weight: 500;
-    color: #626262;
-  }
-}
-
-.footerCertificate {
-  font-size: 10px;
   color: #626262;
-  max-width: 650px;
-  line-height: 1.3;
+
+  span {
+    &:first-child {
+      max-width: 650px;
+      font-size: 10px;
+    }
+    &:last-child {
+      font-size: 14px;
+    }
+  }
 }

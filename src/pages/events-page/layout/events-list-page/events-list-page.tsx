@@ -5,10 +5,8 @@ import { PageContent } from 'src/components/page-content/page-content'
 
 import { Pagination } from 'src/components/pagination/pagination'
 import { useGetAllEventsQuery } from 'src/store/events/events.api'
-import { EventsList } from 'src/modules/events-list/events-list'
 import { Loader } from 'src/components/loader/loader'
 
-import styles from './index.module.scss'
 export const EventsListPage: FC = () => {
 	const { data: eventsList, isLoading } = useGetAllEventsQuery({ year: '' })
 
@@ -18,11 +16,7 @@ export const EventsListPage: FC = () => {
 				<title>Cобытия</title>
 			</Helmet>
 			<h2>Cобытия</h2>
-			{isLoading ? (
-				<Loader />
-			) : (
-				<EventsList className={styles.eventsList} eventsData={eventsList} />
-			)}
+			{isLoading ? <Loader /> : <p>Список событий: {eventsList?.length}</p>}
 
 			<Pagination pagesCount={7} activePage={2} />
 		</PageContent>

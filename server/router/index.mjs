@@ -48,7 +48,7 @@ import {
 	getNewsById,
 	getNewsVideoById,
 	getNewsVideos,
-	getObjectByCode,
+	getObjectById,
 	getObjectEvents,
 	getObjectNews,
 	getObjectNewsById,
@@ -66,7 +66,7 @@ export const router = new Router()
 
 router.get('/objects-info', getObjectsInfo)
 router.get('/objects', getObjects)
-router.get('/objects/:code', getObjectByCode)
+router.get('/objects/:id', getObjectById)
 router.get('/objects/:code/events', getObjectEvents)
 router.get('/objects/:code/photos', getObjectPhotos)
 router.get('/objects/:code/news', getObjectNews)

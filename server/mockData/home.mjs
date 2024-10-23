@@ -648,6 +648,34 @@ export let homeNews = [
 		date: ['2023-05-19T00:00:00+03:00'],
 		desc: '',
 	},
+	{
+		id: '5',
+		title: 'Фестиваль национальных игр «Этноспорт объединяет»',
+		imgUrl: 'https://nyagan.life/editor_files/images/images/news/DSC00808--1-.jpg',
+		date: ['2023-03-25T00:00:00+03:00', '2023-04-25T00:00:00+03:00'],
+		desc: '',
+	},
+	{
+		id: '6',
+		title: 'Фестиваль этноспорта «Югорские обласа»',
+		imgUrl: 'https://sitv.ru/upload/information_system_15/1/6/5/item_165399/item_165399.jpg',
+		date: ['2023-03-25T00:00:00+03:00', '2023-04-25T00:00:00+03:00'],
+		desc: 'Еще вчера иностранные делегации из Турции, Нигерии, Ирана, Камеруна, Замбии и Китая принимали участие в междунар',
+	},
+	{
+		id: '7',
+		title: 'В Карачаево-Черкесии появится центр развития этноспорта',
+		imgUrl: 'https://minobrnauki.gov.ru/upload/iblock/2a4/a2zcz5kolir7s5ymf7qieutx5pmlgdh4.jpeg',
+		date: ['2023-10-21T00:00:00+03:00', '2023-10-23T00:00:00+03:00'],
+		desc: '',
+	},
+	{
+		id: '8',
+		title: 'На Алтае откроют детскую школу по...',
+		imgUrl: 'https://media.nazaccent.ru/cache/ee/a2/eea2ca13f6eca13789d0ee06778ad3be.jpg',
+		date: ['2023-05-19T00:00:00+03:00'],
+		desc: '',
+	},
 ]
 
 export let homeVideos = [
@@ -739,6 +767,21 @@ export let homePartners = [
 		imgUrl: 'https://npotau.ru/templates/default/img/logo.png',
 		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
 	},
+	{
+		id: '7',
+		imgUrl: 'https://assets.turbologo.ru/blog/ru/2020/02/18161800/sber-logo.png',
+		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
+	},
+	{
+		id: '8',
+		imgUrl: 'https://assets.turbologo.ru/blog/ru/2020/02/18161800/sber-logo.png',
+		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
+	},
+	{
+		id: '9',
+		imgUrl: 'https://npotau.ru/templates/default/img/logo.png',
+		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
+	},
 ]
 
 export let homeFaq = [
@@ -790,7 +833,7 @@ export let homeObjects = [
 	{
 		id: '1',
 		title: 'Сосновский краеведческий музей',
-		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
+		logo: 'https://www.lenoblmus.ru/sites/default/files/styles/spisok_materialov_standart_3_2_/public/2020-11/luga.png?itok=HlLgA5jt',
 	},
 	{
 		id: '2',

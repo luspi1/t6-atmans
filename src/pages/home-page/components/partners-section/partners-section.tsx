@@ -1,7 +1,5 @@
 import { type FC } from 'react'
 
-import cn from 'classnames'
-
 import { Container } from 'src/UI/Container/Container'
 import { FlexRow } from 'src/components/flex-row/flex-row'
 import { MainButton } from 'src/UI/MainButton/MainButton'
@@ -13,11 +11,11 @@ import styles from './index.module.scss'
 export const PartnersSection: FC = () => {
 	const { data: partners } = useGetHomePartnersQuery(null)
 	return (
-		<section className={cn(styles.partnersSection, '_bordered')}>
+		<section className={styles.partnersSection}>
 			<Container>
 				<FlexRow
 					className={styles.partnersTop}
-					$margin='0 0 10px 0'
+					$margin='0 0 55px 0'
 					$alignItems='center'
 					$justifyContent='space-between'
 				>

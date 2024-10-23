@@ -1,9 +1,0 @@
-.eventsList {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 390px);
-  gap: 25px;
-  margin-bottom: 30px;
-  @media (max-width: 550px) {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}

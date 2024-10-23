@@ -50,9 +50,9 @@ export const getObjectPhotos = (req, res) => {
 	res.status(200).json(objectPhotos)
 }
 
-export const getObjectByCode = (req, res) => {
-	const objectCode = req.params.code
-	const foundObject = objects.find((object) => object.objectCode === objectCode)
+export const getObjectById = (req, res) => {
+	const objectId = req.params.id
+	const foundObject = objects.find((object) => object.id === objectId)
 
 	res.status(200).json(foundObject)
 }

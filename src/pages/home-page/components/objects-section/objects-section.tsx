@@ -9,9 +9,9 @@ import { Container } from 'src/UI/Container/Container'
 import { SliderBtns } from 'src/components/slider-btns/slider-btns'
 import { useGetHomeObjectsQuery } from 'src/store/home/home.api'
 import { objectsSliderOptions } from 'src/pages/home-page/components/objects-section/consts'
+import { Heptagon } from 'src/UI/Heptagon/Heptagon'
 
 import styles from './index.module.scss'
-import { Heptagon } from 'src/UI/Heptagon/Heptagon'
 
 export const ObjectsSection: FC = () => {
 	const { data: objects } = useGetHomeObjectsQuery(null)
@@ -19,7 +19,7 @@ export const ObjectsSection: FC = () => {
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 	return (
 		<section className={cn(styles.objectsSection, '_bordered')}>
-			<Container $margin='0 auto 28px auto' $width='1920px'>
+			<Container>
 				<Swiper className={styles.objectsSlider} {...objectsSliderOptions} ref={swiperRef}>
 					{objects?.map((slideItem, idx) => (
 						<SwiperSlide key={idx}>

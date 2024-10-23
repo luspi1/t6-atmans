@@ -9,14 +9,14 @@ import { RenderedArray } from 'src/components/rendered-array/rendered-array'
 import { SimpleLink } from 'src/components/simple-link/simple-link'
 
 import { CustomText } from 'src/components/custom-text/custom-text'
-import { useGetObjectByCodeQuery } from 'src/store/objects/objects.api'
+import { useGetObjectByIdQuery } from 'src/store/objects/objects.api'
 
 import styles from './index.module.scss'
 
 export const DepartmentHeader: FC = () => {
 	const { id } = useParams()
 
-	const { data: objectData } = useGetObjectByCodeQuery(id ?? '')
+	const { data: objectData } = useGetObjectByIdQuery(id ?? '')
 
 	useAdditionalCrumbs(objectData?.fullTitle)
 

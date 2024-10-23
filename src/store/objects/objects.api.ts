@@ -1,5 +1,5 @@
 import { type ObjectItem, type ObjectsInfo } from 'src/types/objects'
-import { type EventsItem } from 'src/types/events'
+import { type EventItem } from 'src/types/events'
 import { type ImageItem } from 'src/types/photos'
 import { type VideoItem } from 'src/types/videos'
 
@@ -28,13 +28,13 @@ export const objectsApi = createApi({
 				},
 			}),
 		}),
-		getObjectByCode: build.query<ObjectItem, string>({
-			query: (objCode) => ({
-				url: `objects/${objCode}`,
+		getObjectById: build.query<ObjectItem, string>({
+			query: (id) => ({
+				url: `objects/${id}`,
 			}),
 		}),
 
-		getObjectEvents: build.query<EventsItem[], [string, string]>({
+		getObjectEvents: build.query<EventItem[], [string, string]>({
 			query: ([search, objCode]) => ({
 				url: `objects/${objCode}/events`,
 				params: {
@@ -83,8 +83,7 @@ export const objectsApi = createApi({
 
 export const {
 	useGetAllObjectsQuery,
-	useGetObjectByCodeQuery,
-	useGetObjectEventsQuery,
+	useGetObjectByIdQuery,
 	useGetObjectPhotosQuery,
 	useGetObjectsInfoQuery,
 	useGetObjectAllNewsQuery,

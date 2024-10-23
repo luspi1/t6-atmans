@@ -6,7 +6,6 @@ import { generatePath, Link } from 'react-router-dom'
 import cn from 'classnames'
 
 import { Container } from 'src/UI/Container/Container'
-import { SliderBtns } from 'src/components/slider-btns/slider-btns'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { videotapeSliderOptions } from 'src/pages/home-page/components/videotape-section/consts'
 import { useGetHomeVideosQuery } from 'src/store/home/home.api'
@@ -22,7 +21,7 @@ export const VideotapeSection: FC = () => {
 	return (
 		<section className={cn(styles.videotapeSection, '_bordered')}>
 			<Container className={styles.videotapeTop}>
-				<FlexRow $margin='0 0 10px 0' $alignItems='center' $justifyContent='space-between'>
+				<FlexRow $margin='0 0 25px 0' $alignItems='center' $justifyContent='space-between'>
 					<h4>Видеолента</h4>
 					<MainButton as='route' to={AppRoute.Videos}>
 						Все видео
@@ -48,7 +47,6 @@ export const VideotapeSection: FC = () => {
 						</SwiperSlide>
 					))}
 				</Swiper>
-				<SliderBtns $topPosition='82px' $btnsSpacing='95%' swiperRef={swiperRef} />
 			</Container>
 		</section>
 	)
