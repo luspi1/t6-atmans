@@ -1,21 +1,18 @@
 @import "src/assets/styles/vars";
 
 .mainNav {
-  padding: 55px 0;
-  background-color: #fff;
-  @media (max-width: 768px) {
-    padding: 15px 0;
-  }
+  font-family: 'MADE Likes Slab', serif;
 }
 
 .logoWrapper {
-  width: 219px;
-  min-width: 219px;
-  height: 50px;
+  width: 376px;
+  min-width: 376px;
+  height: 100px;
   @media (max-width: 768px) {
-    min-width: auto;
-    width: 156px;
+    min-width: 200px;
+    width: 200px;
   }
+
   img {
     object-fit: contain;
     width: 100%;
@@ -23,25 +20,50 @@
   }
 }
 
-.navContainer {
+.topMainNavWrapper {
+  padding: 30px 0;
+  background-color: #fff;
+}
+
+.topMainNav {
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
   @media(max-width: 768px) {
     gap: 15px;
+    height: auto;
+    flex-wrap: wrap;
   }
 }
 
+.personMenu {
+  margin-left: auto;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
+}
 
 .menuWrapper {
+  background: #DD0A15;
+  padding: 13px 0;
+}
+
+.menuContainer {
   display: flex;
-  gap: 60px;
+  gap: 50px;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
   @media(max-width: 768px) {
     gap: 15px;
   }
 }
-
+.searchLink {
+  height: 30px;
+  svg {
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+  }
+}

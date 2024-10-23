@@ -41,7 +41,7 @@ export const MonthsSlider: FC<MonthsSliderProps> = ({ activeMonth, changeActiveM
 
 	if (!monthsList) return
 	return (
-		<Container $margin='0 auto 30px auto' $width='1300px' $padding='0 40px'>
+		<Container $margin='0 auto 30px auto' $width='1920px' $padding='0 40px'>
 			<Swiper {...monthsSliderOptions} ref={swiperRef}>
 				{Object.entries(monthsList)?.map(([date, months]) => (
 					<SwiperSlide

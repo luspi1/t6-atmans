@@ -2,7 +2,7 @@ import {
 	deleteNews,
 	getAllBrandEvents,
 	getAllDisciplines,
-	getAllEventMonths,
+	getAllHomeEvents,
 	getBrandEventById,
 	getBrandEventNews,
 	getBrandEventNewsById,
@@ -15,9 +15,7 @@ import {
 	getEthnosportById,
 	getEthnosportGlobal,
 	getEventById,
-	getEventCategories,
 	getEventDisciplinesById,
-	getEventMonths,
 	getEventNews,
 	getEventNewsById,
 	getEventNewsVideoById,
@@ -39,9 +37,9 @@ import {
 	getGroupPhotos,
 	getGroups,
 	getGroupTable,
-	getHomeDepartments,
 	getHomeFaq,
 	getHomeNews,
+	getHomeObjects,
 	getHomePartners,
 	getHomePosters,
 	getHomeRegions,
@@ -118,13 +116,11 @@ router.get('/brand-events/:id/events', getEventsByBrands)
 router.get('/brand-events/:id/photos', getBrandEventPhotos)
 router.get('/home/regions', getHomeRegions)
 router.get('/home/posters', getHomePosters)
-router.get('/home/event-months', getEventMonths)
-router.get('/home/all-event-months', getAllEventMonths)
-router.get('/home/all-event-categories', getEventCategories)
+router.get('/home/all-events', getAllHomeEvents)
 router.get('/home/all-news', getHomeNews)
 router.get('/home/all-videos', getHomeVideos)
 router.get('/home/partners', getHomePartners)
-router.get('/home/departments', getHomeDepartments)
+router.get('/home/objects', getHomeObjects)
 router.get('/home/faq', getHomeFaq)
 router.get('/cultures', getCultures)
 router.get('/cultures/:id', getCultureById)

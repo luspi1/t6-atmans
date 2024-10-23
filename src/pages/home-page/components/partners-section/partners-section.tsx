@@ -18,10 +18,11 @@ export const PartnersSection: FC = () => {
 				<FlexRow
 					className={styles.partnersTop}
 					$margin='0 0 10px 0'
+					$alignItems='center'
 					$justifyContent='space-between'
 				>
 					<h4>Партнеры</h4>
-					<MainButton as='route' to={AppRoute.Home} $variant='light'>
+					<MainButton as='route' to={AppRoute.Home}>
 						Все партнеры
 					</MainButton>
 				</FlexRow>

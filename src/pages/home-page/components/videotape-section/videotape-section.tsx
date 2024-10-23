@@ -22,14 +22,14 @@ export const VideotapeSection: FC = () => {
 	return (
 		<section className={cn(styles.videotapeSection, '_bordered')}>
 			<Container className={styles.videotapeTop}>
-				<FlexRow $margin='0 0 10px 0' $justifyContent='space-between'>
+				<FlexRow $margin='0 0 10px 0' $alignItems='center' $justifyContent='space-between'>
 					<h4>Видеолента</h4>
-					<MainButton as='route' to={AppRoute.Videos} $variant='light'>
+					<MainButton as='route' to={AppRoute.Videos}>
 						Все видео
 					</MainButton>
 				</FlexRow>
 			</Container>
-			<Container $margin='0 auto 28px auto' $width='1300px'>
+			<Container $margin='0 auto 28px auto' $width='1920px'>
 				<Swiper className={styles.videotapeSlider} {...videotapeSliderOptions} ref={swiperRef}>
 					{videos?.map((slideItem, idx) => (
 						<SwiperSlide key={idx}>
@@ -48,12 +48,7 @@ export const VideotapeSection: FC = () => {
 						</SwiperSlide>
 					))}
 				</Swiper>
-				<SliderBtns
-					$topPosition='82px'
-					$btnsSpacing='95%'
-					$variant='sm-light'
-					swiperRef={swiperRef}
-				/>
+				<SliderBtns $topPosition='82px' $btnsSpacing='95%' swiperRef={swiperRef} />
 			</Container>
 		</section>
 	)

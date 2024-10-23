@@ -18,9 +18,9 @@ export const NewsSection: FC = () => {
 	return (
 		<section className={cn(styles.newsSection, '_bordered')}>
 			<Container>
-				<FlexRow $margin='0 0 10px 0' $justifyContent='space-between'>
+				<FlexRow $margin='0 0 10px 0' $alignItems='center' $justifyContent='space-between'>
 					<h4>Новости</h4>
-					<MainButton as='route' to={AppRoute.News} $variant='light'>
+					<MainButton as='route' to={AppRoute.News}>
 						Все новости
 					</MainButton>
 				</FlexRow>

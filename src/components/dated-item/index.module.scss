@@ -18,7 +18,6 @@
 
 .datedItemInner {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
   align-items: flex-start;
   @media (max-width: 768px) {
@@ -30,11 +29,11 @@
 .dateInfo {
   color: #B7212E;
   font-size: 16px;
-  min-width: 100px;
+  min-width: 163px;
 }
 
 .datedItemContent {
-  max-width: 790px;
+  flex-grow: 1;
   h5 {
     @include ptsans-bold;
     font-size: 20px;

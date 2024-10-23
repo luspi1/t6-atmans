@@ -2,23 +2,31 @@ import { type NavigationItem } from 'src/types/navigation'
 
 export const MenuItems: NavigationItem[] = [
 	{
-		title: 'атманов угол',
+		title: 'Атманов угол',
 		link: 'about',
 	},
 	{
-		title: 'объекты',
+		title: 'Карта кластера',
+		link: 'cluster-map',
+	},
+	{
+		title: 'Объекты',
 		link: 'departments-list',
 	},
 	{
-		title: 'новости',
+		title: 'Новости',
 		link: 'news',
 	},
 	{
-		title: 'видеолента',
+		title: 'Видеолента',
 		link: 'videos',
 	},
 	{
-		title: 'события',
+		title: 'События',
 		link: 'events',
+	},
+	{
+		title: 'Библиотека',
+		link: 'library',
 	},
 ]

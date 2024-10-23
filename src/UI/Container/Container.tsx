@@ -10,10 +10,14 @@ type ContainerProps = PropsWithChildren<{
 }>
 
 const StyledContainer = styled.div<ContainerProps>`
-	max-width: ${({ $width }) => $width ?? '1250px'};
-	padding: ${({ $padding }) => $padding ?? '0 15px'};
+	max-width: ${({ $width }) => $width ?? '1920px'};
+	padding: ${({ $padding }) => $padding ?? '0 40px'};
 	margin: ${({ $margin }) => $margin ?? '0 auto'};
 	position: ${({ $position }) => $position ?? 'relative'};
+	@media (max-width: 768px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 `
 export const Container: FC<ContainerProps> = (props) => {
 	return <StyledContainer {...props} />

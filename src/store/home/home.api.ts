@@ -1,10 +1,8 @@
 import {
-	type HomeDepartment,
-	type HomeEventCategory,
 	type HomeEventItem,
-	type HomeEventsList,
 	type HomeFaq,
 	type HomeNewsItem,
+	type HomeObject,
 	type HomePartnerItem,
 	type HomePoster,
 	type HomeVideoItem,
@@ -25,25 +23,13 @@ export const homeApi = createApi({
 				url: `home/posters`,
 			}),
 		}),
-		getAllEventMonths: build.query<HomeEventsList, null>({
+
+		getHomeEvents: build.query<HomeEventItem[], null>({
 			query: () => ({
-				url: `/home/all-event-months`,
+				url: `/home/all-events`,
 			}),
 		}),
-		getHomeEventMonths: build.query<HomeEventItem[], { date: string; category: string }>({
-			query: ({ date, category = '' }) => ({
-				url: 'home/event-months/',
-				params: {
-					d: date,
-					cat: category,
-				},
-			}),
-		}),
-		getHomeEventCategories: build.query<HomeEventCategory[], null>({
-			query: () => ({
-				url: 'home/all-event-categories',
-			}),
-		}),
+
 		getHomeNews: build.query<HomeNewsItem[], null>({
 			query: () => ({
 				url: 'home/all-news',
@@ -59,9 +45,9 @@ export const homeApi = createApi({
 				url: 'home/partners',
 			}),
 		}),
-		getHomeDepartments: build.query<HomeDepartment[], null>({
+		getHomeObjects: build.query<HomeObject[], null>({
 			query: () => ({
-				url: 'home/departments',
+				url: 'home/objects',
 			}),
 		}),
 		getHomeFaq: build.query<HomeFaq[], null>({
@@ -73,13 +59,11 @@ export const homeApi = createApi({
 })
 
 export const {
-	useGetHomeEventCategoriesQuery,
 	useGetHomeNewsQuery,
 	useGetHomeVideosQuery,
-	useGetHomeEventMonthsQuery,
-	useGetAllEventMonthsQuery,
 	useGetHomePostersQuery,
 	useGetHomePartnersQuery,
-	useGetHomeDepartmentsQuery,
 	useGetHomeFaqQuery,
+	useGetHomeEventsQuery,
+	useGetHomeObjectsQuery,
 } = homeApi

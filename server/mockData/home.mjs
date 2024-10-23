@@ -82,11 +82,11 @@ export let homeRegions = [
 export let homePosters = [
 	{
 		id: '6',
-		title: 'Открытая тренировка',
+		title: 'Конно-спортивный клуб «Фаворит»',
 		date: '2024-10-17T17:10:00+03:00',
 		location: 'Конно-спортивный клуб «Фаворит»',
 		image_url:
-			'https://img.championat.com/c/1200x900/news/big/t/m/stavki-na-loshadinye-skachki_15923826641808959597.jpg',
+			'https://images.wallpaperscraft.ru/image/single/sport_konnyj_loshad_81257_1366x768.jpg',
 	},
 	{
 		id: '0',
@@ -101,6 +101,189 @@ export let homePosters = [
 		date: '2025-02-16T00:00:00+03:00',
 		location: 'Москва',
 		image_url: 'https://rossaprimavera.ru/static/files/45db11f24f2b.jpg',
+	},
+]
+
+export let homeEvents = [
+	{
+		id: '0',
+		category: {
+			id: '13',
+			title: 'Атмановские кулачки',
+		},
+		title: 'Атмановские кулачки',
+		imgUrl:
+			'https://api.top68.ru/attachments/609da8f2e3da0db6e37b1a50108be0c86b141e76/store/crop/0/0/604/406/604/406/0/9bde754921ce1545f391210b2ea45fd1f87e1fb31cabc09c5ac5ab78bf4a/qmcmxpgs08w.jpg',
+		date: '2023-12-24T00:00:00+03:00',
+		location: {
+			title: 'Старинное село Атманов угол на Тамбовщене',
+			address: 'село Атманов Угол, Сосновский муниципальный округ',
+		},
+		description:
+			'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
+	},
+	{
+		id: '1',
+		category: {
+			id: '21',
+			title: 'Русские игры',
+		},
+		title: 'Русские игры в Лужниках',
+		imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
+		date: '2023-12-15T00:00:00+03:00',
+		location: {
+			title: 'Спортивный комплекс «Лужники», мини-футбольная площадка',
+			address: 'г. Москва, м. Спортивная',
+		},
+		description:
+			'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
+	},
+	{
+		id: '2',
+		category: {
+			id: '21',
+			title: 'Русские игры',
+		},
+		title: 'Русские игры в Лужниках',
+		imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
+		date: '2024-08-15T00:00:00+03:00',
+		location: {
+			title: 'Спортивный комплекс «Лужники», мини-футбольная площадка',
+			address: 'г. Москва, м. Спортивная',
+		},
+		description:
+			'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
+	},
+	{
+		id: '3',
+		category: {
+			id: '13',
+			title: 'Атмановские кулачки',
+		},
+		title: 'Атмановские кулачки',
+		imgUrl:
+			'https://api.top68.ru/attachments/609da8f2e3da0db6e37b1a50108be0c86b141e76/store/crop/0/0/604/406/604/406/0/9bde754921ce1545f391210b2ea45fd1f87e1fb31cabc09c5ac5ab78bf4a/qmcmxpgs08w.jpg',
+		date: '2024-08-24T00:00:00+03:00',
+		location: {
+			title: 'Старинное село Атманов угол на Тамбовщене',
+			address: 'село Атманов Угол, Сосновский муниципальный округ',
+		},
+		description:
+			'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
+	},
+	{
+		id: '4',
+		category: {
+			id: '21',
+			title: 'Русские игры',
+		},
+		title: 'Русские игры в Лужниках',
+		imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
+		date: '2024-08-15T00:00:00+03:00',
+		location: {
+			title: 'Спортивный комплекс «Лужники», мини-футбольная площадка',
+			address: 'г. Москва, м. Спортивная',
+		},
+		description:
+			'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
+	},
+	{
+		id: '5',
+		category: {
+			id: '21',
+			title: 'Русские игры',
+		},
+		title: 'Русские игры в Лужниках',
+		imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
+		date: '2024-08-15T00:00:00+03:00',
+		location: {
+			title: 'Спортивный комплекс «Лужники», мини-футбольная площадка',
+			address: 'г. Москва, м. Спортивная',
+		},
+		description:
+			'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
+	},
+	{
+		id: '6',
+		category: {
+			id: '13',
+			title: 'Атмановские кулачки',
+		},
+		title: 'Атмановские кулачки',
+		imgUrl:
+			'https://api.top68.ru/attachments/609da8f2e3da0db6e37b1a50108be0c86b141e76/store/crop/0/0/604/406/604/406/0/9bde754921ce1545f391210b2ea45fd1f87e1fb31cabc09c5ac5ab78bf4a/qmcmxpgs08w.jpg',
+		date: '2024-08-24T00:00:00+03:00',
+		location: {
+			title: 'Старинное село Атманов угол на Тамбовщене',
+			address: 'село Атманов Угол, Сосновский муниципальный округ',
+		},
+		description:
+			'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
+	},
+	{
+		id: '7',
+		category: {
+			id: '21',
+			title: 'Русские игры',
+		},
+		title: 'Русские игры в Лужниках',
+		imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
+		date: '2024-08-15T00:00:00+03:00',
+		location: {
+			title: 'Спортивный комплекс «Лужники», мини-футбольная площадка',
+			address: 'г. Москва, м. Спортивная',
+		},
+		description:
+			'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
+	},
+	{
+		id: '8',
+		category: {
+			id: '13',
+			title: 'Атмановские кулачки',
+		},
+		title: 'Атмановские кулачки',
+		imgUrl:
+			'https://api.top68.ru/attachments/609da8f2e3da0db6e37b1a50108be0c86b141e76/store/crop/0/0/604/406/604/406/0/9bde754921ce1545f391210b2ea45fd1f87e1fb31cabc09c5ac5ab78bf4a/qmcmxpgs08w.jpg',
+		date: '2024-09-24T00:00:00+03:00',
+		location: {
+			title: 'Старинное село Атманов угол на Тамбовщене',
+			address: 'село Атманов Угол, Сосновский муниципальный округ',
+		},
+		description:
+			'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
+	},
+	{
+		id: '9',
+		category: {
+			id: '21',
+			title: 'Русские игры',
+		},
+		title: 'Русские игры в Лужниках',
+		imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
+		date: '2024-09-15T00:00:00+03:00',
+		location: {
+			title: 'Спортивный комплекс «Лужники», мини-футбольная площадка',
+			address: 'г. Москва, м. Спортивная',
+		},
+		description:
+			'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
+	},
+	{
+		id: '10',
+		category: {
+			id: '21',
+			title: 'Русские игры',
+		},
+		title: 'Русские игры в Лужниках',
+		imgUrl: 'https://news-sport62.ru/uploads/posts/2021-05/1620473759_veronika-sanina.jpg',
+		date: '2024-10-15T00:00:00+03:00',
+		location: {
+			title: 'Спортивный комплекс «Лужники», мини-футбольная площадка',
+			address: 'г. Москва, м. Спортивная',
+		},
+		description:
+			'Турнир в формате 5х5 пройдёт в рамках большого спортивного фестиваля "День московского спорта" и имеет важное значение, так как участники этого турнира получат путёвку на Богатырскую сечу.!',
 	},
 ]
 
@@ -558,48 +741,6 @@ export let homePartners = [
 	},
 ]
 
-export let homeDepartments = [
-	{
-		id: '16',
-		title: 'Сосновские бугры',
-		imgUrl: 'https://a.d-cd.net/FjAAAgDsi-A-960.jpg',
-	},
-	{
-		id: '90',
-		title: 'Конно-спортивный клуб «Фаворит»',
-		imgUrl:
-			'https://travel.riamo.ru/upload/files/i/i/820/iiuT3yJ0UDr9H8SMEuQcZ4bUUrzUIEZXZAFYVP0wi5IDg2DQykw9pzYBj8fF3TGITZEAFbAFewl6Qe83H8Oipv0NSCOO5ak.jpeg',
-	},
-	{
-		id: '78',
-		title: 'Свято-Никольская Мамонтова пустынь',
-		imgUrl:
-			'https://lh6.googleusercontent.com/proxy/glc5jMejHwRKfVLtUT5o5fZDy0skLC-U7GU1BhLDKE00cROfEB_RHAi8TI6fFfezZGVm27L8uAZl5N-SIug',
-	},
-	{
-		id: '90',
-		title: 'Традиционные игры «Атмановские кулачки»',
-		imgUrl:
-			'https://s.vtambove.ru/localStorage/news/b5/e1/01/de/b5e101de_resizedScaled_1020to573.jpg',
-	},
-	{
-		id: '16',
-		title: 'Оленеферма КФХ Гуровых',
-		imgUrl: 'https://shkola1sosnovka-r68.gosweb.gosuslugi.ru/netcat_files/48/188/olen1.jpg',
-	},
-	{
-		id: '78',
-		title: 'Источник святого апостола Андрея Первозванного',
-		imgUrl:
-			'https://lh4.googleusercontent.com/proxy/G-ekbPtDyuAPxGLW07x3riCiYLY1jS7gkUtzGSxLyRZFtPM7195reEMkrmygelOYcyugmYJn0Hd5BwuXbSug',
-	},
-	{
-		id: '90',
-		title: 'Сосновский краеведческий музей',
-		imgUrl: 'https://cdn.culture.ru/images/4859f888-005d-5f34-be27-a53b1ac3bce3',
-	},
-]
-
 export let homeFaq = [
 	{
 		id: '1',
@@ -642,5 +783,48 @@ export let homeFaq = [
 		title: 'Где могут разместиться участники игр?',
 		content:
 			'Участники игр могут разместиться в палаточном лагере для участников. Добраться до лагеря можно по маршруту, указанному на карте, следуя указателям внутри села. Проехать до лагеря на автомобиле можно 25 августа до 14.00 и 26 августа до 8.00, пройти в любое время без ограничений. Палатки и постельные принадлежности иметь с собой. В лагере имеются туалеты и техническое водоснабжение. Питание организовано на площадке игр.',
+	},
+]
+
+export let homeObjects = [
+	{
+		id: '1',
+		title: 'Сосновский краеведческий музей',
+		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
+	},
+	{
+		id: '2',
+		title: 'Тамбовский краеведческий музей',
+		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
+	},
+	{
+		id: '3',
+		title: 'Сосновский краеведческий музей',
+		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
+	},
+	{
+		id: '4',
+		title: 'Тамбовский краеведческий музей',
+		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
+	},
+	{
+		id: '5',
+		title: 'Сосновский краеведческий музей',
+		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
+	},
+	{
+		id: '6',
+		title: 'Тамбовский краеведческий музей',
+		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
+	},
+	{
+		id: '7',
+		title: 'Сосновский краеведческий музей',
+		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
+	},
+	{
+		id: '8',
+		title: 'Тамбовский краеведческий музей',
+		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
 	},
 ]

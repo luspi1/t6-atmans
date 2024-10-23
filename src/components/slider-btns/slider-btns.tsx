@@ -11,7 +11,6 @@ import styles from './index.module.scss'
 type SliderBtnsProps = {
 	$topPosition?: string
 	$btnsSpacing?: string
-	$variant?: 'sm' | 'lg' | 'opaque' | 'sm-light'
 }
 
 type SliderProps = {
@@ -35,24 +34,7 @@ const StyledSliderBtns = styled.div<SliderBtnsProps>`
 		transform: translateY(-50%);
 		&:hover {
 			svg rect {
-				fill-opacity: ${({ $variant }) => {
-					if ($variant === 'opaque') {
-						return '1'
-					}
-					if ($variant === 'sm-light') {
-						return '0.8'
-					}
-					return '0.4'
-				}};
-				fill: ${({ $variant }) => {
-					if ($variant === 'opaque') {
-						return '#D4D4D4'
-					}
-					if ($variant === 'sm-light') {
-						return '#E7E7E7'
-					}
-					return '#000000'
-				}};
+				fill-opacity: 0.4;
 			}
 		}
 	}
@@ -60,7 +42,6 @@ const StyledSliderBtns = styled.div<SliderBtnsProps>`
 
 export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 	swiperRef,
-	$variant = 'sm',
 	className,
 	...props
 }) => {
@@ -93,9 +74,8 @@ export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 	const handleNext = () => {
 		swiperRef.current?.swiper.slideNext()
 	}
-	console.log()
 	return (
-		<StyledSliderBtns className={className} {...props} $variant={$variant}>
+		<StyledSliderBtns className={className} {...props}>
 			<button
 				className={cn(styles.slideBtnPrev, {
 					[styles._disabled]: isBeginning && !swiperRef.current?.swiper?.params?.loop,
@@ -103,7 +83,7 @@ export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 				type='button'
 				onClick={handlePrev}
 			>
-				<SlidePrevSvg variant={$variant} />
+				<SlidePrevSvg />
 			</button>
 			<button
 				className={cn(styles.slideBtnNext, {
@@ -112,7 +92,7 @@ export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 				type='button'
 				onClick={handleNext}
 			>
-				<SlideNextSvg variant={$variant} />
+				<SlideNextSvg />
 			</button>
 		</StyledSliderBtns>
 	)

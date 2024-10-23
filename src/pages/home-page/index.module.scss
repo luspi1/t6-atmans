@@ -1,9 +1,12 @@
 .homePage {
+  font-family: 'MADE Likes Slab', serif;
   h4 {
     color: #000;
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 400;
+  }
+  p {
+    font-family: 'MADE Likes Slab', serif;
   }
   :global {
     section._bordered {
@@ -13,11 +16,11 @@
         content: '';
         position: absolute;
         bottom: 0;
-        width: 620px;
-        height: 9px;
+        width: 827px;
+        height: 12px;
         left: 50%;
         transform: translateX(-50%);
-        background: url('data:image/svg+xml,<svg width="620" height="9" viewBox="0 0 620 9" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="4.5" x2="282.295" y2="4.5" stroke="%23A8A8A8"/><line x1="337.703" y1="4.5" x2="619.998" y2="4.5" stroke="%23A8A8A8"/><circle cx="310.5" cy="4.5" r="4.5" fill="%23DD0A15"/></svg>') no-repeat;
+        background: url('data:image/svg+xml,<svg width="827" height="12" viewBox="0 0 827 12" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="6.16602" x2="376.393" y2="6.16602" stroke="%23A8A8A8"/><line x1="450.27" y1="6.16602" x2="826.663" y2="6.16602" stroke="%23A8A8A8"/><circle cx="414" cy="6" r="6" fill="%23DD0A15"/></svg>') no-repeat;
         @media (max-width: 768px) {
           width: 237px;
           height: 7px;

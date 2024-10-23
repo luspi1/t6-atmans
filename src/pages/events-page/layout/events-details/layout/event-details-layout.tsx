@@ -24,11 +24,7 @@ export const EventDetailsLayout: FC = () => {
 
 	return (
 		<div className={styles.eventDetailsWrapper}>
-			<PageContent
-				className={styles.eventDetailsContent}
-				$padding='30px 30px 40px 30px'
-				$maxWidth='985px'
-			>
+			<PageContent className={styles.eventDetailsContent} $padding='30px 30px 40px 30px'>
 				<Helmet>
 					<title>Информация о событии</title>
 				</Helmet>

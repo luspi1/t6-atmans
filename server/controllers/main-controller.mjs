@@ -8,11 +8,10 @@ import { newsVideos } from '../mockData/newsVideos.mjs'
 import { groups } from '../mockData/groups.mjs'
 import { brandEvents } from '../mockData/brandEvents.mjs'
 import {
-	homeDepartments,
-	homeEventMonths,
-	homeEventsCategories,
+	homeEvents,
 	homeFaq,
 	homeNews,
+	homeObjects,
 	homePartners,
 	homePosters,
 	homeRegions,
@@ -467,27 +466,27 @@ export const getHomeVideos = (req, res) => {
 export const getHomePartners = (req, res) => {
 	res.status(200).json(homePartners)
 }
-export const getAllEventMonths = (req, res) => {
-	res.status(200).json(homeEventMonths)
+export const getAllHomeEvents = (req, res) => {
+	res.status(200).json(homeEvents)
 }
-export const getHomeDepartments = (req, res) => {
-	res.status(200).json(homeDepartments)
-}
-
-export const getEventMonths = (req, res) => {
-	const { d, cat } = req.query
-	const currentMonthEvents = homeEventMonths[d] || []
-
-	const filteredEvents = currentMonthEvents.filter(
-		(event) => cat === '0' || event.category.id === cat,
-	)
-
-	res.status(200).json(filteredEvents)
+export const getHomeObjects = (req, res) => {
+	res.status(200).json(homeObjects)
 }
 
-export const getEventCategories = (req, res) => {
-	res.status(200).json(homeEventsCategories)
-}
+// export const getEventMonths = (req, res) => {
+// 	const { d, cat } = req.query
+// 	const currentMonthEvents = homeEventMonths[d] || []
+//
+// 	const filteredEvents = currentMonthEvents.filter(
+// 		(event) => cat === '0' || event.category.id === cat,
+// 	)
+//
+// 	res.status(200).json(filteredEvents)
+// }
+
+// export const getEventCategories = (req, res) => {
+// 	res.status(200).json(homeEventsCategories)
+// }
 
 export const getHomeFaq = (req, res) => {
 	res.status(200).json(homeFaq)

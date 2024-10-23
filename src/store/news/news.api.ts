@@ -22,6 +22,15 @@ export const newsApi = createApi({
 			}),
 			providesTags: ['News'],
 		}),
+		// getHomeEventMonths: build.query<HomeEventItem[], { date: string; category: string }>({
+		// 	query: ({ date, category = '' }) => ({
+		// 		url: 'home/event-months/',
+		// 		params: {
+		// 			d: date,
+		// 			cat: category,
+		// 		},
+		// 	}),
+		// }),
 		getNewsById: build.query<NewsItem, string>({
 			query: (newsId) => ({
 				url: `news/${newsId}`,

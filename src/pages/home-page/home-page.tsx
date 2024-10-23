@@ -3,14 +3,14 @@ import { type FC } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 import { PosterSection } from 'src/pages/home-page/components/poster-section/poster-section'
+import { ObjectsSection } from 'src/pages/home-page/components/objects-section/objects-section'
 import { EventsSection } from 'src/pages/home-page/components/events-section/events-section'
 import { VideotapeSection } from 'src/pages/home-page/components/videotape-section/videotape-section'
 import { NewsSection } from 'src/pages/home-page/components/news-section/news-section'
-import { DepartmentsSection } from 'src/pages/home-page/components/departments-section/departments-section'
 import { PartnersSection } from 'src/pages/home-page/components/partners-section/partners-section'
+import { FaqSection } from 'src/pages/home-page/components/faq-section/faq-section'
 
 import styles from './index.module.scss'
-import { FaqSection } from 'src/pages/home-page/components/faq-section/faq-section'
 
 export const HomePage: FC = () => {
 	return (
@@ -18,8 +18,8 @@ export const HomePage: FC = () => {
 			<Helmet>
 				<title>Главная</title>
 			</Helmet>
-			<DepartmentsSection />
 			<PosterSection />
+			<ObjectsSection />
 			<EventsSection />
 			<NewsSection />
 			<VideotapeSection />

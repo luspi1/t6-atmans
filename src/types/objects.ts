@@ -1,44 +1,26 @@
-import { type ShortDocument } from './document'
-import { type ChronologyItem, type RelatedLink, type SourceLink } from 'src/types/global'
 import { type EventsItem } from 'src/types/events'
-import { type PathwayItem } from 'src/types/location'
+import { type ImageItem } from 'src/types/photos'
+import { type NewsItem } from 'src/types/news'
+import { type VideoItem } from 'src/types/videos'
 
 export type ObjectItem = {
+	id: string
 	title: string
-	fullTitle: string
-	mainDesc: string
-	objectCode: string
-	status: string
-	type: string
-	director: string
-	vice: string
-	accountant: string
-	phones: string[]
-	email: string
-	address: string
-	descList: string[]
-	openDate: Date
-	pathways: PathwayItem[]
 	logo: string
-	mainInfoLogo: string
-	site: string
+	mainDesc: string
+	phone: string
+	email: string
+	tgSoc: string
+	vkSoc: string
+	address: string
+	photos: ImageItem[]
+	descList: string[]
 	events: EventsItem[]
-	relatedObjects: RelatedLink[]
-	relatedLinks: SourceLink[]
-	documents: ShortDocument[]
-	history: {
-		mainDesc: string
-		chronology: ChronologyItem[]
-	}
+	news: NewsItem[]
+	videos: VideoItem[]
+	location: string
 }
 
 export type ObjectsInfo = {
 	mainDescription: string
-	aboutDescriptions: string[]
-	secondaryDescriptions: string[]
-	aboutPhoto: {
-		url: string
-		caption: string
-	}
-	sideDocs: ShortDocument[]
 }

@@ -32,13 +32,18 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ menuItems }) => {
 
 	return (
 		<div className={styles.burgerMenu}>
-			<div className={cn(styles.burgerIcon, { [styles._openIcon]: isOpen })} onClick={toggleMenu}>
+			<div className={styles.burgerIcon} onClick={toggleMenu}>
 				<span></span>
 				<span></span>
 				<span></span>
 			</div>
 
 			<nav className={cn(styles.navMenu, { [styles._openMenu]: isOpen })}>
+				<div className={cn(styles.burgerIcon, styles._openIcon)} onClick={toggleMenu}>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 				<ul>
 					{menuItems.map((menuEl) => (
 						<li className={styles.menuItem} key={menuEl.link}>

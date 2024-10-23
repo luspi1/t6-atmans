@@ -4,8 +4,9 @@
   @media (max-width: 768px) {
     display: none;
   }
+
   display: flex;
-  gap: 40px;
+  gap: 65px;
   flex-wrap: wrap;
   align-items: center;
   @media (max-width: 1280px) {
@@ -20,18 +21,12 @@
 
 .menuItem {
   a {
-    @include opensans-bold;
-    color: #000000;
-    text-transform: uppercase;
+    color: #FFFFFF;
     transition: all .3s;
-
+    font-size: 25px;
     &:hover {
-      color: #DD0B16;
+      color: #c0c0c0;
     }
-  }
-
-  a.activeLink {
-    color: #DD0B16;
   }
 }
 

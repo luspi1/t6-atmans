@@ -13,16 +13,14 @@ export const EventNewsList: FC = () => {
 	const { data: newsList, isSuccess } = useGetEventAllNewsQuery({ eventId: id, year: yearsValue })
 
 	return (
-		<div>
-			<NewsList
-				newsItems={newsList ?? []}
-				title='Новости события'
-				setYearsValue={setYearsValue}
-				yearsValue={yearsValue}
-				isSuccess={isSuccess}
-				monthsValue={monthsValue}
-				setMonthsValue={setMonthsValue}
-			/>
-		</div>
+		<NewsList
+			newsItems={newsList ?? []}
+			title='Новости события'
+			setYearsValue={setYearsValue}
+			yearsValue={yearsValue}
+			isSuccess={isSuccess}
+			monthsValue={monthsValue}
+			setMonthsValue={setMonthsValue}
+		/>
 	)
 }

@@ -23,8 +23,8 @@ type SharedStylesTypes = {
 }
 
 const sharedStyles = css<SharedStylesTypes>`
-	padding: ${({ $padding }) => $padding ?? '0 20px'};
-	height: ${({ $height }) => $height ?? '40px'};
+	padding: ${({ $padding }) => $padding ?? '0 33px'};
+	height: ${({ $height }) => $height ?? '60px'};
 	border-radius: ${({ $radius }) => $radius ?? '5px'};
 
 	background-color: ${({ $variant }) => {
@@ -35,14 +35,10 @@ const sharedStyles = css<SharedStylesTypes>`
 		if ($variant === 'light') return '#000000'
 		return '#ffffff'
 	}};
-	text-transform: ${({ $variant }) => {
-		if ($variant === 'primary') return 'uppercase'
-		return 'initial'
-	}};
 	border: none;
 	text-decoration: none;
-	font-weight: 700;
-	font-size: 16px;
+	font-weight: 400;
+	font-size: 25px;
 	cursor: pointer;
 	display: inline-flex;
 	align-items: center;

@@ -1,5 +1,5 @@
 import { type FC, type RefObject, useRef } from 'react'
-
+import cn from 'classnames'
 import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react'
 
 import { SliderBtns } from 'src/components/slider-btns/slider-btns'
@@ -7,7 +7,6 @@ import { Container } from 'src/UI/Container/Container'
 import { useGetHomePostersQuery } from 'src/store/home/home.api'
 import { posterSliderOptions } from './consts'
 import { mainFormatDate } from 'src/helpers/utils'
-import { MainButton } from 'src/UI/MainButton/MainButton'
 
 import styles from './index.module.scss'
 
@@ -17,8 +16,8 @@ export const PosterSection: FC = () => {
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 
 	return (
-		<Container>
-			<section className={styles.posterSection}>
+		<Container $padding='0'>
+			<section className={cn(styles.posterSection, '_bordered')}>
 				<Swiper className={styles.posterSlider} {...posterSliderOptions} ref={swiperRef}>
 					{posterData?.map((slideItem, idx) => (
 						<SwiperSlide key={idx}>
@@ -36,15 +35,6 @@ export const PosterSection: FC = () => {
 										</ul>
 										<h5>{slideItem.title}</h5>
 									</div>
-									<MainButton
-										className={styles.posterRegBtn}
-										as='route'
-										$padding='0 50px'
-										$height='50px'
-										to={`events/${slideItem.id}`}
-									>
-										перейти к событию
-									</MainButton>
 								</div>
 							</div>
 						</SwiperSlide>
@@ -53,8 +43,7 @@ export const PosterSection: FC = () => {
 				<SliderBtns
 					className={styles.posterSliderBtns}
 					$topPosition='47%'
-					$variant='lg'
-					$btnsSpacing='93%'
+					$btnsSpacing='96%'
 					swiperRef={swiperRef}
 				/>
 			</section>

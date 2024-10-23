@@ -1,9 +1,3 @@
-export type HomeRegion = {
-	id: string
-	name: string
-	virtual: string
-	image_url: string
-}
 export type HomePoster = {
 	id: string
 	title: string
@@ -12,16 +6,8 @@ export type HomePoster = {
 	image_url: string
 }
 
-export type HomeEthnoItems = HomeRegion
-
-export type HomeEventCategory = {
-	title: string
-	id: string
-}
-
 export type HomeEventItem = {
 	id: string
-	category: HomeEventCategory
 	title: string
 	imgUrl: string
 	date: Date
@@ -31,8 +17,6 @@ export type HomeEventItem = {
 	}
 	description: string
 }
-
-export type HomeEventsList = Record<string, HomeEventItem[]>
 
 export type HomeNewsItem = {
 	id: string
@@ -53,13 +37,13 @@ export type HomePartnerItem = {
 	imgUrl: string
 	link: string
 }
-export type HomeDepartment = {
-	id: string
-	title: string
-	imgUrl: string
-}
 export type HomeFaq = {
 	id: string
 	title: string
 	content: string
+}
+export type HomeObject = {
+	id: string
+	title: string
+	logo: string
 }

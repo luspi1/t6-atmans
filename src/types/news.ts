@@ -1,8 +1,13 @@
 import { type ImageItem } from 'src/types/photos'
 
+export type NewsCategory = {
+	title: string
+	id: string
+}
 export type NewsItem = {
 	id: string
 	title: string
+	category: NewsCategory
 	shortTitle: string
 	shortDesc: string
 	date: string
@@ -15,3 +20,4 @@ export type NewsItem = {
 	textNews: string[]
 	desc: string
 }
+export type NewsItemsList = Record<string, NewsItem[]>

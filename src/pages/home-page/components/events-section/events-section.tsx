@@ -1,40 +1,29 @@
-import { type FC, useState } from 'react'
+import { type FC } from 'react'
 
-import { getYear } from 'date-fns'
 import cn from 'classnames'
 
 import { Container } from 'src/UI/Container/Container'
-import { MonthsSlider } from 'src/pages/home-page/components/events-section/components/months-slider/months-slider'
-import { MonthsFiltration } from 'src/pages/home-page/components/events-section/components/months-filtration/months-filtration'
-import { useGetHomeEventMonthsQuery } from 'src/store/home/home.api'
 import { HomeEventsList } from 'src/pages/home-page/components/events-section/components/home-events-list/home-events-list'
+import { useGetHomeEventsQuery } from 'src/store/home/home.api'
 
 import styles from './index.module.scss'
+import { FlexRow } from 'src/components/flex-row/flex-row'
+import { MainButton } from 'src/UI/MainButton/MainButton'
+import { AppRoute } from 'src/routes/main-routes/consts'
 
 export const EventsSection: FC = () => {
-	const [activeMonth, setActiveMonth] = useState('')
-	const [activeCategory, setActiveCategory] = useState('0')
-	const { data: homeEvents } = useGetHomeEventMonthsQuery({
-		date: activeMonth,
-		category: activeCategory,
-	})
-
-	const handleChangeActiveMonth = (newMonth: string) => {
-		setActiveMonth(newMonth)
-	}
-	const handleChangeActiveCategory = (newCategory: string) => {
-		setActiveCategory(newCategory)
-	}
+	const { data: homeEvents } = useGetHomeEventsQuery(null)
 
 	return (
 		<section className={cn(styles.eventsSection, '_bordered')}>
 			<Container>
-				<h4>События {getYear(new Date(activeMonth))}</h4>
-				<MonthsSlider changeActiveMonth={handleChangeActiveMonth} activeMonth={activeMonth} />
-				<MonthsFiltration
-					activeCatId={activeCategory}
-					changeActiveCatId={handleChangeActiveCategory}
-				/>
+				<FlexRow $margin='0 0 23px 0' $alignItems='center' $justifyContent='space-between'>
+					<h4>События</h4>
+					<MainButton as='route' to={AppRoute.Events}>
+						Все события
+					</MainButton>
+				</FlexRow>
+
 				<HomeEventsList homeEvents={homeEvents ?? []} />
 			</Container>
 		</section>

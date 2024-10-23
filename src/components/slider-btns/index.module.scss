@@ -23,4 +23,7 @@
 ._disabled {
   opacity: 0.5;
   cursor: initial;
+  &:hover {
+    opacity: 0.4;
+  }
 }
