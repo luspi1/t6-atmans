@@ -24,11 +24,7 @@ export const getObjectsInfo = (req, res) => {
 }
 
 export const getObjects = (req, res) => {
-	const { q } = req.query
-
-	const filteredObjects = objects.filter((el) => el.title.toLowerCase().includes(q))
-
-	res.status(200).json(filteredObjects)
+	res.status(200).json(objects)
 }
 
 export const getObjectEvents = (req, res) => {

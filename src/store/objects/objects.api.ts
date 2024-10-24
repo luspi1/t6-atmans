@@ -20,12 +20,9 @@ export const objectsApi = createApi({
 				url: `objects-info`,
 			}),
 		}),
-		getAllObjects: build.query<ObjectItem[], string>({
-			query: (search) => ({
+		getAllObjects: build.query<ObjectItem[], null>({
+			query: () => ({
 				url: `objects`,
-				params: {
-					q: search,
-				},
 			}),
 		}),
 		getObjectById: build.query<ObjectItem, string>({

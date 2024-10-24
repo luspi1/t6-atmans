@@ -759,26 +759,6 @@ export let homePartners = [
 	},
 	{
 		id: '5',
-		imgUrl: 'https://assets.turbologo.ru/blog/ru/2020/02/18161800/sber-logo.png',
-		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
-	},
-	{
-		id: '6',
-		imgUrl: 'https://npotau.ru/templates/default/img/logo.png',
-		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
-	},
-	{
-		id: '7',
-		imgUrl: 'https://assets.turbologo.ru/blog/ru/2020/02/18161800/sber-logo.png',
-		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
-	},
-	{
-		id: '8',
-		imgUrl: 'https://assets.turbologo.ru/blog/ru/2020/02/18161800/sber-logo.png',
-		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
-	},
-	{
-		id: '9',
 		imgUrl: 'https://npotau.ru/templates/default/img/logo.png',
 		link: 'https://xn--2022-43da0dpql6c.xn--p1ai/',
 	},

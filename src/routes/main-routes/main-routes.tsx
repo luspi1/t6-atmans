@@ -9,21 +9,6 @@ import { AboutGeneral } from 'src/pages/about-page/layout/about-general/about-ge
 import { AboutHistory } from 'src/pages/about-page/layout/about-history/about-history'
 import { AboutContacts } from 'src/pages/about-page/layout/about-contacts/about-contacts'
 
-import { DepartmentsLayout } from 'src/pages/departments-page/departments-layout'
-import { DepartmentsList } from 'src/pages/departments-page/layout/departments-list/departments-list'
-import { DepartmentsAbout } from 'src/pages/departments-page/layout/departments-about/departments-about'
-import { DepartmentDetailsLayout } from 'src/pages/departments-page/layout/department-details/department-details-layout'
-
-import { ObjDetailsHistory } from 'src/pages/departments-page/layout/department-details/layout/obj-details-history/obj-details-history'
-import { ObjDetailsEvents } from 'src/pages/departments-page/layout/department-details/layout/obj-details-events/obj-details-events'
-import { ObjDetailsGallery } from 'src/pages/departments-page/layout/department-details/layout/obj-details-gallery/obj-details-gallery'
-import { ObjDetailsInfo } from 'src/pages/departments-page/layout/department-details/layout/obj-details-info/obj-details-info'
-import { ObjNewsLayout } from 'src/pages/departments-page/layout/department-details/layout/obj-details-news/layout/obj-news-layout'
-import { ObjNewsList } from 'src/pages/departments-page/layout/department-details/layout/obj-details-news/layout/obj-news-list/obj-news-list'
-import { ObjNewsVideos } from 'src/pages/departments-page/layout/department-details/layout/obj-details-news/layout/obj-news-videos/obj-news-videos'
-import { ObjNewsVideoDetails } from 'src/pages/departments-page/layout/department-details/layout/obj-details-news/layout/obj-news-video-details/obj-news-video-details'
-import { ObjNewsDetails } from 'src/pages/departments-page/layout/department-details/layout/obj-details-news/layout/obj-news-details/obj-news-details'
-
 import { NewsDetails } from 'src/pages/news-page/layout/news-details/news-details'
 
 import { NewsLayout } from 'src/pages/news-page/layout/news-layout'
@@ -32,6 +17,9 @@ import { Videos } from 'src/pages/videos-page/layout/videos/videos'
 import { VideoDetails } from 'src/pages/videos-page/layout/video-details/video-details'
 import { News } from 'src/pages/news-page/layout/news/news'
 
+import { ObjectsLayout } from 'src/pages/objects-page/objects-layout'
+import { ObjectsList } from 'src/pages/objects-page/layout/objects-list/objects-list'
+import { ObjectDetails } from 'src/pages/objects-page/layout/department-details/object-details'
 import { EventsLayout } from 'src/pages/events-page/events-layout'
 import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
 import { EventDetailsLayout } from 'src/pages/events-page/layout/events-details/layout/event-details-layout'
@@ -67,21 +55,9 @@ export const MainRoutes = () => {
 					<Route path={AppRoute.AboutContacts} element={<AboutContacts />} />
 				</Route>
 
-				<Route path={AppRoute.Departments} element={<DepartmentsLayout />}>
-					<Route index element={<DepartmentsList />} />
-					<Route path={AppRoute.DepartmentsAbout} element={<DepartmentsAbout />} />
-					<Route path=':id' element={<DepartmentDetailsLayout />}>
-						<Route index element={<ObjDetailsInfo />} />
-						<Route path={AppRoute.News} element={<ObjNewsLayout />}>
-							<Route index element={<ObjNewsList />} />
-							<Route path={AppRoute.Videos} element={<ObjNewsVideos />} />
-							<Route path={`${AppRoute.Videos}/:vidId`} element={<ObjNewsVideoDetails />} />
-							<Route path=':newsId' element={<ObjNewsDetails />} />
-						</Route>
-						<Route path={AppRoute.DepartmentsDetailsHistory} element={<ObjDetailsHistory />} />
-						<Route path={AppRoute.DepartmentsDetailsEvents} element={<ObjDetailsEvents />} />
-						<Route path={AppRoute.DepartmentsDetailsGallery} element={<ObjDetailsGallery />} />
-					</Route>
+				<Route path={AppRoute.Objects} element={<ObjectsLayout />}>
+					<Route index element={<ObjectsList />} />
+					<Route path=':id' element={<ObjectDetails />} />
 				</Route>
 
 				<Route path={AppRoute.News} element={<NewsLayout />}>

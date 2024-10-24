@@ -2,26 +2,25 @@
 
 
 .breadCrumbsList {
-  padding: 25px 0 15px;
+  padding: 35px 0 12px;
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
+  gap: 8px;
 
   li {
     max-width: 550px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    @include ptsans-regular;
   }
 
   a {
     color: #DE0008;
-    font-size: 14px;
+    font-size: 20px;
   }
 
   span {
-    font-size: 14px;
+    font-size: 20px;
   }
 
 }

@@ -5,13 +5,13 @@ export const MenuItems: NavigationItem[] = [
 		title: 'Атманов угол',
 		link: 'about',
 	},
-	{
-		title: 'Карта кластера',
-		link: 'cluster-map',
-	},
+	// {
+	// 	title: 'Карта кластера',
+	// 	link: 'cluster-map',
+	// },
 	{
 		title: 'Объекты',
-		link: 'departments-list',
+		link: 'objects-list',
 	},
 	{
 		title: 'Новости',
@@ -25,8 +25,8 @@ export const MenuItems: NavigationItem[] = [
 		title: 'События',
 		link: 'events',
 	},
-	{
-		title: 'Библиотека',
-		link: 'library',
-	},
+	// {
+	// 	title: 'Библиотека',
+	// 	link: 'library',
+	// },
 ]

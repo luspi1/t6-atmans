@@ -42,7 +42,7 @@ export const BreadCrumbs: FC<BreadCrumbsProps> = ({ crumbsLinksMap }) => {
 	return (
 		<ul className={styles.breadCrumbsList}>
 			<li>
-				<Link to={AppRoute.Home}> Главная </Link> /
+				<Link to={AppRoute.Home}> Главная </Link> <span>/</span>
 			</li>
 
 			{pathNames?.map((pathEl, idx) => {
@@ -56,7 +56,7 @@ export const BreadCrumbs: FC<BreadCrumbsProps> = ({ crumbsLinksMap }) => {
 
 				return (
 					<li key={pathEl}>
-						<Link to={`/${pathEl}`}>{defineLinkTitle(pathEl)}</Link> /
+						<Link to={`/${pathEl}`}>{defineLinkTitle(pathEl)}</Link> <span>/</span>
 					</li>
 				)
 			})}
