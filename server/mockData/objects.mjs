@@ -14,7 +14,6 @@ export let objects = [
 		photos: [
 			{
 				id: '1',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -22,31 +21,26 @@ export let objects = [
 			},
 			{
 				id: '2',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '6',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -54,25 +48,21 @@ export let objects = [
 			},
 			{
 				id: '13',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '14',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '15',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '16',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -80,25 +70,21 @@ export let objects = [
 			},
 			{
 				id: '17',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '18',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '19',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '20',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
@@ -422,7 +408,6 @@ export let objects = [
 		photos: [
 			{
 				id: '1',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -430,31 +415,26 @@ export let objects = [
 			},
 			{
 				id: '2',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '6',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -462,25 +442,21 @@ export let objects = [
 			},
 			{
 				id: '13',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '14',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '15',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '16',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -488,25 +464,21 @@ export let objects = [
 			},
 			{
 				id: '17',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '18',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '19',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '20',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
@@ -831,7 +803,6 @@ export let objects = [
 		photos: [
 			{
 				id: '1',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -839,31 +810,26 @@ export let objects = [
 			},
 			{
 				id: '2',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '6',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -871,25 +837,21 @@ export let objects = [
 			},
 			{
 				id: '13',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '14',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '15',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '16',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -897,25 +859,21 @@ export let objects = [
 			},
 			{
 				id: '17',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '18',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '19',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '20',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
@@ -1239,7 +1197,6 @@ export let objects = [
 		photos: [
 			{
 				id: '1',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -1247,31 +1204,26 @@ export let objects = [
 			},
 			{
 				id: '2',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '6',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -1279,25 +1231,21 @@ export let objects = [
 			},
 			{
 				id: '13',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '14',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '15',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '16',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -1305,25 +1253,21 @@ export let objects = [
 			},
 			{
 				id: '17',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '18',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '19',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '20',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
@@ -1648,7 +1592,6 @@ export let objects = [
 		photos: [
 			{
 				id: '1',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -1656,31 +1599,26 @@ export let objects = [
 			},
 			{
 				id: '2',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '6',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -1688,25 +1626,21 @@ export let objects = [
 			},
 			{
 				id: '13',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '14',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '15',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '16',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -1714,25 +1648,21 @@ export let objects = [
 			},
 			{
 				id: '17',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '18',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '19',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '20',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
@@ -2056,7 +1986,6 @@ export let objects = [
 		photos: [
 			{
 				id: '1',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -2064,31 +1993,26 @@ export let objects = [
 			},
 			{
 				id: '2',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '6',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -2096,25 +2020,21 @@ export let objects = [
 			},
 			{
 				id: '13',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '14',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '15',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '16',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -2122,25 +2042,21 @@ export let objects = [
 			},
 			{
 				id: '17',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '18',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '19',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '20',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
@@ -2465,7 +2381,6 @@ export let objects = [
 		photos: [
 			{
 				id: '1',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -2473,31 +2388,26 @@ export let objects = [
 			},
 			{
 				id: '2',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '6',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -2505,25 +2415,21 @@ export let objects = [
 			},
 			{
 				id: '13',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '14',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '15',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '16',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -2531,25 +2437,21 @@ export let objects = [
 			},
 			{
 				id: '17',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '18',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '19',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '20',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
@@ -2874,7 +2776,6 @@ export let objects = [
 		photos: [
 			{
 				id: '1',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -2882,31 +2783,26 @@ export let objects = [
 			},
 			{
 				id: '2',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '3',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '4',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '5',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '6',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -2914,25 +2810,21 @@ export let objects = [
 			},
 			{
 				id: '13',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '14',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '15',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},
 			{
 				id: '16',
-				title: 'Малые Корелы. Экскурсия по Двинскому enean euismod b',
 				original:
 					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
 				thumbnail:
@@ -2940,25 +2832,21 @@ export let objects = [
 			},
 			{
 				id: '17',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
 			},
 			{
 				id: '18',
-				title: 'Спасо-Бородинский монастырь. Часть 2',
 				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
 			},
 			{
 				id: '19',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
 			},
 			{
 				id: '20',
-				title: 'Пензенское отделение ВООПИК созывает деле enean euismod b',
 				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
 			},

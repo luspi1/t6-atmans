@@ -9,17 +9,18 @@ import { AboutGeneral } from 'src/pages/about-page/layout/about-general/about-ge
 import { AboutHistory } from 'src/pages/about-page/layout/about-history/about-history'
 import { AboutContacts } from 'src/pages/about-page/layout/about-contacts/about-contacts'
 
-import { NewsDetails } from 'src/pages/news-page/layout/news-details/news-details'
+import { ObjectsLayout } from 'src/pages/objects-page/objects-layout'
+import { ObjectsList } from 'src/pages/objects-page/layout/objects-list/objects-list'
+import { ObjectDetails } from 'src/pages/objects-page/layout/object-details/object-details'
 
+import { NewsDetails } from 'src/pages/news-page/layout/news-details/news-details'
 import { NewsLayout } from 'src/pages/news-page/layout/news-layout'
+import { News } from 'src/pages/news-page/layout/news/news'
+
 import { VideosLayout } from 'src/pages/videos-page/layout/videos-layout'
 import { Videos } from 'src/pages/videos-page/layout/videos/videos'
 import { VideoDetails } from 'src/pages/videos-page/layout/video-details/video-details'
-import { News } from 'src/pages/news-page/layout/news/news'
 
-import { ObjectsLayout } from 'src/pages/objects-page/objects-layout'
-import { ObjectsList } from 'src/pages/objects-page/layout/objects-list/objects-list'
-import { ObjectDetails } from 'src/pages/objects-page/layout/department-details/object-details'
 import { EventsLayout } from 'src/pages/events-page/events-layout'
 import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
 import { EventDetailsLayout } from 'src/pages/events-page/layout/events-details/layout/event-details-layout'
@@ -33,9 +34,11 @@ import { EventGallery } from 'src/pages/events-page/layout/events-details/layout
 import { EventProgramLayout } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-layout'
 import { EventProgramDay } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-day/event-program-day'
 import { EventDetails } from 'src/pages/events-page/layout/events-details/layout/event-details/event-details'
+
 import { AboutCultureLayout } from 'src/pages/about-page/layout/about-culture/about-culture-layout'
 import { CultureGeneral } from 'src/pages/about-page/layout/about-culture/layout/culture-general/culture-general'
 import { CultureDetails } from 'src/pages/about-page/layout/about-culture/layout/culture-details/culture-details'
+
 import { SearchPage } from 'src/pages/search-page/search-page'
 
 export const MainRoutes = () => {

@@ -1,5 +1,4 @@
-import { type EventsItem } from 'src/types/events'
-import type { EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
+import { type EventItem } from 'src/types/events'
 import type { ImageItem } from 'src/types/photos'
 import type { NewsItem } from 'src/types/news'
 import type { VideoItem } from 'src/types/videos'
@@ -15,7 +14,7 @@ export const eventsApi = createApi({
 		baseUrl: BASE_URL,
 	}),
 	endpoints: (build) => ({
-		getAllEvents: build.query<EventsItem[], { search?: string; year?: string }>({
+		getAllEvents: build.query<EventItem[], { search?: string; year?: string }>({
 			query: ({ search = '', year = '' }) => ({
 				url: `events`,
 				params: {
@@ -24,16 +23,12 @@ export const eventsApi = createApi({
 				},
 			}),
 		}),
-		getEventById: build.query<EventsItem, string>({
+		getEventById: build.query<EventItem, string>({
 			query: (eventId) => ({
 				url: `events/${eventId}`,
 			}),
 		}),
-		getEventDisciplines: build.query<EthnosportDisciplineItem[], string>({
-			query: (eventId) => ({
-				url: `events/${eventId}/disciplines`,
-			}),
-		}),
+
 		getEventPhoto: build.query<ImageItem[], string>({
 			query: (eventId) => ({
 				url: `events/${eventId}/photos`,

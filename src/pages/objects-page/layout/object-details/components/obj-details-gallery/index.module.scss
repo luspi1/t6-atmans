@@ -1,21 +1,15 @@
-.galleryPage {
-  padding-top: 30px;
-
-  .itemsCount {
-    margin-bottom: 15px;
-    font-size: 16px;
-    font-weight: 700;
-  }
+.gallerySection {
+  padding-top: 50px;
 }
 
-.objPhotos {
-  margin-bottom: 20px;
-  ul {
-    li {
-      h6 {
-        font-weight: 400;
-        font-family: 'PT Sans', sans-serif;
-      }
+.galleryDescs {
+  margin-top: 30px;
+
+  p {
+    font-size: 20px;
+    line-height: 1.19;
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
   }
 }

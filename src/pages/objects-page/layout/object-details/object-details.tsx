@@ -6,11 +6,15 @@ import { AppRoute } from 'src/routes/main-routes/consts'
 import { ObjectHeader } from 'src/pages/objects-page/layout/object-details/components/object-header/object-header'
 
 import styles from './index.module.scss'
+import { ObjDetailsGallery } from 'src/pages/objects-page/layout/object-details/components/obj-details-gallery/obj-details-gallery'
+import { ObjDetailsNews } from 'src/pages/objects-page/layout/object-details/components/obj-details-news/obj-details-news'
 
 export const ObjectDetails: FC = () => {
 	return (
-		<PageContent $padding='30px 35px 30px 30px'>
+		<PageContent className={styles.objDetailsPage}>
 			<ObjectHeader />
+			<ObjDetailsGallery />
+			<ObjDetailsNews />
 			<Outlet />
 			<Link className={styles.pageMainLink} to={`/${AppRoute.Objects}`}>
 				На страницу списка объектов

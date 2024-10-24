@@ -20,10 +20,10 @@ type InfoRowProps = {
 } & InfoRowStyleProps
 
 const StyledInfoRow = styled.div<InfoRowStyleProps>`
-	margin: ${({ $margin }) => $margin ?? '0 0 10px 0'};
+	margin: ${({ $margin }) => $margin ?? '0 0 18px 0'};
 	display: flex;
 	align-items: ${({ $alignItems }) => $alignItems ?? 'flex-start'};
-	gap: ${({ $gap }) => $gap ?? '10px'};
+	gap: ${({ $gap }) => $gap ?? '25px'};
 	@media (max-width: 768px) {
 		flex-direction: column;
 		align-items: flex-start;
@@ -31,19 +31,19 @@ const StyledInfoRow = styled.div<InfoRowStyleProps>`
 	}
 
 	h6 {
-		font-size: ${({ $titleSize }) => $titleSize ?? '16px'};
-		font-weight: ${({ $titleWeight }) => $titleWeight ?? '700'};
-		width: ${({ $titleWidth }) => $titleWidth ?? '190px'};
-		min-width: ${({ $titleWidth }) => $titleWidth ?? '190px'};
-		font-family: 'PT Sans', sans-serif;
+		font-size: ${({ $titleSize }) => $titleSize ?? '20px'};
+		font-weight: ${({ $titleWeight }) => $titleWeight ?? '400'};
+		width: ${({ $titleWidth }) => $titleWidth ?? '225px'};
+		min-width: ${({ $titleWidth }) => $titleWidth ?? '225px'};
 	}
 
 	a {
-		color: #015db9;
+		color: #de0008;
+		font-size: 20px;
 	}
 
 	& > p {
-		font-size: 16px;
+		font-size: 20px;
 		max-width: ${({ $labelMaxWidth }) => $labelMaxWidth ?? 'initial'};
 	}
 `

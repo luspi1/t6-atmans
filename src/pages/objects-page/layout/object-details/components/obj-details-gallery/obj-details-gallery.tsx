@@ -2,20 +2,26 @@ import React, { type FC } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { GalleryImg } from 'src/components/image-gallery/image-gallery'
-import { useGetObjectPhotosQuery } from 'src/store/objects/objects.api'
+import { useGetObjectByIdQuery } from 'src/store/objects/objects.api'
 
 import styles from './index.module.scss'
-import { Pagination } from 'src/components/pagination/pagination'
+import { RenderedArray } from 'src/components/rendered-array/rendered-array'
 
 export const ObjDetailsGallery: FC = () => {
 	const { id } = useParams()
-	const { data: photos } = useGetObjectPhotosQuery(id ?? '')
+
+	const { data: objectData } = useGetObjectByIdQuery(id ?? '')
 
 	return (
-		<div className={styles.galleryPage}>
-			<p className={styles.itemsCount}>Всего фото: {photos?.length}</p>
-			<GalleryImg className={styles.objPhotos} images={photos} limit={10} />
-			<Pagination pagesCount={7} activePage={2} />
-		</div>
+		<section className={styles.gallerySection}>
+			<GalleryImg className={styles.objPhotos} images={objectData?.photos} limit={9} />
+			<RenderedArray
+				className={styles.galleryDescs}
+				strArray={objectData?.descList}
+				asStr='p'
+				as='div'
+				separator=''
+			/>
+		</section>
 	)
 }

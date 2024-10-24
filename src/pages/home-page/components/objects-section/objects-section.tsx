@@ -25,7 +25,7 @@ export const ObjectsSection: FC = () => {
 						<SwiperSlide key={idx}>
 							<Link
 								className={styles.slideItem}
-								to={generatePath('objects/:id', {
+								to={generatePath('objects-list/:id', {
 									id: slideItem.id,
 								})}
 							>

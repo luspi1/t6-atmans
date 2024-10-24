@@ -7,8 +7,8 @@ export const BlockquoteSection: FC = () => {
 		<section className={styles.blockquote}>
 			<div className={styles.blockquoteImg}>
 				<img
-					src='https://s0.bloknottambov.ru/thumb/850x0xcut/upload/iblock/965/1e45k21exoxsxxtpq3kt73ej8giexulo/Predsedatel-federatsii-etnosporta-Rossii_-osnovatel-_Atmanovskikh-kulachek_-Anatoliy-Tedoradze-otmechaet-den-rozhdeniya.jpg'
-					alt='А.С. Тедорадзе, должность в Федерации Этноспорта России'
+					src='https://vmeste-rf.tv/upload/resize_cache/iblock/1f1/1040_585_2/ulufg7ee6bgst3luzv7o4f0lg4gg3dpu.jpg'
+					alt='Атманов Угол'
 				/>
 			</div>
 
