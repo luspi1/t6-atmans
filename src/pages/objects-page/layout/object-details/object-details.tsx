@@ -1,13 +1,15 @@
 import { type FC } from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { PageContent } from 'src/components/page-content/page-content'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { ObjectHeader } from 'src/pages/objects-page/layout/object-details/components/object-header/object-header'
-
-import styles from './index.module.scss'
 import { ObjDetailsGallery } from 'src/pages/objects-page/layout/object-details/components/obj-details-gallery/obj-details-gallery'
 import { ObjDetailsNews } from 'src/pages/objects-page/layout/object-details/components/obj-details-news/obj-details-news'
+
+import styles from './index.module.scss'
+import { ObjDetailsMap } from 'src/pages/objects-page/layout/object-details/components/obj-details-map/obj-details-map'
+import { ObjDetailsVideos } from 'src/pages/objects-page/layout/object-details/components/obj-details-videos/obj-details-videos'
 
 export const ObjectDetails: FC = () => {
 	return (
@@ -15,7 +17,8 @@ export const ObjectDetails: FC = () => {
 			<ObjectHeader />
 			<ObjDetailsGallery />
 			<ObjDetailsNews />
-			<Outlet />
+			<ObjDetailsVideos />
+			<ObjDetailsMap />
 			<Link className={styles.pageMainLink} to={`/${AppRoute.Objects}`}>
 				На страницу списка объектов
 			</Link>

@@ -7,6 +7,7 @@
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
   background: #ffffff;
 }
+
 .newsSwiperContainer {
   position: relative;
 }
@@ -20,11 +21,13 @@ a.newsItem {
     width: 100%;
     max-width: 100%
   }
+
   &:hover {
     .newsItemContent {
       p, h6 {
         color: #ffffff;
       }
+
       background: #DD0A15;
     }
   }
@@ -38,6 +41,7 @@ a.newsItem {
   @media (max-width: 550px) {
     height: 173px;
   }
+
   img {
     border-radius: 5px 5px 0 0;
     width: 100%;
