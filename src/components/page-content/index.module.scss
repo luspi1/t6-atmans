@@ -6,6 +6,9 @@
     font-size: 50px;
     margin-bottom: 15px;
     font-weight: 400;
+    @media (max-width: 768px) {
+      font-size: 35px;
+    }
   }
   h4 {
     font-weight: 400;
@@ -14,7 +17,6 @@
   }
 
   a {
-    color: #DE0008;
     font-size: 16px;
   }
 }

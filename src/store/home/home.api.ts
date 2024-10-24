@@ -1,15 +1,15 @@
 import {
-	type HomeEventItem,
 	type HomeFaq,
-	type HomeNewsItem,
 	type HomeObject,
 	type HomePartnerItem,
 	type HomePoster,
-	type HomeVideoItem,
 } from 'src/types/home-page'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 import { BASE_URL, ReducerPath } from 'src/helpers/consts'
+import { type CardEventItem } from 'src/types/events'
+import { type CardNewsItem } from 'src/types/news'
+import { type CardVideoItem } from 'src/types/videos'
 
 export const homeApi = createApi({
 	reducerPath: ReducerPath.Home,
@@ -24,18 +24,18 @@ export const homeApi = createApi({
 			}),
 		}),
 
-		getHomeEvents: build.query<HomeEventItem[], null>({
+		getHomeEvents: build.query<CardEventItem[], null>({
 			query: () => ({
 				url: `/home/all-events`,
 			}),
 		}),
 
-		getHomeNews: build.query<HomeNewsItem[], null>({
+		getHomeNews: build.query<CardNewsItem[], null>({
 			query: () => ({
 				url: 'home/all-news',
 			}),
 		}),
-		getHomeVideos: build.query<HomeVideoItem[], null>({
+		getHomeVideos: build.query<CardVideoItem[], null>({
 			query: () => ({
 				url: 'home/all-videos',
 			}),

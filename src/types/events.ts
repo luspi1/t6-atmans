@@ -9,7 +9,6 @@ import { type VideoItem } from 'src/types/videos'
 import { type ImageItem } from 'src/types/photos'
 import { type ShortDocument } from 'src/types/document'
 import { type PathwayItem } from 'src/types/location'
-import { type EthnosportDisciplineItem } from 'src/types/ethnosportDiscipline'
 import { type ProgramDay } from 'src/types/program'
 
 export type TeamItem = {
@@ -48,7 +47,6 @@ export type EventItem = {
 	placement: PathwayItem[]
 	faq: Array<{ title: string; content: string }>
 	chronology: ChronologyItem[]
-	disciplines: EthnosportDisciplineItem[]
 	program: ProgramDay[]
 	teams: TeamItem[]
 	type: string
@@ -62,4 +60,17 @@ export type EventItem = {
 	relatedLinks: SourceLink[]
 	tags: string[]
 	designation: string
+}
+
+export type CardEventItem = {
+	id: string
+	imgUrl: string
+	title: string
+	category: CategoryItem
+	date: Date
+	location: {
+		title: string
+		address: string
+	}
+	description: string
 }

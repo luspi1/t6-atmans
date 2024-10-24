@@ -9,9 +9,9 @@ import { VideotapeSection } from 'src/pages/home-page/components/videotape-secti
 import { NewsSection } from 'src/pages/home-page/components/news-section/news-section'
 import { PartnersSection } from 'src/pages/home-page/components/partners-section/partners-section'
 import { FaqSection } from 'src/pages/home-page/components/faq-section/faq-section'
+import { ObjectPreviewSection } from 'src/pages/home-page/components/object-preview-section/object-preview-section'
 
 import styles from './index.module.scss'
-import { ObjectPreviewSection } from 'src/pages/home-page/components/object-preview-section/object-preview-section'
 
 export const HomePage: FC = () => {
 	return (

@@ -6,16 +6,18 @@ import { AppRoute } from 'src/routes/main-routes/consts'
 import { ObjectHeader } from 'src/pages/objects-page/layout/object-details/components/object-header/object-header'
 import { ObjDetailsGallery } from 'src/pages/objects-page/layout/object-details/components/obj-details-gallery/obj-details-gallery'
 import { ObjDetailsNews } from 'src/pages/objects-page/layout/object-details/components/obj-details-news/obj-details-news'
-
-import styles from './index.module.scss'
 import { ObjDetailsMap } from 'src/pages/objects-page/layout/object-details/components/obj-details-map/obj-details-map'
 import { ObjDetailsVideos } from 'src/pages/objects-page/layout/object-details/components/obj-details-videos/obj-details-videos'
+import { ObjDetailsEvents } from 'src/pages/objects-page/layout/object-details/components/obj-details-events/obj-details-events'
+
+import styles from './index.module.scss'
 
 export const ObjectDetails: FC = () => {
 	return (
 		<PageContent className={styles.objDetailsPage}>
 			<ObjectHeader />
 			<ObjDetailsGallery />
+			<ObjDetailsEvents />
 			<ObjDetailsNews />
 			<ObjDetailsVideos />
 			<ObjDetailsMap />

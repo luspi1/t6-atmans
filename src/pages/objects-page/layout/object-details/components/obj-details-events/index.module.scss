@@ -1,4 +1,23 @@
-a.allEventsLink {
-  font-size: 16px;
-  font-weight: 700;
+.objEventsSection {
+  padding-top: 40px;
+}
+
+.objEventsSlider {
+  position: relative;
+}
+
+.objEventSlide {
+  padding-bottom: 10px;
+}
+
+.objEventCard {
+  min-height: 440px;
+  h6 {
+    font-size: 23px;
+  }
+  :global {
+    .event-card-content {
+      padding: 20px 15px;
+    }
+  }
 }

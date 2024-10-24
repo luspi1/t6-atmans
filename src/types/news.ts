@@ -18,4 +18,13 @@ export type NewsItem = {
 	preview: string
 	textNews: string[]
 }
+
 export type NewsItemsList = Record<string, NewsItem[]>
+
+export type CardNewsItem = {
+	id: string
+	title: string
+	imgUrl: string
+	date: [Date, Date] | [Date]
+	desc: string
+}

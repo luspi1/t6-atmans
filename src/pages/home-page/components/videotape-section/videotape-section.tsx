@@ -2,7 +2,6 @@ import { type FC, type RefObject, useRef } from 'react'
 import { type SwiperRef } from 'swiper/react/swiper-react'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { generatePath, Link } from 'react-router-dom'
 import cn from 'classnames'
 
 import { Container } from 'src/UI/Container/Container'
@@ -11,6 +10,7 @@ import { videotapeSliderOptions } from 'src/pages/home-page/components/videotape
 import { useGetHomeVideosQuery } from 'src/store/home/home.api'
 import { FlexRow } from 'src/components/flex-row/flex-row'
 import { MainButton } from 'src/UI/MainButton/MainButton'
+import { VideoCard } from 'src/components/video-card/video-card'
 
 import styles from './index.module.scss'
 
@@ -32,18 +32,7 @@ export const VideotapeSection: FC = () => {
 				<Swiper className={styles.videotapeSlider} {...videotapeSliderOptions} ref={swiperRef}>
 					{videos?.map((slideItem, idx) => (
 						<SwiperSlide key={idx}>
-							<Link
-								className={styles.slideItem}
-								to={generatePath('videos/:id', {
-									id: slideItem.id,
-								})}
-							>
-								<div className={styles.slideThumbWrapper}>
-									<img src={slideItem.thumb} alt={slideItem.title} />
-									<span className={styles.videoDuration}>{slideItem.duration}</span>
-								</div>
-								<p>{slideItem.title}</p>
-							</Link>
+							<VideoCard {...slideItem} />
 						</SwiperSlide>
 					))}
 				</Swiper>

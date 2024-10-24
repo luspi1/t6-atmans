@@ -8,3 +8,10 @@ export type VideoItem = {
 	thumbnail: string
 	similarVideos: VideoItem[]
 }
+
+export type CardVideoItem = {
+	id: string
+	title: string
+	duration: string
+	thumb: string
+}
