@@ -1,5 +1,6 @@
-import { type NewsItem } from 'src/types/news'
+import { type CardNewsItem, type NewsItem, type NewsMonthsList } from 'src/types/news'
 import { type VideoItem } from 'src/types/videos'
+import { type CategoryItem } from 'src/types/global'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
@@ -12,25 +13,25 @@ export const newsApi = createApi({
 		baseUrl: BASE_URL,
 	}),
 	endpoints: (build) => ({
-		getAllNews: build.query<NewsItem[], { search?: string; year?: string }>({
-			query: ({ search = '', year = '' }) => ({
-				url: `news`,
+		getNewsMonths: build.query<CardNewsItem[], { date: string; category: string }>({
+			query: ({ date, category = '' }) => ({
+				url: 'news-months',
 				params: {
-					q: search,
-					y: year,
+					d: date,
+					cat: category,
 				},
 			}),
-			providesTags: ['News'],
 		}),
-		// getHomeEventMonths: build.query<HomeEventItem[], { date: string; category: string }>({
-		// 	query: ({ date, category = '' }) => ({
-		// 		url: 'home/event-months/',
-		// 		params: {
-		// 			d: date,
-		// 			cat: category,
-		// 		},
-		// 	}),
-		// }),
+		getAllNewsMonths: build.query<NewsMonthsList[], null>({
+			query: () => ({
+				url: `all-news`,
+			}),
+		}),
+		getNewsCategories: build.query<CategoryItem[], null>({
+			query: () => ({
+				url: 'news-categories',
+			}),
+		}),
 		getNewsById: build.query<NewsItem, string>({
 			query: (newsId) => ({
 				url: `news/${newsId}`,
@@ -58,7 +59,9 @@ export const newsApi = createApi({
 })
 
 export const {
-	useGetAllNewsQuery,
+	useGetAllNewsMonthsQuery,
+	useGetNewsCategoriesQuery,
+	useGetNewsMonthsQuery,
 	useGetNewsByIdQuery,
 	useGetNewsVideosQuery,
 	useGetNewsVideoByIdQuery,

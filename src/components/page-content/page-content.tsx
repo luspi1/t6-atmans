@@ -10,12 +10,14 @@ type PageContentProps = PropsWithChildren<{
 	$maxWidth?: string
 	$background?: string
 	$margin?: string
+	$minHeight?: string
 }>
 
 const StyledPageContent = styled.div<PageContentProps>`
 	padding: ${({ $padding }) => $padding ?? '42px 35px 70px 50px'};
 	margin: ${({ $margin }) => $margin ?? '0 0 100px 0'};
 	max-width: ${({ $maxWidth }) => $maxWidth ?? '100%'};
+	min-height: ${({ $minHeight }) => $minHeight ?? '1500px'};
 	background: ${({ $background }) => $background ?? '#ffffff'};
 	@media (max-width: 768px) {
 		padding: 30px 20px;

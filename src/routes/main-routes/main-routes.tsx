@@ -14,8 +14,8 @@ import { ObjectsList } from 'src/pages/objects-page/layout/objects-list/objects-
 import { ObjectDetails } from 'src/pages/objects-page/layout/object-details/object-details'
 
 import { NewsDetails } from 'src/pages/news-page/layout/news-details/news-details'
-import { NewsLayout } from 'src/pages/news-page/layout/news-layout'
 import { News } from 'src/pages/news-page/layout/news/news'
+import { NewsLayout } from 'src/pages/news-page/news-layout'
 
 import { VideosLayout } from 'src/pages/videos-page/layout/videos-layout'
 import { Videos } from 'src/pages/videos-page/layout/videos/videos'

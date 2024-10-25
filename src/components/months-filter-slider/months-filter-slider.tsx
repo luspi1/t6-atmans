@@ -8,18 +8,23 @@ import cn from 'classnames'
 import { Container } from 'src/UI/Container/Container'
 import { SliderBtns } from 'src/components/slider-btns/slider-btns'
 import { mainFormatDate } from 'src/helpers/utils'
-import { monthsSliderOptions } from 'src/pages/home-page/components/events-section/components/months-slider/consts'
-import { useGetAllEventMonthsQuery } from 'src/store/home/home.api'
+import { monthsSliderOptions } from './consts'
 
 import styles from './index.module.scss'
 
-type MonthsSliderProps = {
+type MonthsSliderProps<T> = {
 	activeMonth: string
 	changeActiveMonth: (arg: string) => void
+	monthsList: Array<Record<string, T[]>>
+	isSuccess: boolean
 }
 
-export const MonthsSlider: FC<MonthsSliderProps> = ({ activeMonth, changeActiveMonth }) => {
-	const { data: monthsList, isSuccess } = useGetAllEventMonthsQuery(null)
+export const MonthsFilterSlider = <T,>({
+	activeMonth,
+	changeActiveMonth,
+	monthsList,
+	isSuccess,
+}: MonthsSliderProps<T>) => {
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 
 	const handleChangeMonth = (date: string, isActive: boolean) => {
@@ -56,7 +61,7 @@ export const MonthsSlider: FC<MonthsSliderProps> = ({ activeMonth, changeActiveM
 					</SwiperSlide>
 				))}
 			</Swiper>
-			<SliderBtns $topPosition='55%' $btnsSpacing='100%' swiperRef={swiperRef} $variant='opaque' />
+			<SliderBtns $topPosition='55%' $btnsSpacing='100%' swiperRef={swiperRef} />
 		</Container>
 	)
 }

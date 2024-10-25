@@ -1,14 +1,12 @@
-export type NewsCategory = {
-	title: string
-	id: string
-}
+import { type CategoryItem } from 'src/types/global'
+
 export type NewsItem = {
 	id: string
 	title: string
 	imgUrl: string
 	date: [Date, Date] | [Date]
 	desc: string
-	category: NewsCategory
+	category: CategoryItem
 	shortTitle: string
 	shortDesc: string
 	tags: string[]
@@ -19,12 +17,13 @@ export type NewsItem = {
 	textNews: string[]
 }
 
-export type NewsItemsList = Record<string, NewsItem[]>
-
 export type CardNewsItem = {
 	id: string
 	title: string
 	imgUrl: string
 	date: [Date, Date] | [Date]
 	desc: string
+	category: CategoryItem
 }
+
+export type NewsMonthsList = Record<string, CardNewsItem[]>

@@ -1,19 +1,18 @@
 import { Link, useParams } from 'react-router-dom'
 
-import { useGetAllNewsQuery, useGetNewsByIdQuery } from 'src/store/news/news.api'
+import { useGetNewsByIdQuery } from 'src/store/news/news.api'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 import { customFormatDate } from 'src/helpers/utils'
 import { Loader } from 'src/components/loader/loader'
 import { AppRoute } from 'src/routes/main-routes/consts'
 
 import styles from './index.module.scss'
-import { AsideNews } from 'src/components/aside-news/aside-news'
+
 import { GalleryImg } from 'src/components/image-gallery/image-gallery'
 import { PageContent } from 'src/components/page-content/page-content'
 
 export const NewsDetails = () => {
 	const { id } = useParams()
-	const { data: newsList } = useGetAllNewsQuery({})
 	const { data: newsItemData, isLoading } = useGetNewsByIdQuery(id ?? '')
 	useAdditionalCrumbs(newsItemData?.title)
 
@@ -43,7 +42,6 @@ export const NewsDetails = () => {
 					<Link to={`/${AppRoute.News}`}>Все новости</Link>
 				</div>
 			</PageContent>
-			<AsideNews currentNewsId={id ?? ''} newsList={newsList} />
 		</div>
 	)
 }

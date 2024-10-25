@@ -4,12 +4,12 @@ import {
 	type HomePartnerItem,
 	type HomePoster,
 } from 'src/types/home-page'
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-
-import { BASE_URL, ReducerPath } from 'src/helpers/consts'
 import { type CardEventItem } from 'src/types/events'
 import { type CardNewsItem } from 'src/types/news'
 import { type CardVideoItem } from 'src/types/videos'
+
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { BASE_URL, ReducerPath } from 'src/helpers/consts'
 
 export const homeApi = createApi({
 	reducerPath: ReducerPath.Home,

@@ -3,6 +3,7 @@ import {
 	getAllBrandEvents,
 	getAllDisciplines,
 	getAllHomeEvents,
+	getAllNewsMonths,
 	getBrandEventById,
 	getBrandEventNews,
 	getBrandEventNewsById,
@@ -44,8 +45,9 @@ import {
 	getHomePosters,
 	getHomeRegions,
 	getHomeVideos,
-	getNews,
 	getNewsById,
+	getNewsCategories,
+	getNewsMonths,
 	getNewsVideoById,
 	getNewsVideos,
 	getObjectById,
@@ -75,7 +77,9 @@ router.get('/objects/:code/news/:newsId', getObjectNewsById)
 router.get('/objects/:code/news-videos/:videoId', getObjectNewsVideoById)
 router.get('/projects', getProjects)
 router.get('/projects/:id', getProjectById)
-router.get('/news', getNews)
+router.get('/news-months', getNewsMonths)
+router.get('/all-news', getAllNewsMonths)
+router.get('/news-categories', getNewsCategories)
 router.get('/news-videos', getNewsVideos)
 router.get('/news-videos/:id', getNewsVideoById)
 router.get('/news/:id', getNewsById)

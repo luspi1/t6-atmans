@@ -1,5 +1,5 @@
-.newsListPage {
-  h2 {
-    font-size: 30px;
-  }
+.newsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 270px));
+  gap: 23px;
 }
