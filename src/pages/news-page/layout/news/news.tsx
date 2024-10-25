@@ -11,6 +11,7 @@ import {
 } from 'src/store/news/news.api'
 import { CategoriesFiltration } from 'src/components/categories-filtration/categories-filtration'
 import { NewsCard } from 'src/components/news-card/news-card'
+import { getYear } from 'date-fns'
 
 export const News: FC = () => {
 	const [activeMonth, setActiveMonth] = useState('')
@@ -32,6 +33,7 @@ export const News: FC = () => {
 
 	return (
 		<PageContent className={styles.newsListPage}>
+			<h2>Новости {getYear(new Date(activeMonth))}</h2>
 			<MonthsFilterSlider
 				monthsList={newsMonthsList ?? []}
 				changeActiveMonth={handleChangeActiveMonth}

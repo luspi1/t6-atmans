@@ -16,6 +16,7 @@ type SliderBtnsProps = {
 type SliderProps = {
 	swiperRef: RefObject<SwiperRef>
 	className?: string
+	variant?: 'main' | 'sm'
 }
 
 const StyledSliderBtns = styled.div<SliderBtnsProps>`
@@ -43,6 +44,7 @@ const StyledSliderBtns = styled.div<SliderBtnsProps>`
 export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 	swiperRef,
 	className,
+	variant = 'main',
 	...props
 }) => {
 	const [isBeginning, setIsBeginning] = useState(true)
@@ -83,7 +85,7 @@ export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 				type='button'
 				onClick={handlePrev}
 			>
-				<SlidePrevSvg />
+				<SlidePrevSvg variant={variant} />
 			</button>
 			<button
 				className={cn(styles.slideBtnNext, {
@@ -92,7 +94,7 @@ export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 				type='button'
 				onClick={handleNext}
 			>
-				<SlideNextSvg />
+				<SlideNextSvg variant={variant} />
 			</button>
 		</StyledSliderBtns>
 	)

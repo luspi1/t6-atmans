@@ -61,7 +61,7 @@ export const MonthsFilterSlider = <T,>({
 					</SwiperSlide>
 				))}
 			</Swiper>
-			<SliderBtns $topPosition='55%' $btnsSpacing='100%' swiperRef={swiperRef} />
+			<SliderBtns $topPosition='55%' $btnsSpacing='100%' swiperRef={swiperRef} variant='sm' />
 		</Container>
 	)
 }

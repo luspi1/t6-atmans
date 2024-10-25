@@ -1,3 +1,9 @@
+.newsListPage {
+  h2 {
+    margin-bottom: 25px;
+  }
+}
+
 .newsList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 270px));
