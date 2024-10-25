@@ -1,4 +1,4 @@
-import { type FC, type RefObject, useEffect, useRef } from 'react'
+import { type RefObject, useEffect, useRef } from 'react'
 import type { SwiperRef } from 'swiper/react/swiper-react'
 import { uid } from 'react-uid'
 import { Swiper, SwiperSlide } from 'swiper/react'
