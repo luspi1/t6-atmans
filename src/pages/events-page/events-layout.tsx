@@ -9,7 +9,7 @@ export const EventsLayout: FC = () => {
 			<BreadCrumbs
 				crumbsLinksMap={[
 					{
-						title: 'Все события',
+						title: 'События',
 						link: 'events',
 					},
 				]}

@@ -2,6 +2,7 @@ import {
 	deleteNews,
 	getAllBrandEvents,
 	getAllDisciplines,
+	getAllEventsMonths,
 	getAllHomeEvents,
 	getAllNewsMonths,
 	getBrandEventById,
@@ -24,8 +25,9 @@ import {
 	getEventParticipantes,
 	getEventPhotos,
 	getEventProgramById,
-	getEvents,
 	getEventsByBrands,
+	getEventsCategories,
+	getEventsMonths,
 	getEventTeams,
 	getGroupById,
 	getGroupDisciplinesById,
@@ -84,7 +86,9 @@ router.get('/news-videos', getNewsVideos)
 router.get('/news-videos/:id', getNewsVideoById)
 router.get('/news/:id', getNewsById)
 router.delete('/newsDelete/:id', deleteNews)
-router.get('/events', getEvents)
+router.get('/events-months', getEventsMonths)
+router.get('/all-events', getAllEventsMonths)
+router.get('/events-categories', getEventsCategories)
 router.get('/events/:id', getEventById)
 router.get('/events/:id/participantes', getEventParticipantes)
 router.get('/events/:id/teams', getEventTeams)

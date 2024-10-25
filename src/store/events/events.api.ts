@@ -1,4 +1,4 @@
-import { type EventItem } from 'src/types/events'
+import { type CardEventItem, type EventItem, type EventsMonthsList } from 'src/types/events'
 import type { ImageItem } from 'src/types/photos'
 import type { NewsItem } from 'src/types/news'
 import type { VideoItem } from 'src/types/videos'
@@ -6,6 +6,7 @@ import { type ProgramListItem } from 'src/types/program'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { BASE_URL, ReducerPath } from 'src/helpers/consts'
+import type { CategoryItem } from 'src/types/global'
 
 export const eventsApi = createApi({
 	reducerPath: ReducerPath.Events,
@@ -14,13 +15,23 @@ export const eventsApi = createApi({
 		baseUrl: BASE_URL,
 	}),
 	endpoints: (build) => ({
-		getAllEvents: build.query<EventItem[], { search?: string; year?: string }>({
-			query: ({ search = '', year = '' }) => ({
-				url: `events`,
+		getEventsMonths: build.query<CardEventItem[], { date: string; category: string }>({
+			query: ({ date, category = '' }) => ({
+				url: 'events-months',
 				params: {
-					q: search,
-					y: year,
+					d: date,
+					cat: category,
 				},
+			}),
+		}),
+		getAllEventsMonths: build.query<EventsMonthsList[], null>({
+			query: () => ({
+				url: `all-events`,
+			}),
+		}),
+		getEventsCategories: build.query<CategoryItem[], null>({
+			query: () => ({
+				url: 'events-categories',
 			}),
 		}),
 		getEventById: build.query<EventItem, string>({
@@ -28,7 +39,6 @@ export const eventsApi = createApi({
 				url: `events/${eventId}`,
 			}),
 		}),
-
 		getEventPhoto: build.query<ImageItem[], string>({
 			query: (eventId) => ({
 				url: `events/${eventId}/photos`,
@@ -69,7 +79,9 @@ export const eventsApi = createApi({
 })
 
 export const {
-	useGetAllEventsQuery,
+	useGetAllEventsMonthsQuery,
+	useGetEventsMonthsQuery,
+	useGetEventsCategoriesQuery,
 	useGetEventByIdQuery,
 	useGetEventPhotoQuery,
 	useGetEventAllNewsQuery,

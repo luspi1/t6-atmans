@@ -1,7 +1,7 @@
 import { objects, objectsInfo } from '../mockData/objects.mjs'
 import { projects } from '../mockData/projects.mjs'
 import { newsCategories, newsMonths } from '../mockData/news.mjs'
-import { events } from '../mockData/events.mjs'
+import { eventsCategories, eventsMonths } from '../mockData/events.mjs'
 import { ethnosport } from '../mockData/ethnosport.mjs'
 import { disciplines } from '../mockData/disciplines.mjs'
 import { newsVideos } from '../mockData/newsVideos.mjs'
@@ -346,17 +346,23 @@ export const getBrandEventNewsById = (req, res) => {
 	res.status(200).json(foundNews)
 }
 
-export const getEvents = (req, res) => {
-	const { q, y } = req.query
+export const getAllEventsMonths = (req, res) => {
+	res.status(200).json(eventsMonths)
+}
 
-	const filteredEvents = events.filter((el) => {
-		if (y) {
-			return String(new Date(el.dates[0]).getFullYear()) === y && el.title.toLowerCase().includes(q)
-		}
-		return el.title.toLowerCase().includes(q)
-	})
+export const getEventsMonths = (req, res) => {
+	const { d, cat } = req.query
+	const currentMonthEvents = eventsMonths[d] || []
+
+	const filteredEvents = currentMonthEvents.filter(
+		(event) => cat === '0' || event.category.id === cat,
+	)
 
 	res.status(200).json(filteredEvents)
+}
+
+export const getEventsCategories = (req, res) => {
+	res.status(200).json(eventsCategories)
 }
 
 export const getEventById = (req, res) => {

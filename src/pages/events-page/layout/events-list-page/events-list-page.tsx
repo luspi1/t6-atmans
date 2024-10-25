@@ -1,25 +1,24 @@
-import { type FC } from 'react'
+import React, { type FC } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 import { PageContent } from 'src/components/page-content/page-content'
-
-import { useGetAllEventsQuery } from 'src/store/events/events.api'
-import { EventCard } from 'src/components/event-card/event-card'
+import { FilteredEventsList } from 'src/pages/events-page/layout/events-list-page/components/filtered-events-list/filtered-events-list'
+import { EventPoster } from 'src/pages/events-page/layout/events-list-page/components/event-poster/event-poster'
 
 import styles from './index.module.scss'
 
 export const EventsListPage: FC = () => {
-	const { data: eventsList } = useGetAllEventsQuery({ year: '' })
-
 	return (
-		<PageContent>
+		<PageContent
+			className={styles.eventsPageContent}
+			$padding='0 0 70px 0'
+			$borderRadius='25px 25px 0 0'
+		>
 			<Helmet>
 				<title>Cобытия</title>
 			</Helmet>
-			<h2>Cобытия</h2>
-			<div className={styles.eventsList}>
-				{eventsList?.map((eventEl) => <EventCard key={eventEl.id} {...eventEl} />)}
-			</div>
+			<EventPoster />
+			<FilteredEventsList />
 		</PageContent>
 	)
 }

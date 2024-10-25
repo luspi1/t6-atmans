@@ -1,6 +1,5 @@
-.eventsList {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+div.eventsPageContent {
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
-

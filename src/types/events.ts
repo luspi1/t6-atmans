@@ -74,3 +74,5 @@ export type CardEventItem = {
 	}
 	description: string
 }
+
+export type EventsMonthsList = Record<string, CardEventItem[]>

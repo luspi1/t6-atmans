@@ -1,0 +1,16 @@
+.filteredListWrapper {
+  padding: 0 35px 0 50px;
+  @media (max-width: 1024px) {
+    padding: 0 15px;
+  }
+
+  h4 {
+    margin-bottom: 30px;
+  }
+}
+
+.eventsList {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}

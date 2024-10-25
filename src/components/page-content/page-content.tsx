@@ -11,6 +11,7 @@ type PageContentProps = PropsWithChildren<{
 	$background?: string
 	$margin?: string
 	$minHeight?: string
+	$borderRadius?: string
 }>
 
 const StyledPageContent = styled.div<PageContentProps>`
@@ -19,6 +20,7 @@ const StyledPageContent = styled.div<PageContentProps>`
 	max-width: ${({ $maxWidth }) => $maxWidth ?? '100%'};
 	min-height: ${({ $minHeight }) => $minHeight ?? '1500px'};
 	background: ${({ $background }) => $background ?? '#ffffff'};
+	border-radius: ${({ $borderRadius }) => $borderRadius ?? '0'};
 	@media (max-width: 768px) {
 		padding: 30px 20px;
 	}
