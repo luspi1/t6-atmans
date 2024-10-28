@@ -44,9 +44,17 @@ export const FilteredNewsList = () => {
 				changeActiveCatId={handleChangeActiveCategory}
 				categories={newsCategories ?? []}
 			/>
-			<div className={styles.newsList}>
-				{newsList?.map((newsEl) => <NewsCard key={newsEl.id} {...newsEl} />)}
-			</div>
+			{newsList?.length ? (
+				<div className={styles.newsList}>
+					{newsList.map((newsEl) => (
+						<NewsCard key={newsEl.id} {...newsEl} />
+					))}
+				</div>
+			) : (
+				<p className={styles.newsAbsence}>
+					В выбранном вами месяце нет ни одной новости. Пожалуйста, выберите другой месяц.
+				</p>
+			)}
 		</div>
 	)
 }

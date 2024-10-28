@@ -16,7 +16,7 @@ export const VideosLayout: FC = () => {
 					},
 				]}
 			/>
-			<PageContent $padding='30px 40px 55px 30px' $maxWidth='100%'>
+			<PageContent>
 				<Outlet />
 			</PageContent>
 		</Container>

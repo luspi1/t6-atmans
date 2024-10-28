@@ -1,36 +1,61 @@
 import React, { type FC, useState } from 'react'
 
-import { MainSelect } from 'src/UI/MainSelect/MainSelect'
-import { useGetNewsVideosQuery } from 'src/store/news/news.api'
-import { VideoGallery } from 'src/components/video-gallery/video-gallery'
+import { getYear } from 'date-fns'
+import { MonthsFilterSlider } from 'src/components/months-filter-slider/months-filter-slider'
+import { CategoriesFiltration } from 'src/components/categories-filtration/categories-filtration'
+import { VideoCard } from 'src/components/video-card/video-card'
+
+import {
+	useGetAllVideosMonthsQuery,
+	useGetVideosCategoriesQuery,
+	useGetVideosMonthsQuery,
+} from 'src/store/videos/videos.api'
 
 import styles from './index.module.scss'
-import { Pagination } from 'src/components/pagination/pagination'
 
 export const Videos: FC = () => {
-	const [yearsSelectValue, setYearsSelectValue] = useState<string>('')
-	const { data: videosList } = useGetNewsVideosQuery(null)
+	const [activeMonth, setActiveMonth] = useState('')
+	const [activeCategory, setActiveCategory] = useState('0')
 
+	const { data: videosMonthsList, isSuccess: isMonthsSuccess } = useGetAllVideosMonthsQuery(null)
+	const { data: videosCategories } = useGetVideosCategoriesQuery(null)
+	const { data: videosList } = useGetVideosMonthsQuery({
+		date: activeMonth,
+		category: activeCategory,
+	})
+
+	const handleChangeActiveMonth = (newMonth: string) => {
+		setActiveMonth(newMonth)
+	}
+	const handleChangeActiveCategory = (newCategory: string) => {
+		setActiveCategory(newCategory)
+	}
 	return (
-		<div>
-			<div className={styles.videosTitleBlock}>
-				<h2>Видеолента</h2>
-				<MainSelect
-					onChange={(e) => setYearsSelectValue(e.target.value)}
-					value={yearsSelectValue}
-					className={styles.newsDateSelect}
-					items={[{ label: 'Все годы', value: '' }]}
-				/>
-				<MainSelect
-					onChange={(e) => setYearsSelectValue(e.target.value)}
-					value={yearsSelectValue}
-					className={styles.newsDateSelect}
-					items={[{ label: 'Все месяцы', value: '' }]}
-				/>
-			</div>
-			<h5 className={styles.videoMonth}>Август, 2024</h5>
-			<VideoGallery videos={videosList} />
-			<Pagination className={styles.videosPagination} pagesCount={7} activePage={2} />
+		<div className={styles.videosPage}>
+			<h2>Видеолента {getYear(new Date(activeMonth))}</h2>
+
+			<MonthsFilterSlider
+				monthsList={videosMonthsList ?? []}
+				changeActiveMonth={handleChangeActiveMonth}
+				activeMonth={activeMonth}
+				isSuccess={isMonthsSuccess}
+			/>
+			<CategoriesFiltration
+				activeCatId={activeCategory}
+				changeActiveCatId={handleChangeActiveCategory}
+				categories={videosCategories ?? []}
+			/>
+			{videosList?.length ? (
+				<div className={styles.videosList}>
+					{videosList.map((videosEl) => (
+						<VideoCard key={videosEl.id} {...videosEl} />
+					))}
+				</div>
+			) : (
+				<p className={styles.videosAbsence}>
+					В выбранном вами месяце нет ни одного видео. Пожалуйста, выберите другой месяц.
+				</p>
+			)}
 		</div>
 	)
 }

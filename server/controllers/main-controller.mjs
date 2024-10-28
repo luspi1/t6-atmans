@@ -4,7 +4,7 @@ import { newsCategories, newsMonths } from '../mockData/news.mjs'
 import { eventsCategories, eventsMonths } from '../mockData/events.mjs'
 import { ethnosport } from '../mockData/ethnosport.mjs'
 import { disciplines } from '../mockData/disciplines.mjs'
-import { newsVideos } from '../mockData/newsVideos.mjs'
+import { newsVideos, videosCategories, videosMonths } from '../mockData/newsVideos.mjs'
 import { groups } from '../mockData/groups.mjs'
 import { brandEvents } from '../mockData/brandEvents.mjs'
 import {
@@ -128,7 +128,7 @@ export const getNewsVideos = (req, res) => {
 	res.status(200).json(newsVideos)
 }
 
-export const getNewsVideoById = (req, res) => {
+export const getVideoById = (req, res) => {
 	const newsId = req.params.id
 	const foundVideoNews = newsVideos.find((newsItem) => newsItem.id === newsId)
 
@@ -456,6 +456,26 @@ export const getEventProgramById = (req, res) => {
 
 	res.status(200).json(searchedProgramList.programList)
 }
+
+export const getAllVideosMonths = (req, res) => {
+	res.status(200).json(videosMonths)
+}
+
+export const getVideosMonths = (req, res) => {
+	const { d, cat } = req.query
+	const currentMonthVideos = videosMonths[d] || []
+
+	const filteredVideos = currentMonthVideos.filter(
+		(video) => cat === '0' || video.category.id === cat,
+	)
+
+	res.status(200).json(filteredVideos)
+}
+
+export const getVideosCategories = (req, res) => {
+	res.status(200).json(videosCategories)
+}
+
 export const getHomeRegions = (req, res) => {
 	res.status(200).json(homeRegions)
 }

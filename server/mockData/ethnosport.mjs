@@ -1230,3 +1230,26 @@ export let ethnosport = {
 		},
 	],
 }
+
+export let videosCategories = [
+	{
+		id: '0',
+		title: 'Все видео',
+	},
+	{
+		id: '1',
+		title: 'Русские игры',
+	},
+	{
+		id: '2',
+		title: 'Атмановские кулачки',
+	},
+	{
+		id: '3',
+		title: 'Еще один тег видео',
+	},
+	{
+		id: '4',
+		title: 'И еще один тег видео',
+	},
+]

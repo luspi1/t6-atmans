@@ -5,6 +5,7 @@ import {
 	getAllEventsMonths,
 	getAllHomeEvents,
 	getAllNewsMonths,
+	getAllVideosMonths,
 	getBrandEventById,
 	getBrandEventNews,
 	getBrandEventNewsById,
@@ -50,7 +51,6 @@ import {
 	getNewsById,
 	getNewsCategories,
 	getNewsMonths,
-	getNewsVideoById,
 	getNewsVideos,
 	getObjectById,
 	getObjectEvents,
@@ -63,6 +63,9 @@ import {
 	getObjectsInfo,
 	getProjectById,
 	getProjects,
+	getVideoById,
+	getVideosCategories,
+	getVideosMonths,
 } from '../controllers/main-controller.mjs'
 import { Router } from 'express'
 
@@ -83,7 +86,6 @@ router.get('/news-months', getNewsMonths)
 router.get('/all-news', getAllNewsMonths)
 router.get('/news-categories', getNewsCategories)
 router.get('/news-videos', getNewsVideos)
-router.get('/news-videos/:id', getNewsVideoById)
 router.get('/news/:id', getNewsById)
 router.delete('/newsDelete/:id', deleteNews)
 router.get('/events-months', getEventsMonths)
@@ -99,6 +101,10 @@ router.get('/events/:id/news-videos', getEventNewsVideos)
 router.get('/events/:id/news/:newsId', getEventNewsById)
 router.get('/events/:id/news-videos/:videoId', getEventNewsVideoById)
 router.get('/events/:id/program/:dayId', getEventProgramById)
+router.get('/videos-months', getVideosMonths)
+router.get('/all-videos', getAllVideosMonths)
+router.get('/videos-categories', getVideosCategories)
+router.get('/videos/:id', getVideoById)
 router.get('/ethnosport', getEthnosportGlobal)
 router.get('/ethnosport/:id', getEthnosportById)
 router.get('/disciplines', getAllDisciplines)

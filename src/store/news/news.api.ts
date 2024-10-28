@@ -62,7 +62,6 @@ export const {
 	useGetAllNewsMonthsQuery,
 	useGetNewsCategoriesQuery,
 	useGetNewsMonthsQuery,
-	useGetNewsByIdQuery,
 	useGetNewsVideosQuery,
 	useGetNewsVideoByIdQuery,
 } = newsApi

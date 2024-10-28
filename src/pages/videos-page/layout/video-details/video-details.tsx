@@ -1,15 +1,17 @@
 import React, { type FC } from 'react'
-import { useGetNewsVideoByIdQuery } from 'src/store/news/news.api'
 import { useParams } from 'react-router-dom'
-import styles from './index.module.scss'
+
 import { CustomText } from 'src/components/custom-text/custom-text'
 import { mainFormatDate } from 'src/helpers/utils'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 import { AsideVideos } from 'src/components/aside-videos/aside-videos'
+import { useGetVideoByIdQuery } from 'src/store/videos/videos.api'
+
+import styles from './index.module.scss'
 
 export const VideoDetails: FC = () => {
 	const { id } = useParams()
-	const { data: videoDetails } = useGetNewsVideoByIdQuery(id ?? '')
+	const { data: videoDetails } = useGetVideoByIdQuery(id ?? '')
 
 	useAdditionalCrumbs(videoDetails?.title)
 

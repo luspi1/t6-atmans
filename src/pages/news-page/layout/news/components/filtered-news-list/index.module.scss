@@ -3,3 +3,11 @@
   grid-template-columns: repeat(auto-fit, minmax(270px, 270px));
   gap: 23px;
 }
+
+.newsAbsence {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 150px;
+  font-size: 25px;
+}

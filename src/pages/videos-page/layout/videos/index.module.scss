@@ -1,29 +1,19 @@
-.videosTitleBlock {
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
+.videosPage {
   h2 {
-    margin-bottom: 0;
-    line-height: 1.2;
-    margin-right: 15px;
+    margin-bottom: 28px;
   }
 }
 
-select.newsDateSelect {
-  padding: 6px 15px 6px 7px;
-  width: 109px;
-  font-family: 'PT Sans', sans-serif;
+.videosList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 270px));
+  gap: 30px 23px;
 }
 
-.videosPagination {
-  margin-top: 50px;
-}
-
-.videoMonth {
-  font-size: 16px;
-  font-family: 'PT Sans', sans-serif;
-  margin-bottom: 25px;
-  text-transform: uppercase;
+.videosAbsence {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 150px;
+  font-size: 25px;
 }
