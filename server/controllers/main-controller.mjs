@@ -1,6 +1,6 @@
 import { objects, objectsInfo } from '../mockData/objects.mjs'
 import { projects } from '../mockData/projects.mjs'
-import { newsCategories, newsMonths } from '../mockData/news.mjs'
+import { news, newsCategories, newsMonths } from '../mockData/news.mjs'
 import { eventsCategories, eventsMonths } from '../mockData/events.mjs'
 import { ethnosport } from '../mockData/ethnosport.mjs'
 import { disciplines } from '../mockData/disciplines.mjs'
@@ -127,19 +127,18 @@ export const getNewsCategories = (req, res) => {
 export const getNewsVideos = (req, res) => {
 	res.status(200).json(newsVideos)
 }
+export const getNewsById = (req, res) => {
+	const newsId = req.params.id
+	const foundNews = news.find((newsItem) => newsItem.id === newsId)
+
+	res.status(200).json(foundNews)
+}
 
 export const getVideoById = (req, res) => {
 	const newsId = req.params.id
 	const foundVideoNews = newsVideos.find((newsItem) => newsItem.id === newsId)
 
 	res.status(200).json(foundVideoNews)
-}
-
-export const getNewsById = (req, res) => {
-	const newsId = req.params.id
-	const foundNews = news.find((newsItem) => newsItem.id === newsId)
-
-	res.status(200).json(foundNews)
 }
 
 export const deleteNews = (req, res) => {

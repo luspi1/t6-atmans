@@ -1,15 +1,15 @@
 import { type FC } from 'react'
+import { type CardNewsItem } from 'src/types/news'
 import { Link, useLocation } from 'react-router-dom'
-import { type NewsItem } from 'src/types/news'
 
-import { customFormatDate } from 'src/helpers/utils'
+import { mainFormatDate } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
 
 type AsideNewsProps = {
 	previewCount?: number
 	currentNewsId?: string
-	newsList?: NewsItem[]
+	newsList?: CardNewsItem[]
 }
 export const AsideNews: FC<AsideNewsProps> = ({
 	previewCount = 4,
@@ -30,7 +30,7 @@ export const AsideNews: FC<AsideNewsProps> = ({
 					.slice(0, previewCount)
 					.map((newsEl) => (
 						<li key={newsEl.id}>
-							<span>{customFormatDate(newsEl.date, { day: 'numeric', month: 'long' })}</span>
+							<span>{mainFormatDate(newsEl.date[0])}</span>
 							<Link to={`${baseUrl}/${newsEl.id}`}>{newsEl.title}</Link>
 						</li>
 					))}

@@ -287,3 +287,1183 @@ export let newsCategories = [
 		title: 'И еще один тег новостей',
 	},
 ]
+
+export let news = [
+	{
+		id: '1',
+		title:
+			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
+		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '2',
+		title:
+			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
+		date: ['2024-12-25T00:00:00+03:00'],
+		preview:
+			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '3',
+		title:
+			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
+		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '4',
+		title:
+			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
+		date: ['2024-12-25T00:00:00+03:00'],
+		preview:
+			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '5',
+		title:
+			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
+		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '6',
+		title:
+			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
+		date: ['2024-12-25T00:00:00+03:00'],
+		preview:
+			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '7',
+		title:
+			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
+		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '8',
+		title:
+			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
+		date: ['2024-12-25T00:00:00+03:00'],
+		preview:
+			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '9',
+		title:
+			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
+		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '10',
+		title:
+			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
+		date: ['2024-12-25T00:00:00+03:00'],
+		preview:
+			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '11',
+		title:
+			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
+		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '12',
+		title:
+			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
+		date: ['2024-12-25T00:00:00+03:00'],
+		preview:
+			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '13',
+		title:
+			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
+		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '14',
+		title:
+			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
+		date: ['2024-12-25T00:00:00+03:00'],
+		preview:
+			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '15',
+		title:
+			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
+		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '16',
+		title:
+			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
+		date: ['2024-12-25T00:00:00+03:00'],
+		preview:
+			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '17',
+		title:
+			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
+		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '18',
+		title:
+			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
+		date: ['2024-12-25T00:00:00+03:00'],
+		preview:
+			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '19',
+		title:
+			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
+		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '20',
+		title:
+			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
+		date: ['2024-12-25T00:00:00+03:00'],
+		preview:
+			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '21',
+		title:
+			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
+		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+	{
+		id: '22',
+		title:
+			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
+		date: ['2024-12-25T00:00:00+03:00'],
+		preview:
+			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
+		imgGallery: [
+			{
+				id: '1',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '2',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+			{
+				id: '3',
+				original: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2020/09/IMG_20200914_122627_287.jpg',
+			},
+			{
+				id: '4',
+				original: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/e9b/otdel_voopig_b.jpg',
+			},
+			{
+				id: '5',
+				original: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+				thumbnail: 'https://voopik.ru/upload/iblock/614/3110-1.jpg',
+			},
+			{
+				id: '6',
+				original:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+				thumbnail:
+					'https://upload.wikimedia.org/wikipedia/commons/f/fe/Wooden_church_and_house_01.jpg',
+			},
+			{
+				id: '7',
+				original: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+				thumbnail: 'https://www.borodino.ru/wp-content/uploads/2017/08/DSC01241-1-1024x689.jpg',
+			},
+		],
+		textNews: [
+			'Осенью 2023 года Всероссийским обществом охраны памятников истории и культуры (ВООПИК) по заказу АНО «Институт развития интернета» создан документальный сериал, «Русское наследие. Возвращение домой». Проект посвящен сложной судьбе памятников архитектуры Донбасса и других новых территорий, которые вопреки попыткам переписать историю, являются неотъемлемой частью русской культуры и русского мира.',
+			'Каждая серия демонстрирует наиболее значимые памятники истории и культуры новых территорий, рассказы об известных людях, чья жизнь связана с этими объектами, и о гражданском обществе, благодаря усилиям которого многие памятники удалось сохранить. Герои проекта - общественники, краеведы и волонтеры, которые даже в условиях постоянных обстрелов со стороны ВСУ, делают все, чтобы сохранить объекты культурного наследия.',
+			'Проект получил обширную общественную поддержку и набрал 9,5 миллионов просмотров на различных площадках в сети Интернет. Все серии доступны для просмотра на различных площадках в сети Интернет:',
+		],
+	},
+]

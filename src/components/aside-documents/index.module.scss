@@ -1,4 +1,3 @@
-@import "src/assets/styles/vars";
 
 .documents {
   max-width: 203px;
@@ -9,7 +8,6 @@
   li {
     line-height: 1.2;
     font-size: 14px;
-    @include ptsans-regular
   }
 
   .documentLink {

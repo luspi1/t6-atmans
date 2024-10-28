@@ -1,7 +1,8 @@
 import { type FC } from 'react'
-import styles from './index.module.scss'
 import { useGetEventByIdQuery } from 'src/store/events/events.api'
 import { Placement } from 'src/modules/placement/placement'
+
+import styles from './index.module.scss'
 
 export const ContactsInfo: FC = () => {
 	const { data: contactsInfo } = useGetEventByIdQuery('1')
