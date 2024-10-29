@@ -1,26 +1,25 @@
-import { FormProvider, type SubmitHandler, useForm } from 'react-hook-form'
-import { type SearchWithTagInputs } from 'src/pages/search-page/schema'
 import { Helmet } from 'react-helmet-async'
 
 import { Container } from 'src/UI/Container/Container'
-import { ControlledInput } from 'src/components/controlled-input/controlled-input'
-import { MainButton } from 'src/UI/MainButton/MainButton'
 import { TagsList } from 'src/pages/search-page/consts'
+import { useState } from 'react'
+import { useGetSearchedQuery } from 'src/store/search/search.api'
+import { MainInput } from 'src/UI/MainInput/MainInput'
+import { useDebounce } from 'src/hooks/debounce/debounce'
 
 import styles from './index.module.scss'
+import cn from 'classnames'
 
 export const SearchPage = () => {
-	const methods = useForm<SearchWithTagInputs>({
-		mode: 'onBlur',
-	})
+	const [searchVal, setSearchVal] = useState<string>('')
+	const debouncedSearch = useDebounce(searchVal)
+
+	useGetSearchedQuery(debouncedSearch)
 
 	const setTagOnSearch = (e: React.MouseEvent<HTMLLIElement>) => {
-		methods.setValue('search', e.currentTarget.textContent ?? '')
+		setSearchVal(e.currentTarget.textContent ?? '')
 	}
 
-	const onSubmit: SubmitHandler<SearchWithTagInputs> = (data) => {
-		console.log(data)
-	}
 	return (
 		<Container className={styles.searchContainer}>
 			<Helmet>
@@ -28,19 +27,14 @@ export const SearchPage = () => {
 			</Helmet>
 			<div className={styles.searchBox}>
 				<div className={styles.searchWrapper}>
-					<FormProvider {...methods}>
-						<form onSubmit={methods.handleSubmit(onSubmit)}>
-							<ControlledInput
-								className={styles.searchInput}
-								name='search'
-								placeholder='Название события, объекта, места'
-								required
-							/>
-							<MainButton className={styles.searchBtn} as='button' type='submit'>
-								найти
-							</MainButton>
-						</form>
-					</FormProvider>
+					<MainInput
+						className={cn(styles.searchInput, { [styles._activeSearch]: searchVal })}
+						name='search'
+						placeholder='Событие, объект, место'
+						value={searchVal}
+						onChange={(e) => setSearchVal(e.target.value)}
+						required
+					/>
 				</div>
 				<ul className={styles.tagsList}>
 					{TagsList?.map((tag) => (
