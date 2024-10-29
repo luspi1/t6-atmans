@@ -7,7 +7,7 @@ export const newsSliderOptions: SwiperProps = {
 	slidesPerGroup: 1,
 	spaceBetween: 25,
 	breakpoints: {
-		[DisplayBreakpoints.Xs]: {
+		[DisplayBreakpoints.Sm]: {
 			slidesPerView: 2,
 		},
 		[DisplayBreakpoints.Lg]: {

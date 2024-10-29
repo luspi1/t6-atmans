@@ -19,6 +19,7 @@ export enum DisplayBreakpoints {
 	Lg = 1024,
 	Xl = 1280,
 	Xxl = 1440,
+	Fhd = 1920,
 }
 
 export const BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:4020/api/v1'

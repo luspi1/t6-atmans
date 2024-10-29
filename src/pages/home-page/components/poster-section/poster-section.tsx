@@ -1,6 +1,6 @@
 import { type FC, type RefObject, useRef } from 'react'
-import cn from 'classnames'
 import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react'
+import cn from 'classnames'
 
 import { SliderBtns } from 'src/components/slider-btns/slider-btns'
 import { Container } from 'src/UI/Container/Container'

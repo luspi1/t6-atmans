@@ -1,11 +1,21 @@
-@import "src/assets/styles/vars";
-
 
 .newsSection {
   padding: 80px 0 103px;
+  @media (max-width: 768px) {
+    padding: 45px 0 50px;
+  }
+  .newsSliderBtns {
+    @media (max-width: 768px) {
+      top: 96px;
+      width: 95%;
+    }
+  }
+}
+
+.newsSliderWrapper {
+  position: relative;
 }
 
 .newsSlide {
-
   padding-bottom: 10px;
 }

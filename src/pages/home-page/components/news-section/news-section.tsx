@@ -29,7 +29,7 @@ export const NewsSection: FC = () => {
 					</MainButton>
 				</FlexRow>
 				{newsList?.length && (
-					<>
+					<div className='relative-wrapper'>
 						<Swiper {...newsSliderOptions} ref={swiperRef}>
 							{newsList.map((newsEl, idx) => (
 								<SwiperSlide className={styles.newsSlide} key={idx}>
@@ -37,8 +37,13 @@ export const NewsSection: FC = () => {
 								</SwiperSlide>
 							))}
 						</Swiper>
-						<SliderBtns $topPosition='61%' $btnsSpacing='calc(100% - 80px)' swiperRef={swiperRef} />
-					</>
+						<SliderBtns
+							className={styles.newsSliderBtns}
+							$topPosition='54%'
+							$btnsSpacing='100%'
+							swiperRef={swiperRef}
+						/>
+					</div>
 				)}
 			</Container>
 		</section>

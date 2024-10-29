@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 import { Container } from 'src/UI/Container/Container'
 import { SocialLinks } from 'src/components/social-links/social-links'
 import footerLogo from 'src/assets/img/footer-logo.svg'
-
-import styles from './index.module.scss'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { FlexRow } from 'src/components/flex-row/flex-row'
+
+import styles from './index.module.scss'
 
 export const Footer: FC = () => {
 	return (
@@ -15,13 +15,13 @@ export const Footer: FC = () => {
 			<Container>
 				<FlexRow
 					className={styles.footerTop}
-					$gap='35px'
+					$gap='40px'
 					$alignItems='center'
 					$justifyContent='space-between'
 					$margin='0 0 45px 0'
 				>
-					<img src={footerLogo} alt='Логотип' />
-					<FlexRow $gap='50px'>
+					<img className={styles.footerLogo} src={footerLogo} alt='Логотип' />
+					<FlexRow className={styles.footerTopLinks} $gap='50px'>
 						<Link to={AppRoute.Events}>События</Link>
 						<Link to={AppRoute.Events}>Обратная связь</Link>
 					</FlexRow>

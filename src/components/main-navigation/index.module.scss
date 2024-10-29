@@ -1,16 +1,11 @@
-@import "src/assets/styles/vars";
-
-.mainNav {
-  font-family: 'MADE Likes Slab', serif;
-}
-
 .logoWrapper {
   width: 376px;
   min-width: 376px;
   height: 100px;
   @media (max-width: 768px) {
-    min-width: 200px;
-    width: 200px;
+    min-width: 225px;
+    width: 225px;
+    height: 60px;
   }
 
   img {
@@ -23,6 +18,9 @@
 .topMainNavWrapper {
   padding: 30px 0;
   background-color: #fff;
+  @media (max-width: 768px) {
+    padding: 15px 0;
+  }
 }
 
 .topMainNav {
@@ -43,11 +41,23 @@
   height: 40px;
   width: 40px;
   min-width: 40px;
+  @media (max-width: 768px) {
+    height: 32px;
+    width: 32px;
+    min-width: 32px;
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
 }
 
 .menuWrapper {
   background: #DD0A15;
   padding: 13px 0;
+  @media (max-width: 768px) {
+    padding: 16px 0;
+  }
 }
 
 .menuContainer {
@@ -59,11 +69,21 @@
     gap: 15px;
   }
 }
+
 .searchLink {
   height: 30px;
+  @media (max-width: 768px) {
+    height: 24px;
+  }
+
   svg {
     height: 30px;
     width: 30px;
     min-width: 30px;
+    @media (max-width: 768px) {
+      height: 24px;
+      width: 24px;
+      min-width: 24px;
+    }
   }
 }

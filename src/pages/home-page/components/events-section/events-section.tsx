@@ -29,14 +29,21 @@ export const EventsSection: FC = () => {
 				</FlexRow>
 			</Container>
 			<Container>
-				<Swiper {...eventsSliderOptions} ref={swiperRef}>
-					{homeEvents?.map((slideItem, idx) => (
-						<SwiperSlide key={idx}>
-							<EventCard className={styles.homeEventCard} {...slideItem} />
-						</SwiperSlide>
-					))}
-				</Swiper>
-				<SliderBtns $topPosition='49%' $btnsSpacing='calc(100% - 80px)' swiperRef={swiperRef} />
+				<div className='relative-wrapper'>
+					<Swiper {...eventsSliderOptions} ref={swiperRef}>
+						{homeEvents?.map((slideItem, idx) => (
+							<SwiperSlide key={idx}>
+								<EventCard className={styles.homeEventCard} {...slideItem} />
+							</SwiperSlide>
+						))}
+					</Swiper>
+					<SliderBtns
+						className={styles.eventsSliderBtns}
+						$topPosition='49%'
+						$btnsSpacing='100%'
+						swiperRef={swiperRef}
+					/>
+				</div>
 			</Container>
 		</section>
 	)

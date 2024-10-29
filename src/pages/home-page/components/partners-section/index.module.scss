@@ -1,5 +1,13 @@
 .partnersSection {
   padding: 80px 0 84px;
+  @media (max-width: 768px) {
+    padding: 45px 0 50px;
+  }
+  .partnersTop {
+    @media (max-width: 768px) {
+      margin-bottom: 25px;
+    }
+  }
 }
 
 .partnersList {

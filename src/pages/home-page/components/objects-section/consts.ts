@@ -7,13 +7,20 @@ export const objectsSliderOptions: SwiperProps = {
 	slidesPerGroup: 1,
 	spaceBetween: 77,
 	breakpoints: {
-		[DisplayBreakpoints.Xs]: {
+		[DisplayBreakpoints.Sm]: {
 			slidesPerView: 2,
 		},
 		[DisplayBreakpoints.Lg]: {
+			slidesPerView: 3,
+		},
+		[DisplayBreakpoints.Xl]: {
 			slidesPerView: 4,
 		},
 		[DisplayBreakpoints.Xxl]: {
+			slidesPerView: 5,
+			spaceBetween: 20,
+		},
+		[DisplayBreakpoints.Fhd]: {
 			slidesPerView: 6,
 		},
 	},

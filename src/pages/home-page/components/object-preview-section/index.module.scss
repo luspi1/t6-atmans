@@ -1,5 +1,8 @@
 .objectPreviewSection {
-  padding: 60px 0 100px;
+  padding: 90px 0 100px;
+  @media (max-width: 768px) {
+    padding: 50px 0 60px;
+  }
 }
 
 .objPreview {
@@ -10,23 +13,25 @@
   }
 }
 
+
 .objLocation {
   flex-grow: 1;
   border: 1px solid #DD0A15;
   border-radius: 25px 0 0 25px;
   @media (max-width: 768px) {
-    border-radius: 0;
-    border: none;
+    border-radius: 5px 5px 0 0;
     height: 300px;
   }
+
   iframe {
     border: none;
     border-radius: 25px 0 0 25px;
     @media (max-width: 768px) {
-      border-radius: 0;
+      border-radius: 5px 5px 0 0;
     }
   }
 }
+
 
 .objInfo {
   background: #ffffff;
@@ -39,18 +44,32 @@
     min-width: 100%;
     width: 100%;
     border-radius: 0;
+    padding-right: 35px;
   }
+
+  .objLogo {
+    width: 235px;
+    height: 235px;
+    border-radius: 50%;
+    margin-bottom: 27px;
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
   h6 {
     font-weight: 400;
     font-size: 25px;
     margin-bottom: 19px;
     line-height: 1.2;
   }
+
   .objAddress {
     padding-left: 30px;
     position: relative;
     max-width: 375px;
     margin-bottom: 20px;
+
     &::before {
       content: '';
       position: absolute;
@@ -60,11 +79,13 @@
       width: 18px;
       height: 18px;
     }
+
     span {
       display: block;
       font-size: 15px;
     }
   }
+
   .objDesc {
     line-height: 1.2;
     font-size: 18px;
