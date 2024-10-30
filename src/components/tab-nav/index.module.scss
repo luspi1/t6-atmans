@@ -1,7 +1,7 @@
 .tabNavWrapper {
   h5 {
-    font-weight: 700;
-    font-size: 22px;
+    font-weight: 400;
+    font-size: 20px;
     margin-bottom: 20px;
 
     &:first-letter {
@@ -26,8 +26,8 @@
       display: inline-block;
       color: #000;
       font-size: 16px;
-      font-weight: 700;
-      text-transform: capitalize;
+      font-weight: 400;
+      text-transform: lowercase;
     }
   }
 

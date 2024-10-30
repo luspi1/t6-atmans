@@ -18,18 +18,12 @@ import {
 	getEthnosportById,
 	getEthnosportGlobal,
 	getEventById,
-	getEventDisciplinesById,
-	getEventNews,
-	getEventNewsById,
-	getEventNewsVideoById,
-	getEventNewsVideos,
-	getEventParticipantes,
+	getEventChronology,
 	getEventPhotos,
 	getEventProgramById,
 	getEventsByBrands,
 	getEventsCategories,
 	getEventsMonths,
-	getEventTeams,
 	getGroupById,
 	getGroupDisciplinesById,
 	getGroupEvent,
@@ -92,14 +86,8 @@ router.get('/events-months', getEventsMonths)
 router.get('/all-events', getAllEventsMonths)
 router.get('/events-categories', getEventsCategories)
 router.get('/events/:id', getEventById)
-router.get('/events/:id/participantes', getEventParticipantes)
-router.get('/events/:id/teams', getEventTeams)
-router.get('/events/:id/disciplines', getEventDisciplinesById)
+router.get('/events/:id/chronology', getEventChronology)
 router.get('/events/:id/photos', getEventPhotos)
-router.get('/events/:id/news', getEventNews)
-router.get('/events/:id/news-videos', getEventNewsVideos)
-router.get('/events/:id/news/:newsId', getEventNewsById)
-router.get('/events/:id/news-videos/:videoId', getEventNewsVideoById)
 router.get('/events/:id/program/:dayId', getEventProgramById)
 router.get('/videos-months', getVideosMonths)
 router.get('/all-videos', getAllVideosMonths)

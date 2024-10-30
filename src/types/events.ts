@@ -4,8 +4,8 @@ import {
 	type SimpleLinkType,
 	type SourceLink,
 } from 'src/types/global'
-import { type NewsItem } from 'src/types/news'
-import { type VideoItem } from 'src/types/videos'
+import { type CardNewsItem } from 'src/types/news'
+import { type CardVideoItem } from 'src/types/videos'
 import { type ImageItem } from 'src/types/photos'
 import { type ShortDocument } from 'src/types/document'
 import { type PathwayItem } from 'src/types/location'
@@ -21,26 +21,9 @@ export type TeamItem = {
 }
 
 export type EventItem = {
-	id: string
-	imgUrl: string
-	category: CategoryItem
-	date: Date
-	location: {
-		title: string
-		address: string
-	}
 	description: string
-	countHeld: number
-	countHeldPlan: string
-	eventsInterval: string
 	sections: string[]
-	region: string
-	relevance: string
-	title: string
 	mainBrand: SimpleLinkType
-	contactPerson: string
-	partGroup: string
-	preview: string
 	brandImg: string
 	partnerImg: string
 	pathways: PathwayItem[]
@@ -48,19 +31,15 @@ export type EventItem = {
 	faq: Array<{ title: string; content: string }>
 	chronology: ChronologyItem[]
 	program: ProgramDay[]
-	teams: TeamItem[]
-	type: string
 	descs: string[]
 	sideDocs: ShortDocument[]
 	organizerLinks: SimpleLinkType[]
 	partnerLinks: SimpleLinkType[]
-	news: NewsItem[]
-	newsVideos: VideoItem[]
+	news: CardNewsItem[]
+	videos: CardVideoItem[]
 	photos: ImageItem[]
 	relatedLinks: SourceLink[]
-	tags: string[]
-	designation: string
-}
+} & CardEventItem
 
 export type CardEventItem = {
 	id: string

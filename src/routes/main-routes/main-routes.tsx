@@ -24,16 +24,13 @@ import { VideoDetails } from 'src/pages/videos-page/layout/video-details/video-d
 import { EventsLayout } from 'src/pages/events-page/events-layout'
 import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
 import { EventDetailsLayout } from 'src/pages/events-page/layout/events-details/layout/event-details-layout'
-import { EventNewsLayout } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-layout'
-import { EventNewsList } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-list/event-news-list'
-import { EventNewsVideos } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/news-videos/event-news-videos'
-import { EventNewsVideoDetails } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-video-details/event-news-video-details'
-import { EventNewsDetails } from 'src/pages/events-page/layout/events-details/layout/event-news/layout/event-news-details/event-news-details'
 import { EventHistory } from 'src/pages/events-page/layout/events-details/layout/event-history/event-history'
 import { EventGallery } from 'src/pages/events-page/layout/events-details/layout/event-gallery/event-gallery'
 import { EventProgramLayout } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-layout'
 import { EventProgramDay } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-day/event-program-day'
 import { EventDetails } from 'src/pages/events-page/layout/events-details/layout/event-details/event-details'
+import { EventNews } from 'src/pages/events-page/layout/events-details/layout/event-news/event-news'
+import { EventVideos } from 'src/pages/events-page/layout/events-details/layout/event-videos/event-videos'
 
 import { AboutCultureLayout } from 'src/pages/about-page/layout/about-culture/about-culture-layout'
 import { CultureGeneral } from 'src/pages/about-page/layout/about-culture/layout/culture-general/culture-general'
@@ -76,18 +73,14 @@ export const MainRoutes = () => {
 				<Route path={AppRoute.Events} element={<EventsLayout />}>
 					<Route index element={<EventsListPage />} />
 					<Route path=':id' element={<EventDetailsLayout />}>
-						<Route path={AppRoute.News} element={<EventNewsLayout />}>
-							<Route index element={<EventNewsList />} />
-							<Route path={AppRoute.Videos} element={<EventNewsVideos />} />
-							<Route path={`${AppRoute.Videos}/:vidId`} element={<EventNewsVideoDetails />} />
-							<Route path=':newsId' element={<EventNewsDetails />} />
-						</Route>
+						<Route index element={<EventNews />} />
 						<Route path={AppRoute.EventInfo} element={<EventDetails />} />
 						<Route path={AppRoute.EventHistory} element={<EventHistory />} />
 						<Route path={`${AppRoute.EventProgram}`} element={<EventProgramLayout />}>
 							<Route path=':dayId' element={<EventProgramDay />} />
 						</Route>
 						<Route path={AppRoute.EventGallery} element={<EventGallery />} />
+						<Route path={AppRoute.EventVideos} element={<EventVideos />} />
 					</Route>
 				</Route>
 			</Route>

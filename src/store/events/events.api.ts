@@ -1,12 +1,10 @@
 import { type CardEventItem, type EventItem, type EventsMonthsList } from 'src/types/events'
 import type { ImageItem } from 'src/types/photos'
-import type { NewsItem } from 'src/types/news'
-import type { VideoItem } from 'src/types/videos'
 import { type ProgramListItem } from 'src/types/program'
+import type { CategoryItem, ChronologyItem } from 'src/types/global'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { BASE_URL, ReducerPath } from 'src/helpers/consts'
-import type { CategoryItem } from 'src/types/global'
 
 export const eventsApi = createApi({
 	reducerPath: ReducerPath.Events,
@@ -44,30 +42,9 @@ export const eventsApi = createApi({
 				url: `events/${eventId}/photos`,
 			}),
 		}),
-		getEventAllNews: build.query<NewsItem[], { eventId?: string; search?: string; year?: string }>({
-			query: ({ eventId = '', search = '', year = '' }) => ({
-				url: `events/${eventId}/news`,
-				params: {
-					q: search,
-					y: year,
-				},
-			}),
-			providesTags: ['EventNews'],
-		}),
-		getEventNewsById: build.query<NewsItem, { eventId?: string; newsId?: string }>({
-			query: ({ eventId = '', newsId = '' }) => ({
-				url: `events/${eventId}/news/${newsId}`,
-			}),
-			providesTags: ['EventNews'],
-		}),
-		getEventNewsVideos: build.query<VideoItem[], string>({
+		getEventChronology: build.query<ChronologyItem[], string>({
 			query: (eventId) => ({
-				url: `events/${eventId}/news-videos`,
-			}),
-		}),
-		getEventNewsVideoById: build.query<VideoItem, { eventId?: string; videoId?: string }>({
-			query: ({ eventId = '', videoId = '' }) => ({
-				url: `events/${eventId}/news-videos/${videoId}`,
+				url: `events/${eventId}/chronology`,
 			}),
 		}),
 		getEventProgramById: build.query<ProgramListItem[], { eventId?: string; dayId?: string }>({
@@ -84,9 +61,5 @@ export const {
 	useGetEventsCategoriesQuery,
 	useGetEventByIdQuery,
 	useGetEventPhotoQuery,
-	useGetEventAllNewsQuery,
-	useGetEventNewsVideosQuery,
-	useGetEventNewsByIdQuery,
-	useGetEventNewsVideoByIdQuery,
 	useGetEventProgramByIdQuery,
 } = eventsApi
