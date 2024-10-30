@@ -28,7 +28,7 @@ export const EventInfo = () => {
 					<img src={eventData?.imgUrl} alt={eventData?.title} />
 				</div>
 				<div className={styles.infoBlock}>
-					<CustomText $fontSize='16px' $fontStyle='italic' $lineHeight='1.45' $margin='0 0 20px 0'>
+					<CustomText $fontSize='16px' $lineHeight='1.3' $margin='0 0 20px 0'>
 						{eventData?.description}
 					</CustomText>
 					<InfoRow

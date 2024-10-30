@@ -1,5 +1,3 @@
-@import "src/assets/styles/vars";
-
 .cultureElem {
   padding: 17px 15px;
   background: #F2F5F8;
@@ -7,18 +5,16 @@
     margin-bottom: 11px;
   }
   h6 {
-    @include ptsans-bold;
+    font-weight: 400;
     font-size: 22px;
     margin-bottom: 11px;
   }
   p {
-    @include ptsans-regular;
     font-size: 16px;
     margin-bottom: 10px;
     line-height: 1.37;
   }
   a {
-    @include ptsans-regular;
     font-size: 16px;
     color: #DE0008;
   }

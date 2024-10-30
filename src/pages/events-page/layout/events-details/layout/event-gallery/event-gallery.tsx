@@ -14,9 +14,7 @@ export const EventGallery: FC = () => {
 
 	return (
 		<div className={styles.eventGallery}>
-			<p className={styles.galleryLengthInfo}>
-				Всего фото: <b>{photosData?.length}</b>
-			</p>
+			<p className={styles.galleryLengthInfo}>Всего фото: {photosData?.length}</p>
 			<GalleryImg className={styles.eventPhotos} images={photosData} limit={12} limitController />
 		</div>
 	)

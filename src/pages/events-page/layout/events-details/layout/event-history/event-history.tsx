@@ -27,12 +27,12 @@ export const EventHistory: FC = () => {
 						<InfoRow
 							title={mainFormatDate(el.date, 'dd MMMM yyyy года') ?? ''}
 							label={el.text}
-							$titleWidth='87px'
+							$titleWidth='130px'
 							$gap='10px'
-							titleClassname='_accordion-open'
+							titleClassname='_titleOpen'
 						/>
 					}
-					content={<InfoRow title='' label={el.hiddenText} $titleWidth='87px' $gap='10px' />}
+					content={<InfoRow title='' label={el.hiddenText} $titleWidth='130px' $gap='10px' />}
 				/>
 			))}
 		</div>

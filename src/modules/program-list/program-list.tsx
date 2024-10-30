@@ -13,11 +13,11 @@ export const ProgramList: FC<ProgramListProps> = ({ list }) => {
 		<ul className={styles.listProgram}>
 			{list.map((programEL) => (
 				<li key={programEL.id}>
-					<span className={styles.programTime}>{programEL.time}</span>
+					<p className={styles.programTime}>{programEL.time}</p>
 					<span className={styles.programPlace}>{programEL.place}</span>
 					<span className={styles.programTitle}>{programEL.title}</span>
 					<a className={styles.programPageLink} href='#'>
-						На страницу
+						на страницу
 					</a>
 				</li>
 			))}

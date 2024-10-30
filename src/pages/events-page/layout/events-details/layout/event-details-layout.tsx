@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 
-import { Outlet, useParams } from 'react-router-dom'
+import { Link, Outlet, useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 
 import { PageContent } from 'src/components/page-content/page-content'
@@ -9,6 +9,7 @@ import { EventInfoNavItems } from 'src/pages/events-page/layout/events-details/l
 import { EventInfo } from 'src/pages/events-page/layout/events-details/components/event-info/event-info'
 import { DetailedAside } from 'src/modules/detailedAside/detailedAside'
 import { useGetEventByIdQuery } from 'src/store/events/events.api'
+import { AppRoute } from 'src/routes/main-routes/consts'
 
 import styles from './index.module.scss'
 
@@ -25,6 +26,9 @@ export const EventDetailsLayout: FC = () => {
 				<EventInfo />
 				<TabNav className={styles.eventTabs} navItems={EventInfoNavItems} />
 				<Outlet />
+				<Link className={styles.allEventsLink} to={`/${AppRoute.Events}`}>
+					На страницу списка событий
+				</Link>
 			</PageContent>
 			<DetailedAside
 				brandImg={eventInfo?.brandImg}

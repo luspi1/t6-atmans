@@ -4,4 +4,12 @@
 
 .chronologyAccordion {
   margin-bottom: 10px;
+
+  :global {
+    ._triggerOpen {
+      ._titleOpen {
+        color: #ED1C24;
+      }
+    }
+  }
 }

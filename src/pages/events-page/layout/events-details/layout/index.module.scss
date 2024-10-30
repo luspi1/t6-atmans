@@ -11,6 +11,8 @@
 
 div.eventDetailsContent {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   overflow-x: auto;
   @media (max-width: 768px) {
     margin: 0 0 20px 0;
@@ -48,7 +50,7 @@ div.eventDetailsContent {
 }
 
 a.allEventsLink {
-  color: #015DB9;
+  color: #DE0008;
   font-size: 16px;
   margin-top: auto;
   display: block;
