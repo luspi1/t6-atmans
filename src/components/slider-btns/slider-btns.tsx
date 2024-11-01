@@ -39,6 +39,9 @@ const StyledSliderBtns = styled.div<SliderBtnsProps>`
 			}
 		}
 	}
+	@media (max-width: 425px) {
+		display: none;
+	}
 `
 
 export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({

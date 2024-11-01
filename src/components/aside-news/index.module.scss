@@ -8,6 +8,10 @@
     margin-bottom: 50px;
 
   }
+  @media (max-width: 425px) {
+    margin: 50px 0;
+    padding: 0 15px;
+  }
 
 
   h6 {
@@ -15,6 +19,9 @@
     line-height: 1;
     font-weight: 400;
     margin-bottom: 17px;
+    @media (max-width: 425px) {
+      font-size: 35px;
+    }
   }
 
   li {
@@ -28,11 +35,19 @@
       font-size: 14px;
       color: #9D9D9D;
       display: block;
+      @media (max-width: 425px) {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
     }
 
     a {
       font-size: 14px;
       color: #015DB9;
+      @media (max-width: 425px) {
+        font-size: 18px;
+        color: #DE0008;
+      }
     }
   }
 

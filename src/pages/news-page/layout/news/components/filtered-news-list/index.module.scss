@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 270px));
   gap: 23px;
+  @media (max-width: 425px) {
+    grid-template-columns: repeat(auto-fit, minmax(310px, 395px));
+  }
 }
 
 .newsAbsence {

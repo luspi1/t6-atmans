@@ -11,6 +11,12 @@ import {
 
 import styles from './index.module.scss'
 import { getYear } from 'date-fns'
+import MobileList from 'src/components/mobile-list/mobile-list'
+import { useWindowSize } from 'src/hooks/windowSize'
+import { createBreakpoint } from 'react-use'
+import { DisplayBreakpoints } from 'src/helpers/consts'
+
+const useBreakPoint = createBreakpoint({ M: DisplayBreakpoints.Md, S: DisplayBreakpoints.Sm })
 
 export const FilteredNewsList = () => {
 	const [activeMonth, setActiveMonth] = useState('')
@@ -22,6 +28,8 @@ export const FilteredNewsList = () => {
 		date: activeMonth,
 		category: activeCategory,
 	})
+
+	const breakpoint = useBreakPoint()
 
 	const handleChangeActiveMonth = (newMonth: string) => {
 		setActiveMonth(newMonth)
@@ -45,6 +53,9 @@ export const FilteredNewsList = () => {
 				categories={newsCategories ?? []}
 			/>
 			{newsList?.length ? (
+				breakpoint == "S" ?
+				<MobileList items={newsList} renderItem={NewsCard} classListItems={styles.newsList}/>
+				:
 				<div className={styles.newsList}>
 					{newsList.map((newsEl) => (
 						<NewsCard key={newsEl.id} {...newsEl} />

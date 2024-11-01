@@ -4,6 +4,9 @@
   @media (max-width: 768px) {
     padding-bottom: 40px;
   }
+  @media (max-width: 425px) {
+    padding: 15px 15px 40px 15px;
+  }
   .footerTopLinks {
     @media (max-width: 768px) {
       gap: 30px;

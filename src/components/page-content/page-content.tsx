@@ -24,6 +24,11 @@ const StyledPageContent = styled.div<PageContentProps>`
 	@media (max-width: 768px) {
 		padding: 30px 20px;
 	}
+	@media (max-width: 425px) {
+		padding: 25px 15px;
+		min-height: auto;
+		margin-bottom: 45px;
+	}
 `
 
 export const PageContent: FC<React.HTMLAttributes<HTMLDivElement> & PageContentProps> = (props) => {
