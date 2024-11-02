@@ -16,13 +16,14 @@ type MonthsSliderProps<T> = {
 	activeMonth: string
 	changeActiveMonth: (arg: string) => void
 	monthsList: Array<Record<string, T[]>>
-	isSuccess: boolean
+	allMonthTitle: string
 }
 
 export const MonthsFilterSlider = <T,>({
 	activeMonth,
 	changeActiveMonth,
 	monthsList,
+	allMonthTitle,
 }: MonthsSliderProps<T>) => {
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 
@@ -42,7 +43,7 @@ export const MonthsFilterSlider = <T,>({
 				onClick={() => changeActiveMonth('0')}
 				type='button'
 			>
-				все новости
+				{allMonthTitle}
 			</button>
 			<Swiper className={styles.monthsFilterSlider} {...monthsSliderOptions} ref={swiperRef}>
 				{Object.entries(monthsList)?.map(([date, months]) => (

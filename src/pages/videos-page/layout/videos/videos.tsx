@@ -14,10 +14,10 @@ import {
 import styles from './index.module.scss'
 
 export const Videos: FC = () => {
-	const [activeMonth, setActiveMonth] = useState('')
+	const [activeMonth, setActiveMonth] = useState('0')
 	const [activeCategory, setActiveCategory] = useState('0')
 
-	const { data: videosMonthsList, isSuccess: isMonthsSuccess } = useGetAllVideosMonthsQuery(null)
+	const { data: videosMonthsList } = useGetAllVideosMonthsQuery(null)
 	const { data: videosCategories } = useGetVideosCategoriesQuery(null)
 	const { data: videosList } = useGetVideosMonthsQuery({
 		date: activeMonth,
@@ -32,13 +32,13 @@ export const Videos: FC = () => {
 	}
 	return (
 		<div className={styles.videosPage}>
-			<h2>Видеолента {getYear(new Date(activeMonth))}</h2>
+			<h2>Видеолента {activeMonth !== '0' && getYear(new Date(activeMonth))}</h2>
 
 			<MonthsFilterSlider
 				monthsList={videosMonthsList ?? []}
 				changeActiveMonth={handleChangeActiveMonth}
 				activeMonth={activeMonth}
-				isSuccess={isMonthsSuccess}
+				allMonthTitle='все видео'
 			/>
 			<CategoriesFiltration
 				activeCatId={activeCategory}

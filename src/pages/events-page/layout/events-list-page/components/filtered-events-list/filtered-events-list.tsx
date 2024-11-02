@@ -13,10 +13,10 @@ import styles from './index.module.scss'
 import { getYear } from 'date-fns'
 
 export const FilteredEventsList = () => {
-	const [activeMonth, setActiveMonth] = useState('')
+	const [activeMonth, setActiveMonth] = useState('0')
 	const [activeCategory, setActiveCategory] = useState('0')
 
-	const { data: eventsMonthsList, isSuccess: isMonthsSuccess } = useGetAllEventsMonthsQuery(null)
+	const { data: eventsMonthsList } = useGetAllEventsMonthsQuery(null)
 	const { data: eventsCategories } = useGetEventsCategoriesQuery(null)
 	const { data: eventsList } = useGetEventsMonthsQuery({
 		date: activeMonth,
@@ -31,12 +31,12 @@ export const FilteredEventsList = () => {
 	}
 	return (
 		<div className={styles.filteredListWrapper}>
-			<h4>Cобытия {getYear(new Date(activeMonth))}</h4>
+			<h4>Cобытия {activeMonth !== '0' && getYear(new Date(activeMonth))}</h4>
 			<MonthsFilterSlider
 				monthsList={eventsMonthsList ?? []}
 				changeActiveMonth={handleChangeActiveMonth}
 				activeMonth={activeMonth}
-				isSuccess={isMonthsSuccess}
+				allMonthTitle='все события'
 			/>
 			<CategoriesFiltration
 				activeCatId={activeCategory}

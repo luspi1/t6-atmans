@@ -10,10 +10,10 @@ export const monthsSliderOptions: SwiperProps = {
 			slidesPerView: 2,
 		},
 		[DisplayBreakpoints.Md]: {
-			slidesPerView: 4,
+			slidesPerView: 3,
 		},
 		[DisplayBreakpoints.Lg]: {
-			slidesPerView: 7,
+			slidesPerView: 6,
 		},
 		[DisplayBreakpoints.Xxl]: {
 			slidesPerView: 10,

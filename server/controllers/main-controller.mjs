@@ -2,10 +2,7 @@ import { objects, objectsInfo } from '../mockData/objects.mjs'
 import { projects } from '../mockData/projects.mjs'
 import { news, newsCategories, newsMonths } from '../mockData/news.mjs'
 import { events, eventsCategories, eventsMonths } from '../mockData/events.mjs'
-import { ethnosport } from '../mockData/ethnosport.mjs'
-import { disciplines } from '../mockData/disciplines.mjs'
 import { newsVideos, videosCategories, videosMonths } from '../mockData/newsVideos.mjs'
-import { groups } from '../mockData/groups.mjs'
 import { brandEvents } from '../mockData/brandEvents.mjs'
 import {
 	homeEvents,
@@ -146,141 +143,6 @@ export const getVideoById = (req, res) => {
 	res.status(200).json(foundVideoNews)
 }
 
-export const deleteNews = (req, res) => {
-	const newsId = req.params.id
-	let deleteIdx
-	news.forEach((el, idx) => {
-		if (el.id === newsId) {
-			deleteIdx = idx
-		}
-	})
-	news.splice(deleteIdx, 1)
-
-	res.status(200).json(deleteIdx)
-}
-
-export const getEthnosportGlobal = (req, res) => {
-	res.status(200).json(ethnosport)
-}
-
-export const getEthnosportById = (req, res) => {
-	const ethnoId = req.params.id
-	const foundEthno = ethnosport.directions.find((ethno) => ethno.id === ethnoId)
-
-	res.status(200).json(foundEthno)
-}
-
-export const getAllDisciplines = (req, res) => {
-	res.status(200).json(disciplines)
-}
-
-export const getDisciplineById = (req, res) => {
-	const disId = req.params.id
-	const foundDiscipline = disciplines.find((dis) => dis.id === disId)
-
-	res.status(200).json(foundDiscipline)
-}
-
-export const getGroups = (req, res) => {
-	const { q } = req.query
-
-	const filteredGroups = groups.filter((el) => el.title.toLowerCase().includes(q))
-
-	res.status(200).json(filteredGroups)
-}
-export const getGroupById = (req, res) => {
-	const groupId = req.params.id
-	const foundGroup = groups.find((group) => group.id === groupId)
-
-	res.status(200).json(foundGroup)
-}
-
-export const getGroupEvent = (req, res) => {
-	const { q } = req.query
-	const groupId = req.params.id
-
-	const searchedGroup = groups.find((group) => group.id === groupId)
-	const filteredEvents = searchedGroup.events.filter((event) =>
-		event.title.toLowerCase().includes(q),
-	)
-
-	res.status(200).json(filteredEvents)
-}
-export const getGroupParticipantes = (req, res) => {
-	const { q } = req.query
-	const groupId = req.params.id
-
-	const searchedGroup = groups.find((group) => group.id === groupId)
-	const filteredParticipantes = searchedGroup.participants.filter((participant) =>
-		participant.fullname.toLowerCase().includes(q),
-	)
-
-	res.status(200).json(filteredParticipantes)
-}
-export const getGroupTable = (req, res) => {
-	const { q } = req.query
-	const groupId = req.params.id
-
-	const searchedGroup = groups.find((group) => group.id === groupId)
-	const filteredGroups = searchedGroup.groups.filter((group) =>
-		group.title.toLowerCase().includes(q),
-	)
-
-	res.status(200).json(filteredGroups)
-}
-export const getGroupDisciplinesById = (req, res) => {
-	const groupId = req.params.id
-	const searchedGroup = groups.find((group) => group.id === groupId)
-
-	res.status(200).json(searchedGroup.disciplines)
-}
-export const getGroupPhotos = (req, res) => {
-	const groupId = req.params.id
-
-	const searchedGroup = groups.find((group) => group.id === groupId)
-
-	res.status(200).json(searchedGroup.photos)
-}
-
-export const getGroupNews = (req, res) => {
-	const groupId = req.params.id
-	const { q, y } = req.query
-	const searchedGroup = groups.find((group) => group.id === groupId)
-	const filteredNews = searchedGroup.news.filter((el) => {
-		if (y) {
-			return String(new Date(el.date).getFullYear()) === y && el.title.toLowerCase().includes(q)
-		}
-		return el.title.toLowerCase().includes(q)
-	})
-
-	res.status(200).json(filteredNews)
-}
-
-export const getGroupNewsVideos = (req, res) => {
-	const groupId = req.params.id
-	const searchedGroup = groups.find((group) => group.id === groupId)
-	res.status(200).json(searchedGroup.newsVideos)
-}
-
-export const getGroupNewsVideoById = (req, res) => {
-	const groupId = req.params.id
-	const videoId = req.params.videoId
-	const searchedGroup = groups.find((group) => group.id === groupId)
-	const foundVideoNews = searchedGroup.newsVideos.find((videoItem) => videoItem.id === videoId)
-
-	res.status(200).json(foundVideoNews)
-}
-
-export const getGroupNewsById = (req, res) => {
-	const groupId = req.params.id
-	const newsId = req.params.newsId
-	const searchedGroup = groups.find((group) => group.id === groupId)
-
-	const foundNews = searchedGroup.news.find((newsItem) => newsItem.id === newsId)
-
-	res.status(200).json(foundNews)
-}
-
 export const getAllBrandEvents = (req, res) => {
 	res.status(200).json(brandEvents)
 }
@@ -356,11 +218,14 @@ export const getAllEventsMonths = (req, res) => {
 
 export const getEventsMonths = (req, res) => {
 	const { d, cat } = req.query
-	const currentMonthEvents = eventsMonths[d] || []
+	let currentEvents = []
+	if (d === '0') {
+		currentEvents = Object.values(eventsMonths).flat()
+	} else {
+		currentEvents = eventsMonths[d] ?? []
+	}
 
-	const filteredEvents = currentMonthEvents.filter(
-		(event) => cat === '0' || event.category.id === cat,
-	)
+	const filteredEvents = currentEvents.filter((event) => cat === '0' || event.category.id === cat)
 
 	res.status(200).json(filteredEvents)
 }
@@ -405,11 +270,14 @@ export const getAllVideosMonths = (req, res) => {
 
 export const getVideosMonths = (req, res) => {
 	const { d, cat } = req.query
-	const currentMonthVideos = videosMonths[d] || []
+	let currentVideos = []
+	if (d === '0') {
+		currentVideos = Object.values(videosMonths).flat()
+	} else {
+		currentVideos = videosMonths[d] ?? []
+	}
 
-	const filteredVideos = currentMonthVideos.filter(
-		(video) => cat === '0' || video.category.id === cat,
-	)
+	const filteredVideos = currentVideos.filter((video) => cat === '0' || video.category.id === cat)
 
 	res.status(200).json(filteredVideos)
 }

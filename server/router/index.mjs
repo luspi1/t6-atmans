@@ -1,7 +1,5 @@
 import {
-	deleteNews,
 	getAllBrandEvents,
-	getAllDisciplines,
 	getAllEventsMonths,
 	getAllHomeEvents,
 	getAllNewsMonths,
@@ -14,9 +12,6 @@ import {
 	getBrandEventPhotos,
 	getCultureById,
 	getCultures,
-	getDisciplineById,
-	getEthnosportById,
-	getEthnosportGlobal,
 	getEventById,
 	getEventChronology,
 	getEventPhotos,
@@ -24,17 +19,6 @@ import {
 	getEventsByBrands,
 	getEventsCategories,
 	getEventsMonths,
-	getGroupById,
-	getGroupDisciplinesById,
-	getGroupEvent,
-	getGroupNews,
-	getGroupNewsById,
-	getGroupNewsVideoById,
-	getGroupNewsVideos,
-	getGroupParticipantes,
-	getGroupPhotos,
-	getGroups,
-	getGroupTable,
 	getHomeFaq,
 	getHomeNews,
 	getHomeObjects,
@@ -81,7 +65,6 @@ router.get('/all-news', getAllNewsMonths)
 router.get('/news-categories', getNewsCategories)
 router.get('/news/:id', getNewsById)
 router.get('/news-videos', getNewsVideos)
-router.delete('/newsDelete/:id', deleteNews)
 router.get('/events-months', getEventsMonths)
 router.get('/all-events', getAllEventsMonths)
 router.get('/events-categories', getEventsCategories)
@@ -93,21 +76,6 @@ router.get('/videos-months', getVideosMonths)
 router.get('/all-videos', getAllVideosMonths)
 router.get('/videos-categories', getVideosCategories)
 router.get('/videos/:id', getVideoById)
-router.get('/ethnosport', getEthnosportGlobal)
-router.get('/ethnosport/:id', getEthnosportById)
-router.get('/disciplines', getAllDisciplines)
-router.get('/disciplines/:id', getDisciplineById)
-router.get('/groups', getGroups)
-router.get('/groups/:id', getGroupById)
-router.get('/groups/:id/event', getGroupEvent)
-router.get('/groups/:id/participantes', getGroupParticipantes)
-router.get('/groups/:id/table', getGroupTable)
-router.get('/groups/:id/disciplines', getGroupDisciplinesById)
-router.get('/groups/:id/photos', getGroupPhotos)
-router.get('/groups/:id/news', getGroupNews)
-router.get('/groups/:id/news-videos', getGroupNewsVideos)
-router.get('/groups/:id/news/:newsId', getGroupNewsById)
-router.get('/groups/:id/news-videos/:videoId', getGroupNewsVideoById)
 router.get('/brand-events', getAllBrandEvents)
 router.get('/brand-events/:id', getBrandEventById)
 router.get('/brand-events/:id/news', getBrandEventNews)

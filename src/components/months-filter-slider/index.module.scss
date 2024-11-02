@@ -4,11 +4,16 @@
   display: flex;
   gap: 20px;
   margin-bottom: 30px;
-  .monthsFilterSlider {
-    padding: 0 35px;
-
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
   }
 
+  .monthsFilterSlider {
+    padding: 0 35px;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+  }
 }
 
 

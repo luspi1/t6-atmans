@@ -16,7 +16,7 @@ export const FilteredNewsList = () => {
 	const [activeMonth, setActiveMonth] = useState('0')
 	const [activeCategory, setActiveCategory] = useState('0')
 
-	const { data: newsMonthsList, isSuccess: isMonthsSuccess } = useGetAllNewsMonthsQuery(null)
+	const { data: newsMonthsList } = useGetAllNewsMonthsQuery(null)
 	const { data: newsCategories } = useGetNewsCategoriesQuery(null)
 	const { data: newsList } = useGetNewsMonthsQuery({
 		date: activeMonth,
@@ -37,7 +37,7 @@ export const FilteredNewsList = () => {
 				monthsList={newsMonthsList ?? []}
 				changeActiveMonth={handleChangeActiveMonth}
 				activeMonth={activeMonth}
-				isSuccess={isMonthsSuccess}
+				allMonthTitle='все новости'
 			/>
 			<CategoriesFiltration
 				activeCatId={activeCategory}
