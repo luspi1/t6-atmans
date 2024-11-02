@@ -53,14 +53,19 @@ export const FilteredNewsList = () => {
 				categories={newsCategories ?? []}
 			/>
 			{newsList?.length ? (
-				breakpoint == "S" ?
-				<MobileList items={newsList} renderItem={NewsCard} classListItems={styles.newsList}/>
-				:
-				<div className={styles.newsList}>
-					{newsList.map((newsEl) => (
-						<NewsCard key={newsEl.id} {...newsEl} />
-					))}
-				</div>
+				breakpoint == 'S' ? (
+					<MobileList 
+						items={newsList} 
+						renderItem={NewsCard} 
+						classListItems={styles.newsList} 
+					/>
+				) : (
+					<div className={styles.newsList}>
+						{newsList.map((newsEl) => (
+							<NewsCard key={newsEl.id} {...newsEl} />
+						))}
+					</div>
+				)
 			) : (
 				<p className={styles.newsAbsence}>
 					В выбранном вами месяце нет ни одной новости. Пожалуйста, выберите другой месяц.

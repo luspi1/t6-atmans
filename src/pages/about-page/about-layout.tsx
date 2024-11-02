@@ -10,8 +10,13 @@ import { AsideDocuments } from 'src/components/aside-documents/aside-documents'
 import { AboutMenuItems, aboutPageDocuments } from './consts'
 
 import styles from './index.module.scss'
+import { createBreakpoint } from 'react-use'
+import { DisplayBreakpoints } from 'src/helpers/consts'
+
+const useBreakPoint = createBreakpoint({ L: 1201, M: DisplayBreakpoints.Md, S: DisplayBreakpoints.Sm })
 
 export const AboutLayout: FC = () => {
+	const breakpoint = useBreakPoint()
 	return (
 		<div className={styles.aboutLayout}>
 			<Container>
@@ -37,9 +42,20 @@ export const AboutLayout: FC = () => {
 								...AboutMenuItems,
 							]}
 						/>
-						<AsideDocuments documents={aboutPageDocuments} />
+						{
+							breakpoint == "L" ?
+							<AsideDocuments documents={aboutPageDocuments} />
+							:
+							null
+						}
 					</div>
 				</div>
+				{
+					breakpoint != "L" ?
+					<AsideDocuments documents={aboutPageDocuments} />
+					:
+					null
+				}
 			</Container>
 		</div>
 	)

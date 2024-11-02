@@ -23,11 +23,11 @@ const StyledPageContent = styled.div<PageContentProps>`
 	border-radius: ${({ $borderRadius }) => $borderRadius ?? '0'};
 	@media (max-width: 768px) {
 		padding: 30px 20px;
+		margin: 0 0 55px 0;
 	}
 	@media (max-width: 425px) {
 		padding: 25px 15px;
 		min-height: auto;
-		margin-bottom: 45px;
 	}
 `
 

@@ -12,14 +12,14 @@ type ButtonComponentProps = {
 	$padding?: string
 	$height?: string
 	$radius?: string
-	$variant?: 'primary' | 'light'
+	$variant?: 'primary' | 'light' | 'show'
 }
 
 type SharedStylesTypes = {
 	$padding?: string
 	$height?: string
 	$radius?: string
-	$variant?: 'primary' | 'light'
+	$variant?: 'primary' | 'light' | 'show'
 }
 
 const sharedStyles = css<SharedStylesTypes>`
@@ -28,29 +28,41 @@ const sharedStyles = css<SharedStylesTypes>`
 	border-radius: ${({ $radius }) => $radius ?? '5px'};
 
 	background-color: ${({ $variant }) => {
+		if ($variant === 'show') return '#F2F1F7'
 		if ($variant === 'light') return '#FFFFFF'
 		return '#DD0A15'
 	}};
 	color: ${({ $variant }) => {
 		if ($variant === 'light') return '#000000'
+		if ($variant === 'show') return '#000000'
 		return '#ffffff'
 	}};
 	border: none;
 	text-decoration: none;
 	font-weight: 400;
-	font-size: 25px;
+	font-size: ${({ $variant }) => {
+		if ($variant === 'show') return '18px'
+		return '25px'
+	}};
 	cursor: pointer;
-	display: inline-flex;
+	display: ${({ $variant }) => {
+		if ($variant === 'show') return 'inline'
+		return 'inline-flex'
+	}};
 	align-items: center;
 	transition: all 0.3s;
-
+	width: ${({ $variant }) => {
+		if ($variant === 'show') return '100%'
+	}};
 	&:hover {
 		background-color: ${({ $variant }) => {
 			if ($variant === 'light') return '#cdcbcb'
+			if ($variant === 'show') return '#F2F1F7'
 			return '#c40a14'
 		}};
 		color: ${({ $variant }) => {
 			if ($variant === 'light') return '#000000'
+			if ($variant === 'show') return '#000000'
 			return '#ffffff'
 		}};
 	}

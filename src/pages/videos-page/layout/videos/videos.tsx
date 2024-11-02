@@ -53,14 +53,19 @@ export const Videos: FC = () => {
 				categories={videosCategories ?? []}
 			/>
 			{videosList?.length ? (
-				breakpoint == "S" ?
-				<MobileList items={videosList} renderItem={VideoCard} classListItems={styles.videosList}/>
-				:
-				<div className={styles.videosList}>
-					{videosList.map((videosEl) => (
-						<VideoCard key={videosEl.id} {...videosEl} />
-					))}
-				</div>
+				breakpoint == 'S' ? (
+					<MobileList
+						items={videosList}
+						renderItem={VideoCard}
+						classListItems={styles.videosList}
+					/>
+				) : (
+					<div className={styles.videosList}>
+						{videosList.map((videosEl) => (
+							<VideoCard key={videosEl.id} {...videosEl} />
+						))}
+					</div>
+				)
 			) : (
 				<p className={styles.videosAbsence}>
 					В выбранном вами месяце нет ни одного видео. Пожалуйста, выберите другой месяц.

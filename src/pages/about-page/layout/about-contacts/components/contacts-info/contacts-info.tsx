@@ -3,8 +3,13 @@ import { useGetEventByIdQuery } from 'src/store/events/events.api'
 import { Placement } from 'src/modules/placement/placement'
 
 import styles from './index.module.scss'
+import { createBreakpoint } from 'react-use'
+import { DisplayBreakpoints } from 'src/helpers/consts'
+
+const useBreakPoint = createBreakpoint({ M: DisplayBreakpoints.Md, S: 426, Xs: DisplayBreakpoints.Xs })
 
 export const ContactsInfo: FC = () => {
+	const breakpoint = useBreakPoint()
 	const { data: contactsInfo } = useGetEventByIdQuery('1')
 	return (
 		<>
@@ -23,7 +28,12 @@ export const ContactsInfo: FC = () => {
 				<h4>Электронная почта</h4>
 				<a href='mailto:mail@mail.ru'>mail@mail.ru</a>
 			</div>
-			<Placement placeVariants={contactsInfo?.pathways} title='Маршруты' />
+			{
+				breakpoint !== "Xs" ?
+				<Placement placeVariants={contactsInfo?.pathways} title='Маршруты' />
+				:
+				null
+			}
 		</>
 	)
 }

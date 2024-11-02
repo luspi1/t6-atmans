@@ -6,6 +6,9 @@
     width: 100%;
     margin-bottom: 50px;
   }
+  @media (max-width: 425px) {
+    border-top: 7px solid #F2F5F8;
+  }
 
   &._horizontal {
     width: 100%;
@@ -41,6 +44,7 @@
     font-size: 30px;
     font-weight: 400;
     margin-bottom: 15px;
+    padding-top: 40px;
   }
 
   li {

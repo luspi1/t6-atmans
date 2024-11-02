@@ -4,7 +4,11 @@
   display: flex;
   flex-direction: column;
   gap: 22px;
-
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-bottom: 55px;
+    padding: 0px 15px;
+  }
   li {
     line-height: 1.2;
     font-size: 14px;
@@ -13,6 +17,9 @@
   .documentLink {
     color: #015DB9;
     line-height: 1.25;
+    @media (max-width: 768px) {
+      color: #DE0008;
+    }
   }
 
   .documentInfo {
