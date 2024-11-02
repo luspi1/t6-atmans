@@ -18,6 +18,9 @@ const StyledContainer = styled.div<ContainerProps>`
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	@media (max-width: 425px) {
+		padding: 0;
+	}
 `
 export const Container: FC<ContainerProps> = (props) => {
 	return <StyledContainer {...props} />

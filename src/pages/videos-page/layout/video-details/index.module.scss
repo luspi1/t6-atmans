@@ -13,6 +13,9 @@
     height: 652px;
     border: none;
     border-radius: 9px;
+    @media (max-width: 425px) {
+      height: 173px;
+    }
   }
 }
 

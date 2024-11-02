@@ -31,6 +31,9 @@
       display: block;
     }
   }
+  @media (max-width: 425px) {
+    display: none;
+  }
 }
 
 .gridImgWrapper {
@@ -51,6 +54,9 @@
       background: rgba(#000, 0.5);
     }
   }
+  @media (max-width: 425px) {
+    margin: 30px 0 50px 0;
+  }
 }
 
 .customFsBtn {
@@ -66,12 +72,25 @@
       stroke: #ffffff;
     }
   }
+  @media (max-width: 425px) {
+    display: none;
+  }
 }
 
 .fullscreenHidden {
   :global {
     .image-gallery-content {
       display: none;
+      @media (max-width: 425px) {
+        display: block;
+        border-radius: 5px;
+      }
+      .image-gallery-thumbnails {
+        display: none;
+      }
+      .image-gallery-slides {
+      border-radius: 5px;
+      }
     }
   }
 }
