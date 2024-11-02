@@ -113,9 +113,14 @@ export const getAllNewsMonths = (req, res) => {
 
 export const getNewsMonths = (req, res) => {
 	const { d, cat } = req.query
-	const currentMonthNews = newsMonths[d] || []
+	let currentNews = []
+	if (d === '0') {
+		currentNews = Object.values(newsMonths).flat()
+	} else {
+		currentNews = newsMonths[d] ?? []
+	}
 
-	const filteredNews = currentMonthNews.filter((news) => cat === '0' || news.category.id === cat)
+	const filteredNews = currentNews.filter((news) => cat === '0' || news.category.id === cat)
 
 	res.status(200).json(filteredNews)
 }

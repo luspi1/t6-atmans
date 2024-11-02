@@ -1,6 +1,5 @@
-import React, { type FC, type RefObject, useEffect, useState } from 'react'
+import React, { type FC, type RefObject } from 'react'
 import { type SwiperRef } from 'swiper/react'
-import cn from 'classnames'
 import styled from 'styled-components'
 
 import { SlidePrevSvg } from 'src/UI/icons/slidePrevSVG'
@@ -11,12 +10,12 @@ import styles from './index.module.scss'
 type SliderBtnsProps = {
 	$topPosition?: string
 	$btnsSpacing?: string
+	$variant?: 'main' | 'sm'
 }
 
 type SliderProps = {
 	swiperRef: RefObject<SwiperRef>
 	className?: string
-	variant?: 'main' | 'sm'
 }
 
 const StyledSliderBtns = styled.div<SliderBtnsProps>`
@@ -33,9 +32,13 @@ const StyledSliderBtns = styled.div<SliderBtnsProps>`
 	button {
 		height: min-content;
 		transform: translateY(-50%);
+
 		&:hover {
 			svg rect {
-				fill-opacity: 0.4;
+				fill-opacity: ${({ $variant }) => {
+					if ($variant === 'sm') return '1'
+					return '0.4'
+				}};
 			}
 		}
 	}
@@ -44,31 +47,9 @@ const StyledSliderBtns = styled.div<SliderBtnsProps>`
 export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 	swiperRef,
 	className,
-	variant = 'main',
+	$variant = 'main',
 	...props
 }) => {
-	const [isBeginning, setIsBeginning] = useState(true)
-	const [isEnd, setIsEnd] = useState(false)
-
-	useEffect(() => {
-		if (swiperRef.current?.swiper) {
-			const swiperInstance = swiperRef.current.swiper
-
-			const updateNavigationState = () => {
-				setIsBeginning(swiperInstance.isBeginning)
-				setIsEnd(swiperInstance.isEnd)
-			}
-
-			swiperInstance.on('slideChange', updateNavigationState)
-
-			updateNavigationState()
-
-			return () => {
-				swiperInstance.off('slideChange', updateNavigationState)
-			}
-		}
-	}, [swiperRef])
-
 	const handlePrev = () => {
 		swiperRef.current?.swiper.slidePrev()
 	}
@@ -77,24 +58,12 @@ export const SliderBtns: FC<SliderBtnsProps & SliderProps> = ({
 		swiperRef.current?.swiper.slideNext()
 	}
 	return (
-		<StyledSliderBtns className={className} {...props}>
-			<button
-				className={cn(styles.slideBtnPrev, {
-					[styles._disabled]: isBeginning && !swiperRef.current?.swiper?.params?.loop,
-				})}
-				type='button'
-				onClick={handlePrev}
-			>
-				<SlidePrevSvg variant={variant} />
+		<StyledSliderBtns className={className} $variant={$variant} {...props}>
+			<button className={styles.slideBtnPrev} type='button' onClick={handlePrev}>
+				<SlidePrevSvg variant={$variant} />
 			</button>
-			<button
-				className={cn(styles.slideBtnNext, {
-					[styles._disabled]: isEnd && !swiperRef.current?.swiper?.params?.loop,
-				})}
-				type='button'
-				onClick={handleNext}
-			>
-				<SlideNextSvg variant={variant} />
+			<button className={styles.slideBtnNext} type='button' onClick={handleNext}>
+				<SlideNextSvg variant={$variant} />
 			</button>
 		</StyledSliderBtns>
 	)

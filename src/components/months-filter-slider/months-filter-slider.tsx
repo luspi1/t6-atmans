@@ -1,11 +1,11 @@
-import { type RefObject, useEffect, useRef } from 'react'
+import { type RefObject, useRef } from 'react'
 import type { SwiperRef } from 'swiper/react/swiper-react'
+
 import { uid } from 'react-uid'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { isSameMonth } from 'date-fns'
 import cn from 'classnames'
 
-import { Container } from 'src/UI/Container/Container'
 import { SliderBtns } from 'src/components/slider-btns/slider-btns'
 import { mainFormatDate } from 'src/helpers/utils'
 import { monthsSliderOptions } from './consts'
@@ -23,7 +23,6 @@ export const MonthsFilterSlider = <T,>({
 	activeMonth,
 	changeActiveMonth,
 	monthsList,
-	isSuccess,
 }: MonthsSliderProps<T>) => {
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 
@@ -33,21 +32,19 @@ export const MonthsFilterSlider = <T,>({
 		}
 	}
 
-	useEffect(() => {
-		if (swiperRef && isSuccess) {
-			const datesArr = Object.keys(monthsList)
-			const activeDateIndex = datesArr.findIndex((dateEl) =>
-				isSameMonth(new Date(), new Date(dateEl)),
-			)
-			changeActiveMonth(datesArr[activeDateIndex])
-			swiperRef.current?.swiper.slideTo(activeDateIndex)
-		}
-	}, [swiperRef, isSuccess])
-
 	if (!monthsList) return
 	return (
-		<Container $margin='0 auto 30px auto' $width='1920px' $padding='0 40px'>
-			<Swiper {...monthsSliderOptions} ref={swiperRef}>
+		<div className={styles.monthsFilterWrapper}>
+			<button
+				className={cn(styles.allMonthsBtn, {
+					[styles._activeMonthsBtn]: activeMonth === '0',
+				})}
+				onClick={() => changeActiveMonth('0')}
+				type='button'
+			>
+				все новости
+			</button>
+			<Swiper className={styles.monthsFilterSlider} {...monthsSliderOptions} ref={swiperRef}>
 				{Object.entries(monthsList)?.map(([date, months]) => (
 					<SwiperSlide
 						className={cn(styles.monthSlide, {
@@ -60,8 +57,8 @@ export const MonthsFilterSlider = <T,>({
 						<p>{mainFormatDate(date, 'LLLL')}</p>
 					</SwiperSlide>
 				))}
+				<SliderBtns $topPosition='55%' $btnsSpacing='100%' swiperRef={swiperRef} $variant='sm' />
 			</Swiper>
-			<SliderBtns $topPosition='55%' $btnsSpacing='100%' swiperRef={swiperRef} variant='sm' />
-		</Container>
+		</div>
 	)
 }

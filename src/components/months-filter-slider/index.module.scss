@@ -1,3 +1,17 @@
+
+.monthsFilterWrapper {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  .monthsFilterSlider {
+    padding: 0 35px;
+
+  }
+
+}
+
+
 .monthSlide {
   p {
     font-size: 18px;
@@ -14,8 +28,22 @@
   }
 }
 
+.allMonthsBtn {
+  min-width: max-content;
+  padding: 4px 17px 0;
+  font-size: 18px;
+  height: 40px;
+  line-height: 1.1;
+  background: #F2F5F8;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
 ._disableSlide {
   cursor: default;
+
   p {
     cursor: default;
     color: #8D8D8D
@@ -27,4 +55,9 @@
     background-color: #DD0A15;
     color: #ffffff;
   }
+}
+
+._activeMonthsBtn {
+  background-color: #DD0A15;
+  color: #ffffff;
 }

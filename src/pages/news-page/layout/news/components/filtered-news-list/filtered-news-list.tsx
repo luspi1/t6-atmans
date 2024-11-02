@@ -13,7 +13,7 @@ import styles from './index.module.scss'
 import { getYear } from 'date-fns'
 
 export const FilteredNewsList = () => {
-	const [activeMonth, setActiveMonth] = useState('')
+	const [activeMonth, setActiveMonth] = useState('0')
 	const [activeCategory, setActiveCategory] = useState('0')
 
 	const { data: newsMonthsList, isSuccess: isMonthsSuccess } = useGetAllNewsMonthsQuery(null)
@@ -31,7 +31,7 @@ export const FilteredNewsList = () => {
 	}
 	return (
 		<div>
-			<h2>Новости {getYear(new Date(activeMonth))}</h2>
+			<h2>Новости {activeMonth !== '0' && getYear(new Date(activeMonth))}</h2>
 
 			<MonthsFilterSlider
 				monthsList={newsMonthsList ?? []}

@@ -1,5 +1,3 @@
-@import "src/assets/styles/vars";
-
 .menuList {
   @media (max-width: 768px) {
     display: none;
@@ -22,11 +20,7 @@
 .menuItem {
   a {
     color: #FFFFFF;
-    transition: all .3s;
     font-size: 25px;
-    &:hover {
-      color: #c0c0c0;
-    }
   }
 }
 
