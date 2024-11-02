@@ -1,9 +1,4 @@
-import {
-	type CategoryItem,
-	type ChronologyItem,
-	type SimpleLinkType,
-	type SourceLink,
-} from 'src/types/global'
+import { type CategoryItem, type SimpleLinkType, type SourceLink } from 'src/types/global'
 import { type CardNewsItem } from 'src/types/news'
 import { type CardVideoItem } from 'src/types/videos'
 import { type ImageItem } from 'src/types/photos'
@@ -11,25 +6,17 @@ import { type ShortDocument } from 'src/types/document'
 import { type PathwayItem } from 'src/types/location'
 import { type ProgramDay } from 'src/types/program'
 
-export type TeamItem = {
-	id: string
-	region: string
-	title: string
-	participantsCount: number
-	disciplines: Array<{ id: string; title: string }>
-	side: string
-}
-
 export type EventItem = {
 	description: string
 	sections: string[]
 	mainBrand: SimpleLinkType
+	object: { id: string; title: string }
+	site: SimpleLinkType
 	brandImg: string
 	partnerImg: string
 	pathways: PathwayItem[]
 	placement: PathwayItem[]
 	faq: Array<{ title: string; content: string }>
-	chronology: ChronologyItem[]
 	program: ProgramDay[]
 	descs: string[]
 	sideDocs: ShortDocument[]

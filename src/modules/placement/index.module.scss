@@ -3,7 +3,7 @@
 
 .placementWrapper {
   h4 {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 400;
     margin-bottom: 12px;
   }
@@ -50,6 +50,9 @@
   p {
     padding-left: 15px;
     position: relative;
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
     &::before {
       content: '';
       position: absolute;

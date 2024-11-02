@@ -2,18 +2,19 @@ import { type NavigationItem } from 'src/types/navigation'
 
 export const EventInfoNavItems: NavigationItem[] = [
 	{
-		title: 'новости',
+		title: 'информация',
 		link: '',
 		exact: true,
 	},
 	{
-		title: 'информация',
-		link: 'event-info',
+		title: 'новости',
+		link: 'event-news',
 	},
 	{
-		title: 'история',
-		link: 'event-history',
+		title: 'видеолента',
+		link: 'event-videos',
 	},
+
 	{
 		title: 'программа',
 		link: 'event-program',
@@ -21,9 +22,5 @@ export const EventInfoNavItems: NavigationItem[] = [
 	{
 		title: 'галерея',
 		link: 'event-gallery',
-	},
-	{
-		title: 'видео',
-		link: 'event-videos',
 	},
 ]

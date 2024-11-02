@@ -3,7 +3,12 @@
   width: 205px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 33px;
+  h6 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
   @media (max-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -17,11 +22,7 @@
     width: 30%;
     min-width: 205px;
   }
-  h6 {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 10px;
-  }
+
 }
 
 .asideImg {
@@ -37,7 +38,7 @@
 .asideSimpleLinks {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 
   a {
     color: #DE0008;
@@ -46,15 +47,6 @@
 }
 
 .detailedAsideLinks {
-  h4 {
-    font-size: 16px;
-    margin-bottom: 7px;
-    font-weight: 400;
-    span {
-      display: none;
-    }
-  }
-
   li {
     line-height: 1.2;
     p {

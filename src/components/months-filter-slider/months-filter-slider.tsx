@@ -58,7 +58,13 @@ export const MonthsFilterSlider = <T,>({
 						<p>{mainFormatDate(date, 'LLLL')}</p>
 					</SwiperSlide>
 				))}
-				<SliderBtns $topPosition='55%' $btnsSpacing='100%' swiperRef={swiperRef} $variant='sm' />
+				<SliderBtns
+					className={styles.monthsSliderNavBtns}
+					$topPosition='55%'
+					$btnsSpacing='100%'
+					swiperRef={swiperRef}
+					$variant='sm'
+				/>
 			</Swiper>
 		</div>
 	)

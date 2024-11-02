@@ -24,11 +24,9 @@ import { VideoDetails } from 'src/pages/videos-page/layout/video-details/video-d
 import { EventsLayout } from 'src/pages/events-page/events-layout'
 import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
 import { EventDetailsLayout } from 'src/pages/events-page/layout/events-details/layout/event-details-layout'
-import { EventHistory } from 'src/pages/events-page/layout/events-details/layout/event-history/event-history'
 import { EventGallery } from 'src/pages/events-page/layout/events-details/layout/event-gallery/event-gallery'
 import { EventProgramLayout } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-layout'
 import { EventProgramDay } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-day/event-program-day'
-import { EventDetails } from 'src/pages/events-page/layout/events-details/layout/event-details/event-details'
 import { EventNews } from 'src/pages/events-page/layout/events-details/layout/event-news/event-news'
 import { EventVideos } from 'src/pages/events-page/layout/events-details/layout/event-videos/event-videos'
 
@@ -37,6 +35,7 @@ import { CultureGeneral } from 'src/pages/about-page/layout/about-culture/layout
 import { CultureDetails } from 'src/pages/about-page/layout/about-culture/layout/culture-details/culture-details'
 
 import { SearchPage } from 'src/pages/search-page/search-page'
+import { EventDetails } from 'src/pages/events-page/layout/events-details/layout/event-details/event-details'
 
 export const MainRoutes = () => {
 	return (
@@ -73,9 +72,8 @@ export const MainRoutes = () => {
 				<Route path={AppRoute.Events} element={<EventsLayout />}>
 					<Route index element={<EventsListPage />} />
 					<Route path=':id' element={<EventDetailsLayout />}>
-						<Route index element={<EventNews />} />
-						<Route path={AppRoute.EventInfo} element={<EventDetails />} />
-						<Route path={AppRoute.EventHistory} element={<EventHistory />} />
+						<Route index element={<EventDetails />} />
+						<Route path={AppRoute.EventNews} element={<EventNews />} />
 						<Route path={`${AppRoute.EventProgram}`} element={<EventProgramLayout />}>
 							<Route path=':dayId' element={<EventProgramDay />} />
 						</Route>

@@ -12,6 +12,6 @@ export enum AppRoute {
 	EventHistory = 'event-history',
 	EventGallery = 'event-gallery',
 	EventProgram = 'event-program',
-	EventInfo = 'event-info',
+	EventNews = 'event-news',
 	EventVideos = 'event-videos',
 }

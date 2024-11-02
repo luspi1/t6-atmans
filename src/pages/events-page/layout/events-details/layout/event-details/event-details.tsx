@@ -15,6 +15,7 @@ export const EventDetails: FC = () => {
 	return (
 		<div className={styles.eventDetailTab}>
 			<section>
+				<h4>Информация</h4>
 				<RenderedArray
 					className={styles.eventDescs}
 					strArray={eventInfo?.descs}
