@@ -10,7 +10,7 @@ import styles from './index.module.scss'
 type SliderBtnsProps = {
 	$topPosition?: string
 	$btnsSpacing?: string
-	$variant?: 'main' | 'sm'
+	$variant?: 'main' | 'sm' | 'gallery'
 }
 
 type SliderProps = {

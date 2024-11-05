@@ -65,22 +65,30 @@ export const GalleryImg: FC<ImageGalleryProps> = ({
 	return (
 		<div className={className}>
 			{variant === 'slider' ? (
-				<div className='relative-wrapper'>
-					<Swiper className={styles.posterSlider} {...gallerySliderOptions} ref={swiperRef}>
+				<div className={styles.gallerySliderWrapper}>
+					<Swiper {...gallerySliderOptions} ref={swiperRef}>
 						{images?.map((slideItem, idx) => (
-							<SwiperSlide key={idx} onClick={() => openFullscreen(idx)}>
+							<SwiperSlide
+								className={styles.gallerySlide}
+								key={idx}
+								onClick={() => openFullscreen(idx)}
+							>
 								<div className={styles.slideItem}>
-									<div className={styles.slideItemImg}>
+									<div className={styles.slideImg}>
 										<img src={slideItem.thumbnail} alt={slideItem.title} />
 									</div>
-									<div className={styles.slideInfo}>
-										<h5>{slideItem.title}</h5>
-									</div>
+									<h6>{slideItem.title}</h6>
 								</div>
 							</SwiperSlide>
 						))}
 					</Swiper>
-					<SliderBtns $topPosition='47%' $btnsSpacing='96%' swiperRef={swiperRef} />
+					<SliderBtns
+						className={styles.galleryBtns}
+						$topPosition='calc(50% - 20px)'
+						$btnsSpacing='calc(100% + 30px)'
+						$variant='gallery'
+						swiperRef={swiperRef}
+					/>
 				</div>
 			) : (
 				<ul className={cn(styles.gridGallery, listClassName)}>

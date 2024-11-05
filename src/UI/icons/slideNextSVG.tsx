@@ -1,9 +1,28 @@
 import { type FC } from 'react'
 type SlideNextSvgProps = {
-	variant?: 'main' | 'sm'
+	variant?: 'main' | 'sm' | 'gallery'
 }
 
 export const SlideNextSvg: FC<SlideNextSvgProps> = ({ variant = 'main' }) => {
+	if (variant === 'gallery')
+		return (
+			<svg
+				width='28'
+				height='40'
+				viewBox='0 0 28 40'
+				fill='none'
+				xmlns='http://www.w3.org/2000/svg'
+			>
+				<g>
+					<rect width='27.6923' height='40' rx='5' fill='black' fillOpacity='0.3' />
+				</g>
+				<path
+					d='M17.2323 20.3959C17.2323 20.5736 17.1379 20.8403 16.9492 20.9292L11.2868 26.261C11.0037 26.5276 10.4375 26.5276 10.06 26.261C9.77688 25.9944 9.77688 25.4612 10.06 25.1057L15.1561 20.307L10.06 15.5084C9.77688 15.2418 9.77688 14.7086 10.06 14.3532C10.3431 14.0866 10.9093 14.0866 11.2868 14.3532L16.9492 19.685C17.1379 19.9516 17.2323 20.2182 17.2323 20.3959Z'
+					fill='white'
+				/>
+			</svg>
+		)
+
 	if (variant === 'sm')
 		return (
 			<svg

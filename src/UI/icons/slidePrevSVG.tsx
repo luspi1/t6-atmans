@@ -1,10 +1,38 @@
 import { type FC } from 'react'
 
 type SlidePrevSvgProps = {
-	variant?: 'main' | 'sm'
+	variant?: 'main' | 'sm' | 'gallery'
 }
 
 export const SlidePrevSvg: FC<SlidePrevSvgProps> = ({ variant = 'main' }) => {
+	if (variant === 'gallery')
+		return (
+			<svg
+				width='28'
+				height='40'
+				viewBox='0 0 28 40'
+				fill='none'
+				xmlns='http://www.w3.org/2000/svg'
+			>
+				<g>
+					<rect
+						x='27.6914'
+						y='40'
+						width='27.6923'
+						height='40'
+						rx='5'
+						transform='rotate(-180 27.6914 40)'
+						fill='black'
+						fillOpacity='0.3'
+					/>
+				</g>
+				<path
+					d='M10.463 19.6041C10.463 19.4264 10.5574 19.1597 10.7462 19.0708L16.4085 13.739C16.6916 13.4724 17.2578 13.4724 17.6353 13.739C17.9184 14.0056 17.9184 14.5388 17.6353 14.8943L12.5392 19.693L17.6353 24.4916C17.9184 24.7582 17.9184 25.2914 17.6353 25.6468C17.3522 25.9134 16.786 25.9134 16.4085 25.6468L10.7462 20.315C10.5574 20.0484 10.463 19.7818 10.463 19.6041Z'
+					fill='white'
+				/>
+			</svg>
+		)
+
 	if (variant === 'sm')
 		return (
 			<svg

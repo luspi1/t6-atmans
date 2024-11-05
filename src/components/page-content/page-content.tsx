@@ -21,6 +21,7 @@ const StyledPageContent = styled.div<PageContentProps>`
 	min-height: ${({ $minHeight }) => $minHeight ?? '1500px'};
 	background: ${({ $background }) => $background ?? '#ffffff'};
 	border-radius: ${({ $borderRadius }) => $borderRadius ?? '0'};
+	overflow: hidden;
 	@media (max-width: 768px) {
 		padding: 30px 20px;
 	}
