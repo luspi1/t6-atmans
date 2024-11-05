@@ -8,7 +8,7 @@ import styles from './index.module.scss'
 
 export const AboutCultureLayout = () => {
 	return (
-		<PageContent className={styles.aboutCulturePage} $padding='30px 30px 45px 30px'>
+		<PageContent className={styles.aboutCulturePage}>
 			<Helmet>
 				<title>Материальная культура</title>
 			</Helmet>

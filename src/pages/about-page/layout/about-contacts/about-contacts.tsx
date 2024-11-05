@@ -8,7 +8,7 @@ import { PageContent } from 'src/components/page-content/page-content'
 import styles from './index.module.scss'
 export const AboutContacts: FC = () => {
 	return (
-		<PageContent $padding='30px 30px 35px 30px'>
+		<PageContent>
 			<Helmet>
 				<title>Карта и маршруты</title>
 			</Helmet>

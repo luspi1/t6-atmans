@@ -1,7 +1,11 @@
-@import "src/assets/styles/vars";
 
 .gallerySection {
   margin-bottom: 30px;
+  h5 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
 }
 
 .galleryPhotos {

@@ -7,7 +7,7 @@ import { PageContent } from 'src/components/page-content/page-content'
 
 export const AboutHistory: FC = () => {
 	return (
-		<PageContent className={styles.historyPageContent} $padding='30px 70px 45px 30px'>
+		<PageContent className={styles.historyPageContent}>
 			<Helmet>
 				<title>История Атманова угла</title>
 			</Helmet>

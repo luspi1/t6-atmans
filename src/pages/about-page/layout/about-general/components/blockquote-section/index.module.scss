@@ -1,17 +1,24 @@
 
-.blockquote {
+.blockquoteSection {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
-  margin-bottom: 42px;
+  gap: 40px;
+  margin-bottom: 53px;
 
   @media (max-width: 768px) {
     flex-direction: column;
   }
 
+  blockquote {
+    margin: 0;
+  }
+
   .blockquoteText {
-    margin-bottom: 20px;
     font-size: 16px;
+    line-height: 1.45;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   footer {
@@ -23,12 +30,13 @@
 }
 
 .blockquoteImg {
-  width: 132px;
-  min-width: 132px ;
-  height: 164px;
-  border: 7px solid #EBEEF2;
+  width: 190px;
+  min-width: 190px ;
+  height: 127px;
+  border-radius: 5px;
   img {
     width: 100%;
     height: 100%;
+    border-radius: 5px;
   }
 }

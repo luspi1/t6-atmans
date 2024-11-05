@@ -6,9 +6,11 @@ import { BlockquoteSection } from 'src/pages/about-page/layout/about-general/com
 import { GallerySection } from 'src/pages/about-page/layout/about-general/components/gallery-section/gallery-section'
 import { DescSection } from 'src/pages/about-page/layout/about-general/components/desc-section/desc-section'
 
+import styles from './index.module.scss'
+
 export const AboutGeneral: FC = () => {
 	return (
-		<PageContent $padding='30px 73px 40px 30px'>
+		<PageContent className={styles.aboutGeneralPage}>
 			<Helmet>
 				<title>Атманов угол</title>
 			</Helmet>

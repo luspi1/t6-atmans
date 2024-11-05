@@ -4,7 +4,7 @@ import styles from './index.module.scss'
 
 export const BlockquoteSection: FC = () => {
 	return (
-		<section className={styles.blockquote}>
+		<section className={styles.blockquoteSection}>
 			<div className={styles.blockquoteImg}>
 				<img
 					src='https://vmeste-rf.tv/upload/resize_cache/iblock/1f1/1040_585_2/ulufg7ee6bgst3luzv7o4f0lg4gg3dpu.jpg'

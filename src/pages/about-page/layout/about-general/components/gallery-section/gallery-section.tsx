@@ -8,8 +8,8 @@ import { GalleryImg } from 'src/components/image-gallery/image-gallery'
 export const GallerySection: FC = () => {
 	return (
 		<section className={styles.gallerySection}>
-			<h4>Фотогалерея</h4>
-			<GalleryImg className={styles.galleryPhotos} images={galleryContent} />
+			<h5>Фотогалерея</h5>
+			<GalleryImg className={styles.galleryPhotos} images={galleryContent} variant='slider' />
 		</section>
 	)
 }
