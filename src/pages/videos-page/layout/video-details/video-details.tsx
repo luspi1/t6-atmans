@@ -8,11 +8,15 @@ import { AsideVideos } from 'src/components/aside-videos/aside-videos'
 import { useGetVideoByIdQuery } from 'src/store/videos/videos.api'
 
 import styles from './index.module.scss'
+import { createBreakpoint } from 'react-use'
+import { DisplayBreakpoints } from 'src/helpers/consts'
+
+const useBreakPoint = createBreakpoint({ M: DisplayBreakpoints.Md, S: DisplayBreakpoints.Sm })
 
 export const VideoDetails: FC = () => {
 	const { id } = useParams()
 	const { data: videoDetails } = useGetVideoByIdQuery(id ?? '')
-
+	const breakpoint = useBreakPoint()
 	useAdditionalCrumbs(videoDetails?.title)
 
 	if (!videoDetails) return
@@ -20,7 +24,7 @@ export const VideoDetails: FC = () => {
 	return (
 		<div className={styles.videoDetailPage}>
 			<h2>{videoDetails?.title}</h2>
-			<CustomText $fontSize='16px' $color='#9D9D9D' $margin='0 0 20px 0'>
+			<CustomText $fontSize='16px' $color={breakpoint !== 'M' ? '#DE0008' : '#9D9D9D'} $margin='0 0 20px 0'>
 				{mainFormatDate(videoDetails?.date)}
 			</CustomText>
 			<div className={styles.mainVideo}>

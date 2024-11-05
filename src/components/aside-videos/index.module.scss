@@ -14,8 +14,14 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+      @media (max-width: 425px) {
+        justify-content: center;
+      }
       li {
         max-width: 270px;
+        @media (max-width: 425px) {
+          max-width: 310px;
+        }
         iframe {
           height: 155px;
         }

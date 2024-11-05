@@ -12,6 +12,11 @@ import {
 } from 'src/store/videos/videos.api'
 
 import styles from './index.module.scss'
+import { createBreakpoint } from 'react-use'
+import { DisplayBreakpoints } from 'src/helpers/consts'
+import MobileList from 'src/components/mobile-list/mobile-list'
+
+const useBreakPoint = createBreakpoint({ M: DisplayBreakpoints.Md, S: DisplayBreakpoints.Sm })
 
 export const Videos: FC = () => {
 	const [activeMonth, setActiveMonth] = useState('0')
@@ -23,6 +28,8 @@ export const Videos: FC = () => {
 		date: activeMonth,
 		category: activeCategory,
 	})
+
+	const breakpoint = useBreakPoint()
 
 	const handleChangeActiveMonth = (newMonth: string) => {
 		setActiveMonth(newMonth)
@@ -46,11 +53,19 @@ export const Videos: FC = () => {
 				categories={videosCategories ?? []}
 			/>
 			{videosList?.length ? (
-				<div className={styles.videosList}>
-					{videosList.map((videosEl) => (
-						<VideoCard key={videosEl.id} {...videosEl} />
-					))}
-				</div>
+				breakpoint === 'S' ? (
+					<MobileList
+						items={videosList}
+						renderItem={VideoCard}
+						classListItems={styles.videosList}
+					/>
+				) : (
+					<div className={styles.videosList}>
+						{videosList.map((videosEl) => (
+							<VideoCard key={videosEl.id} {...videosEl} />
+						))}
+					</div>
+				)
 			) : (
 				<p className={styles.videosAbsence}>
 					В выбранном вами месяце нет ни одного видео. Пожалуйста, выберите другой месяц.
