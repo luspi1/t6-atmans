@@ -29,7 +29,7 @@ const MobileList = <T extends CardNewsItem | CardVideoItem>({
 			<div className={classListItems}>
 				{visibleItems?.map((item) => <RenderItem key={item.id} {...item} />)}
 			</div>
-			{items?.length !== defaultVisibleCount && (
+			{items?.length > defaultVisibleCount && (
 				<MainButton $variant='show' $radius='3px' $height='45px' $padding='0' onClick={toggleList}>
 					{isExpanded ? 'Скрыть' : 'Показать ещё'}
 				</MainButton>
