@@ -26,12 +26,14 @@ const MobileList = <T extends CardNewsItem | CardVideoItem>({
 
 	return (
 		<>
-		<div className={classListItems}>
-			{visibleItems?.map((item) => <RenderItem key={item.id} {...item} />)}
-		</div>
-		<MainButton $variant='show' $radius='3px' $height='45px' $padding='0' onClick={toggleList}>
-				{isExpanded ? 'Скрыть' : 'Показать ещё'}
-			</MainButton>
+			<div className={classListItems}>
+				{visibleItems?.map((item) => <RenderItem key={item.id} {...item} />)}
+			</div>
+			{items?.length !== defaultVisibleCount && (
+				<MainButton $variant='show' $radius='3px' $height='45px' $padding='0' onClick={toggleList}>
+					{isExpanded ? 'Скрыть' : 'Показать ещё'}
+				</MainButton>
+			)}
 		</>
 	)
 }

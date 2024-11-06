@@ -24,7 +24,7 @@ export const VideoDetails: FC = () => {
 	return (
 		<div className={styles.videoDetailPage}>
 			<h2>{videoDetails?.title}</h2>
-			<CustomText $fontSize='16px' $color={breakpoint !== 'M' ? '#DE0008' : '#9D9D9D'} $margin='0 0 20px 0'>
+			<CustomText $fontSize={breakpoint !== 'M' ? '18px' : '16px'} $color={breakpoint !== 'M' ? '#DE0008' : '#9D9D9D'} $margin={breakpoint !== 'M' ? '0 0 30px 0' :'0 0 20px 0'}>
 				{mainFormatDate(videoDetails?.date)}
 			</CustomText>
 			<div className={styles.mainVideo}>
