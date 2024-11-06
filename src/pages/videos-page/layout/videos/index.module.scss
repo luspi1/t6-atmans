@@ -8,10 +8,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 270px));
   gap: 30px 23px;
+  margin-bottom: 30px;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
   @media (max-width: 425px) {
     grid-template-columns: repeat(auto-fit, minmax(310px, 310px));
-    align-items: center;
-    justify-content: center;
   }
 }
 

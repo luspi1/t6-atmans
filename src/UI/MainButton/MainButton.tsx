@@ -13,6 +13,8 @@ type ButtonComponentProps = {
 	$height?: string
 	$radius?: string
 	$width?: string
+	$maxWidth?: string
+	$margin?: string
 	$variant?: 'primary' | 'light' | 'show'
 }
 
@@ -21,13 +23,17 @@ type SharedStylesTypes = {
 	$height?: string
 	$radius?: string
 	$width?: string
+	$maxWidth?: string
+	$margin?: string
 	$variant?: 'primary' | 'light' | 'show'
 }
 
 const sharedStyles = css<SharedStylesTypes>`
 	padding: ${({ $padding }) => $padding ?? '0 33px'};
+	margin: ${({ $margin }) => $margin ?? 'auto'};
 	height: ${({ $height }) => $height ?? '60px'};
 	width: ${({ $width }) => $width ?? '100%'};
+	max-width: ${({ $maxWidth }) => $maxWidth ?? '310px'};
 	border-radius: ${({ $radius }) => $radius ?? '5px'};
 
 	background-color: ${({ $variant }) => {
@@ -47,13 +53,13 @@ const sharedStyles = css<SharedStylesTypes>`
 		return '25px'
 	}};
 	cursor: pointer;
-	display: inline-flex;
+	display: ${({ $variant }) => {
+		if ($variant === 'show') return 'block'
+		return 'inline-flex'
+	}};
 	align-items: center;
 	justify-content: center;
 	transition: all 0.3s;
-	width: ${({ $variant }) => {
-		if ($variant === 'show') return '100%'
-	}};
 	&:hover {
 		background-color: ${({ $variant }) => {
 			if ($variant === 'light') return '#cdcbcb'

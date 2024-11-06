@@ -25,12 +25,14 @@ const MobileList = <T extends CardNewsItem | CardVideoItem>({
 	const visibleItems = isExpanded ? items : items?.slice(0, defaultVisibleCount)
 
 	return (
+		<>
 		<div className={classListItems}>
 			{visibleItems?.map((item) => <RenderItem key={item.id} {...item} />)}
-			<MainButton $variant='show' $radius='3px' $height='45px' $padding='0' onClick={toggleList}>
+		</div>
+		<MainButton $variant='show' $radius='3px' $height='45px' $padding='0' onClick={toggleList}>
 				{isExpanded ? 'Скрыть' : 'Показать ещё'}
 			</MainButton>
-		</div>
+		</>
 	)
 }
 
