@@ -6,7 +6,7 @@ import { createBreakpoint } from 'react-use'
 import { MonthsFilterSlider } from 'src/components/months-filter-slider/months-filter-slider'
 import { CategoriesFiltration } from 'src/components/categories-filtration/categories-filtration'
 import { VideoCard } from 'src/components/video-card/video-card'
-import MobileList from 'src/components/mobile-list/mobile-list'
+import { MobileList } from 'src/components/mobile-list/mobile-list'
 
 import {
 	useGetAllVideosMonthsQuery,

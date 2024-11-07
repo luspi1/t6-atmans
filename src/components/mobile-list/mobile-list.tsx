@@ -1,18 +1,15 @@
 import React, { useState } from 'react'
 
-import type { CardNewsItem } from 'src/types/news'
-import type { CardVideoItem } from 'src/types/videos'
-
 import { MainButton } from 'src/UI/MainButton/MainButton'
 
-interface MobileListProps<T> {
+type MobileListProps<T> = {
 	items: T[]
 	defaultVisibleCount?: number
 	renderItem: React.ComponentType<T>
 	classListItems: string
 }
 
-const MobileList = <T extends CardNewsItem | CardVideoItem>({
+export const MobileList = <T extends { id: string }>({
 	items,
 	defaultVisibleCount = 2,
 	renderItem: RenderItem,
@@ -39,5 +36,3 @@ const MobileList = <T extends CardNewsItem | CardVideoItem>({
 		</>
 	)
 }
-
-export default MobileList
