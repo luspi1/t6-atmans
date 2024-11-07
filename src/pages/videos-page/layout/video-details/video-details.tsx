@@ -1,13 +1,15 @@
 import React, { type FC } from 'react'
+
 import { useParams } from 'react-router-dom'
 import { createBreakpoint } from 'react-use'
 
 import { CustomText } from 'src/components/custom-text/custom-text'
-import { mainFormatDate } from 'src/helpers/utils'
-import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 import { AsideVideos } from 'src/components/aside-videos/aside-videos'
+
 import { useGetVideoByIdQuery } from 'src/store/videos/videos.api'
 import { DisplayBreakpoints } from 'src/helpers/consts'
+import { mainFormatDate } from 'src/helpers/utils'
+import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 
 import styles from './index.module.scss'
 

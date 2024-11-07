@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import type { CardNewsItem } from 'src/types/news'
 import type { CardVideoItem } from 'src/types/videos'
+
 import { MainButton } from 'src/UI/MainButton/MainButton'
 
 interface MobileListProps<T> {
