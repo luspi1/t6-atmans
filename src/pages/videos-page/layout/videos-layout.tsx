@@ -11,7 +11,7 @@ import styles from './index.module.scss'
 export const VideosLayout: FC = () => {
 	return (
 		<>
-			<Container className={styles.videosContainer}>
+			<Container>
 				<BreadCrumbs
 					crumbsLinksMap={[
 						{
@@ -20,6 +20,8 @@ export const VideosLayout: FC = () => {
 						},
 					]}
 				/>
+			</Container>
+			<Container className={styles.videosContainer} $paddingAdaptive='0'>
 				<PageContent className={styles.videosPageContent}>
 					<Outlet />
 				</PageContent>

@@ -1,9 +1,8 @@
 .videosContainer {
-  @media (max-width: 768px) {
-    padding: 0;
-  }
   .videosPageContent {
-    min-height: auto;
-    margin: 0 0 45px 0;
+    @media (max-width: 768px) {
+      min-height: auto;
+      margin: 0 0 45px 0;
+    }
   }
 }

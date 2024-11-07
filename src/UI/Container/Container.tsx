@@ -16,10 +16,6 @@ const StyledContainer = styled.div<ContainerProps>`
 	margin: ${({ $margin }) => $margin ?? '0 auto'};
 	position: ${({ $position }) => $position ?? 'relative'};
 	@media (max-width: 768px) {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	@media (max-width: 425px) {
 		padding: ${({ $paddingAdaptive }) => $paddingAdaptive ?? '0 15px'};
 	}
 `
