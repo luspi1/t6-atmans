@@ -29,7 +29,15 @@ export const MobileList = <T extends { id: string }>({
 				{visibleItems?.map((item) => <RenderItem key={item.id} {...item} />)}
 			</div>
 			{items?.length > defaultVisibleCount && (
-				<MainButton $variant='show' $radius='3px' $height='45px' $padding='0' onClick={toggleList}>
+				<MainButton
+					$variant='show'
+					$radius='3px'
+					$height='45px'
+					$padding='0'
+					$width='100%'
+					$fontSize='18px'
+					onClick={toggleList}
+				>
 					{isExpanded ? 'Скрыть' : 'Показать ещё'}
 				</MainButton>
 			)}

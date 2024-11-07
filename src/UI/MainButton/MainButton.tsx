@@ -13,8 +13,7 @@ type ButtonComponentProps = {
 	$height?: string
 	$radius?: string
 	$width?: string
-	$maxWidth?: string
-	$margin?: string
+	$fontSize?: string
 	$variant?: 'primary' | 'light' | 'show'
 }
 
@@ -23,17 +22,15 @@ type SharedStylesTypes = {
 	$height?: string
 	$radius?: string
 	$width?: string
-	$maxWidth?: string
-	$margin?: string
+	$fontSize?: string
 	$variant?: 'primary' | 'light' | 'show'
 }
 
 const sharedStyles = css<SharedStylesTypes>`
 	padding: ${({ $padding }) => $padding ?? '0 33px'};
-	margin: ${({ $margin }) => $margin ?? 'auto'};
 	height: ${({ $height }) => $height ?? '60px'};
-	width: ${({ $width }) => $width ?? '100%'};
-	max-width: ${({ $maxWidth }) => $maxWidth ?? '310px'};
+	width: ${({ $width }) => $width ?? 'auto'};
+	font-size: ${({ $fontSize }) => $fontSize ?? '25px'};
 	border-radius: ${({ $radius }) => $radius ?? '5px'};
 
 	background-color: ${({ $variant }) => {
@@ -48,15 +45,8 @@ const sharedStyles = css<SharedStylesTypes>`
 	border: none;
 	text-decoration: none;
 	font-weight: 400;
-	font-size: ${({ $variant }) => {
-		if ($variant === 'show') return '18px'
-		return '25px'
-	}};
 	cursor: pointer;
-	display: ${({ $variant }) => {
-		if ($variant === 'show') return 'block'
-		return 'inline-flex'
-	}};
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	transition: all 0.3s;
