@@ -4,7 +4,7 @@
   @media (max-width: 768px) {
     min-width: auto;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
   }
 
   &._horizontal {
@@ -12,19 +12,31 @@
 
     ul {
       display: flex;
-      gap: 20px;
+      gap: 23px;
       flex-wrap: wrap;
+      @media (max-width: 425px) {
+        justify-content: center;
+      }
       li {
         max-width: 270px;
+        @media (max-width: 425px) {
+          max-width: 310px;
+        }
         iframe {
-          height: 155px;
+          height: 160px;
         }
         a {
           font-size: 16px;
           margin-top: 5px;
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
         }
         span {
           font-size: 16px;
+          @media (max-width: 768px) {
+            font-size: 15px;
+          }
         }
       }
     }
@@ -35,6 +47,10 @@
     font-size: 30px;
     font-weight: 400;
     margin-bottom: 15px;
+    @media (max-width: 768px) {
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
   }
 
   li {

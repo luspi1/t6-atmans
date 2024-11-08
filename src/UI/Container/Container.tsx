@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 type ContainerProps = PropsWithChildren<{
 	$padding?: string
+	$paddingAdaptive?: string
 	$width?: string
 	$margin?: string
 	$position?: string
@@ -15,8 +16,7 @@ const StyledContainer = styled.div<ContainerProps>`
 	margin: ${({ $margin }) => $margin ?? '0 auto'};
 	position: ${({ $position }) => $position ?? 'relative'};
 	@media (max-width: 768px) {
-		padding-left: 15px;
-		padding-right: 15px;
+		padding: ${({ $paddingAdaptive }) => $paddingAdaptive ?? '0 15px'};
 	}
 `
 export const Container: FC<ContainerProps> = (props) => {
