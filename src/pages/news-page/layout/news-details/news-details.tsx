@@ -2,7 +2,6 @@ import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { type CardNewsItem } from 'src/types/news'
 
-import { PageContent } from 'src/components/page-content/page-content'
 import { useGetAllNewsMonthsQuery, useGetNewsByIdQuery } from 'src/store/news/news.api'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 import { formatDateRange, mainFormatDate } from 'src/helpers/utils'
@@ -12,12 +11,20 @@ import { RenderedArray } from 'src/components/rendered-array/rendered-array'
 import { AsideNews } from 'src/components/aside-news/aside-news'
 
 import styles from './index.module.scss'
+import { Container } from 'src/UI/Container/Container'
+import { PageContent } from 'src/components/page-content/page-content'
+import { createBreakpoint } from 'react-use'
+import { DisplayBreakpoints } from 'src/helpers/consts'
+
+const useBreakPoint = createBreakpoint({ M: 769, S: DisplayBreakpoints.Sm })
 
 export const NewsDetails = () => {
 	const { id } = useParams()
 	const { data: allNews, isSuccess: isSuccessAllNews } = useGetAllNewsMonthsQuery(null)
 	const { data: newsItemData } = useGetNewsByIdQuery(id ?? '')
 	useAdditionalCrumbs(newsItemData?.title)
+
+	const breakpoint = useBreakPoint()
 
 	const [newsArray, setNewsArray] = useState<CardNewsItem[]>([])
 
@@ -30,29 +37,43 @@ export const NewsDetails = () => {
 	if (!newsItemData) return null
 
 	return (
-		<div className={styles.newsItemPage}>
-			<PageContent className={styles.newsItemPageContent}>
-				<h2>{newsItemData.title}</h2>
-				<span className={styles.newsItemDate}>
-					{newsItemData.date.length > 1
-						? formatDateRange(newsItemData.date as [Date, Date])
-						: mainFormatDate(newsItemData?.date[0])}
-				</span>
-				<div className={styles.newsItemMainImg}>
-					<img src={newsItemData?.preview} alt={newsItemData?.title} />
-				</div>
-				<RenderedArray
-					className={styles.newsDescs}
-					strArray={newsItemData?.textNews}
-					asStr='p'
-					as='div'
-				/>
-				<GalleryImg listClassName={styles.newsGallery} images={newsItemData.imgGallery} />
-				<div className={styles.allNewsBlock}>
-					<Link to={`/${AppRoute.News}`}>Все новости</Link>
-				</div>
-			</PageContent>
-			<AsideNews currentNewsId={id ?? ''} newsList={newsArray} />
-		</div>
+		<>
+			<Container className={styles.newsContainer} $paddingAdaptive='0'>
+				<PageContent className={styles.newsListPage}>
+					<div className={styles.newsItemPage}>
+						<div className={styles.newsItemPageContent}>
+							<h2>{newsItemData.title}</h2>
+							<span className={styles.newsItemDate}>
+								{newsItemData.date.length > 1
+									? formatDateRange(newsItemData.date as [Date, Date])
+									: mainFormatDate(newsItemData?.date[0])}
+							</span>
+							<div className={styles.newsItemMainImg}>
+								<img src={newsItemData?.preview} alt={newsItemData?.title} />
+							</div>
+							<RenderedArray
+								className={styles.newsDescs}
+								strArray={newsItemData?.textNews}
+								asStr='p'
+								as='div'
+							/>
+							<GalleryImg
+								variant={breakpoint === 'M' ? 'list' : 'slider'}
+								listClassName={styles.newsGallery}
+								images={newsItemData.imgGallery}
+								className={styles.gallerySlider}
+							/>
+							<div className={styles.allNewsBlock}>
+								<Link to={`/${AppRoute.News}`}>Все новости</Link>
+							</div>
+						</div>
+						{breakpoint === 'M' && <AsideNews currentNewsId={id ?? ''} newsList={newsArray} />}
+					</div>
+				</PageContent>
+			</Container>
+			<Container>
+				{breakpoint !== 'M' && <AsideNews currentNewsId={id ?? ''} newsList={newsArray} />}
+			</Container>
+		</>
 	)
 }

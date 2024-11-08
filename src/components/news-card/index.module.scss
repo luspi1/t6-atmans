@@ -55,6 +55,9 @@ a.newsItem {
     line-height: 1.3;
     font-weight: 400;
     margin-bottom: 7px;
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -66,4 +69,7 @@ a.newsItem {
 .newsDesc {
   font-size: 15px;
   line-height: 1.2;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
