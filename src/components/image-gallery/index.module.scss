@@ -112,7 +112,9 @@
 .gallerySliderWrapper {
   position: relative;
   .galleryBtns {
+    top: 70px;
     @media (max-width: 768px) {
+      top: 90px;
       width: 100%;
     }
   }

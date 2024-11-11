@@ -84,7 +84,6 @@ export const GalleryImg: FC<ImageGalleryProps> = ({
 					</Swiper>
 					<SliderBtns
 						className={styles.galleryBtns}
-						$topPosition='calc(50% - 20px)'
 						$btnsSpacing='calc(100% + 30px)'
 						$variant='gallery'
 						swiperRef={swiperRef}
