@@ -1,11 +1,14 @@
 import { type FC } from 'react'
+
 import { useGetEventByIdQuery } from 'src/store/events/events.api'
 import { Placement } from 'src/modules/placement/placement'
+import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
 
 import styles from './index.module.scss'
 
 export const ContactsInfo: FC = () => {
 	const { data: contactsInfo } = useGetEventByIdQuery('1')
+	const breakpoint = useBreakPoint()
 	return (
 		<>
 			<div className={styles.contactsBlock}>
@@ -23,7 +26,7 @@ export const ContactsInfo: FC = () => {
 				<h4>Электронная почта</h4>
 				<a href='mailto:mail@mail.ru'>mail@mail.ru</a>
 			</div>
-			<Placement placeVariants={contactsInfo?.pathways} title='Маршруты' />
+			{breakpoint === 'M' && <Placement placeVariants={contactsInfo?.pathways} title='Маршруты' />}
 		</>
 	)
 }

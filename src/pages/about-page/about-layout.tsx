@@ -9,6 +9,7 @@ import { SideMenu } from 'src/components/side-menu/side-menu'
 import { AboutMenuItems } from './consts'
 
 import styles from './index.module.scss'
+import { PageContent } from 'src/components/page-content/page-content'
 
 export const AboutLayout: FC = () => {
 	return (
@@ -23,19 +24,21 @@ export const AboutLayout: FC = () => {
 						},
 					]}
 				/>
-				<div className={styles.aboutContentWrapper}>
+			</Container>
+			<Container className={styles.aboutContainer} $paddingAdaptive='0'>
+				<SideMenu
+					className={styles.aboutSideMenu}
+					sideItems={[
+						{
+							title: 'Атманов угол',
+							link: '/about',
+						},
+						...AboutMenuItems,
+					]}
+				/>
+				<PageContent className={styles.aboutContentWrapper}>
 					<Outlet />
-					<SideMenu
-						className={styles.aboutSideMenu}
-						sideItems={[
-							{
-								title: 'Атманов угол',
-								link: '/about',
-							},
-							...AboutMenuItems,
-						]}
-					/>
-				</div>
+				</PageContent>
 			</Container>
 		</div>
 	)

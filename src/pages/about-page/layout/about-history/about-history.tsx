@@ -3,11 +3,10 @@ import { Helmet } from 'react-helmet-async'
 
 import styles from './index.module.scss'
 import foundersImage from 'src/assets/img/history-founders.jpg'
-import { PageContent } from 'src/components/page-content/page-content'
 
 export const AboutHistory: FC = () => {
 	return (
-		<PageContent className={styles.historyPageContent}>
+		<div className={styles.historyPageContent}>
 			<Helmet>
 				<title>История Атманова угла</title>
 			</Helmet>
@@ -73,6 +72,6 @@ export const AboutHistory: FC = () => {
 				кургане в Волгограде, Музей-заповедник партизанской славы в Кистнянском лесу Брянской
 				области, благоустройство воинских захоронений.
 			</p>
-		</PageContent>
+		</div>
 	)
 }
