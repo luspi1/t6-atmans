@@ -22,7 +22,7 @@ export const NewsDetails = () => {
 	const { data: newsItemData } = useGetNewsByIdQuery(id ?? '')
 	useAdditionalCrumbs(newsItemData?.title)
 
-	const breakpoint = useBreakPoint()()
+	const breakpoint = useBreakPoint()
 
 	const [newsArray, setNewsArray] = useState<CardNewsItem[]>([])
 

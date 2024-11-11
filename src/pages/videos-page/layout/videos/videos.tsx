@@ -26,7 +26,7 @@ export const Videos: FC = () => {
 		category: activeCategory,
 	})
 
-	const breakpoint = useBreakPoint()()
+	const breakpoint = useBreakPoint()
 
 	const handleChangeActiveMonth = (newMonth: string) => {
 		setActiveMonth(newMonth)

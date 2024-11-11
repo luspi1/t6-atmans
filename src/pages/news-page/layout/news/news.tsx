@@ -28,7 +28,7 @@ export const News = () => {
 		category: activeCategory,
 	})
 
-	const breakpoint = useBreakPoint()()
+	const breakpoint = useBreakPoint()
 
 	const handleChangeActiveMonth = (newMonth: string) => {
 		setActiveMonth(newMonth)
