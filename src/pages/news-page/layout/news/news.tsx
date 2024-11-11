@@ -1,24 +1,21 @@
 import React, { useState } from 'react'
-import { createBreakpoint } from 'react-use'
 
-import { MonthsFilterSlider } from 'src/components/months-filter-slider/months-filter-slider'
-import { CategoriesFiltration } from 'src/components/categories-filtration/categories-filtration'
-import { NewsCard } from 'src/components/news-card/news-card'
-
+import { getYear } from 'date-fns'
 import {
 	useGetAllNewsMonthsQuery,
 	useGetNewsCategoriesQuery,
 	useGetNewsMonthsQuery,
 } from 'src/store/news/news.api'
+import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
 
-import styles from './index.module.scss'
-import { getYear } from 'date-fns'
+import { MonthsFilterSlider } from 'src/components/months-filter-slider/months-filter-slider'
+import { CategoriesFiltration } from 'src/components/categories-filtration/categories-filtration'
+import { NewsCard } from 'src/components/news-card/news-card'
 import { MobileList } from 'src/components/mobile-list/mobile-list'
-import { DisplayBreakpoints } from 'src/helpers/consts'
 import { Container } from 'src/UI/Container/Container'
 import { PageContent } from 'src/components/page-content/page-content'
 
-const useBreakPoint = createBreakpoint({ M: DisplayBreakpoints.Md, S: DisplayBreakpoints.Sm })
+import styles from './index.module.scss'
 
 export const News = () => {
 	const [activeMonth, setActiveMonth] = useState('0')
@@ -31,7 +28,7 @@ export const News = () => {
 		category: activeCategory,
 	})
 
-	const breakpoint = useBreakPoint()
+	const breakpoint = useBreakPoint()()
 
 	const handleChangeActiveMonth = (newMonth: string) => {
 		setActiveMonth(newMonth)

@@ -5,18 +5,16 @@ import { type CardNewsItem } from 'src/types/news'
 import { useGetAllNewsMonthsQuery, useGetNewsByIdQuery } from 'src/store/news/news.api'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 import { formatDateRange, mainFormatDate } from 'src/helpers/utils'
+import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
+
 import { GalleryImg } from 'src/components/image-gallery/image-gallery'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { RenderedArray } from 'src/components/rendered-array/rendered-array'
 import { AsideNews } from 'src/components/aside-news/aside-news'
-
-import styles from './index.module.scss'
 import { Container } from 'src/UI/Container/Container'
 import { PageContent } from 'src/components/page-content/page-content'
-import { createBreakpoint } from 'react-use'
-import { DisplayBreakpoints } from 'src/helpers/consts'
 
-const useBreakPoint = createBreakpoint({ M: 769, S: DisplayBreakpoints.Sm })
+import styles from './index.module.scss'
 
 export const NewsDetails = () => {
 	const { id } = useParams()
@@ -24,7 +22,7 @@ export const NewsDetails = () => {
 	const { data: newsItemData } = useGetNewsByIdQuery(id ?? '')
 	useAdditionalCrumbs(newsItemData?.title)
 
-	const breakpoint = useBreakPoint()
+	const breakpoint = useBreakPoint()()
 
 	const [newsArray, setNewsArray] = useState<CardNewsItem[]>([])
 
@@ -39,8 +37,8 @@ export const NewsDetails = () => {
 	return (
 		<>
 			<Container className={styles.newsContainer} $paddingAdaptive='0'>
-				<PageContent className={styles.newsListPage}>
-					<div className={styles.newsItemPage}>
+				<div className={styles.newsItemPage}>
+					<PageContent className={styles.newsListPage}>
 						<div className={styles.newsItemPageContent}>
 							<h2>{newsItemData.title}</h2>
 							<span className={styles.newsItemDate}>
@@ -67,12 +65,11 @@ export const NewsDetails = () => {
 								<Link to={`/${AppRoute.News}`}>Все новости</Link>
 							</div>
 						</div>
-						{breakpoint === 'M' && <AsideNews currentNewsId={id ?? ''} newsList={newsArray} />}
+					</PageContent>
+					<div className={styles.asideNewsDetails}>
+						<AsideNews currentNewsId={id ?? ''} newsList={newsArray} />
 					</div>
-				</PageContent>
-			</Container>
-			<Container>
-				{breakpoint !== 'M' && <AsideNews currentNewsId={id ?? ''} newsList={newsArray} />}
+				</div>
 			</Container>
 		</>
 	)
