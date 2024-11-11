@@ -1,6 +1,40 @@
-.newsListPage {
-  h2 {
-    margin-bottom: 25px;
+.newsContainer {
+  .newsListPage {
+    h2 {
+      margin-bottom: 25px;
+    }
+    .newsList {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 270px));
+      @media (max-width: 768px) {
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 425px) {
+        grid-template-columns: repeat(auto-fit, minmax(310px, 310px));
+      }
+      gap: 23px;
+      a.newsItem {
+        .newsItemContent {
+          .newsDesc {
+            @media (max-width: 768px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .newsAbsence {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding-top: 150px;
+      font-size: 25px;
+    }
+    @media (max-width: 768px) {
+      min-height: auto;
+      margin: 0 0 45px 0;
+    }
   }
 }
-

@@ -1,23 +1,19 @@
 import React, { type FC, useState } from 'react'
 
 import { getYear } from 'date-fns'
-import { createBreakpoint } from 'react-use'
+import {
+	useGetAllVideosMonthsQuery,
+	useGetVideosCategoriesQuery,
+	useGetVideosMonthsQuery,
+} from 'src/store/videos/videos.api'
+import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
 
 import { MonthsFilterSlider } from 'src/components/months-filter-slider/months-filter-slider'
 import { CategoriesFiltration } from 'src/components/categories-filtration/categories-filtration'
 import { VideoCard } from 'src/components/video-card/video-card'
 import { MobileList } from 'src/components/mobile-list/mobile-list'
 
-import {
-	useGetAllVideosMonthsQuery,
-	useGetVideosCategoriesQuery,
-	useGetVideosMonthsQuery,
-} from 'src/store/videos/videos.api'
-import { DisplayBreakpoints } from 'src/helpers/consts'
-
 import styles from './index.module.scss'
-
-const useBreakPoint = createBreakpoint({ M: DisplayBreakpoints.Md, S: DisplayBreakpoints.Sm })
 
 export const Videos: FC = () => {
 	const [activeMonth, setActiveMonth] = useState('0')
