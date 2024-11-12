@@ -26,7 +26,8 @@ export const CollapsibleText: React.FC<CollapsibleTextProps> = ({
 	}
 
 	const isOverflowing = useCollapsibleText({ ref: textContainerRef, lineClamp })
-	if (breakpoint === collapsePoint) {
+
+	if (breakpoint !== collapsePoint) {
 		return <>{item}</>
 	}
 	return (

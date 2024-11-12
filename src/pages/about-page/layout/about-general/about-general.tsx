@@ -18,7 +18,7 @@ export const AboutGeneral: FC = () => {
 			<h2>Атманов угол</h2>
 			<BlockquoteSection />
 			<GallerySection />
-			<CollapsibleText item={<DescSection />} lineClamp={22} collapsePoint={'M'} />
+			<CollapsibleText item={<DescSection />} lineClamp={22} collapsePoint={'S'} />
 		</div>
 	)
 }
