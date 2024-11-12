@@ -5,11 +5,11 @@ import { Outlet } from 'react-router-dom'
 import { Container } from 'src/UI/Container/Container'
 import { BreadCrumbs } from 'src/modules/bread-crumbs/bread-crumbs'
 import { SideMenu } from 'src/components/side-menu/side-menu'
+import { PageContent } from 'src/components/page-content/page-content'
 
 import { AboutMenuItems } from './consts'
 
 import styles from './index.module.scss'
-import { PageContent } from 'src/components/page-content/page-content'
 
 export const AboutLayout: FC = () => {
 	return (

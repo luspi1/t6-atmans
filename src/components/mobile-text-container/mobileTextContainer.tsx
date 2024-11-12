@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react'
+
+import { useComparator } from 'src/hooks/compareHeight/useComparator'
+
 import { MainButton } from 'src/UI/MainButton/MainButton'
 import { TextContainer } from './components/text-container'
-import { useComparator } from 'src/hooks/compareHeight/useComparator'
 
 type TextListProps = {
 	item: React.ReactNode
