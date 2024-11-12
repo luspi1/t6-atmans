@@ -1,14 +1,14 @@
 import { type CardEventItem, type EventItem, type EventsMonthsList } from 'src/types/events'
 import type { ImageItem } from 'src/types/photos'
 import { type ProgramListItem } from 'src/types/program'
-import type { CategoryItem, ChronologyItem } from 'src/types/global'
+import type { CategoryItem } from 'src/types/global'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { BASE_URL, ReducerPath } from 'src/helpers/consts'
 
 export const eventsApi = createApi({
 	reducerPath: ReducerPath.Events,
-	tagTypes: ['Events', 'EventNews'],
+	tagTypes: ['Events'],
 	baseQuery: fetchBaseQuery({
 		baseUrl: BASE_URL,
 	}),
@@ -42,11 +42,7 @@ export const eventsApi = createApi({
 				url: `events/${eventId}/photos`,
 			}),
 		}),
-		getEventChronology: build.query<ChronologyItem[], string>({
-			query: (eventId) => ({
-				url: `events/${eventId}/chronology`,
-			}),
-		}),
+
 		getEventProgramById: build.query<ProgramListItem[], { eventId?: string; dayId?: string }>({
 			query: ({ eventId = '', dayId = '' }) => ({
 				url: `events/${eventId}/program/${dayId}`,
