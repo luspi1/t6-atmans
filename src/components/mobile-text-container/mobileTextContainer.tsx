@@ -5,7 +5,7 @@ import { useComparator } from 'src/hooks/compareHeight/useComparator'
 
 type TextListProps = {
 	item: React.ReactNode
-	lineClamp?: number
+	lineClamp: number
 }
 
 export const MobileTextContainer: React.FC<TextListProps> = ({ item, lineClamp }) => {

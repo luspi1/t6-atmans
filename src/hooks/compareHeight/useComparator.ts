@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 type UseComparatorProps = {
 	ref: React.MutableRefObject<HTMLDivElement | null>
-	lineClamp?: number
+	lineClamp: number
 }
 
 export const useComparator = ({ ref, lineClamp }: UseComparatorProps): boolean => {
@@ -14,7 +14,7 @@ export const useComparator = ({ ref, lineClamp }: UseComparatorProps): boolean =
 		}
 		const childElement = ref.current.firstChild as HTMLDivElement
 
-		if (childElement && lineClamp) {
+		if (childElement) {
 			const { clientHeight } = childElement
 			const lineHeight = parseFloat(getComputedStyle(childElement).lineHeight)
 			const maxHeight = lineClamp * lineHeight
