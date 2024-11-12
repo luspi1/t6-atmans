@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import React, { type ReactNode, forwardRef } from 'react'
 
-type StyledTextContainerProps = {
+type StyledCollapseContainerProps = {
 	$lineClamp: number
 	$isExpanded?: boolean
 	children: ReactNode
 } & React.CSSProperties
 
-const StyledTextContainer = styled.div<StyledTextContainerProps>`
+const StyledTextContainer = styled.div<StyledCollapseContainerProps>`
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
@@ -24,7 +24,7 @@ const StyledTextContainer = styled.div<StyledTextContainerProps>`
   `}
 `
 
-export const TextContainer = forwardRef<HTMLDivElement, StyledTextContainerProps>(
+export const CollapseContainer = forwardRef<HTMLDivElement, StyledCollapseContainerProps>(
 	({ children, ...props }, ref) => {
 		return (
 			<StyledTextContainer ref={ref} {...props}>
@@ -34,4 +34,4 @@ export const TextContainer = forwardRef<HTMLDivElement, StyledTextContainerProps
 	},
 )
 
-TextContainer.displayName = 'TextContainer'
+CollapseContainer.displayName = 'CollapseContainer'

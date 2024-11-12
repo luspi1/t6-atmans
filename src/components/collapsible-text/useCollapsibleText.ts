@@ -5,7 +5,7 @@ type UseComparatorProps = {
 	lineClamp: number
 }
 
-export const useComparator = ({ ref, lineClamp }: UseComparatorProps): boolean => {
+export const useCollapsibleText = ({ ref, lineClamp }: UseComparatorProps): boolean => {
 	const [isOverflowing, setIsOverflowing] = useState(false)
 
 	useEffect(() => {
