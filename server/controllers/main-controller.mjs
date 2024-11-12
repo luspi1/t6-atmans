@@ -11,7 +11,6 @@ import {
 	homeObjects,
 	homePartners,
 	homePosters,
-	homeRegions,
 	homeVideos,
 } from '../mockData/home.mjs'
 import { cultures } from '../mockData/cultures.mjs'
@@ -286,9 +285,6 @@ export const getVideosCategories = (req, res) => {
 	res.status(200).json(videosCategories)
 }
 
-export const getHomeRegions = (req, res) => {
-	res.status(200).json(homeRegions)
-}
 export const getHomePosters = (req, res) => {
 	res.status(200).json(homePosters)
 }

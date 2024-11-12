@@ -20,7 +20,7 @@ export const EventPoster: FC = () => {
 					<SwiperSlide key={idx}>
 						<div className={styles.slideItem}>
 							<div className={styles.slideItemImg}>
-								<img src={slideItem.image_url} alt={slideItem.title} />
+								<img src={slideItem.imgUrl} alt={slideItem.title} />
 							</div>
 							<div className={styles.slideInfo}>
 								<div className={styles.slideInfoTitle}>

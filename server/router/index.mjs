@@ -24,7 +24,6 @@ import {
 	getHomeObjects,
 	getHomePartners,
 	getHomePosters,
-	getHomeRegions,
 	getHomeVideos,
 	getNewsById,
 	getNewsCategories,
@@ -84,7 +83,6 @@ router.get('/brand-events/:id/news/:newsId', getBrandEventNewsById)
 router.get('/brand-events/:id/news-videos/:videoId', getBrandEventNewsVideoById)
 router.get('/brand-events/:id/events', getEventsByBrands)
 router.get('/brand-events/:id/photos', getBrandEventPhotos)
-router.get('/home/regions', getHomeRegions)
 router.get('/home/posters', getHomePosters)
 router.get('/home/all-events', getAllHomeEvents)
 router.get('/home/all-news', getHomeNews)

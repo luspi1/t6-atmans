@@ -1,8 +1,8 @@
 import cn from 'classnames'
 import { Container } from 'src/UI/Container/Container'
+import { useGetObjectByIdQuery } from 'src/store/objects/objects.api'
 
 import styles from './index.module.scss'
-import { useGetObjectByIdQuery } from 'src/store/objects/objects.api'
 
 export const ObjectPreviewSection = () => {
 	const { data: object } = useGetObjectByIdQuery('1')

@@ -1,106 +1,67 @@
-export let homeRegions = [
-	{
-		id: '0',
-		name: 'Татарстан',
-		image_url: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Coat_of_arms_of_Tatarstan.svg',
-	},
-	{
-		id: '1',
-		name: 'Московская область',
-		image_url: 'https://abali.ru/wp-content/uploads/2011/03/moskovskaya_oblast_gerb.png',
-	},
-	{
-		id: '3',
-		name: 'Ростов',
-		image_url: 'https://abali.ru/wp-content/uploads/2014/03/gerb_rostovskoy_oblasti.png',
-	},
-	{
-		id: '4',
-		name: 'Мурманская область',
-		image_url:
-			'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/RUS_Murmansk_COA.svg/640px-RUS_Murmansk_COA.svg.png',
-	},
-	{
-		id: '5',
-		name: 'Оренбургская область',
-		image_url:
-			'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Coat_of_arms_of_Orenburg_Oblast.svg/800px-Coat_of_arms_of_Orenburg_Oblast.svg.png',
-	},
-	{
-		id: '6',
-		name: 'Санкт-Петербург',
-		image_url: 'https://abali.ru/wp-content/uploads/2010/12/gerb_sankt-peterburga.png',
-	},
-	{
-		id: '7',
-		name: 'Тамбовская область',
-		image_url:
-			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjS5Ff7b1tB1NNou4UvpHG-spSWxH86jvzpw&s',
-	},
-	{
-		id: '8',
-		name: 'Ярославская область',
-		image_url:
-			'https://upload.wikimedia.org/wikipedia/commons/4/48/Coat_of_arms_of_Yaroslavl_Oblast.svg',
-	},
-	{
-		id: '9',
-		name: 'Пермь',
-		image_url:
-			'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Coat_of_Arms_of_Perm.svg/1200px-Coat_of_Arms_of_Perm.svg.png',
-	},
-	{
-		id: '10',
-		name: 'Ростов',
-		image_url: 'https://abali.ru/wp-content/uploads/2014/03/gerb_rostovskoy_oblasti.png',
-	},
-	{
-		id: '11',
-		name: 'Мурманская область',
-		image_url:
-			'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/RUS_Murmansk_COA.svg/640px-RUS_Murmansk_COA.svg.png',
-	},
-	{
-		id: '12',
-		name: 'Оренбургская область',
-		image_url:
-			'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Coat_of_arms_of_Orenburg_Oblast.svg/800px-Coat_of_arms_of_Orenburg_Oblast.svg.png',
-	},
-	{
-		id: '13',
-		name: 'Санкт-Петербург',
-		image_url: 'https://abali.ru/wp-content/uploads/2010/12/gerb_sankt-peterburga.png',
-	},
-	{
-		id: '14',
-		name: 'Тамбовская область',
-		image_url:
-			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjS5Ff7b1tB1NNou4UvpHG-spSWxH86jvzpw&s',
-	},
-]
-
 export let homePosters = [
 	{
 		id: '6',
 		title: 'Конно-спортивный клуб «Фаворит»',
 		date: '2024-10-17T17:10:00+03:00',
 		location: 'Конно-спортивный клуб «Фаворит»',
-		image_url:
-			'https://images.wallpaperscraft.ru/image/single/sport_konnyj_loshad_81257_1366x768.jpg',
+		imgUrl: 'https://images.wallpaperscraft.ru/image/single/sport_konnyj_loshad_81257_1366x768.jpg',
 	},
 	{
 		id: '0',
 		title: 'Атмановские кулачки',
 		date: '2024-08-23T00:00:00+03:00',
 		location: 'Село Атманов угол',
-		image_url: 'https://атманки.рф/uploads/catalogimages/events/big/53_foto.jpg',
+		imgUrl: 'https://атманки.рф/uploads/catalogimages/events/big/53_foto.jpg',
 	},
 	{
 		id: '1',
 		title: 'Международный фестиваль этноспорт',
 		date: '2025-02-16T00:00:00+03:00',
 		location: 'Москва',
-		image_url: 'https://rossaprimavera.ru/static/files/45db11f24f2b.jpg',
+		imgUrl: 'https://rossaprimavera.ru/static/files/45db11f24f2b.jpg',
+	},
+]
+
+export let homeObjects = [
+	{
+		id: '1',
+		title: 'Сосновский краеведческий музей',
+		logo: 'https://www.lenoblmus.ru/sites/default/files/styles/spisok_materialov_standart_3_2_/public/2020-11/luga.png?itok=HlLgA5jt',
+	},
+	{
+		id: '2',
+		title: 'Тамбовский краеведческий музей',
+		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
+	},
+	{
+		id: '3',
+		title: 'Сосновский краеведческий музей',
+		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
+	},
+	{
+		id: '4',
+		title: 'Тамбовский краеведческий музей',
+		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
+	},
+	{
+		id: '5',
+		title: 'Сосновский краеведческий музей',
+		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
+	},
+	{
+		id: '6',
+		title: 'Тамбовский краеведческий музей',
+		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
+	},
+	{
+		id: '7',
+		title: 'Сосновский краеведческий музей',
+		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
+	},
+	{
+		id: '8',
+		title: 'Тамбовский краеведческий музей',
+		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
 	},
 ]
 
@@ -287,6 +248,18 @@ export let homeEvents = [
 	},
 ]
 
+export let homePreviewObject = {
+	id: '1',
+	title: 'Сосновский краеведческий музей',
+	logo: 'https://www.lenoblmus.ru/sites/default/files/styles/spisok_materialov_standart_3_2_/public/2020-11/luga.png?itok=HlLgA5jt',
+	mainDesc:
+		'Небольшое, но интересное описание объекта кластера. Стоит буквально в нескольких словах описать, что это такое, зачем надо и что в этом месте интересного.',
+	address:
+		'Россия, Тамбовская область, Сосновский округ, р.п. Сосновка, улица Интернациональная, 212',
+	location:
+		'https://yandex.ru/map-widget/v1/?ll=41.441455%2C52.957474&amp;mode=routes&amp;routes%5Bavoid%5D=unpaved%2Cpoor_condition&amp;rtext=52.721295%2C41.452750~53.133161%2C41.394850&amp;rtt=auto&amp;ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzA1NzEyMxIa0KDQvtGB0YHQuNGPLCDQotCw0LzQsdC-0LIiCg2dzyVCFZviUkI%2C~&amp;utm_source=share&amp;z=10',
+}
+
 export let homeNews = [
 	{
 		id: '1',
@@ -460,48 +433,5 @@ export let homeFaq = [
 		title: 'Где могут разместиться участники игр?',
 		content:
 			'Участники игр могут разместиться в палаточном лагере для участников. Добраться до лагеря можно по маршруту, указанному на карте, следуя указателям внутри села. Проехать до лагеря на автомобиле можно 25 августа до 14.00 и 26 августа до 8.00, пройти в любое время без ограничений. Палатки и постельные принадлежности иметь с собой. В лагере имеются туалеты и техническое водоснабжение. Питание организовано на площадке игр.',
-	},
-]
-
-export let homeObjects = [
-	{
-		id: '1',
-		title: 'Сосновский краеведческий музей',
-		logo: 'https://www.lenoblmus.ru/sites/default/files/styles/spisok_materialov_standart_3_2_/public/2020-11/luga.png?itok=HlLgA5jt',
-	},
-	{
-		id: '2',
-		title: 'Тамбовский краеведческий музей',
-		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
-	},
-	{
-		id: '3',
-		title: 'Сосновский краеведческий музей',
-		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
-	},
-	{
-		id: '4',
-		title: 'Тамбовский краеведческий музей',
-		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
-	},
-	{
-		id: '5',
-		title: 'Сосновский краеведческий музей',
-		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
-	},
-	{
-		id: '6',
-		title: 'Тамбовский краеведческий музей',
-		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
-	},
-	{
-		id: '7',
-		title: 'Сосновский краеведческий музей',
-		logo: 'https://fototrap.ru/wp-content/uploads/2023/12/muzei-raskraska-4.webp',
-	},
-	{
-		id: '8',
-		title: 'Тамбовский краеведческий музей',
-		logo: 'https://tmbmuseum.ru/images/mainslider/exh/mainbanner.jpg',
 	},
 ]

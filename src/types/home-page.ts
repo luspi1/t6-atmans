@@ -3,7 +3,7 @@ export type HomePoster = {
 	title: string
 	date: Date
 	location: string
-	image_url: string
+	imgUrl: string
 }
 
 export type HomePartnerItem = {
