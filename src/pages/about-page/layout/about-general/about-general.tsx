@@ -22,7 +22,7 @@ export const AboutGeneral: FC = () => {
 			<BlockquoteSection />
 			<GallerySection />
 			{breakpoint !== 'M' ? (
-				<MobileTextContainer item={<DescSection />} lineClamp={14} />
+				<MobileTextContainer item={<DescSection />} lineClamp={13} />
 			) : (
 				<DescSection />
 			)}

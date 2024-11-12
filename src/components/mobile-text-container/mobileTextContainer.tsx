@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { MainButton } from 'src/UI/MainButton/MainButton'
 import { TextContainer } from './components/text-container'
 
@@ -9,29 +9,19 @@ type TextListProps = {
 
 export const MobileTextContainer: React.FC<TextListProps> = ({ item, lineClamp = 14 }) => {
 	const [isExpanded, setIsExpanded] = useState(false)
-	const [showButton, setShowButton] = useState(false)
 	const textContainerRef = useRef<HTMLDivElement | null>(null)
 
 	const toggleList = () => {
 		setIsExpanded(!isExpanded)
 	}
 
-	useEffect(() => {
-		if (textContainerRef.current) {
-			const { clientHeight } = textContainerRef.current
-			const lineHeight = parseFloat(getComputedStyle(textContainerRef.current).lineHeight)
-			const maxHeight = lineClamp * lineHeight
-
-			setShowButton(clientHeight > maxHeight)
-		}
-	}, [item, lineClamp])
-
+	const isOverflowing = true
 	return (
 		<>
 			<TextContainer ref={textContainerRef} $lineClamp={lineClamp} $isExpanded={isExpanded}>
 				{item}
 			</TextContainer>
-			{showButton && (
+			{isOverflowing && (
 				<MainButton
 					$variant='show'
 					$radius='3px'
