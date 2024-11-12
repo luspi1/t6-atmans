@@ -1,13 +1,14 @@
 import React, { useRef, useState } from 'react'
 import { MainButton } from 'src/UI/MainButton/MainButton'
 import { TextContainer } from './components/text-container'
+import { useComparator } from 'src/hooks/compareHeight/useComparator'
 
 type TextListProps = {
 	item: React.ReactNode
 	lineClamp?: number
 }
 
-export const MobileTextContainer: React.FC<TextListProps> = ({ item, lineClamp = 14 }) => {
+export const MobileTextContainer: React.FC<TextListProps> = ({ item, lineClamp }) => {
 	const [isExpanded, setIsExpanded] = useState(false)
 	const textContainerRef = useRef<HTMLDivElement | null>(null)
 
@@ -15,7 +16,7 @@ export const MobileTextContainer: React.FC<TextListProps> = ({ item, lineClamp =
 		setIsExpanded(!isExpanded)
 	}
 
-	const isOverflowing = true
+	const isOverflowing = useComparator({ ref: textContainerRef, lineClamp })
 	return (
 		<>
 			<TextContainer ref={textContainerRef} $lineClamp={lineClamp} $isExpanded={isExpanded}>

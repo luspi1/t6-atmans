@@ -13,7 +13,7 @@ const StyledTextContainer = styled.div<StyledTextContainerProps>`
 	overflow: hidden;
 	text-overflow: ellipsis;
 	line-height: 1.45;
-	max-height: ${({ $lineClamp }) => `${($lineClamp ?? 14) * 39}px`};
+	max-height: ${({ $lineClamp }) => `${$lineClamp ? `${$lineClamp * 23}px` : 'auto'}`};
 	transition: max-height 0.3s ease;
 	margin-bottom: 30px;
 	${({ $isExpanded }) =>
