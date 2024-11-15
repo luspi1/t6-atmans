@@ -5,7 +5,7 @@ export let newsMonths = {
 			id: '1',
 			title: 'Фестиваль национальных игр «Этноспорт объединяет»',
 			imgUrl: 'https://nyagan.life/editor_files/images/images/news/DSC00808--1-.jpg',
-			date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+			date: '2023-12-25T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '1',
@@ -16,7 +16,7 @@ export let newsMonths = {
 			id: '2',
 			title: 'Фестиваль этноспорта «Югорские обласа»',
 			imgUrl: 'https://sitv.ru/upload/information_system_15/1/6/5/item_165399/item_165399.jpg',
-			date: ['2023-12-11T00:00:00+03:00'],
+			date: '2023-12-11T00:00:00+03:00',
 			desc: 'Еще вчера иностранные делегации из Турции, Нигерии, Ирана, Камеруна, Замбии и Китая принимали участие в междунар',
 			category: {
 				id: '1',
@@ -36,7 +36,7 @@ export let newsMonths = {
 			id: '3',
 			title: 'В Карачаево-Черкесии появится центр развития этноспорта',
 			imgUrl: 'https://minobrnauki.gov.ru/upload/iblock/2a4/a2zcz5kolir7s5ymf7qieutx5pmlgdh4.jpeg',
-			date: ['2024-08-21T00:00:00+03:00', '2024-08-23T00:00:00+03:00'],
+			date: '2024-08-21T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '2',
@@ -47,7 +47,7 @@ export let newsMonths = {
 			id: '4',
 			title: 'На Алтае откроют детскую школу по...',
 			imgUrl: 'https://media.nazaccent.ru/cache/ee/a2/eea2ca13f6eca13789d0ee06778ad3be.jpg',
-			date: ['2024-08-19T00:00:00+03:00'],
+			date: '2024-08-19T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '2',
@@ -58,7 +58,7 @@ export let newsMonths = {
 			id: '5',
 			title: 'Фестиваль национальных игр «Этноспорт объединяет»',
 			imgUrl: 'https://nyagan.life/editor_files/images/images/news/DSC00808--1-.jpg',
-			date: ['2024-08-25T00:00:00+03:00', '2024-08-25T00:00:00+03:00'],
+			date: '2024-08-25T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '2',
@@ -69,7 +69,7 @@ export let newsMonths = {
 			id: '6',
 			title: 'Фестиваль этноспорта «Югорские обласа»',
 			imgUrl: 'https://sitv.ru/upload/information_system_15/1/6/5/item_165399/item_165399.jpg',
-			date: ['2024-08-25T00:00:00+03:00', '2024-08-25T00:00:00+03:00'],
+			date: '2024-08-25T00:00:00+03:00',
 			desc: 'Еще вчера иностранные делегации из Турции, Нигерии, Ирана, Камеруна, Замбии и Китая принимали участие в междунар',
 			category: {
 				id: '3',
@@ -80,7 +80,7 @@ export let newsMonths = {
 			id: '7',
 			title: 'В Карачаево-Черкесии появится центр развития этноспорта',
 			imgUrl: 'https://minobrnauki.gov.ru/upload/iblock/2a4/a2zcz5kolir7s5ymf7qieutx5pmlgdh4.jpeg',
-			date: ['2024-08-21T00:00:00+03:00'],
+			date: '2024-08-21T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '3',
@@ -91,7 +91,7 @@ export let newsMonths = {
 			id: '8',
 			title: 'На Алтае откроют детскую школу по...',
 			imgUrl: 'https://media.nazaccent.ru/cache/ee/a2/eea2ca13f6eca13789d0ee06778ad3be.jpg',
-			date: ['2024-08-19T00:00:00+03:00'],
+			date: '2024-08-19T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '4',
@@ -102,7 +102,7 @@ export let newsMonths = {
 			id: '9',
 			title: 'Фестиваль национальных игр «Этноспорт объединяет»',
 			imgUrl: 'https://nyagan.life/editor_files/images/images/news/DSC00808--1-.jpg',
-			date: ['2024-08-25T00:00:00+03:00', '2024-08-25T00:00:00+03:00'],
+			date: '2024-08-25T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '1',
@@ -113,7 +113,7 @@ export let newsMonths = {
 			id: '10',
 			title: 'Фестиваль этноспорта «Югорские обласа»',
 			imgUrl: 'https://sitv.ru/upload/information_system_15/1/6/5/item_165399/item_165399.jpg',
-			date: ['2024-08-25T00:00:00+03:00'],
+			date: '2024-08-25T00:00:00+03:00',
 			desc: 'Еще вчера иностранные делегации из Турции, Нигерии, Ирана, Камеруна, Замбии и Китая принимали участие в междунар',
 			category: {
 				id: '1',
@@ -124,7 +124,7 @@ export let newsMonths = {
 			id: '11',
 			title: 'В Карачаево-Черкесии появится центр развития этноспорта',
 			imgUrl: 'https://minobrnauki.gov.ru/upload/iblock/2a4/a2zcz5kolir7s5ymf7qieutx5pmlgdh4.jpeg',
-			date: ['2024-08-21T00:00:00+03:00', '2024-08-23T00:00:00+03:00'],
+			date: '2024-08-21T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '2',
@@ -135,7 +135,7 @@ export let newsMonths = {
 			id: '12',
 			title: 'На Алтае откроют детскую школу по...',
 			imgUrl: 'https://media.nazaccent.ru/cache/ee/a2/eea2ca13f6eca13789d0ee06778ad3be.jpg',
-			date: ['2024-08-19T00:00:00+03:00'],
+			date: '2024-08-19T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '2',
@@ -148,7 +148,7 @@ export let newsMonths = {
 			id: '13',
 			title: 'Фестиваль национальных игр «Этноспорт объединяет»',
 			imgUrl: 'https://nyagan.life/editor_files/images/images/news/DSC00808--1-.jpg',
-			date: ['2024-09-25T00:00:00+03:00', '2024-09-25T00:00:00+03:00'],
+			date: '2024-09-25T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '2',
@@ -159,7 +159,7 @@ export let newsMonths = {
 			id: '14',
 			title: 'Фестиваль этноспорта «Югорские обласа»',
 			imgUrl: 'https://sitv.ru/upload/information_system_15/1/6/5/item_165399/item_165399.jpg',
-			date: ['2024-09-25T00:00:00+03:00', '2024-09-25T00:00:00+03:00'],
+			date: '2024-09-25T00:00:00+03:00',
 			desc: 'Еще вчера иностранные делегации из Турции, Нигерии, Ирана, Камеруна, Замбии и Китая принимали участие в междунар',
 			category: {
 				id: '3',
@@ -170,7 +170,7 @@ export let newsMonths = {
 			id: '15',
 			title: 'В Карачаево-Черкесии появится центр развития этноспорта',
 			imgUrl: 'https://minobrnauki.gov.ru/upload/iblock/2a4/a2zcz5kolir7s5ymf7qieutx5pmlgdh4.jpeg',
-			date: ['2024-09-21T00:00:00+03:00', '2024-09-23T00:00:00+03:00'],
+			date: '2024-09-21T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '3',
@@ -183,7 +183,7 @@ export let newsMonths = {
 			id: '16',
 			title: 'На Алтае откроют детскую школу по...',
 			imgUrl: 'https://media.nazaccent.ru/cache/ee/a2/eea2ca13f6eca13789d0ee06778ad3be.jpg',
-			date: ['2024-10-19T00:00:00+03:00'],
+			date: '2024-10-19T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '4',
@@ -194,7 +194,7 @@ export let newsMonths = {
 			id: '17',
 			title: 'В Карачаево-Черкесии появится центр развития этноспорта',
 			imgUrl: 'https://minobrnauki.gov.ru/upload/iblock/2a4/a2zcz5kolir7s5ymf7qieutx5pmlgdh4.jpeg',
-			date: ['2024-10-21T00:00:00+03:00', '2024-10-23T00:00:00+03:00'],
+			date: '2024-10-21T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '2',
@@ -207,7 +207,7 @@ export let newsMonths = {
 			id: '18',
 			title: 'На Алтае откроют детскую школу по...',
 			imgUrl: 'https://media.nazaccent.ru/cache/ee/a2/eea2ca13f6eca13789d0ee06778ad3be.jpg',
-			date: ['2024-11-19T00:00:00+03:00'],
+			date: '2024-11-19T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '2',
@@ -218,7 +218,7 @@ export let newsMonths = {
 			id: '19',
 			title: 'Фестиваль национальных игр «Этноспорт объединяет»',
 			imgUrl: 'https://nyagan.life/editor_files/images/images/news/DSC00808--1-.jpg',
-			date: ['2024-11-25T00:00:00+03:00', '2024-11-25T00:00:00+03:00'],
+			date: '2024-11-25T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '2',
@@ -231,7 +231,7 @@ export let newsMonths = {
 			id: '20',
 			title: 'Фестиваль этноспорта «Югорские обласа»',
 			imgUrl: 'https://sitv.ru/upload/information_system_15/1/6/5/item_165399/item_165399.jpg',
-			date: ['2024-12-25T00:00:00+03:00', '2024-12-25T00:00:00+03:00'],
+			date: '2024-12-25T00:00:00+03:00',
 			desc: 'Еще вчера иностранные делегации из Турции, Нигерии, Ирана, Камеруна, Замбии и Китая принимали участие в междунар',
 			category: {
 				id: '3',
@@ -244,7 +244,7 @@ export let newsMonths = {
 			id: '21',
 			title: 'В Карачаево-Черкесии появится центр развития этноспорта',
 			imgUrl: 'https://minobrnauki.gov.ru/upload/iblock/2a4/a2zcz5kolir7s5ymf7qieutx5pmlgdh4.jpeg',
-			date: ['2025-01-21T00:00:00+03:00', '2025-01-23T00:00:00+03:00'],
+			date: '2025-01-21T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '3',
@@ -255,7 +255,7 @@ export let newsMonths = {
 			id: '22',
 			title: 'На Алтае откроют детскую школу по...',
 			imgUrl: 'https://media.nazaccent.ru/cache/ee/a2/eea2ca13f6eca13789d0ee06778ad3be.jpg',
-			date: ['2025-01-19T00:00:00+03:00'],
+			date: '2025-01-19T00:00:00+03:00',
 			desc: '',
 			category: {
 				id: '4',
@@ -293,7 +293,7 @@ export let news = [
 		id: '1',
 		title:
 			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
-		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		date: '2023-12-25T00:00:00+03:00',
 		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
 		imgGallery: [
 			{
@@ -346,7 +346,7 @@ export let news = [
 		id: '2',
 		title:
 			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
-		date: ['2024-12-25T00:00:00+03:00'],
+		date: '2024-12-25T00:00:00+03:00',
 		preview:
 			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
 		imgGallery: [
@@ -400,7 +400,7 @@ export let news = [
 		id: '3',
 		title:
 			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
-		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		date: '2023-12-25T00:00:00+03:00',
 		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
 		imgGallery: [
 			{
@@ -453,7 +453,7 @@ export let news = [
 		id: '4',
 		title:
 			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
-		date: ['2024-12-25T00:00:00+03:00'],
+		date: '2024-12-25T00:00:00+03:00',
 		preview:
 			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
 		imgGallery: [
@@ -507,7 +507,7 @@ export let news = [
 		id: '5',
 		title:
 			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
-		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		date: '2023-12-25T00:00:00+03:00',
 		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
 		imgGallery: [
 			{
@@ -560,7 +560,7 @@ export let news = [
 		id: '6',
 		title:
 			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
-		date: ['2024-12-25T00:00:00+03:00'],
+		date: '2024-12-25T00:00:00+03:00',
 		preview:
 			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
 		imgGallery: [
@@ -614,7 +614,7 @@ export let news = [
 		id: '7',
 		title:
 			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
-		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		date: '2023-12-25T00:00:00+03:00',
 		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
 		imgGallery: [
 			{
@@ -667,7 +667,7 @@ export let news = [
 		id: '8',
 		title:
 			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
-		date: ['2024-12-25T00:00:00+03:00'],
+		date: '2024-12-25T00:00:00+03:00',
 		preview:
 			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
 		imgGallery: [
@@ -721,7 +721,7 @@ export let news = [
 		id: '9',
 		title:
 			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
-		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		date: '2023-12-25T00:00:00+03:00',
 		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
 		imgGallery: [
 			{
@@ -774,7 +774,7 @@ export let news = [
 		id: '10',
 		title:
 			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
-		date: ['2024-12-25T00:00:00+03:00'],
+		date: '2024-12-25T00:00:00+03:00',
 		preview:
 			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
 		imgGallery: [
@@ -828,7 +828,7 @@ export let news = [
 		id: '11',
 		title:
 			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
-		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		date: '2023-12-25T00:00:00+03:00',
 		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
 		imgGallery: [
 			{
@@ -881,7 +881,7 @@ export let news = [
 		id: '12',
 		title:
 			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
-		date: ['2024-12-25T00:00:00+03:00'],
+		date: '2024-12-25T00:00:00+03:00',
 		preview:
 			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
 		imgGallery: [
@@ -935,7 +935,7 @@ export let news = [
 		id: '13',
 		title:
 			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
-		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		date: '2023-12-25T00:00:00+03:00',
 		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
 		imgGallery: [
 			{
@@ -988,7 +988,7 @@ export let news = [
 		id: '14',
 		title:
 			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
-		date: ['2024-12-25T00:00:00+03:00'],
+		date: '2024-12-25T00:00:00+03:00',
 		preview:
 			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
 		imgGallery: [
@@ -1042,7 +1042,7 @@ export let news = [
 		id: '15',
 		title:
 			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
-		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		date: '2023-12-25T00:00:00+03:00',
 		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
 		imgGallery: [
 			{
@@ -1095,7 +1095,7 @@ export let news = [
 		id: '16',
 		title:
 			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
-		date: ['2024-12-25T00:00:00+03:00'],
+		date: '2024-12-25T00:00:00+03:00',
 		preview:
 			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
 		imgGallery: [
@@ -1149,7 +1149,7 @@ export let news = [
 		id: '17',
 		title:
 			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
-		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		date: '2023-12-25T00:00:00+03:00',
 		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
 		imgGallery: [
 			{
@@ -1202,7 +1202,7 @@ export let news = [
 		id: '18',
 		title:
 			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
-		date: ['2024-12-25T00:00:00+03:00'],
+		date: '2024-12-25T00:00:00+03:00',
 		preview:
 			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
 		imgGallery: [
@@ -1256,7 +1256,7 @@ export let news = [
 		id: '19',
 		title:
 			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
-		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		date: '2023-12-25T00:00:00+03:00',
 		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
 		imgGallery: [
 			{
@@ -1309,7 +1309,7 @@ export let news = [
 		id: '20',
 		title:
 			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
-		date: ['2024-12-25T00:00:00+03:00'],
+		date: '2024-12-25T00:00:00+03:00',
 		preview:
 			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
 		imgGallery: [
@@ -1363,7 +1363,7 @@ export let news = [
 		id: '21',
 		title:
 			'Компания MR Group и РГХПУ им. С. Г. Строганова подписали соглашение о стратегическом партнерстве ',
-		date: ['2023-12-25T00:00:00+03:00', '2023-12-28T00:00:00+03:00'],
+		date: '2023-12-25T00:00:00+03:00',
 		preview: 'https://proverili.ru/uploads/media/436/4.jpg',
 		imgGallery: [
 			{
@@ -1416,7 +1416,7 @@ export let news = [
 		id: '22',
 		title:
 			'В сети состоялась премьера документального сериала «Русское наследие возвращение домой», созданного федерацией',
-		date: ['2024-12-25T00:00:00+03:00'],
+		date: '2024-12-25T00:00:00+03:00',
 		preview:
 			'https://i.mycdn.me/getVideoPreview?id=5360311601916&idx=1&type=39&tkn=fe7vLjS_VgDID56NSgKWWuGhXgs&fn=vid_x',
 		imgGallery: [

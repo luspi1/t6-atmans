@@ -23,6 +23,6 @@ export enum DisplayBreakpoints {
 	Fhd = 1920,
 }
 
-export const BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:4020/api/v1'
-export const PROD_URL = '/api'
-export const MAIN_PROD_URL = 'https://auapi.npotau.ru'
+export const BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:4020/api/v1' // express js сервер
+export const PROD_URL = '/api' // для локальной разработки
+export const MAIN_PROD_URL = 'https://auapi.npotau.ru' // для выкладки на vercel

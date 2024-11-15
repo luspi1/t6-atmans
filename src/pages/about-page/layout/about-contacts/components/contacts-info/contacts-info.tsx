@@ -19,7 +19,7 @@ export const ContactsInfo: FC = () => {
 			<div className={styles.contactsBlock}>
 				<h4>Телефон</h4>
 				<p>Демидов Артём Геннадьевич, заведующий библиотекой</p>
-				<a href='tel:csvoopik@mail.ru'>+7 (495) 695-07-06</a>
+				<a href='tel:+7 (495) 695-07-06'>+7 (495) 695-07-06</a>
 			</div>
 
 			<div className={styles.contactsBlock}>
