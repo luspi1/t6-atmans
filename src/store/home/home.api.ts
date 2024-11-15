@@ -10,13 +10,13 @@ import { type CardNewsItem } from 'src/types/news'
 import { type CardVideoItem } from 'src/types/videos'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { PROD_URL, ReducerPath } from 'src/helpers/consts'
+import { MAIN_PROD_URL, ReducerPath } from 'src/helpers/consts'
 
 export const homeApi = createApi({
 	reducerPath: ReducerPath.Home,
 	tagTypes: ['Home'],
 	baseQuery: fetchBaseQuery({
-		baseUrl: PROD_URL,
+		baseUrl: MAIN_PROD_URL,
 	}),
 	endpoints: (build) => ({
 		getHomePosters: build.query<HomePoster[], null>({
