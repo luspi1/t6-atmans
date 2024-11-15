@@ -21,44 +21,44 @@ export const homeApi = createApi({
 	endpoints: (build) => ({
 		getHomePosters: build.query<HomePoster[], null>({
 			query: () => ({
-				url: `home/posters/`,
+				url: `home/posters`,
 			}),
 		}),
 
 		getHomeEvents: build.query<CardEventItem[], null>({
 			query: () => ({
-				url: `/home/events/`,
+				url: `/home/events`,
 			}),
 		}),
 
 		getHomeNews: build.query<CardNewsItem[], null>({
 			query: () => ({
-				url: 'home/news/',
+				url: 'home/news',
 			}),
 		}),
 		getHomeVideos: build.query<CardVideoItem[], null>({
 			query: () => ({
-				url: 'home/videos/',
+				url: 'home/videos',
 			}),
 		}),
 		getHomePartners: build.query<HomePartnerItem[], null>({
 			query: () => ({
-				url: 'home/partners/',
+				url: 'home/partners',
 			}),
 		}),
 		getHomeObjects: build.query<HomeObject[], null>({
 			query: () => ({
-				url: 'home/objects/',
+				url: 'home/objects',
 			}),
 		}),
 		getHomeFaq: build.query<HomeFaq[], null>({
 			query: () => ({
-				url: 'home/faq/',
+				url: 'home/faq',
 			}),
 		}),
 		getHomePreviewObject: build.query<HomePreviewObject, null>({
 			query: () => ({
-				url: 'home/preview_object/',
+				url: 'home/preview_object',
 			}),
 		}),
 	}),
