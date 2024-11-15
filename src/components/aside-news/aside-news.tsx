@@ -30,7 +30,7 @@ export const AsideNews: FC<AsideNewsProps> = ({
 					.slice(0, previewCount)
 					.map((newsEl) => (
 						<li key={newsEl.id}>
-							<span>{mainFormatDate(newsEl.date[0])}</span>
+							<span>{mainFormatDate(newsEl.date)}</span>
 							<Link to={`${baseUrl}/${newsEl.id}`}>{newsEl.title}</Link>
 						</li>
 					))}

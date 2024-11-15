@@ -23,3 +23,11 @@ export type HomeObject = {
 	title: string
 	logo: string
 }
+export type HomePreviewObject = {
+	id: string
+	title: string
+	logo: string
+	mainDesc: string
+	address: string
+	location: string
+}

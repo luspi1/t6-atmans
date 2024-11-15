@@ -4,7 +4,7 @@ import { type CardNewsItem } from 'src/types/news'
 
 import { useGetAllNewsMonthsQuery, useGetNewsByIdQuery } from 'src/store/news/news.api'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
-import { formatDateRange, mainFormatDate } from 'src/helpers/utils'
+import { mainFormatDate } from 'src/helpers/utils'
 import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
 
 import { GalleryImg } from 'src/components/image-gallery/image-gallery'
@@ -41,11 +41,7 @@ export const NewsDetails = () => {
 					<PageContent className={styles.newsListPage}>
 						<div className={styles.newsItemPageContent}>
 							<h2>{newsItemData.title}</h2>
-							<span className={styles.newsItemDate}>
-								{newsItemData.date.length > 1
-									? formatDateRange(newsItemData.date as [Date, Date])
-									: mainFormatDate(newsItemData?.date[0])}
-							</span>
+							<span className={styles.newsItemDate}>{mainFormatDate(newsItemData?.date)}</span>
 							<div className={styles.newsItemMainImg}>
 								<img src={newsItemData?.preview} alt={newsItemData?.title} />
 							</div>

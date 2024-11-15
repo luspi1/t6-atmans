@@ -18,5 +18,12 @@ export default defineConfig({
 			methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 			allowedHeaders: ['Content-Type', 'Authorization'],
 		},
+		proxy: {
+			'/api': {
+				target: 'https://auapi.npotau.ru',
+				changeOrigin: true,
+				rewrite: (path) => path.replace(/^\/api/, ''),
+			},
+		},
 	},
 })

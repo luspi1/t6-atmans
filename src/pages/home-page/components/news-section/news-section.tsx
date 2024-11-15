@@ -18,7 +18,6 @@ import styles from './index.module.scss'
 export const NewsSection: FC = () => {
 	const { data: newsList } = useGetHomeNewsQuery(null)
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
-
 	return (
 		<section className={cn(styles.newsSection, '_bordered')}>
 			<Container>
