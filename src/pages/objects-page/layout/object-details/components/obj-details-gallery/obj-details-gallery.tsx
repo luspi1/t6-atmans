@@ -20,7 +20,6 @@ export const ObjDetailsGallery: FC = () => {
 				strArray={objectData?.descList}
 				asStr='p'
 				as='div'
-				separator=''
 			/>
 		</section>
 	)

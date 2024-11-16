@@ -21,7 +21,6 @@ export const EventDetails: FC = () => {
 					strArray={eventInfo?.descs}
 					as='div'
 					asStr='p'
-					separator=''
 				/>
 			</section>
 			<section>

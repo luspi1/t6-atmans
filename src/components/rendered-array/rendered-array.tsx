@@ -16,7 +16,7 @@ export const RenderedArray: FC<RenderedArrayProps> = ({
 	className,
 	strArray = [],
 	elArray = [],
-	separator = ', ',
+	separator = '',
 	limit,
 }) => {
 	if (!strArray?.length && !elArray?.length) return null

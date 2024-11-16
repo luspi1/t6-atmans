@@ -41,7 +41,6 @@ export const Placement: FC<PlacementProps> = ({ title, placeVariants }) => {
 								strArray={place.desc}
 								asStr='p'
 								as='div'
-								separator=''
 							/>
 						) : (
 							<p>{place.desc}</p>
