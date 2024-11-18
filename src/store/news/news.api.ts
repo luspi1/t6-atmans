@@ -1,33 +1,28 @@
-import { type CardNewsItem, type NewsItem, type NewsMonthsList } from 'src/types/news'
-import { type CategoryItem } from 'src/types/global'
+import { type CardNewsItem, type NewsItem } from 'src/types/news'
+import { type FiltrationInfo } from 'src/types/global'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-import { BASE_URL, ReducerPath } from 'src/helpers/consts'
+import { MAIN_PROD_URL, ReducerPath } from 'src/helpers/consts'
 
 export const newsApi = createApi({
 	reducerPath: ReducerPath.News,
 	baseQuery: fetchBaseQuery({
-		baseUrl: BASE_URL,
+		baseUrl: MAIN_PROD_URL,
 	}),
 	endpoints: (build) => ({
 		getNewsMonths: build.query<CardNewsItem[], { date: string; category: string }>({
-			query: ({ date, category = '' }) => ({
-				url: 'news-months',
+			query: ({ date = '0', category = '0' }) => ({
+				url: 'news',
 				params: {
 					d: date,
 					cat: category,
 				},
 			}),
 		}),
-		getAllNewsMonths: build.query<NewsMonthsList[], null>({
+		getNewsFiltration: build.query<FiltrationInfo, null>({
 			query: () => ({
-				url: `all-news`,
-			}),
-		}),
-		getNewsCategories: build.query<CategoryItem[], null>({
-			query: () => ({
-				url: 'news-categories',
+				url: `news_filter_info`,
 			}),
 		}),
 		getNewsById: build.query<NewsItem, string>({
@@ -38,9 +33,4 @@ export const newsApi = createApi({
 	}),
 })
 
-export const {
-	useGetAllNewsMonthsQuery,
-	useGetNewsCategoriesQuery,
-	useGetNewsMonthsQuery,
-	useGetNewsByIdQuery,
-} = newsApi
+export const { useGetNewsMonthsQuery, useGetNewsFiltrationQuery, useGetNewsByIdQuery } = newsApi

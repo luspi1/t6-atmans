@@ -1,4 +1,4 @@
-import { type CategoryItem } from 'src/types/global'
+import { type CategoryFilterItem } from 'src/types/global'
 import { type FC } from 'react'
 import cn from 'classnames'
 
@@ -7,7 +7,7 @@ import styles from './index.module.scss'
 type CategoriesFiltrationProps = {
 	activeCatId: string
 	changeActiveCatId: (arg: string) => void
-	categories: CategoryItem[]
+	categories: CategoryFilterItem[]
 }
 
 export const CategoriesFiltration: FC<CategoriesFiltrationProps> = ({

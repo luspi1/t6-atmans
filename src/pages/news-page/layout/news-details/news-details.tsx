@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { type CardNewsItem } from 'src/types/news'
 
-import { useGetAllNewsMonthsQuery, useGetNewsByIdQuery } from 'src/store/news/news.api'
+import { useGetNewsByIdQuery, useGetNewsMonthsQuery } from 'src/store/news/news.api'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 import { mainFormatDate } from 'src/helpers/utils'
 import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
@@ -18,7 +18,10 @@ import styles from './index.module.scss'
 
 export const NewsDetails = () => {
 	const { id } = useParams()
-	const { data: allNews, isSuccess: isSuccessAllNews } = useGetAllNewsMonthsQuery(null)
+	const { data: allNews, isSuccess: isSuccessAllNews } = useGetNewsMonthsQuery({
+		date: '0',
+		category: '0',
+	})
 	const { data: newsItemData } = useGetNewsByIdQuery(id ?? '')
 	useAdditionalCrumbs(newsItemData?.title)
 

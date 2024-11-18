@@ -1,5 +1,6 @@
-import { type RefObject, useRef } from 'react'
+import { FC, type RefObject, useRef } from 'react'
 import type { SwiperRef } from 'swiper/react/swiper-react'
+import { type MonthFilterItem } from 'src/types/global'
 
 import { uid } from 'react-uid'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -12,19 +13,19 @@ import { monthsSliderOptions } from './consts'
 
 import styles from './index.module.scss'
 
-type MonthsSliderProps<T> = {
+type MonthsSliderProps = {
 	activeMonth: string
 	changeActiveMonth: (arg: string) => void
-	monthsList: Array<Record<string, T[]>>
+	monthsList: MonthFilterItem[]
 	allMonthTitle: string
 }
 
-export const MonthsFilterSlider = <T,>({
+export const MonthsFilterSlider: FC<MonthsSliderProps> = ({
 	activeMonth,
 	changeActiveMonth,
 	monthsList,
 	allMonthTitle,
-}: MonthsSliderProps<T>) => {
+}) => {
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 
 	const handleChangeMonth = (date: string, isActive: boolean) => {
@@ -46,14 +47,14 @@ export const MonthsFilterSlider = <T,>({
 				{allMonthTitle}
 			</button>
 			<Swiper className={styles.monthsFilterSlider} {...monthsSliderOptions} ref={swiperRef}>
-				{Object.entries(monthsList)?.map(([date, months]) => (
+				{monthsList?.map(({ date, isActive }) => (
 					<SwiperSlide
 						className={cn(styles.monthSlide, {
-							[styles._disableSlide]: !months?.length,
+							[styles._disableSlide]: !isActive,
 							[styles._activeSlide]: isSameMonth(new Date(date), new Date(activeMonth)),
 						})}
 						key={uid(date)}
-						onClick={() => handleChangeMonth(date, !!months?.length)}
+						onClick={() => handleChangeMonth(String(date), isActive)}
 					>
 						<p>{mainFormatDate(date, 'LLLL')}</p>
 					</SwiperSlide>

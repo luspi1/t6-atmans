@@ -19,25 +19,16 @@ export const aboutApi = createApi({
 			query: () => ({
 				url: `about/general`,
 			}),
-			transformResponse: (response: [AboutGeneralPage]) => {
-				return response[0]
-			},
 		}),
 		getAboutHistory: build.query<AboutHistoryPage, null>({
 			query: () => ({
 				url: `about/history`,
 			}),
-			transformResponse: (response: [AboutHistoryPage]) => {
-				return response[0]
-			},
 		}),
 		getAboutCulture: build.query<AboutCulturePage, null>({
 			query: () => ({
 				url: `about/culture`,
 			}),
-			transformResponse: (response: [AboutCulturePage]) => {
-				return response[0]
-			},
 		}),
 		getAboutContacts: build.query<AboutContactsPage, null>({
 			query: () => ({

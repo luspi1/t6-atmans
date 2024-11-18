@@ -21,7 +21,16 @@ export type SourceLink = {
 	source: string
 }
 
-export type CategoryItem = {
+export type MonthFilterItem = {
+	date: Date
+	isActive: boolean
+}
+export type CategoryFilterItem = {
 	id: string
 	title: string
+}
+
+export type FiltrationInfo = {
+	months: MonthFilterItem[]
+	categories: CategoryFilterItem[]
 }

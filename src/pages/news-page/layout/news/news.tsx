@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 
 import { getYear } from 'date-fns'
-import {
-	useGetAllNewsMonthsQuery,
-	useGetNewsCategoriesQuery,
-	useGetNewsMonthsQuery,
-} from 'src/store/news/news.api'
+import { useGetNewsFiltrationQuery, useGetNewsMonthsQuery } from 'src/store/news/news.api'
 import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
 
 import { MonthsFilterSlider } from 'src/components/months-filter-slider/months-filter-slider'
@@ -21,8 +17,7 @@ export const News = () => {
 	const [activeMonth, setActiveMonth] = useState('0')
 	const [activeCategory, setActiveCategory] = useState('0')
 
-	const { data: newsMonthsList } = useGetAllNewsMonthsQuery(null)
-	const { data: newsCategories } = useGetNewsCategoriesQuery(null)
+	const { data: newsFiltrationInfo } = useGetNewsFiltrationQuery(null)
 	const { data: newsList } = useGetNewsMonthsQuery({
 		date: activeMonth,
 		category: activeCategory,
@@ -42,7 +37,7 @@ export const News = () => {
 				<h2>Новости {activeMonth !== '0' && getYear(new Date(activeMonth))}</h2>
 
 				<MonthsFilterSlider
-					monthsList={newsMonthsList ?? []}
+					monthsList={newsFiltrationInfo?.months ?? []}
 					changeActiveMonth={handleChangeActiveMonth}
 					activeMonth={activeMonth}
 					allMonthTitle='все новости'
@@ -50,7 +45,7 @@ export const News = () => {
 				<CategoriesFiltration
 					activeCatId={activeCategory}
 					changeActiveCatId={handleChangeActiveCategory}
-					categories={newsCategories ?? []}
+					categories={newsFiltrationInfo?.categories ?? []}
 				/>
 				{newsList?.length ? (
 					breakpoint === 'S' ? (
