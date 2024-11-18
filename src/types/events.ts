@@ -1,10 +1,10 @@
-import { type CategoryItem, type SimpleLinkType, type SourceLink } from 'src/types/global'
+import { type CategoryFilterItem, type SimpleLinkType, type SourceLink } from 'src/types/global'
 import { type CardNewsItem } from 'src/types/news'
-import { type CardVideoItem } from 'src/types/videos'
 import { type ImageItem } from 'src/types/photos'
 import { type ShortDocument } from 'src/types/document'
 import { type PathwayItem } from 'src/types/location'
 import { type ProgramDay } from 'src/types/program'
+import { type VideoItem } from 'src/types/videos'
 
 export type EventItem = {
 	description: string
@@ -23,7 +23,7 @@ export type EventItem = {
 	organizerLinks: SimpleLinkType[]
 	partnerLinks: SimpleLinkType[]
 	news: CardNewsItem[]
-	videos: CardVideoItem[]
+	videos: VideoItem[]
 	photos: ImageItem[]
 	relatedLinks: SourceLink[]
 } & CardEventItem
@@ -32,7 +32,7 @@ export type CardEventItem = {
 	id: string
 	imgUrl: string
 	title: string
-	category: CategoryItem
+	category: CategoryFilterItem
 	date: Date
 	location: {
 		title: string
@@ -40,5 +40,3 @@ export type CardEventItem = {
 	}
 	description: string
 }
-
-export type EventsMonthsList = Record<string, CardEventItem[]>

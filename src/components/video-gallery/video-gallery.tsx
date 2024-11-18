@@ -55,7 +55,7 @@ export const VideoGallery: FC<VideoGalleryProps> = ({
 					<li key={item.id}>
 						<StyledVideo $videoWidth={$videoWidth} $videoHeight={$videoHeight}>
 							<iframe
-								src={item.url}
+								src={item.url ?? '#'}
 								allow='encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;'
 								allowFullScreen
 							></iframe>

@@ -1,4 +1,4 @@
-import { type CategoryItem } from 'src/types/global'
+import { type CategoryFilterItem } from 'src/types/global'
 import { type ImageItem } from 'src/types/photos'
 
 export type NewsItem = {
@@ -16,7 +16,5 @@ export type CardNewsItem = {
 	imgUrl: string
 	date: Date
 	desc: string
-	category: CategoryItem
+	category: CategoryFilterItem
 }
-
-export type NewsMonthsList = Record<string, CardNewsItem[]>

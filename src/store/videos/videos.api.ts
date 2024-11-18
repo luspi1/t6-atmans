@@ -1,34 +1,29 @@
-import { type CardVideoItem, type VideoItem, type VideosMonthsList } from 'src/types/videos'
-import { type CategoryItem } from 'src/types/global'
+import { type VideoItem } from 'src/types/videos'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-import { BASE_URL, ReducerPath } from 'src/helpers/consts'
+import { MAIN_PROD_URL, ReducerPath } from 'src/helpers/consts'
+import type { FiltrationInfo } from 'src/types/global'
 
 export const videosApi = createApi({
 	reducerPath: ReducerPath.Videos,
 	tagTypes: ['Videos'],
 	baseQuery: fetchBaseQuery({
-		baseUrl: BASE_URL,
+		baseUrl: MAIN_PROD_URL,
 	}),
 	endpoints: (build) => ({
-		getVideosMonths: build.query<CardVideoItem[], { date: string; category: string }>({
+		getVideosMonths: build.query<VideoItem[], { date: string; category: string }>({
 			query: ({ date, category = '' }) => ({
-				url: 'videos-months',
+				url: 'videos',
 				params: {
 					d: date,
 					cat: category,
 				},
 			}),
 		}),
-		getAllVideosMonths: build.query<VideosMonthsList[], null>({
+		getVideosFiltration: build.query<FiltrationInfo, null>({
 			query: () => ({
-				url: `all-videos`,
-			}),
-		}),
-		getVideosCategories: build.query<CategoryItem[], null>({
-			query: () => ({
-				url: 'videos-categories',
+				url: `videos_filter_info`,
 			}),
 		}),
 		getVideoById: build.query<VideoItem, string>({
@@ -39,9 +34,5 @@ export const videosApi = createApi({
 	}),
 })
 
-export const {
-	useGetVideosCategoriesQuery,
-	useGetAllVideosMonthsQuery,
-	useGetVideosMonthsQuery,
-	useGetVideoByIdQuery,
-} = videosApi
+export const { useGetVideosMonthsQuery, useGetVideoByIdQuery, useGetVideosFiltrationQuery } =
+	videosApi

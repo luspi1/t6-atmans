@@ -5,14 +5,14 @@ import { type VideoItem } from 'src/types/videos'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-import { BASE_URL, ReducerPath } from 'src/helpers/consts'
+import { MAIN_PROD_URL, ReducerPath } from 'src/helpers/consts'
 import type { NewsItem } from 'src/types/news'
 
 export const objectsApi = createApi({
 	reducerPath: ReducerPath.Objects,
 	tagTypes: ['Objects', 'ObjectNews'],
 	baseQuery: fetchBaseQuery({
-		baseUrl: BASE_URL,
+		baseUrl: MAIN_PROD_URL,
 	}),
 	endpoints: (build) => ({
 		getObjectsInfo: build.query<ObjectsInfo, null>({

@@ -32,7 +32,7 @@ export const AsideVideos: FC<AsideVideosProps> = ({
 				{[...videosList].slice(0, previewCount).map((videoEl) => (
 					<li key={videoEl.id}>
 						<iframe
-							src={videoEl.url}
+							src={videoEl.url ?? '#'}
 							allow='encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;'
 							allowFullScreen
 						></iframe>

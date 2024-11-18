@@ -27,7 +27,7 @@ export const VideoDetails: FC = () => {
 			</CustomText>
 			<div className={styles.mainVideo}>
 				<iframe
-					src={videoDetails?.url}
+					src={videoDetails.url ?? '#'}
 					allow='encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;'
 					allowFullScreen
 				></iframe>

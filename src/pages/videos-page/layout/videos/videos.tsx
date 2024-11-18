@@ -1,11 +1,7 @@
 import React, { type FC, useState } from 'react'
 
 import { getYear } from 'date-fns'
-import {
-	useGetAllVideosMonthsQuery,
-	useGetVideosCategoriesQuery,
-	useGetVideosMonthsQuery,
-} from 'src/store/videos/videos.api'
+import { useGetVideosFiltrationQuery, useGetVideosMonthsQuery } from 'src/store/videos/videos.api'
 import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
 
 import { MonthsFilterSlider } from 'src/components/months-filter-slider/months-filter-slider'
@@ -19,8 +15,7 @@ export const Videos: FC = () => {
 	const [activeMonth, setActiveMonth] = useState('0')
 	const [activeCategory, setActiveCategory] = useState('0')
 
-	const { data: videosMonthsList } = useGetAllVideosMonthsQuery(null)
-	const { data: videosCategories } = useGetVideosCategoriesQuery(null)
+	const { data: videosFiltrationInfo } = useGetVideosFiltrationQuery(null)
 	const { data: videosList } = useGetVideosMonthsQuery({
 		date: activeMonth,
 		category: activeCategory,
@@ -39,7 +34,7 @@ export const Videos: FC = () => {
 			<h2>Видеолента {activeMonth !== '0' && getYear(new Date(activeMonth))}</h2>
 
 			<MonthsFilterSlider
-				monthsList={videosMonthsList ?? []}
+				monthsList={videosFiltrationInfo?.months ?? []}
 				changeActiveMonth={handleChangeActiveMonth}
 				activeMonth={activeMonth}
 				allMonthTitle='все видео'
@@ -47,7 +42,7 @@ export const Videos: FC = () => {
 			<CategoriesFiltration
 				activeCatId={activeCategory}
 				changeActiveCatId={handleChangeActiveCategory}
-				categories={videosCategories ?? []}
+				categories={videosFiltrationInfo?.categories ?? []}
 			/>
 			{videosList?.length ? (
 				breakpoint === 'S' ? (

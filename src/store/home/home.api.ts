@@ -7,7 +7,7 @@ import {
 } from 'src/types/home-page'
 import { type CardEventItem } from 'src/types/events'
 import { type CardNewsItem } from 'src/types/news'
-import { type CardVideoItem } from 'src/types/videos'
+import { type VideoItem } from 'src/types/videos'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { MAIN_PROD_URL, ReducerPath } from 'src/helpers/consts'
@@ -36,7 +36,7 @@ export const homeApi = createApi({
 				url: 'home/news',
 			}),
 		}),
-		getHomeVideos: build.query<CardVideoItem[], null>({
+		getHomeVideos: build.query<VideoItem[], null>({
 			query: () => ({
 				url: 'home/videos',
 			}),

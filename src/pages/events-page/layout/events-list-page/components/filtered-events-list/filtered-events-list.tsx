@@ -1,23 +1,17 @@
 import React, { useState } from 'react'
+import { getYear } from 'date-fns'
 
 import { MonthsFilterSlider } from 'src/components/months-filter-slider/months-filter-slider'
 import { CategoriesFiltration } from 'src/components/categories-filtration/categories-filtration'
 import { EventCard } from 'src/components/event-card/event-card'
-import {
-	useGetAllEventsMonthsQuery,
-	useGetEventsCategoriesQuery,
-	useGetEventsMonthsQuery,
-} from 'src/store/events/events.api'
+import { useGetEventsFiltrationQuery, useGetEventsMonthsQuery } from 'src/store/events/events.api'
 
 import styles from './index.module.scss'
-import { getYear } from 'date-fns'
 
 export const FilteredEventsList = () => {
 	const [activeMonth, setActiveMonth] = useState('0')
 	const [activeCategory, setActiveCategory] = useState('0')
-
-	const { data: eventsMonthsList } = useGetAllEventsMonthsQuery(null)
-	const { data: eventsCategories } = useGetEventsCategoriesQuery(null)
+	const { data: eventsFiltrationInfo } = useGetEventsFiltrationQuery(null)
 	const { data: eventsList } = useGetEventsMonthsQuery({
 		date: activeMonth,
 		category: activeCategory,
@@ -33,7 +27,7 @@ export const FilteredEventsList = () => {
 		<div className={styles.filteredListWrapper}>
 			<h4>Cобытия {activeMonth !== '0' && getYear(new Date(activeMonth))}</h4>
 			<MonthsFilterSlider
-				monthsList={eventsMonthsList ?? []}
+				monthsList={eventsFiltrationInfo?.months ?? []}
 				changeActiveMonth={handleChangeActiveMonth}
 				activeMonth={activeMonth}
 				allMonthTitle='все события'
@@ -41,7 +35,7 @@ export const FilteredEventsList = () => {
 			<CategoriesFiltration
 				activeCatId={activeCategory}
 				changeActiveCatId={handleChangeActiveCategory}
-				categories={eventsCategories ?? []}
+				categories={eventsFiltrationInfo?.categories ?? []}
 			/>
 			<div className={styles.eventsList}>
 				{eventsList?.map((eventEl) => <EventCard key={eventEl.id} {...eventEl} />)}
