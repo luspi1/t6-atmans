@@ -8,6 +8,7 @@ import { type VideoItem } from 'src/types/videos'
 
 export type EventItem = {
 	description: string
+	date: [Date, Date] | [Date]
 	sections: string[]
 	mainBrand: SimpleLinkType
 	object: { id: string; title: string }
@@ -26,7 +27,7 @@ export type EventItem = {
 	videos: VideoItem[]
 	photos: ImageItem[]
 	relatedLinks: SourceLink[]
-} & CardEventItem
+} & Omit<CardEventItem, 'date'>
 
 export type CardEventItem = {
 	id: string

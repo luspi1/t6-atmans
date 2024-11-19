@@ -4,7 +4,7 @@ import { InfoRow } from 'src/UI/InfoRow/InfoRow'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 import { CustomText } from 'src/components/custom-text/custom-text'
 import { useGetEventByIdQuery } from 'src/store/events/events.api'
-import { mainFormatDate } from 'src/helpers/utils'
+import { formatDateRange, mainFormatDate } from 'src/helpers/utils'
 import { AppRoute } from 'src/routes/main-routes/consts'
 
 import styles from './index.module.scss'
@@ -19,7 +19,9 @@ export const EventInfo = () => {
 		<div className={styles.eventInfoWrapper}>
 			<h2>{eventData?.title}</h2>
 			<CustomText $fontSize='16px' $margin='0 0 28px 0'>
-				{mainFormatDate(eventData?.date)}
+				{eventData?.date && eventData.date.length > 1
+					? formatDateRange(eventData?.date as [Date, Date])
+					: mainFormatDate(eventData?.date[0])}
 			</CustomText>
 
 			<div className={styles.mainInfo}>

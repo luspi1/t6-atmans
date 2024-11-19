@@ -11,7 +11,6 @@ import mainLogo from 'src/assets/img/main-logo.svg'
 
 import { SearchBtnIconSvg } from 'src/UI/icons/searchBtnIconSVG'
 import { PersonIconSvg } from 'src/UI/icons/personIconSVG'
-import { NavBanner } from 'src/components/main-navigation/components/nav-banner/nav-banner'
 import styles from './index.module.scss'
 
 export const MainNavigation: FC = () => {
@@ -22,7 +21,7 @@ export const MainNavigation: FC = () => {
 					<Link to={AppRoute.Home} className={styles.logoWrapper}>
 						<img src={mainLogo} alt='logo' />
 					</Link>
-					<NavBanner />
+					{/* <NavBanner /> */}
 					<Link className={styles.personMenu} to='/'>
 						<PersonIconSvg />
 					</Link>
