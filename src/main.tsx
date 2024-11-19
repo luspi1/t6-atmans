@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 
 import { HelmetProvider } from 'react-helmet-async'
 import { ToastContainer } from 'react-toastify'
+import { ScrollToTop } from 'src/components/scroll-to-top/scroll-to-top'
 
 import 'react-toastify/dist/ReactToastify.min.css'
 import 'swiper/swiper-bundle.css'
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<Provider store={store}>
 		<HelmetProvider>
 			<BrowserRouter>
+				<ScrollToTop />
 				<ToastContainer />
 				<App />
 			</BrowserRouter>
