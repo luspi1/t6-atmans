@@ -22,5 +22,6 @@ export type ObjectItem = {
 }
 
 export type ObjectsInfo = {
-	mainDescription: string
+	description: string
+	objects: ObjectItem[]
 }

@@ -1,13 +1,16 @@
 import React, { type FC } from 'react'
 
 import { GridRow } from 'src/components/grid-row/grid-row'
-import { useGetHomeVideosQuery } from 'src/store/home/home.api'
 import { VideoCard } from 'src/components/video-card/video-card'
+import { useGetEventVideosByIdQuery } from 'src/store/events/events.api'
+import { useParams } from 'react-router-dom'
 
 import styles from './index.module.scss'
 
 export const EventVideos: FC = () => {
-	const { data: videos } = useGetHomeVideosQuery(null)
+	const { id = '' } = useParams()
+
+	const { data: videos } = useGetEventVideosByIdQuery(id)
 
 	return (
 		<div className={styles.videosTabContent}>

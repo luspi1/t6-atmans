@@ -1,6 +1,8 @@
 import { type CardEventItem, type EventItem } from 'src/types/events'
 import { type ProgramListItem } from 'src/types/program'
 import type { FiltrationInfo } from 'src/types/global'
+import { type CardNewsItem } from 'src/types/news'
+import { type VideoItem } from 'src/types/videos'
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { MAIN_PROD_URL, ReducerPath } from 'src/helpers/consts'
@@ -32,6 +34,22 @@ export const eventsApi = createApi({
 				url: `events/${eventId}`,
 			}),
 		}),
+		getEventNewsById: build.query<CardNewsItem[], string>({
+			query: (eventId) => ({
+				url: `news`,
+				params: {
+					id_event: eventId,
+				},
+			}),
+		}),
+		getEventVideosById: build.query<VideoItem[], string>({
+			query: (eventId) => ({
+				url: `videos`,
+				params: {
+					id_event: eventId,
+				},
+			}),
+		}),
 
 		getEventProgramById: build.query<ProgramListItem[], { eventId?: string; dayId?: string }>({
 			query: ({ eventId = '', dayId = '' }) => ({
@@ -46,4 +64,6 @@ export const {
 	useGetEventsMonthsQuery,
 	useGetEventByIdQuery,
 	useGetEventProgramByIdQuery,
+	useGetEventNewsByIdQuery,
+	useGetEventVideosByIdQuery,
 } = eventsApi
