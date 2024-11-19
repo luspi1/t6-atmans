@@ -9,6 +9,7 @@ import { posterSliderOptions } from './consts'
 import { mainFormatDate } from 'src/helpers/utils'
 
 import styles from './index.module.scss'
+import { ToggleLink } from 'src/components/toggle-link/toggle-link'
 
 export const PosterSection: FC = () => {
 	const { data: posterData } = useGetHomePostersQuery(null)
@@ -21,7 +22,11 @@ export const PosterSection: FC = () => {
 				<Swiper className={styles.posterSlider} {...posterSliderOptions} ref={swiperRef}>
 					{posterData?.map((slideItem, idx) => (
 						<SwiperSlide key={idx}>
-							<div className={styles.slideItem}>
+							<ToggleLink
+								className={styles.slideItem}
+								isExternal={slideItem.isExternal}
+								link={slideItem.itemLink}
+							>
 								<div className={styles.slideItemImg}>
 									<img src={slideItem.imgUrl} alt={slideItem.title} />
 								</div>
@@ -36,7 +41,7 @@ export const PosterSection: FC = () => {
 										<h5>{slideItem.title}</h5>
 									</div>
 								</div>
-							</div>
+							</ToggleLink>
 						</SwiperSlide>
 					))}
 				</Swiper>

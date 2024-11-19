@@ -4,6 +4,8 @@ export type HomePoster = {
 	date: Date
 	location: string
 	imgUrl: string
+	isExternal: boolean
+	itemLink: string
 }
 
 export type HomePartnerItem = {
