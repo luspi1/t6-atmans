@@ -15,7 +15,7 @@ export const CategoriesFiltration: FC<CategoriesFiltrationProps> = ({
 	changeActiveCatId,
 	activeCatId,
 }) => {
-	if (!categories?.length) return
+	if (!categories?.length) return null
 	return (
 		<ul className={styles.categoriesFiltration}>
 			{categories.map((catEl) => (

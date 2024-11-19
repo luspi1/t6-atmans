@@ -1,5 +1,6 @@
 import { type FC, type RefObject, useRef } from 'react'
 import { type SwiperRef } from 'swiper/react/swiper-react'
+import cn from 'classnames'
 
 import { useParams } from 'react-router-dom'
 
@@ -21,7 +22,7 @@ export const ObjDetailsEvents: FC = () => {
 		<section className={styles.objEventsSection}>
 			<h4>События</h4>
 
-			<div className={styles.objEventsSlider}>
+			<div className={cn(styles.objEventsSlider, 'slider-with-btns ')}>
 				<Swiper {...eventsSliderOptions} ref={swiperRef}>
 					{objectData.events.map((slideItem, idx) => (
 						<SwiperSlide className={styles.objEventSlide} key={idx}>

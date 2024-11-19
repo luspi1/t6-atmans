@@ -25,7 +25,7 @@ export const ObjDetailsVideos: FC = () => {
 		<section className={cn(styles.videotapeSection, '_bordered')}>
 			<h4>Видеогалерея</h4>
 
-			<div className={styles.objSwiperWrapper}>
+			<div className={cn(styles.objSwiperWrapper, 'slider-with-btns')}>
 				<Swiper className={styles.videotapeSlider} {...videotapeSliderOptions} ref={swiperRef}>
 					{objectData.videos.map((slideItem, idx) => (
 						<SwiperSlide key={idx}>

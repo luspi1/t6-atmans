@@ -17,7 +17,7 @@ export type SourceLink = {
 	id: string
 	title: string
 	link: string
-	date: string
+	date: Date
 	source: string
 }
 

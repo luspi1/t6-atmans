@@ -92,7 +92,7 @@ export const formatSourceLinks = (data: SourceLink[] | undefined): LinkItem[] | 
 		id: sourceLinkItem.id,
 		link: sourceLinkItem.link,
 		titleLink: sourceLinkItem.title,
-		label: [sourceLinkItem.date, sourceLinkItem.source],
+		label: [mainFormatDate(sourceLinkItem.date), sourceLinkItem.source],
 	}))
 }
 

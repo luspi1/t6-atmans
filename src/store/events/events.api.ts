@@ -1,5 +1,4 @@
 import { type CardEventItem, type EventItem } from 'src/types/events'
-import type { ImageItem } from 'src/types/photos'
 import { type ProgramListItem } from 'src/types/program'
 import type { FiltrationInfo } from 'src/types/global'
 
@@ -33,11 +32,6 @@ export const eventsApi = createApi({
 				url: `events/${eventId}`,
 			}),
 		}),
-		getEventPhoto: build.query<ImageItem[], string>({
-			query: (eventId) => ({
-				url: `events/${eventId}/photos`,
-			}),
-		}),
 
 		getEventProgramById: build.query<ProgramListItem[], { eventId?: string; dayId?: string }>({
 			query: ({ eventId = '', dayId = '' }) => ({
@@ -51,6 +45,5 @@ export const {
 	useGetEventsFiltrationQuery,
 	useGetEventsMonthsQuery,
 	useGetEventByIdQuery,
-	useGetEventPhotoQuery,
 	useGetEventProgramByIdQuery,
 } = eventsApi

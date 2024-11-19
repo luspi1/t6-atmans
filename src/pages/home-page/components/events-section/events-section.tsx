@@ -29,7 +29,7 @@ export const EventsSection: FC = () => {
 				</FlexRow>
 			</Container>
 			<Container>
-				<div className='relative-wrapper'>
+				<div className='slider-with-btns'>
 					<Swiper {...eventsSliderOptions} ref={swiperRef}>
 						{homeEvents?.map((slideItem, idx) => (
 							<SwiperSlide key={idx}>

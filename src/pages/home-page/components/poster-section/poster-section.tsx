@@ -17,7 +17,7 @@ export const PosterSection: FC = () => {
 
 	return (
 		<Container $padding='0'>
-			<section className={cn(styles.posterSection, '_bordered')}>
+			<section className={cn(styles.posterSection, '_bordered', 'slider-with-btns')}>
 				<Swiper className={styles.posterSlider} {...posterSliderOptions} ref={swiperRef}>
 					{posterData?.map((slideItem, idx) => (
 						<SwiperSlide key={idx}>

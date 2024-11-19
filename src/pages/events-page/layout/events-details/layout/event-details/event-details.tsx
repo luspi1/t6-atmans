@@ -14,34 +14,39 @@ export const EventDetails: FC = () => {
 	const { data: eventInfo } = useGetEventByIdQuery(id ?? '')
 	return (
 		<div className={styles.eventDetailTab}>
-			<section>
-				<h4>Информация</h4>
-				<RenderedArray
-					className={styles.eventDescs}
-					strArray={eventInfo?.descs}
-					as='div'
-					asStr='p'
-				/>
-			</section>
+			{!!eventInfo?.descs?.length && (
+				<section>
+					<h4>Информация</h4>
+					<RenderedArray
+						className={styles.eventDescs}
+						strArray={eventInfo?.descs}
+						as='div'
+						asStr='p'
+					/>
+				</section>
+			)}
+
 			<section>
 				<Placement placeVariants={eventInfo?.pathways} title='Как добраться' />
 			</section>
 			<section>
 				<Placement placeVariants={eventInfo?.placement} title='Размещение' />
 			</section>
-			<section>
-				<h4>Часто задаваемые вопросы</h4>
-				<div className={styles.faqList}>
-					{eventInfo?.faq?.map((faqEl, idx) => (
-						<AccordionItem
-							className={styles.eventFaqItem}
-							key={idx}
-							trigger={faqEl.title}
-							content={faqEl.content}
-						/>
-					))}
-				</div>
-			</section>
+			{!!eventInfo?.faq?.length && (
+				<section>
+					<h4>Часто задаваемые вопросы</h4>
+					<div className={styles.faqList}>
+						{eventInfo?.faq?.map((faqEl, idx) => (
+							<AccordionItem
+								className={styles.eventFaqItem}
+								key={idx}
+								trigger={faqEl.title}
+								content={faqEl.content}
+							/>
+						))}
+					</div>
+				</section>
+			)}
 		</div>
 	)
 }

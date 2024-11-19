@@ -23,6 +23,8 @@ export const EventProgramLayout: FC = () => {
 		`${AppRoute.Events}/${id}/${AppRoute.EventProgram}`,
 	])
 
+	if (!eventDetails?.program?.length) return <h4>нет программы</h4>
+
 	if (matchesLocation) return <Navigate to={eventDetails?.program[0].id ?? '0'} replace />
 	return (
 		<div className={styles.programTab}>

@@ -18,7 +18,7 @@ export const ObjectsSection: FC = () => {
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 	return (
 		<section className={cn(styles.objectsSection, '_bordered')}>
-			<Container>
+			<Container className='slider-with-btns'>
 				<Swiper className={styles.objectsSlider} {...objectsSliderOptions} ref={swiperRef}>
 					{objects?.map((slideItem, idx) => (
 						<SwiperSlide key={idx}>

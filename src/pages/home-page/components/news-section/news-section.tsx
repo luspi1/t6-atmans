@@ -28,7 +28,7 @@ export const NewsSection: FC = () => {
 					</MainButton>
 				</FlexRow>
 				{newsList?.length && (
-					<div className='relative-wrapper'>
+					<div className='slider-with-btns'>
 						<Swiper {...newsSliderOptions} ref={swiperRef}>
 							{newsList.map((newsEl, idx) => (
 								<SwiperSlide className={styles.newsSlide} key={idx}>

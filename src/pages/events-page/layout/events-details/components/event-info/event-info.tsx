@@ -30,28 +30,36 @@ export const EventInfo = () => {
 					<CustomText $fontSize='20px' $lineHeight='1.3' $margin='0 0 30px 0'>
 						{eventData?.description}
 					</CustomText>
-					<InfoRow
-						title='Место проведения:'
-						label={eventData?.location?.address}
-						$titleWidth='180px'
-						$gap='34px'
-					/>
-					<InfoRow
-						title='Объект:'
-						label={
-							<Link to={`/${AppRoute.Objects}/${eventData?.object.id}`}>
-								{eventData?.object.title}
-							</Link>
-						}
-						$titleWidth='180px'
-						$gap='34px'
-					/>
-					<InfoRow
-						title='Сайт события:'
-						label={<a href={eventData?.site.link}>{eventData?.site.title}</a>}
-						$titleWidth='180px'
-						$gap='34px'
-					/>
+					{eventData?.location?.address && (
+						<InfoRow
+							title='Место проведения:'
+							label={eventData?.location?.address}
+							$titleWidth='180px'
+							$gap='34px'
+						/>
+					)}
+
+					{eventData?.object?.title && (
+						<InfoRow
+							title='Объект:'
+							label={
+								<Link to={`/${AppRoute.Objects}/${eventData?.object.id}`}>
+									{eventData?.object.title}
+								</Link>
+							}
+							$titleWidth='180px'
+							$gap='34px'
+						/>
+					)}
+
+					{eventData?.site.link && (
+						<InfoRow
+							title='Сайт события:'
+							label={<a href={eventData?.site.link}>{eventData?.site.title}</a>}
+							$titleWidth='180px'
+							$gap='34px'
+						/>
+					)}
 				</div>
 			</div>
 		</div>

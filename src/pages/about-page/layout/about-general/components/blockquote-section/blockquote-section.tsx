@@ -18,7 +18,7 @@ export const BlockquoteSection: FC = () => {
 			<div className={styles.blockquoteRight}>
 				<RenderedArray strArray={aboutPageData.mainDescs} asStr='p' as='blockquote' />
 
-				<footer>А.С. Тедорадзе, должность в Федерации Этноспорта России</footer>
+				<footer>{aboutPageData.caption}</footer>
 			</div>
 		</section>
 	)
