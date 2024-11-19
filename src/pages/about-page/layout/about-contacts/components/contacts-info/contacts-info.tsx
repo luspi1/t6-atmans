@@ -1,32 +1,36 @@
 import { type FC } from 'react'
 
-import { useGetEventByIdQuery } from 'src/store/events/events.api'
-import { Placement } from 'src/modules/placement/placement'
-import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
+import { useGetAboutContactsQuery } from 'src/store/about/about.api'
 
 import styles from './index.module.scss'
 
 export const ContactsInfo: FC = () => {
-	const { data: contactsInfo } = useGetEventByIdQuery('1')
-	const breakpoint = useBreakPoint()
+	const { data: aboutContactsData } = useGetAboutContactsQuery(null)
 	return (
 		<>
-			<div className={styles.contactsBlock}>
-				<h4>Почтовый адрес</h4>
-				<p>119019, Тамбовская область, Сосновский округ, с. Атманов угол, ул. Ленина, 4/2</p>
-			</div>
+			{aboutContactsData?.mailAddress && (
+				<div className={styles.contactsBlock}>
+					<h4>Почтовый адрес</h4>
+					<p>{aboutContactsData.mailAddress}</p>
+				</div>
+			)}
 
-			<div className={styles.contactsBlock}>
-				<h4>Телефон</h4>
-				<p>Демидов Артём Геннадьевич, заведующий библиотекой</p>
-				<a href='tel:+7 (495) 695-07-06'>+7 (495) 695-07-06</a>
-			</div>
+			{aboutContactsData?.phone?.contact && (
+				<div className={styles.contactsBlock}>
+					<h4>Телефон</h4>
+					<p>{aboutContactsData.phone.contact}</p>
+					<a href={`tel:${aboutContactsData.phone.phoneNumber.number}`}>
+						{aboutContactsData.phone.phoneNumber.formatNumber}
+					</a>
+				</div>
+			)}
 
-			<div className={styles.contactsBlock}>
-				<h4>Электронная почта</h4>
-				<a href='mailto:mail@mail.ru'>mail@mail.ru</a>
-			</div>
-			{breakpoint === 'M' && <Placement placeVariants={contactsInfo?.pathways} title='Маршруты' />}
+			{aboutContactsData?.email && (
+				<div className={styles.contactsBlock}>
+					<h4>Электронная почта</h4>
+					<a href={`mailto:${aboutContactsData.email}`}>{aboutContactsData.email}</a>
+				</div>
+			)}
 		</>
 	)
 }

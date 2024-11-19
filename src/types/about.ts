@@ -30,7 +30,7 @@ export type AboutCulturePage = {
 }
 
 export type AboutContactsPage = {
-	mapCoords: [number, number]
+	map_coords: [number, number]
 	mailAddress: string
 	phone: {
 		contact: string
