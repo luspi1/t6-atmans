@@ -32,28 +32,45 @@ export const ObjectHeader: FC = () => {
 					<CustomText $fontSize='20px' $margin='0 0 30px 0' $lineHeight='1.2'>
 						{objectData?.mainDesc}
 					</CustomText>
-					<InfoRow titleClassname={styles.phoneTitle} title='Телефон:' label={objectData?.phone} />
-					<InfoRow
-						titleClassname={styles.mailTitle}
-						title='Электронная почта:'
-						label={<SimpleLink title={objectData?.email} link={objectData?.email} isEmail />}
-					/>
-					<InfoRow
-						titleClassname={styles.addressTitle}
-						title='Адрес объекта:'
-						label={objectData?.address}
-					/>
-					<InfoRow
-						titleClassname={styles.tgTitle}
-						title='Телеграм:'
-						label={<SimpleLink title={objectData?.tgSoc} link={objectData?.tgSoc} />}
-					/>
-					<InfoRow
-						titleClassname={styles.vkTitle}
-						title='Вконтакте:'
-						label={<SimpleLink title={objectData?.vkSoc} link={objectData?.vkSoc} />}
-						$margin='0'
-					/>
+					{objectData?.phone && (
+						<InfoRow
+							titleClassname={styles.phoneTitle}
+							title='Телефон:'
+							label={objectData?.phone}
+						/>
+					)}
+					{objectData?.email && (
+						<InfoRow
+							titleClassname={styles.mailTitle}
+							title='Электронная почта:'
+							label={<SimpleLink title={objectData?.email} link={objectData?.email} isEmail />}
+						/>
+					)}
+
+					{objectData?.address && (
+						<InfoRow
+							titleClassname={styles.addressTitle}
+							title='Адрес объекта:'
+							label={objectData?.address}
+						/>
+					)}
+
+					{objectData?.tgSoc && (
+						<InfoRow
+							titleClassname={styles.tgTitle}
+							title='Телеграм:'
+							label={<SimpleLink title={objectData?.tgSoc} link={objectData?.tgSoc} />}
+						/>
+					)}
+
+					{objectData?.vkSoc && (
+						<InfoRow
+							titleClassname={styles.vkTitle}
+							title='Вконтакте:'
+							label={<SimpleLink title={objectData?.vkSoc} link={objectData?.vkSoc} />}
+							$margin='0'
+						/>
+					)}
 				</div>
 			</div>
 		</section>

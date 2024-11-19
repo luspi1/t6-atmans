@@ -47,7 +47,7 @@ export const DetailedAside: FC<DetailedAsideProps> = ({
 					</div>
 				</div>
 			)}
-			{partners?.length && (
+			{!!partners?.length && (
 				<div className={styles.asideEl}>
 					<h6>Партнеры</h6>
 					<ul className={styles.asideSimpleLinks}>
@@ -57,7 +57,7 @@ export const DetailedAside: FC<DetailedAsideProps> = ({
 					</ul>
 				</div>
 			)}
-			{organizers?.length && (
+			{!!organizers?.length && (
 				<div className={styles.asideEl}>
 					<h6>Организаторы программы</h6>
 					<ul className={styles.asideSimpleLinks}>

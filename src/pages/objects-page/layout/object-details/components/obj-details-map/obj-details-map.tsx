@@ -10,6 +10,8 @@ export const ObjDetailsMap: FC = () => {
 
 	const { data: objectData } = useGetObjectByIdQuery(id ?? '')
 
+	if (!objectData?.location) return null
+
 	return (
 		<section className={styles.mapSection}>
 			<div className={styles.objLocation}>

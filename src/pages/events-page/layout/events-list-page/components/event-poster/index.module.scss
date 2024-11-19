@@ -1,66 +1,64 @@
 .eventsPosterSlider {
-  position: relative;
-  margin-bottom: 45px;
+	position: relative;
+	margin-bottom: 45px;
 }
 
 .slideItem {
-  height: 555px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  .slideItemImg {
-    position: absolute;
-    inset: 0;
-    border-radius: 25px;
-    img {
-      border-radius: 25px;
-      width: 100%;
-      height: 100%;
-    }
-  }
+	height: 555px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	.slideItemImg {
+		position: absolute;
+		inset: 0;
+		border-radius: 25px;
+		img {
+			border-radius: 25px;
+			width: 100%;
+			height: 100%;
+		}
+	}
 }
 
-
-.slideInfo{
-  padding: 0 50px 50px;
-  z-index: 10;
-  margin-top: auto;
-  gap: 10px;
-  flex-wrap: wrap;
-  h5 {
-    color: #ffffff;
-    font-size: 40px;
-    background: #DD0A15;
-    line-height: 1.1;
-    display: inline-block;
-    padding: 12px 21px;
-    border-radius: 5px;
-    font-weight: 400;
-    @media (max-width: 768px) {
-      font-size: 30px;
-    }
-  }
+.slideInfo {
+	padding: 0 50px 50px;
+	z-index: 10;
+	margin-top: auto;
+	gap: 10px;
+	flex-wrap: wrap;
+	h5 {
+		color: #ffffff;
+		font-size: 40px;
+		background: #dd0a15;
+		line-height: 1.1;
+		display: inline-block;
+		padding: 12px 21px;
+		border-radius: 5px;
+		font-weight: 400;
+		@media (max-width: 768px) {
+			font-size: 30px;
+		}
+	}
 }
 
 .slideInfoTitle {
-  ul {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-    @media (max-width: 768px) {
-      padding-bottom: 15px;
-      flex-direction: column;
-    }
-    li {
-      color: #ffffff;
-      font-size: 24px;
-      padding: 2px 12px;
-      border-radius: 5px;
-      border: 1px solid #ffffff;
-      @media (max-width: 768px) {
-        font-size: 18px;
-      }
-    }
-  }
+	ul {
+		display: flex;
+		gap: 15px;
+		margin-bottom: 20px;
+		@media (max-width: 768px) {
+			padding-bottom: 15px;
+			flex-direction: column;
+		}
+		li {
+			color: #ffffff;
+			font-size: 24px;
+			padding: 3px 10px;
+			border-radius: 5px;
+			background: #dd0a15;
+			@media (max-width: 768px) {
+				font-size: 18px;
+			}
+		}
+	}
 }
-

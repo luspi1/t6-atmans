@@ -19,13 +19,15 @@ export const ObjDetailsVideos: FC = () => {
 
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 
+	if (!objectData?.videos?.length) return null
+
 	return (
 		<section className={cn(styles.videotapeSection, '_bordered')}>
 			<h4>Видеогалерея</h4>
 
 			<div className={styles.objSwiperWrapper}>
 				<Swiper className={styles.videotapeSlider} {...videotapeSliderOptions} ref={swiperRef}>
-					{objectData?.videos?.map((slideItem, idx) => (
+					{objectData.videos.map((slideItem, idx) => (
 						<SwiperSlide key={idx}>
 							<VideoCard key={slideItem.id} {...slideItem} />
 						</SwiperSlide>

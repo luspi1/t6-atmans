@@ -12,6 +12,8 @@ export const ObjDetailsGallery: FC = () => {
 
 	const { data: objectData } = useGetObjectByIdQuery(id ?? '')
 
+	if (!objectData?.photos?.length && !objectData?.descList?.length) return null
+
 	return (
 		<section className={styles.gallerySection}>
 			<GalleryImg className={styles.objPhotos} images={objectData?.photos} limit={9} />

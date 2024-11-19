@@ -16,6 +16,9 @@ export const ObjDetailsNews: FC = () => {
 
 	const { data: objectData } = useGetObjectByIdQuery(id ?? '')
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
+
+	if (!objectData?.news?.length) return null
+
 	return (
 		<section className={styles.objNewsSection}>
 			<h4>Новости</h4>
