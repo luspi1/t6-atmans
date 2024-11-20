@@ -1,5 +1,5 @@
 import { type CardEventItem, type EventItem } from 'src/types/events'
-import { type ProgramListItem } from 'src/types/program'
+import { type ProgramDay } from 'src/types/program'
 import type { FiltrationInfo } from 'src/types/global'
 import { type CardNewsItem } from 'src/types/news'
 import { type VideoItem } from 'src/types/videos'
@@ -50,10 +50,12 @@ export const eventsApi = createApi({
 				},
 			}),
 		}),
-
-		getEventProgramById: build.query<ProgramListItem[], { eventId?: string; dayId?: string }>({
-			query: ({ eventId = '', dayId = '' }) => ({
-				url: `events/${eventId}/program/${dayId}`,
+		getEventProgramById: build.query<ProgramDay[], string>({
+			query: (eventId) => ({
+				url: `events/program`,
+				params: {
+					id_event: eventId,
+				},
 			}),
 		}),
 	}),
@@ -63,7 +65,7 @@ export const {
 	useGetEventsFiltrationQuery,
 	useGetEventsMonthsQuery,
 	useGetEventByIdQuery,
-	useGetEventProgramByIdQuery,
 	useGetEventNewsByIdQuery,
 	useGetEventVideosByIdQuery,
+	useGetEventProgramByIdQuery,
 } = eventsApi

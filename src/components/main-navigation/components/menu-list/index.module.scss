@@ -1,26 +1,24 @@
 .menuList {
-  @media (max-width: 768px) {
-    display: none;
-  }
+	@media (max-width: 768px) {
+		display: none;
+	}
 
-  display: flex;
-  gap: 65px;
-  flex-wrap: wrap;
-  align-items: center;
-  @media (max-width: 1280px) {
-    max-width: 50%;
-    gap: 15px;
-  }
-  @media (max-width: 768px) {
-    max-width: 100%;
-    flex-direction: column;
-  }
+	display: flex;
+	gap: 65px;
+	flex-wrap: wrap;
+	align-items: center;
+	@media (max-width: 1280px) {
+		gap: 10px;
+	}
+	@media (max-width: 768px) {
+		max-width: 100%;
+		flex-direction: column;
+	}
 }
 
 .menuItem {
-  a {
-    color: #FFFFFF;
-    font-size: 25px;
-  }
+	a {
+		color: #ffffff;
+		font-size: 25px;
+	}
 }
-

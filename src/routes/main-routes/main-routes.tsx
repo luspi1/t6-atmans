@@ -25,8 +25,7 @@ import { EventsLayout } from 'src/pages/events-page/events-layout'
 import { EventsListPage } from 'src/pages/events-page/layout/events-list-page/events-list-page'
 import { EventDetailsLayout } from 'src/pages/events-page/layout/events-details/layout/event-details-layout'
 import { EventGallery } from 'src/pages/events-page/layout/events-details/layout/event-gallery/event-gallery'
-import { EventProgramLayout } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-layout'
-import { EventProgramDay } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program-day/event-program-day'
+import { EventProgram } from 'src/pages/events-page/layout/events-details/layout/event-program/layout/event-program'
 import { EventNews } from 'src/pages/events-page/layout/events-details/layout/event-news/event-news'
 import { EventVideos } from 'src/pages/events-page/layout/events-details/layout/event-videos/event-videos'
 
@@ -74,9 +73,7 @@ export const MainRoutes = () => {
 					<Route path=':id' element={<EventDetailsLayout />}>
 						<Route index element={<EventDetails />} />
 						<Route path={AppRoute.EventNews} element={<EventNews />} />
-						<Route path={`${AppRoute.EventProgram}`} element={<EventProgramLayout />}>
-							<Route path=':dayId' element={<EventProgramDay />} />
-						</Route>
+						<Route path={AppRoute.EventProgram} element={<EventProgram />} />
 						<Route path={AppRoute.EventGallery} element={<EventGallery />} />
 						<Route path={AppRoute.EventVideos} element={<EventVideos />} />
 					</Route>

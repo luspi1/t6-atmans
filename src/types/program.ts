@@ -6,7 +6,7 @@ export type ProgramListItem = {
 }
 
 export type ProgramDay = {
-	id: string
+	id: number
 	date: Date
 	programList: ProgramListItem[]
 }
