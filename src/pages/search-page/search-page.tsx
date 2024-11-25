@@ -15,7 +15,10 @@ export const SearchPage = () => {
 	const [searchVal, setSearchVal] = useState<string>('')
 	const debouncedSearch = useDebounce(searchVal)
 
-	const { data: searchedData } = useGetSearchedQuery({ search: debouncedSearch, limit: 0 })
+	const { data: searchedData } = useGetSearchedQuery({
+		search: debouncedSearch,
+		limit: 0,
+	})
 
 	const setTagOnSearch = (e: React.MouseEvent<HTMLLIElement>) => {
 		setSearchVal(e.currentTarget.textContent ?? '')
