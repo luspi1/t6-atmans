@@ -1,28 +1,16 @@
 section.videotapeSection {
-  padding: 85px 0 95px;
-  @media (max-width: 768px) {
-    padding: 45px 0 40px;
-  }
-  h4 {
-    @media (max-width: 550px) {
-      margin-bottom: 1px;
-    }
-  }
-  .videotapeTop {
-    @media (max-width: 550px) {
-      margin-bottom: 17px;
-    }
-  }
+	padding: 85px 0 95px;
+	@media (max-width: 768px) {
+		padding: 45px 0 40px;
+	}
+	h4 {
+		@media (max-width: 550px) {
+			margin-bottom: 1px;
+		}
+	}
+	.videotapeTop {
+		@media (max-width: 550px) {
+			margin-bottom: 17px;
+		}
+	}
 }
-
-.videosList {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(287px, 287px));
-  @media (max-width: 768px) {
-    gap: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
-
-
