@@ -1,6 +1,8 @@
-import { type FC } from 'react'
+import { type RefObject, useRef, type FC } from 'react'
 
 import cn from 'classnames'
+import { type SwiperRef } from 'swiper/react/swiper-react'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { Container } from 'src/UI/Container/Container'
 import { AppRoute } from 'src/routes/main-routes/consts'
@@ -10,9 +12,12 @@ import { MainButton } from 'src/UI/MainButton/MainButton'
 import { VideoCard } from 'src/components/video-card/video-card'
 
 import styles from './index.module.scss'
+import { SliderBtns } from 'src/components/slider-btns/slider-btns'
+import { videosSliderOptions } from './consts'
 
 export const VideotapeSection: FC = () => {
 	const { data: videos } = useGetHomeVideosQuery(null)
+	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
 
 	return (
 		<section className={cn(styles.videotapeSection, '_bordered')}>
@@ -23,9 +28,23 @@ export const VideotapeSection: FC = () => {
 						Все видео
 					</MainButton>
 				</FlexRow>
-				<div className={styles.videosList}>
-					{videos?.map((videoItem) => <VideoCard key={videoItem.id} {...videoItem} />)}
-				</div>
+				{videos?.length && (
+					<div className='relative-wrapper'>
+						<Swiper {...videosSliderOptions} ref={swiperRef}>
+							{videos.map((videoItem, idx) => (
+								<SwiperSlide className={styles.videosSlide} key={idx}>
+									<VideoCard key={videoItem.id} {...videoItem} />
+								</SwiperSlide>
+							))}
+						</Swiper>
+						<SliderBtns
+							className={styles.videosSliderBtns}
+							$topPosition='42%'
+							$btnsSpacing='100%'
+							swiperRef={swiperRef}
+						/>
+					</div>
+				)}
 			</Container>
 		</section>
 	)

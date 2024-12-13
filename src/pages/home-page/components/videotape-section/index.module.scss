@@ -13,6 +13,21 @@ section.videotapeSection {
       margin-bottom: 17px;
     }
   }
+  .videosSliderBtns {
+    button {
+      svg {
+        width: 28px;
+        height: 40px;
+      }
+    }
+    @media (max-width: 768px) {
+      top: 96px;
+      width: 95%;
+    }
+  }
+  .videosSlide {
+    padding-bottom: 10px;
+  }
 }
 
 .videosList {

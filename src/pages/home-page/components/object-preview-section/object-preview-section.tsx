@@ -1,29 +1,58 @@
 import cn from 'classnames'
 import { Container } from 'src/UI/Container/Container'
-import { useGetObjectByIdQuery } from 'src/store/objects/objects.api'
+import { useGetAllObjectsQuery } from 'src/store/objects/objects.api'
 
 import styles from './index.module.scss'
+import { type RefObject, useRef } from 'react'
+import { type SwiperRef } from 'swiper/react/swiper-react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { SliderBtns } from 'src/components/slider-btns/slider-btns'
+import { objectsSliderOptions } from './consts'
 
 export const ObjectPreviewSection = () => {
-	const { data: object } = useGetObjectByIdQuery('1')
-	if (!object) return
+	const { data: objects } = useGetAllObjectsQuery(null)
+
+	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
+
+	if (!objects) return
 	return (
 		<section className={cn(styles.objectPreviewSection, '_bordered')}>
 			<Container>
-				<div className={styles.objPreview}>
-					<div className={styles.objLocation}>
-						<iframe src={object.location} width='100%' height='100%' loading='eager'></iframe>
+				{objects?.length && (
+					<div className='relative-wrapper'>
+						<Swiper {...objectsSliderOptions} ref={swiperRef}>
+							{objects.map((object, idx) => (
+								<SwiperSlide className={styles.objectSlide} key={idx}>
+									<div className={styles.objPreview}>
+										<div className={styles.objLocation}>
+											<iframe
+												src={object.location}
+												width='100%'
+												height='100%'
+												loading='eager'
+											></iframe>
+										</div>
+										<div className={styles.objInfo}>
+											<img className={styles.objLogo} src={object.logo} alt={object.title} />
+											<h6>{object.title}</h6>
+											<p className={styles.objAddress}>
+												<span>{object.title}</span>
+												<span>{object.address}</span>
+											</p>
+											<p className={styles.objDesc}>{object.mainDesc}</p>
+										</div>
+									</div>
+								</SwiperSlide>
+							))}
+						</Swiper>
+						<SliderBtns
+							className={styles.objectSliderBtns}
+							$topPosition='50%'
+							$btnsSpacing='100%'
+							swiperRef={swiperRef}
+						/>
 					</div>
-					<div className={styles.objInfo}>
-						<img className={styles.objLogo} src={object.logo} alt={object.title} />
-						<h6>{object.title}</h6>
-						<p className={styles.objAddress}>
-							<span>{object.title}</span>
-							<span>{object.address}</span>
-						</p>
-						<p className={styles.objDesc}>{object.mainDesc}</p>
-					</div>
-				</div>
+				)}
 			</Container>
 		</section>
 	)
