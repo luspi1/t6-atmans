@@ -1,19 +1,19 @@
 import { type RefObject, useRef, type FC } from 'react'
+import { type SwiperRef } from 'swiper/react/swiper-react'
 
 import cn from 'classnames'
-import { type SwiperRef } from 'swiper/react/swiper-react'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { videosSliderOptions } from './consts'
+import { useGetHomeVideosQuery } from 'src/store/home/home.api'
 
+import { Swiper, SwiperSlide } from 'swiper/react'
 import { Container } from 'src/UI/Container/Container'
 import { AppRoute } from 'src/routes/main-routes/consts'
-import { useGetHomeVideosQuery } from 'src/store/home/home.api'
 import { FlexRow } from 'src/components/flex-row/flex-row'
 import { MainButton } from 'src/UI/MainButton/MainButton'
 import { VideoCard } from 'src/components/video-card/video-card'
+import { SliderBtns } from 'src/components/slider-btns/slider-btns'
 
 import styles from './index.module.scss'
-import { SliderBtns } from 'src/components/slider-btns/slider-btns'
-import { videosSliderOptions } from './consts'
 
 export const VideotapeSection: FC = () => {
 	const { data: videos } = useGetHomeVideosQuery(null)

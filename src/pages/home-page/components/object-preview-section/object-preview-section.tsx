@@ -1,13 +1,15 @@
-import cn from 'classnames'
-import { Container } from 'src/UI/Container/Container'
-import { useGetAllObjectsQuery } from 'src/store/objects/objects.api'
-
-import styles from './index.module.scss'
 import { type RefObject, useRef } from 'react'
 import { type SwiperRef } from 'swiper/react/swiper-react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { SliderBtns } from 'src/components/slider-btns/slider-btns'
+
+import cn from 'classnames'
+import { useGetAllObjectsQuery } from 'src/store/objects/objects.api'
 import { objectsSliderOptions } from './consts'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Container } from 'src/UI/Container/Container'
+import { SliderBtns } from 'src/components/slider-btns/slider-btns'
+
+import styles from './index.module.scss'
 
 export const ObjectPreviewSection = () => {
 	const { data: objects } = useGetAllObjectsQuery(null)
