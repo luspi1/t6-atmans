@@ -12,7 +12,6 @@ export const FilteredEventsList = () => {
 	const [activeMonth, setActiveMonth] = useState('0')
 	const [activeCategory, setActiveCategory] = useState('0')
 	const { data: eventsFiltrationInfo } = useGetEventsFiltrationQuery(null)
-	console.log(eventsFiltrationInfo)
 	const { data: eventsList } = useGetEventsMonthsQuery({
 		date: activeMonth,
 		category: activeCategory,

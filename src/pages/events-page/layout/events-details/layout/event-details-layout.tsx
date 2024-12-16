@@ -20,7 +20,11 @@ export const EventDetailsLayout: FC = () => {
 	const { data: eventInfo } = useGetEventByIdQuery(id ?? '')
 	return (
 		<div className={styles.eventDetailsWrapper}>
-			<PageContent className={styles.eventDetailsContent} $padding='42px 35px 35px 50px'>
+			<PageContent
+				className={styles.eventDetailsContent}
+				$padding='42px 35px 35px 50px'
+				$minHeight='auto'
+			>
 				<Helmet>
 					<title>Информация о событии</title>
 				</Helmet>

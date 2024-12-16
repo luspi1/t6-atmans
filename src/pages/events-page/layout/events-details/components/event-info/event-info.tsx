@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 
 import { useGetEventByIdQuery } from 'src/store/events/events.api'
 import { formatDateRange, mainFormatDate } from 'src/helpers/utils'
+import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 
 import { InfoRow } from 'src/UI/InfoRow/InfoRow'
@@ -9,10 +10,9 @@ import { CustomText } from 'src/components/custom-text/custom-text'
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { FlexRow } from 'src/components/flex-row/flex-row'
 import { EventStatus } from 'src/components/event-status/event-status'
+import { Container } from 'src/UI/Container/Container'
 
 import styles from './index.module.scss'
-import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
-import { Container } from 'src/UI/Container/Container'
 
 export const EventInfo = () => {
 	const { id } = useParams()
@@ -32,7 +32,7 @@ export const EventInfo = () => {
 							? formatDateRange(eventData?.date as [Date, Date])
 							: mainFormatDate(eventData?.date[0])}
 					</CustomText>
-					{breakPoint !== 'S' && <EventStatus classname={styles.status} statusCode='cancel' />}
+					{breakPoint !== 'S' && <EventStatus className={styles.status} statusCode='cancel' />}
 					<CustomText
 						className={styles.ageRating}
 						$fontSize={breakPoint === 'S' ? '18px' : '16px'}
