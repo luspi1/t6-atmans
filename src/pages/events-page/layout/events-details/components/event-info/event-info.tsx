@@ -23,7 +23,7 @@ export const EventInfo = () => {
 	useAdditionalCrumbs(eventData?.title)
 
 	return (
-		<Container $paddingAdaptive='0'>
+		<Container $padding='0' $paddingAdaptive='0'>
 			<div className={styles.eventInfoWrapper}>
 				<h2>{eventData?.title}</h2>
 				<FlexRow className={styles.topLineEvent}>

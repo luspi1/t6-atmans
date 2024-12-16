@@ -19,32 +19,34 @@ export const EventDetailsLayout: FC = () => {
 
 	const { data: eventInfo } = useGetEventByIdQuery(id ?? '')
 	return (
-		<div className={styles.eventDetailsWrapper}>
-			<PageContent
-				className={styles.eventDetailsContent}
-				$padding='42px 35px 35px 50px'
-				$minHeight='auto'
-			>
-				<Helmet>
-					<title>Информация о событии</title>
-				</Helmet>
-				<EventInfo />
-				<TabNav className={styles.eventTabs} navItems={EventInfoNavItems} />
-				<Outlet />
-				<Link className={styles.allEventsLink} to={`/${AppRoute.Events}`}>
-					На страницу списка событий
-				</Link>
-			</PageContent>
-			<Container $padding='0' $margin='0'>
-				<DetailedAside
-					brandImg={eventInfo?.brandImg}
-					genPartnerImg={eventInfo?.partnerImg}
-					partners={eventInfo?.partnerLinks}
-					organizers={eventInfo?.organizerLinks}
-					documents={eventInfo?.sideDocs}
-					links={eventInfo?.relatedLinks}
-				/>
-			</Container>
-		</div>
+		<Container $paddingAdaptive='0'>
+			<div className={styles.eventDetailsWrapper}>
+				<PageContent
+					className={styles.eventDetailsContent}
+					$padding='42px 35px 35px 50px'
+					$minHeight='auto'
+				>
+					<Helmet>
+						<title>Информация о событии</title>
+					</Helmet>
+					<EventInfo />
+					<TabNav className={styles.eventTabs} navItems={EventInfoNavItems} />
+					<Outlet />
+					<Link className={styles.allEventsLink} to={`/${AppRoute.Events}`}>
+						На страницу списка событий
+					</Link>
+				</PageContent>
+				<Container $padding='0' $margin='0'>
+					<DetailedAside
+						brandImg={eventInfo?.brandImg}
+						genPartnerImg={eventInfo?.partnerImg}
+						partners={eventInfo?.partnerLinks}
+						organizers={eventInfo?.organizerLinks}
+						documents={eventInfo?.sideDocs}
+						links={eventInfo?.relatedLinks}
+					/>
+				</Container>
+			</div>
+		</Container>
 	)
 }
