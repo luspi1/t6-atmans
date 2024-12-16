@@ -1,6 +1,11 @@
 .eventsPosterSlider {
 	position: relative;
 	margin-bottom: 45px;
+	.posterSliderBtns {
+		height: 65px;
+		opacity: 1;
+		visibility: visible;
+	}
 }
 
 .slideItem {
