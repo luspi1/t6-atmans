@@ -3,6 +3,11 @@
   h2 {
     margin-bottom: 15px;
   }
+  .topLineEvent {
+    @media (max-width: 768px) {
+      gap: 20px;
+    }
+  }
 }
 
 .mainInfo {
@@ -27,6 +32,21 @@
 
 .infoBlock {
   flex-grow: 1;
+}
+
+.ageRating {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute; 
+    right: 28px; 
+    top: 10px; 
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #DE0008;
+  }
 }
 
 

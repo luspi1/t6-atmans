@@ -7,11 +7,15 @@ import { RenderedArray } from 'src/components/rendered-array/rendered-array'
 import { Placement } from 'src/modules/placement/placement'
 import { AccordionItem } from 'src/components/accordion-item/accordion-item'
 import styles from './index.module.scss'
+import { CustomText } from 'src/components/custom-text/custom-text'
+import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
 
 export const EventDetails: FC = () => {
 	const { id } = useParams()
 
 	const { data: eventInfo } = useGetEventByIdQuery(id ?? '')
+	const breakPoint = useBreakPoint()
+
 	return (
 		<div className={styles.eventDetailTab}>
 			{!!eventInfo?.descs?.length && (
@@ -47,6 +51,9 @@ export const EventDetails: FC = () => {
 					</div>
 				</section>
 			)}
+			<CustomText $fontSize={breakPoint === 'S' ? '18px' : '16px'} $margin='0 0 28px 0'>
+				Возрастной рейтинг: <span className={styles.ageRating}>{eventInfo?.ageRating}+</span>
+			</CustomText>
 		</div>
 	)
 }

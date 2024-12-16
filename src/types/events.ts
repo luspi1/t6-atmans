@@ -7,6 +7,7 @@ import { type ProgramDay } from 'src/types/program'
 import { type VideoItem } from 'src/types/videos'
 
 export type EventItem = {
+	ageRating: string
 	description: string
 	date: [Date, Date] | [Date]
 	sections: string[]

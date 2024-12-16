@@ -1,28 +1,45 @@
 import { Link, useParams } from 'react-router-dom'
 
-import { InfoRow } from 'src/UI/InfoRow/InfoRow'
-import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
-import { CustomText } from 'src/components/custom-text/custom-text'
 import { useGetEventByIdQuery } from 'src/store/events/events.api'
 import { formatDateRange, mainFormatDate } from 'src/helpers/utils'
+import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
+
+import { InfoRow } from 'src/UI/InfoRow/InfoRow'
+import { CustomText } from 'src/components/custom-text/custom-text'
 import { AppRoute } from 'src/routes/main-routes/consts'
+import { FlexRow } from 'src/components/flex-row/flex-row'
+import { EventStatus } from 'src/components/event-status/event-status'
 
 import styles from './index.module.scss'
+import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
 
 export const EventInfo = () => {
 	const { id } = useParams()
 	const { data: eventData } = useGetEventByIdQuery(id ?? '')
+
+	const breakPoint = useBreakPoint()
 
 	useAdditionalCrumbs(eventData?.title)
 
 	return (
 		<div className={styles.eventInfoWrapper}>
 			<h2>{eventData?.title}</h2>
-			<CustomText $fontSize='16px' $margin='0 0 28px 0'>
-				{eventData?.date && eventData.date.length > 1
-					? formatDateRange(eventData?.date as [Date, Date])
-					: mainFormatDate(eventData?.date[0])}
-			</CustomText>
+			<FlexRow className={styles.topLineEvent}>
+				<CustomText $fontSize={breakPoint === 'S' ? '18px' : '16px'} $margin='0 0 28px 0'>
+					{eventData?.date && eventData.date.length > 1
+						? formatDateRange(eventData?.date as [Date, Date])
+						: mainFormatDate(eventData?.date[0])}
+				</CustomText>
+				{breakPoint !== 'S' && <EventStatus classname={styles.status} statusCode='cancel' />}
+				<CustomText
+					className={styles.ageRating}
+					$fontSize={breakPoint === 'S' ? '18px' : '16px'}
+					$margin='0 0 28px 0'
+					$color='#DE0008'
+				>
+					{eventData?.ageRating}+
+				</CustomText>
+			</FlexRow>
 
 			<div className={styles.mainInfo}>
 				<div className={styles.avatarWrapper}>
