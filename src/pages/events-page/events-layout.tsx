@@ -5,16 +5,18 @@ import { Outlet } from 'react-router-dom'
 
 export const EventsLayout: FC = () => {
 	return (
-		<Container>
-			<BreadCrumbs
-				crumbsLinksMap={[
-					{
-						title: 'События',
-						link: 'events',
-					},
-				]}
-			/>
+		<>
+			<Container>
+				<BreadCrumbs
+					crumbsLinksMap={[
+						{
+							title: 'События',
+							link: 'events',
+						},
+					]}
+				/>
+			</Container>
 			<Outlet />
-		</Container>
+		</>
 	)
 }

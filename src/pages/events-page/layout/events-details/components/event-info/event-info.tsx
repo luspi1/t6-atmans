@@ -12,6 +12,7 @@ import { EventStatus } from 'src/components/event-status/event-status'
 
 import styles from './index.module.scss'
 import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
+import { Container } from 'src/UI/Container/Container'
 
 export const EventInfo = () => {
 	const { id } = useParams()
@@ -22,65 +23,67 @@ export const EventInfo = () => {
 	useAdditionalCrumbs(eventData?.title)
 
 	return (
-		<div className={styles.eventInfoWrapper}>
-			<h2>{eventData?.title}</h2>
-			<FlexRow className={styles.topLineEvent}>
-				<CustomText $fontSize={breakPoint === 'S' ? '18px' : '16px'} $margin='0 0 28px 0'>
-					{eventData?.date && eventData.date.length > 1
-						? formatDateRange(eventData?.date as [Date, Date])
-						: mainFormatDate(eventData?.date[0])}
-				</CustomText>
-				{breakPoint !== 'S' && <EventStatus classname={styles.status} statusCode='cancel' />}
-				<CustomText
-					className={styles.ageRating}
-					$fontSize={breakPoint === 'S' ? '18px' : '16px'}
-					$margin='0 0 28px 0'
-					$color='#DE0008'
-				>
-					{eventData?.ageRating}+
-				</CustomText>
-			</FlexRow>
-
-			<div className={styles.mainInfo}>
-				<div className={styles.avatarWrapper}>
-					<img src={eventData?.imgUrl} alt={eventData?.title} />
-				</div>
-				<div className={styles.infoBlock}>
-					<CustomText $fontSize='20px' $lineHeight='1.3' $margin='0 0 30px 0'>
-						{eventData?.description}
+		<Container $paddingAdaptive='0'>
+			<div className={styles.eventInfoWrapper}>
+				<h2>{eventData?.title}</h2>
+				<FlexRow className={styles.topLineEvent}>
+					<CustomText $fontSize={breakPoint === 'S' ? '18px' : '16px'} $margin='0 0 28px 0'>
+						{eventData?.date && eventData.date.length > 1
+							? formatDateRange(eventData?.date as [Date, Date])
+							: mainFormatDate(eventData?.date[0])}
 					</CustomText>
-					{eventData?.location?.address && (
-						<InfoRow
-							title='Место проведения:'
-							label={eventData?.location?.address}
-							$titleWidth='180px'
-							$gap='34px'
-						/>
-					)}
+					{breakPoint !== 'S' && <EventStatus classname={styles.status} statusCode='cancel' />}
+					<CustomText
+						className={styles.ageRating}
+						$fontSize={breakPoint === 'S' ? '18px' : '16px'}
+						$margin='0 0 28px 0'
+						$color='#DE0008'
+					>
+						{eventData?.ageRating}+
+					</CustomText>
+				</FlexRow>
 
-					{eventData?.object?.title && (
-						<InfoRow
-							title='Объект:'
-							label={
-								<Link to={`/${AppRoute.Objects}/${eventData?.object.id}`}>
-									{eventData?.object.title}
-								</Link>
-							}
-							$titleWidth='180px'
-							$gap='34px'
-						/>
-					)}
+				<div className={styles.mainInfo}>
+					<div className={styles.avatarWrapper}>
+						<img src={eventData?.imgUrl} alt={eventData?.title} />
+					</div>
+					<div className={styles.infoBlock}>
+						<CustomText $fontSize='20px' $lineHeight='1.3' $margin='0 0 30px 0'>
+							{eventData?.description}
+						</CustomText>
+						{eventData?.location?.address && (
+							<InfoRow
+								title='Место проведения:'
+								label={eventData?.location?.address}
+								$titleWidth='180px'
+								$gap='34px'
+							/>
+						)}
 
-					{eventData?.site.link && (
-						<InfoRow
-							title='Сайт события:'
-							label={<a href={eventData?.site.link}>{eventData?.site.title}</a>}
-							$titleWidth='180px'
-							$gap='34px'
-						/>
-					)}
+						{eventData?.object?.title && (
+							<InfoRow
+								title='Объект:'
+								label={
+									<Link to={`/${AppRoute.Objects}/${eventData?.object.id}`}>
+										{eventData?.object.title}
+									</Link>
+								}
+								$titleWidth='180px'
+								$gap='34px'
+							/>
+						)}
+
+						{eventData?.site.link && (
+							<InfoRow
+								title='Сайт события:'
+								label={<a href={eventData?.site.link}>{eventData?.site.title}</a>}
+								$titleWidth='180px'
+								$gap='34px'
+							/>
+						)}
+					</div>
 				</div>
 			</div>
-		</div>
+		</Container>
 	)
 }

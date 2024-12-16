@@ -12,6 +12,7 @@ import { useGetEventByIdQuery } from 'src/store/events/events.api'
 import { AppRoute } from 'src/routes/main-routes/consts'
 
 import styles from './index.module.scss'
+import { Container } from 'src/UI/Container/Container'
 
 export const EventDetailsLayout: FC = () => {
 	const { id } = useParams()
@@ -30,14 +31,16 @@ export const EventDetailsLayout: FC = () => {
 					На страницу списка событий
 				</Link>
 			</PageContent>
-			<DetailedAside
-				brandImg={eventInfo?.brandImg}
-				genPartnerImg={eventInfo?.partnerImg}
-				partners={eventInfo?.partnerLinks}
-				organizers={eventInfo?.organizerLinks}
-				documents={eventInfo?.sideDocs}
-				links={eventInfo?.relatedLinks}
-			/>
+			<Container $padding='0' $margin='0'>
+				<DetailedAside
+					brandImg={eventInfo?.brandImg}
+					genPartnerImg={eventInfo?.partnerImg}
+					partners={eventInfo?.partnerLinks}
+					organizers={eventInfo?.organizerLinks}
+					documents={eventInfo?.sideDocs}
+					links={eventInfo?.relatedLinks}
+				/>
+			</Container>
 		</div>
 	)
 }
