@@ -1,4 +1,5 @@
 import React, { type FC } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 import { useParams } from 'react-router-dom'
 
@@ -20,24 +21,29 @@ export const VideoDetails: FC = () => {
 	if (!videoDetails) return
 
 	return (
-		<div className={styles.videoDetailPage}>
-			<h2>{videoDetails?.title}</h2>
-			<CustomText $fontSize='18px' $color='#DE0008' $margin='0 0 30px 0'>
-				{mainFormatDate(videoDetails?.date)}
-			</CustomText>
-			<div className={styles.mainVideo}>
-				<iframe
-					src={videoDetails.url ?? ''}
-					allow='encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;'
-					allowFullScreen
-				></iframe>
+		<>
+			<Helmet>
+				<title>{videoDetails?.title}</title>
+			</Helmet>
+			<div className={styles.videoDetailPage}>
+				<h2>{videoDetails?.title}</h2>
+				<CustomText $fontSize='18px' $color='#DE0008' $margin='0 0 30px 0'>
+					{mainFormatDate(videoDetails?.date)}
+				</CustomText>
+				<div className={styles.mainVideo}>
+					<iframe
+						src={videoDetails.url ?? ''}
+						allow='encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;'
+						allowFullScreen
+					></iframe>
+				</div>
+				<AsideVideos
+					videosList={videoDetails?.similarVideos}
+					title='Похожие видео'
+					previewCount={4}
+					orient='horizontal'
+				/>
 			</div>
-			<AsideVideos
-				videosList={videoDetails?.similarVideos}
-				title='Похожие видео'
-				previewCount={4}
-				orient='horizontal'
-			/>
-		</div>
+		</>
 	)
 }

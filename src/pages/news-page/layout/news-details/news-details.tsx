@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { type RefObject, useEffect, useRef, useState } from 'react'
 import { type CardNewsItem } from 'src/types/news'
 import cn from 'classnames'
@@ -8,6 +9,7 @@ import { useGetNewsByIdQuery, useGetNewsMonthsQuery } from 'src/store/news/news.
 import { useAdditionalCrumbs } from 'src/hooks/additional-crumbs/additional-crumbs'
 import { mainFormatDate } from 'src/helpers/utils'
 import { gallerySliderOptions } from './consts'
+import { useBreakPoint } from 'src/hooks/useBreakPoint/useBreakPoint'
 
 import { AppRoute } from 'src/routes/main-routes/consts'
 import { RenderedArray } from 'src/components/rendered-array/rendered-array'
@@ -29,6 +31,7 @@ export const NewsDetails = () => {
 	useAdditionalCrumbs(newsItemData?.title)
 
 	const [newsArray, setNewsArray] = useState<CardNewsItem[]>([])
+	const breakpoint = useBreakPoint()
 
 	useEffect(() => {
 		if (isSuccessAllNews) {
@@ -40,21 +43,30 @@ export const NewsDetails = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>{newsItemData?.title}</title>
+			</Helmet>
 			<Container className={styles.newsContainer} $padding='0 90px 0 40px' $paddingAdaptive='0'>
 				<div className={styles.newsItemPage}>
-					<PageContent className={styles.newsListPage}>
+					<PageContent className={styles.newsListPage} $minHeight='0'>
 						<div className={styles.newsItemPageContent}>
 							<h2>{newsItemData.title}</h2>
 							<span className={styles.newsItemDate}>{mainFormatDate(newsItemData?.date)}</span>
-							<div className={styles.newsDescs}>
-								<p>{newsItemData?.textNews[0]}</p>
-							</div>
+							{breakpoint !== 'S' && (
+								<div className={styles.newsDescs}>
+									<p>{newsItemData?.textNews[0]}</p>
+								</div>
+							)}
 							<div className={styles.newsItemMainImg}>
 								<img src={newsItemData?.preview} alt={newsItemData?.title} />
 							</div>
 							<RenderedArray
 								className={styles.newsDescs}
-								strArray={newsItemData?.textNews}
+								strArray={
+									breakpoint === 'S'
+										? newsItemData?.textNews
+										: newsItemData?.textNews.filter((_, index) => index !== 0)
+								}
 								asStr='p'
 								as='div'
 							/>
@@ -80,9 +92,9 @@ export const NewsDetails = () => {
 									swiperRef={swiperRef}
 								/>
 							</div>
-							<div className={styles.allNewsBlock}>
-								<Link to={`/${AppRoute.News}`}>Все новости</Link>
-							</div>
+						</div>
+						<div className={styles.allNewsBlock}>
+							<Link to={`/${AppRoute.News}`}>Все новости</Link>
 						</div>
 					</PageContent>
 					<div className={styles.asideNewsDetails}>

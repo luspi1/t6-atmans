@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 import { getYear } from 'date-fns'
 import { useGetNewsFiltrationQuery, useGetNewsMonthsQuery } from 'src/store/news/news.api'
@@ -32,37 +33,42 @@ export const News = () => {
 		setActiveCategory(newCategory)
 	}
 	return (
-		<Container className={styles.newsContainer} $paddingAdaptive='0'>
-			<PageContent className={styles.newsListPage}>
-				<h2>Новости {activeMonth !== '0' && getYear(new Date(activeMonth))}</h2>
+		<>
+			<Helmet>
+				<title>Новости</title>
+			</Helmet>
+			<Container className={styles.newsContainer} $paddingAdaptive='0'>
+				<PageContent className={styles.newsListPage}>
+					<h2>Новости {activeMonth !== '0' && getYear(new Date(activeMonth))}</h2>
 
-				<MonthsFilterSlider
-					monthsList={newsFiltrationInfo?.months ?? []}
-					changeActiveMonth={handleChangeActiveMonth}
-					activeMonth={activeMonth}
-					allMonthTitle='все новости'
-				/>
-				<CategoriesFiltration
-					activeCatId={activeCategory}
-					changeActiveCatId={handleChangeActiveCategory}
-					categories={newsFiltrationInfo?.categories ?? []}
-				/>
-				{newsList?.length ? (
-					breakpoint === 'S' ? (
-						<MobileList items={newsList} renderItem={NewsCard} classListItems={styles.newsList} />
+					<MonthsFilterSlider
+						monthsList={newsFiltrationInfo?.months ?? []}
+						changeActiveMonth={handleChangeActiveMonth}
+						activeMonth={activeMonth}
+						allMonthTitle='все новости'
+					/>
+					<CategoriesFiltration
+						activeCatId={activeCategory}
+						changeActiveCatId={handleChangeActiveCategory}
+						categories={newsFiltrationInfo?.categories ?? []}
+					/>
+					{newsList?.length ? (
+						breakpoint === 'S' ? (
+							<MobileList items={newsList} renderItem={NewsCard} classListItems={styles.newsList} />
+						) : (
+							<div className={styles.newsList}>
+								{newsList.map((newsEl) => (
+									<NewsCard key={newsEl.id} {...newsEl} />
+								))}
+							</div>
+						)
 					) : (
-						<div className={styles.newsList}>
-							{newsList.map((newsEl) => (
-								<NewsCard key={newsEl.id} {...newsEl} />
-							))}
-						</div>
-					)
-				) : (
-					<p className={styles.newsAbsence}>
-						В выбранном вами месяце нет ни одной новости. Пожалуйста, выберите другой месяц.
-					</p>
-				)}
-			</PageContent>
-		</Container>
+						<p className={styles.newsAbsence}>
+							В выбранном вами месяце нет ни одной новости. Пожалуйста, выберите другой месяц.
+						</p>
+					)}
+				</PageContent>
+			</Container>
+		</>
 	)
 }

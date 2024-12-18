@@ -55,7 +55,8 @@
 			height: 492px;
 			margin: 50px 0;
 			@media (max-width: 768px) {
-				height: 173px;
+				height: auto;
+				margin: 0 0 30px 0;
 			}
 
 			img {

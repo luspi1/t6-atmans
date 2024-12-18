@@ -1,4 +1,5 @@
 import React, { type FC, useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 import { getYear } from 'date-fns'
 import { useGetVideosFiltrationQuery, useGetVideosMonthsQuery } from 'src/store/videos/videos.api'
@@ -30,39 +31,44 @@ export const Videos: FC = () => {
 		setActiveCategory(newCategory)
 	}
 	return (
-		<div className={styles.videosPage}>
-			<h2>Видеолента {activeMonth !== '0' && getYear(new Date(activeMonth))}</h2>
+		<>
+			<Helmet>
+				<title>Видеолента</title>
+			</Helmet>
+			<div className={styles.videosPage}>
+				<h2>Видеолента {activeMonth !== '0' && getYear(new Date(activeMonth))}</h2>
 
-			<MonthsFilterSlider
-				monthsList={videosFiltrationInfo?.months ?? []}
-				changeActiveMonth={handleChangeActiveMonth}
-				activeMonth={activeMonth}
-				allMonthTitle='все видео'
-			/>
-			<CategoriesFiltration
-				activeCatId={activeCategory}
-				changeActiveCatId={handleChangeActiveCategory}
-				categories={videosFiltrationInfo?.categories ?? []}
-			/>
-			{videosList?.length ? (
-				breakpoint === 'S' ? (
-					<MobileList
-						items={videosList}
-						renderItem={VideoCard}
-						classListItems={styles.videosList}
-					/>
+				<MonthsFilterSlider
+					monthsList={videosFiltrationInfo?.months ?? []}
+					changeActiveMonth={handleChangeActiveMonth}
+					activeMonth={activeMonth}
+					allMonthTitle='все видео'
+				/>
+				<CategoriesFiltration
+					activeCatId={activeCategory}
+					changeActiveCatId={handleChangeActiveCategory}
+					categories={videosFiltrationInfo?.categories ?? []}
+				/>
+				{videosList?.length ? (
+					breakpoint === 'S' ? (
+						<MobileList
+							items={videosList}
+							renderItem={VideoCard}
+							classListItems={styles.videosList}
+						/>
+					) : (
+						<div className={styles.videosList}>
+							{videosList.map((videosEl) => (
+								<VideoCard key={videosEl.id} {...videosEl} />
+							))}
+						</div>
+					)
 				) : (
-					<div className={styles.videosList}>
-						{videosList.map((videosEl) => (
-							<VideoCard key={videosEl.id} {...videosEl} />
-						))}
-					</div>
-				)
-			) : (
-				<p className={styles.videosAbsence}>
-					В выбранном вами месяце нет ни одного видео. Пожалуйста, выберите другой месяц.
-				</p>
-			)}
-		</div>
+					<p className={styles.videosAbsence}>
+						В выбранном вами месяце нет ни одного видео. Пожалуйста, выберите другой месяц.
+					</p>
+				)}
+			</div>
+		</>
 	)
 }
