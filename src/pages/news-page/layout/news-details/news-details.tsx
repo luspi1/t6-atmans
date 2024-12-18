@@ -26,7 +26,6 @@ export const NewsDetails = () => {
 	})
 	const { data: newsItemData } = useGetNewsByIdQuery(id ?? '')
 	const swiperRef: RefObject<SwiperRef> = useRef<SwiperRef>(null)
-	console.log(newsItemData)
 	useAdditionalCrumbs(newsItemData?.title)
 
 	const [newsArray, setNewsArray] = useState<CardNewsItem[]>([])
@@ -47,6 +46,9 @@ export const NewsDetails = () => {
 						<div className={styles.newsItemPageContent}>
 							<h2>{newsItemData.title}</h2>
 							<span className={styles.newsItemDate}>{mainFormatDate(newsItemData?.date)}</span>
+							<div className={styles.newsDescs}>
+								<p>{newsItemData?.textNews[0]}</p>
+							</div>
 							<div className={styles.newsItemMainImg}>
 								<img src={newsItemData?.preview} alt={newsItemData?.title} />
 							</div>
