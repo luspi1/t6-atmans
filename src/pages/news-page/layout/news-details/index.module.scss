@@ -1,23 +1,24 @@
 .newsContainer {
 	.newsItemPage {
 		display: flex;
-		gap: 20px;
+		gap: 60px;
 		justify-content: space-between;
-		@media (max-width: 768px) {
+		@media (max-width: 1200px) {
 			flex-direction: column;
-      gap: 45px;
+      gap: 0;
 		}
 
 		.newsListPage {
 			h2 {
 				margin-bottom: 25px;
 			}
-      @media (max-width: 768px) {
+      @media (max-width: 1200px) {
         min-height: auto;
         margin: 0;
       }
 
 			.newsItemPageContent {
+				max-width: 1125px;
 				flex-grow: 1;
 				display: flex;
 				flex-direction: column;
@@ -36,8 +37,9 @@
 		}
 
     .asideNewsDetails {
-      @media (max-width: 768px) {
-        padding: 0 15px;
+			padding: 45px 0 0 0;
+      @media (max-width: 1200px) {
+        padding: 30px 15px 30px 15px;
       }
     }
 
@@ -45,7 +47,7 @@
 			color: #de0008;
 			display: block;
 			margin-bottom: 30px;
-			font-size: 18px;
+			font-size: 22px;
 		}
 
 		.newsItemMainImg {
@@ -59,12 +61,13 @@
 			img {
 				width: 100%;
 				height: 100%;
+				border-radius: 15px;
 			}
 		}
 
 		.newsDescs {
 			p {
-				font-size: 18px;
+				font-size: 22px;
 				&:not(:last-child) {
 					margin-bottom: 15px;
 				}
@@ -75,13 +78,51 @@
 			margin-top: 40px;
 			margin-bottom: 40px;
 			gap: 15px;
-			grid-template-columns: repeat(auto-fit, minmax(208px, 208px));
+			grid-template-columns: repeat(auto-fit, minmax(217px, 217px));
 			li {
-				width: 208px;
-				max-width: 208px;
+				width: 217px;
+				max-width: 217px;
 				& > div {
 					border: none;
 					height: 156px;
+				}
+			}
+		}
+
+		.slider {
+			margin: 40px 0;
+			position: relative;
+			.newsSliderBtns {
+				opacity: 1;
+				visibility: visible;
+				svg {
+					width: 28px;
+					height: 40px;
+				}
+			}
+			.noBtns {
+				opacity: 0;
+				visibility: hidden;
+			}
+			.slideItem {
+				h6 {
+					font-size: 18px;
+					font-weight: 500;
+					color: #9D9D9D;
+				}
+				.slideImg {
+					height: 127px;
+					border-radius: 5px;
+					margin-bottom: 5px;
+					@media (max-width: 768px) {
+						height: 173px;
+					}
+
+					img {
+						width: 100%;
+						height: 100%;
+						border-radius: 5px;
+					}
 				}
 			}
 		}
